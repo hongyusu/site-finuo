@@ -25,6 +25,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import { useState } from 'react';
 
 
 const items = [
@@ -204,16 +205,19 @@ const items = [
 
 export default function Packages() {
 
-    const [open, setOpen] = React.useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [currentItem, setCurrentItem] = useState(null);
 
-    const handleClickOpen = () => {
-    setOpen(true);
-    };
+  const handleOpenDialog = (item) => () => {
+    setCurrentItem(item);
+    setOpenDialog(true);
+  };
 
-    const handleClose = () => {
-    setOpen(false);
-    };
-
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+    setCurrentItem(null); // Reset current item when closing the dialog
+  };
+    
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
 
@@ -322,7 +326,7 @@ export default function Packages() {
             useFlexGap
             sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
           >
-            {items.map(({ icon, title, days, description }, index) => (
+            {items.map((item, index) => (
               <Card
                 key={index}
                 component={Button}
@@ -368,7 +372,7 @@ export default function Packages() {
                       },
                     }}
                   >
-                    {icon}
+                    {item.icon}
                   </Box>
                   <div>
                     <Typography
@@ -376,21 +380,21 @@ export default function Packages() {
                       variant="body2"
                       fontWeight="bold"
                     >
-                      {title}
+                      {item.title}
                     </Typography>
                     <Typography
                       color="text.primary"
                       variant="body2"
                       fontWeight="bold"
                     >
-                      {days}
+                      {item.days}
                     </Typography>
                     <Typography
                       color="text.secondary"
                       variant="body2"
                       sx={{ my: 0.5 }}
                     >
-                      {description}
+                      {item.description}
                     </Typography>
                     <Link
                       color="primary"
@@ -406,7 +410,7 @@ export default function Packages() {
                       //  event.stopPropagation();
                       //}}
 
-        onClick={handleClickOpen} // Modified to open the dialog
+        onClick={handleOpenDialog(item)} // Modified to open the dialog
                     >
                       <span>Learn more and book</span>
                       <ChevronRightRoundedIcon
@@ -415,14 +419,20 @@ export default function Packages() {
                       />
                     </Link>
 
-      <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
+              {currentItem && (
+        <Dialog
+          open={openDialog}
+          onClose={handleCloseDialog}
+          aria-labelledby="dialog-title"
+          aria-describedby="dialog-description"
+        >
         <DialogTitle>{"Explore Our Adventures"}</DialogTitle>
         <DialogContent>
           <Typography>{items[selectedItemIndex].description}</Typography>
           <Timeline position="alternate">
-            {items[selectedItemIndex].tasks.map((task, index) => (
+            {items[selectedItemIndex].tasks.map((task, index1) => (
 
-                <TimelineItem key={index}>
+                <TimelineItem key={index1}>
                     <TimelineOppositeContent
                     sx={{ m: 'auto 0' }}
                     align="right"
@@ -452,9 +462,9 @@ export default function Packages() {
           </Timeline>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Close</Button>
+            <Button onClick={handleCloseDialog}>Close</Button>
         </DialogActions>
-      </Dialog>
+      </Dialog>)}
                   </div>
                 </Box>
               </Card>
