@@ -89,8 +89,6 @@ export default function LandingPage() {
         <Divider />
         <Testimonials />
         <Divider />
-        <Pricing />
-        <Divider />
         <FAQ />
         <Divider />
         <Footer />

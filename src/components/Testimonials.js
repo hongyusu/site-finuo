@@ -9,51 +9,52 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
 
+
 const userTestimonials = [
   {
-    avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />,
-    name: 'Remy Sharp',
-    occupation: 'Senior Engineer',
+    avatar: <Avatar alt="Elsa Nygård" src="/static/images/avatar/1.jpg" />,
+    name: 'Elsa Nygård',
+    occupation: 'Adventure Photographer',
     testimonial:
-      "I absolutely love how versatile this product is! Whether I'm tackling work projects or indulging in my favorite hobbies, it seamlessly adapts to my changing needs. Its intuitive design has truly enhanced my daily routine, making tasks more efficient and enjoyable.",
+      "Exploring the Arctic wilderness with Finuo's Northern Lights trip was a surreal experience. Their expertise in choosing the perfect spots allowed me to capture some of my best shots under the celestial dance of the auroras.",
   },
   {
-    avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />,
-    name: 'Travis Howard',
-    occupation: 'Lead Product Designer',
+    avatar: <Avatar alt="Mikkel Jensen" src="/static/images/avatar/2.jpg" />,
+    name: 'Mikkel Jensen',
+    occupation: 'Nature Guide',
     testimonial:
-      "One of the standout features of this product is the exceptional customer support. In my experience, the team behind this product has been quick to respond and incredibly helpful. It's reassuring to know that they stand firmly behind their product.",
+      "Finuo's commitment to authentic Nordic experiences shines through their meticulously planned hiking tours. The vistas of untouched landscapes were breathtaking, and their knowledgeable guides made the journey unforgettable.",
   },
   {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />,
-    name: 'Cindy Baker',
-    occupation: 'CTO',
+    avatar: <Avatar alt="Sofia Karlsson" src="/static/images/avatar/3.jpg" />,
+    name: 'Sofia Karlsson',
+    occupation: 'Cultural Blogger',
     testimonial:
-      'The level of simplicity and user-friendliness in this product has significantly simplified my life. I appreciate the creators for delivering a solution that not only meets but exceeds user expectations.',
+      "The Santa Claus Village tour with Finuo was magical. It was more than just a trip; it was stepping into a fairy tale. The joy on my children's faces was priceless, and the attention to detail made it a special family memory.",
   },
   {
-    avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/4.jpg" />,
-    name: 'Julia Stewart',
-    occupation: 'Senior Engineer',
+    avatar: <Avatar alt="Liam O'Sullivan" src="/static/images/avatar/4.jpg" />,
+    name: 'Liam O\'Sullivan',
+    occupation: 'Ski Instructor',
     testimonial:
-      "I appreciate the attention to detail in the design of this product. The small touches make a big difference, and it's evident that the creators focused on delivering a premium experience.",
+      "As a ski instructor, I've experienced many ski trips, but Finuo's ski trip was top-notch. The perfect balance of thrill and safety, with luxury accommodations, made it stand out. Highly recommended for both beginners and pros.",
   },
   {
-    avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/5.jpg" />,
-    name: 'John Smith',
-    occupation: 'Product Designer',
+    avatar: <Avatar alt="Anna Petrova" src="/static/images/avatar/5.jpg" />,
+    name: 'Anna Petrova',
+    occupation: 'Travel Influencer',
     testimonial:
-      "I've tried other similar products, but this one stands out for its innovative features. It's clear that the makers put a lot of thought into creating a solution that truly addresses user needs.",
-  },
-  {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
-    name: 'Daniel Wolf',
-    occupation: 'CDO',
-    testimonial:
-      "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
-  },
+      "The snowmobile adventure organized by Finuo was exhilarating! Racing across the snow-covered landscapes was a thrilling experience, and their team ensured everything was seamless from start to finish. The gear provided was first-rate, making the adventure not only thrilling but also safe.",
+},
+{
+avatar: <Avatar alt="Oliver Thomson" src="/static/images/avatar/6.jpg" />,
+name: 'Oliver Thomson',
+occupation: 'Documentary Filmmaker',
+testimonial:
+"Documenting the Nordic cities with Finuo was an extraordinary journey. Their city tours are well-curated, combining historical depth with modern vibrancy. The insights provided by our guides were invaluable for our project.",
+},
 ];
-
+      
 const whiteLogos = [
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d520d0517ae8e8ddf13_Bern-white.svg',
