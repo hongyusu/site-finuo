@@ -56,7 +56,7 @@ export default function Hero() {
               textAlign: 'center',
             }}
           >
-            Finuo&nbsp;
+            FINUO&nbsp;
             <Typography
               component="span"
               variant="h1"
