@@ -136,7 +136,7 @@ function AppAppBar({ mode, toggleColorMode, activeSite, onSiteChange, navItems }
           {/* Logo + Site Switcher */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <img
-              src="/images/finuo_logo.png"
+              src="/images/finuo_logo.svg"
               style={logoStyle}
               alt="Finuo logo"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -266,7 +266,7 @@ function AppAppBar({ mode, toggleColorMode, activeSite, onSiteChange, navItems }
                 >
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <img
-                      src="/images/finuo_logo.png"
+                      src="/images/finuo_logo.svg"
                       style={{ width: '40px', height: 'auto' }}
                       alt="Finuo logo"
                     />

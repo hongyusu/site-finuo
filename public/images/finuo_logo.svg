@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Aurora arc -->
+  <path d="M80 160 Q140 60 200 120 Q260 180 320 80" stroke="#55a6f6" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.3"/>
+  <path d="M60 140 Q140 40 200 110 Q260 180 340 60" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M100 150 Q160 80 200 125 Q240 170 300 90" stroke="#06b6d4" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+  <!-- Star/compass point -->
+  <circle cx="200" cy="108" r="6" fill="#06b6d4"/>
+  <line x1="200" y1="96" x2="200" y2="80" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="200" y1="120" x2="200" y2="136" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="188" y1="108" x2="176" y2="108" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="212" y1="108" x2="224" y2="108" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- FINUO text -->
+  <text x="200" y="230" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="12" fill="#1e293b">FINUO</text>
+
+  <!-- Tagline underline -->
+  <line x1="110" y1="252" x2="290" y2="252" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Subtitle -->
+  <text x="200" y="285" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" letter-spacing="8" fill="#64748b">NORDIC</text>
+
+  <!-- Small pine trees -->
+  <polygon points="135,320 140,300 145,320" fill="#06b6d4" opacity="0.4"/>
+  <polygon points="150,320 156,295 162,320" fill="#3b82f6" opacity="0.3"/>
+  <polygon points="238,320 244,295 250,320" fill="#3b82f6" opacity="0.3"/>
+  <polygon points="255,320 260,300 265,320" fill="#06b6d4" opacity="0.4"/>
+
+  <!-- Ground line -->
+  <line x1="120" y1="322" x2="280" y2="322" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+</svg>
