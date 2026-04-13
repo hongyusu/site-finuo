@@ -7,10 +7,10 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-
-import FacebookIcon from '@mui/icons-material/GitHub';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
+import XIcon from '@mui/icons-material/X';
+import { useTranslation } from 'react-i18next';
 
 const logoStyle = {
   width: '140px',
@@ -21,13 +21,15 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="https://finup.fi/">Finuo Oy&nbsp;</Link>
+      <Link href="https://finuo.fi/">Finuo Oy&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
   );
 }
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Container
       sx={{
@@ -55,21 +57,19 @@ export default function Footer() {
             minWidth: { xs: '100%', sm: '60%' },
           }}
         >
-          <Box sx={{ width: { xs: '200%', sm: '60%' } }}>
+          <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
             <Box sx={{ ml: '-15px' }}>
               <img
-                src={
-                    '/images/finuo_logo.png'
-                }
+                src={'/images/finuo_logo.png'}
                 style={logoStyle}
-                alt="logo of sitemark"
+                alt="Finuo logo"
               />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
-              Newsletter
+              {t('footer.newsletter')}
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              Subscribe to our newsletter for weekly updates and promotions.
+              {t('footer.newsletterDesc')}
             </Typography>
             <Stack direction="row" spacing={1} useFlexGap>
               <TextField
@@ -78,15 +78,15 @@ export default function Footer() {
                 size="small"
                 variant="outlined"
                 fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
+                aria-label={t('footer.emailPlaceholder')}
+                placeholder={t('footer.emailPlaceholder')}
                 inputProps={{
                   autocomplete: 'off',
-                  ariaLabel: 'Enter your email address',
+                  ariaLabel: t('footer.emailPlaceholder'),
                 }}
               />
               <Button variant="contained" color="primary" sx={{ flexShrink: 0 }}>
-                Subscribe
+                {t('footer.subscribe')}
               </Button>
             </Stack>
           </Box>
@@ -99,22 +99,22 @@ export default function Footer() {
           }}
         >
           <Typography variant="body2" fontWeight={600}>
-            Product
+            {t('footer.product')}
           </Typography>
           <Link color="text.secondary" href="#">
-            Features
+            {t('footer.features')}
           </Link>
           <Link color="text.secondary" href="#">
-            Testimonials
+            {t('nav.testimonials')}
           </Link>
           <Link color="text.secondary" href="#">
-            Highlights
+            {t('footer.highlights')}
           </Link>
           <Link color="text.secondary" href="#">
-            Pricing
+            {t('footer.pricing')}
           </Link>
           <Link color="text.secondary" href="#">
-            FAQs
+            {t('footer.faqs')}
           </Link>
         </Box>
         <Box
@@ -125,16 +125,16 @@ export default function Footer() {
           }}
         >
           <Typography variant="body2" fontWeight={600}>
-            Company
+            {t('footer.company')}
           </Typography>
           <Link color="text.secondary" href="#">
-            About us
+            {t('footer.aboutUs')}
           </Link>
           <Link color="text.secondary" href="#">
-            Careers
+            {t('footer.careers')}
           </Link>
           <Link color="text.secondary" href="#">
-            Press
+            {t('footer.press')}
           </Link>
         </Box>
         <Box
@@ -145,16 +145,16 @@ export default function Footer() {
           }}
         >
           <Typography variant="body2" fontWeight={600}>
-            Legal
+            {t('footer.legal')}
           </Typography>
           <Link color="text.secondary" href="#">
-            Terms
+            {t('footer.terms')}
           </Link>
           <Link color="text.secondary" href="#">
-            Privacy
+            {t('footer.privacy')}
           </Link>
           <Link color="text.secondary" href="#">
-            Contact
+            {t('footer.contact')}
           </Link>
         </Box>
       </Box>
@@ -170,13 +170,13 @@ export default function Footer() {
       >
         <div>
           <Link color="text.secondary" href="#">
-            Privacy Policy
+            {t('footer.privacyPolicy')}
           </Link>
           <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
             &nbsp;•&nbsp;
           </Typography>
           <Link color="text.secondary" href="#">
-            Terms of Service
+            {t('footer.termsOfService')}
           </Link>
           <Copyright />
         </div>
@@ -191,23 +191,23 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
+            href="#"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
-            <FacebookIcon />
+            <GitHubIcon />
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://twitter.com/MaterialUI"
+            href="#"
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
-            <TwitterIcon />
+            <XIcon />
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="#"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >

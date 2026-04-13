@@ -5,54 +5,17 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
-import CardActionArea from '@mui/material/CardActionArea';
 import { useState } from 'react';
 import { Dialog, DialogActions, DialogContentText, DialogContent, DialogTitle, Button } from '@mui/material';
-
-
-
-const items = [
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: "Promoting Local Finnish Educational Resources",
-    description: "We connect students with a wide range of educational opportunities in Finland, including renowned universities, vocational schools, and high schools. We provide detailed information about these institutions, their programs, and their unique offerings."
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: "School and Program Selection Assistance",
-    description: "We understand that choosing the right school and program is crucial for students' academic and career aspirations. Our experienced consultants work closely with students to assess their academic interests, career goals, and personal preferences. Based on this information, we provide personalized guidance to help students make informed decisions."
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: "Application Guidance and Support",
-    description: "Navigating the application process can be overwhelming. We offer comprehensive guidance and support to ensure students meet all application requirements. Our consultants assist students in preparing their application materials, such as resumes, essays, and recommendation letters, to maximize their chances of success."
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: "Visa and Immigration Assistance",
-    description: "We provide valuable support in the visa and immigration process. Our team assists students with document preparation, appointment scheduling, and guidance on fulfilling the necessary requirements. We strive to simplify the visa process and ensure a smooth transition for students."
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: "Accommodation and Adaptation Support",
-    description: "Moving to a new country can be challenging. We offer guidance on finding suitable accommodation options that align with students' preferences and budgets. Additionally, we provide cultural orientation and language training to help students adapt to their new environment and make the most of their study abroad experience."
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: "Scholarship and Financial Aid Support",
-    description: "We recognize the importance of financial considerations in pursuing an education abroad. Our consultants provide guidance on available scholarships and financial aid opportunities, helping students explore options to fund their studies and alleviate financial burdens."
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Services() {
+  const { t } = useTranslation();
   const [openDialog, setOpenDialog] = useState(false);
   const [currentItem, setCurrentItem] = useState(null);
+
+  const items = t('educationServices.items', { returnObjects: true });
 
   const handleOpenDialog = (item) => () => {
     setCurrentItem(item);
@@ -61,15 +24,17 @@ export default function Services() {
 
   const handleCloseDialog = () => {
     setOpenDialog(false);
-    setCurrentItem(null); // Reset current item when closing the dialog
-  };  return (
+    setCurrentItem(null);
+  };
+
+  return (
     <Box
       id="services"
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
-        color: 'black',
-        bgcolor: 'white',
+        color: 'text.primary',
+        bgcolor: 'background.default',
       }}
     >
       <Container
@@ -88,11 +53,11 @@ export default function Services() {
           }}
         >
           <Typography component="h2" variant="h4">
-      Education Services
+            {t('educationServices.title')}
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-Finuo Education Consulting is your trusted partner in making your dreams of studying abroad a reality. Our comprehensive range of services is designed to support students at every step of their journey:
-                      </Typography>
+            {t('educationServices.description')}
+          </Typography>
         </Box>
         <Grid container spacing={2.5}>
           {items.map((item, index) => (
@@ -111,16 +76,13 @@ Finuo Education Consulting is your trusted partner in making your dreams of stud
                   background: 'transparent',
                   backgroundColor: 'grey.900',
                 }}
-
-            onClick={handleOpenDialog(item)}
+                onClick={handleOpenDialog(item)}
               >
                 <Box sx={{ opacity: '90%' }}>
-                {React.cloneElement(item.icon, {
-                    sx: { color: 'white' }
-                })}
+                  <SupportAgentRoundedIcon sx={{ color: 'text.primary' }} />
                 </Box>
                 <div>
-                  <Typography fontWeight="xxlarge" gutterBottom sx={{ color: 'white' }}>
+                  <Typography fontWeight="bold" gutterBottom sx={{ color: 'text.primary' }}>
                     {item.title}
                   </Typography>
                   <Typography variant="body1" sx={{ color: 'grey.400' }}>
@@ -129,23 +91,23 @@ Finuo Education Consulting is your trusted partner in making your dreams of stud
                 </div>
               </Stack>
               {currentItem && (
-        <Dialog
-          open={openDialog}
-          onClose={handleCloseDialog}
-          aria-labelledby="dialog-title"
-          aria-describedby="dialog-description"
-        >
-          <DialogTitle id="dialog-title">{currentItem.title}</DialogTitle>
-          <DialogContent>
-            <DialogContentText id="dialog-description">
-              {currentItem.description}
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleCloseDialog}>Close</Button>
-          </DialogActions>
-        </Dialog>
-      )}
+                <Dialog
+                  open={openDialog}
+                  onClose={handleCloseDialog}
+                  aria-labelledby="dialog-title"
+                  aria-describedby="dialog-description"
+                >
+                  <DialogTitle id="dialog-title">{currentItem.title}</DialogTitle>
+                  <DialogContent>
+                    <DialogContentText id="dialog-description">
+                      {currentItem.description}
+                    </DialogContentText>
+                  </DialogContent>
+                  <DialogActions>
+                    <Button onClick={handleCloseDialog}>{t('educationServices.close')}</Button>
+                  </DialogActions>
+                </Dialog>
+              )}
             </Grid>
           ))}
         </Grid>

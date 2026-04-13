@@ -1,0 +1,387 @@
+{
+  "nav": {
+    "experience": "Travel",
+    "education": "Education",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "packages": "Packages",
+    "highlights": "Highlights",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "services": "Services"
+  },
+  "hero": {
+    "experienceTitle": "Travel",
+    "experienceTagline": "Experience the Majesty of the Nordics: Landscapes That Stir the Spirit, Adventures That Feed the Soul.",
+    "educationTitle": "Education",
+    "educationTagline": "Igniting Minds, Unveiling the Wonders of Knowledge. Explore Beyond Boundaries, Learn Without Limits."
+  },
+  "logoCollection": {
+    "title": "Trusted by the best companies"
+  },
+  "packages": {
+    "title": "Popular destinations and routes",
+    "description": "Here you find a selection of travel packages around Nordics.",
+    "learnMore": "Learn more",
+    "learnMoreBook": "Learn more and book",
+    "dialogTitle": "Explore Our Adventures",
+    "close": "Close",
+    "items": [
+      {
+        "title": "Fjord Explorer Journey",
+        "days": "Duration: 3 days",
+        "description": "Embark on a voyage through the serene waters of the Nordic fjords, witnessing breathtaking landscapes and pristine nature.",
+        "tasks": [
+          {
+            "name": "Boarding the vessel",
+            "description": "Meet at the harbor to board our state-of-the-art exploration vessel."
+          },
+          {
+            "name": "Fjord navigation briefing",
+            "description": "Receive a comprehensive briefing on fjord geography and navigation techniques."
+          },
+          {
+            "name": "Wildlife spotting",
+            "description": "Spot and learn about local wildlife, including seals, eagles, and dolphins."
+          },
+          {
+            "name": "Lunch at a remote cove",
+            "description": "Enjoy a gourmet lunch prepared by our onboard chef in a secluded cove."
+          },
+          {
+            "name": "Kayaking adventure",
+            "description": "Explore the fjords up close in a kayak, guided by our expert instructors."
+          },
+          {
+            "name": "Evening reflections",
+            "description": "Reflect on the day's adventures over dinner as we anchor in a peaceful bay."
+          }
+        ]
+      },
+      {
+        "title": "Midnight Sun Hiking",
+        "days": "Duration: 3 days",
+        "description": "Discover the magic of the midnight sun with guided hikes through the untouched Nordic wilderness, offering unparalleled views and solitude.",
+        "tasks": [
+          {
+            "name": "Pre-hike orientation",
+            "description": "Gather for an orientation session on the unique phenomena of the midnight sun."
+          },
+          {
+            "name": "Hike commencement",
+            "description": "Begin the hike under the ethereal light of the midnight sun, with stops at scenic outlooks."
+          },
+          {
+            "name": "Mid-hike campfire",
+            "description": "Enjoy stories and local delicacies by the campfire, surrounded by the tranquil night."
+          },
+          {
+            "name": "Summit at midnight",
+            "description": "Reach the summit to experience the full majesty of the sun at midnight, a moment of awe and serenity."
+          },
+          {
+            "name": "Descent and return",
+            "description": "Descend under the still-bright sky, returning with memories of an unforgettable journey."
+          }
+        ]
+      },
+      {
+        "title": "Viking Heritage Tour",
+        "days": "Duration: 3 days",
+        "description": "Step back in time on a cultural odyssey exploring the rich Viking heritage of the Nordics, from ancient ruins to historic villages.",
+        "tasks": [
+          {
+            "name": "Museum visit",
+            "description": "Start the day with a guided tour of the National Viking Museum, showcasing rare artifacts."
+          },
+          {
+            "name": "Traditional Viking lunch",
+            "description": "Enjoy a meal of traditional Viking fare in a reconstructed longhouse."
+          },
+          {
+            "name": "Archaeological site exploration",
+            "description": "Explore an archaeological site with remnants from the Viking Age, guided by an expert historian."
+          },
+          {
+            "name": "Viking shipbuilding workshop",
+            "description": "Participate in a workshop on ancient shipbuilding techniques, crafting a miniature Viking ship."
+          },
+          {
+            "name": "Evening saga storytelling",
+            "description": "Conclude the day with an evening of Viking sagas and legends, narrated by a local skald."
+          }
+        ]
+      },
+      {
+        "title": "Arctic Survival Challenge",
+        "days": "Duration: 3 days",
+        "description": "Test your limits with an immersive survival experience in the Arctic wilderness, guided by seasoned survival experts.",
+        "tasks": [
+          {
+            "name": "Survival skills briefing",
+            "description": "Begin with a briefing on essential survival skills and gear preparation."
+          },
+          {
+            "name": "Shelter building",
+            "description": "Learn to build a shelter using natural materials found in the Arctic environment."
+          },
+          {
+            "name": "Ice fishing",
+            "description": "Try your hand at ice fishing, learning techniques to catch fish in frozen lakes."
+          },
+          {
+            "name": "Wilderness navigation",
+            "description": "Navigate through the wilderness using traditional and modern tools under expert guidance."
+          },
+          {
+            "name": "Campfire cooking",
+            "description": "Prepare a meal with your catch of the day, cooking over an open campfire."
+          },
+          {
+            "name": "Arctic survival tactics",
+            "description": "Evening discussion on advanced survival tactics and strategies for the Arctic environment."
+          }
+        ]
+      }
+    ]
+  },
+  "highlights": {
+    "title": "Highlights",
+    "description": "Explore our services and connections to our partners.",
+    "close": "Close",
+    "items": [
+      {
+        "title": "Viking Line Cruise",
+        "description": "Embark on a majestic journey through the Baltic Sea, exploring scenic coastlines and historic ports with the comfort and elegance of our Viking Line Cruises."
+      },
+      {
+        "title": "VR Train Expeditions",
+        "description": "Experience the beauty of the Nordic landscapes through the window of our VR trains, offering fast, eco-friendly, and comfortable travel across the region."
+      },
+      {
+        "title": "Husky Sled Adventures",
+        "description": "Dive into the thrill of the Arctic wilderness with our Husky Sled Adventures, where you can steer your own sled team across frozen landscapes under the Northern Lights."
+      },
+      {
+        "title": "Sailing Cruise Trip",
+        "description": "Set sail on a breathtaking cruise, navigating the clear Nordic waters and discovering secluded islands, with opportunities for fishing, swimming, and wildlife spotting."
+      },
+      {
+        "title": "Aurora Borealis Tours",
+        "description": "Join us for an unforgettable night under the stars, where we chase the mesmerizing Northern Lights, offering guided tours in prime viewing locations."
+      },
+      {
+        "title": "Ski and Snowboard Escapes",
+        "description": "Hit the slopes with our premium ski and snowboard packages, catering to all skill levels and offering access to top resorts with breathtaking mountain views."
+      },
+      {
+        "title": "Wildlife Photography Safaris",
+        "description": "Capture the majestic beauty of Nordic wildlife on our photography safaris, guided by professional photographers through untouched natural habitats."
+      },
+      {
+        "title": "Kayak Expeditions",
+        "description": "Paddle through serene fjords and along rugged coastlines on our guided kayak expeditions, suitable for adventurers of all experience levels."
+      },
+      {
+        "title": "Guided Hiking Tours",
+        "description": "Explore the great outdoors with our guided hiking tours, featuring breathtaking trails through national parks, mountains, and coastal paths."
+      },
+      {
+        "title": "Nordic Culinary Experiences",
+        "description": "Savor the flavors of the North with our culinary tours, offering tastings of traditional dishes, visits to local markets, and cooking classes with expert chefs."
+      },
+      {
+        "title": "Cultural Festival Tours",
+        "description": "Immerse yourself in Nordic culture with our festival tours, attending authentic celebrations, music festivals, and historical reenactments."
+      },
+      {
+        "title": "Castle and Heritage Sites",
+        "description": "Step back in time as you visit ancient castles, Viking settlements, and UNESCO World Heritage sites, rich in history and architectural marvels."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "description": "We offer different pricing structure to meet the need for groups of different sizes.",
+    "perMonth": "per month",
+    "tiers": [
+      {
+        "title": "Single Customer",
+        "description": [
+          "Private tour for one",
+          "Personalized itinerary",
+          "Dedicated tour guide",
+          "Special access to select locations"
+        ],
+        "buttonText": "Book Now"
+      },
+      {
+        "title": "Small Group",
+        "subheader": "Ideal for Families",
+        "description": [
+          "Up to 4 people",
+          "Custom family-friendly itinerary",
+          "Private transportation",
+          "Discounts on attractions",
+          "Dedicated tour guide"
+        ],
+        "buttonText": "Book for Family"
+      },
+      {
+        "title": "Large Group",
+        "subheader": "Perfect for Companies",
+        "description": [
+          "Up to 10 people",
+          "Team-building activities included",
+          "Corporate discounts",
+          "Customized group itinerary",
+          "Priority support"
+        ],
+        "buttonText": "Book for Group"
+      },
+      {
+        "title": "Special Purpose",
+        "description": [
+          "Ideal for filming, competitions, and other special events",
+          "Tailored services to meet event needs",
+          "Logistical support for equipment and personnel",
+          "Exclusive access to locations",
+          "Dedicated project manager"
+        ],
+        "buttonText": "Contact for Quote"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "description": "See what our customers love about our products. Discover how we excel in efficiency, durability, and satisfaction. Join us for quality, innovation, and reliable support.",
+    "experience": [
+      {
+        "name": "Elsa Nygard",
+        "occupation": "Adventure Photographer",
+        "testimonial": "Exploring the Arctic wilderness with Finuo's Northern Lights trip was a surreal experience. Their expertise in choosing the perfect spots allowed me to capture some of my best shots under the celestial dance of the auroras."
+      },
+      {
+        "name": "Mikkel Jensen",
+        "occupation": "Nature Guide",
+        "testimonial": "Finuo's commitment to authentic Nordic experiences shines through their meticulously planned hiking tours. The vistas of untouched landscapes were breathtaking, and their knowledgeable guides made the journey unforgettable."
+      },
+      {
+        "name": "Sofia Karlsson",
+        "occupation": "Cultural Blogger",
+        "testimonial": "The Santa Claus Village tour with Finuo was magical. It was more than just a trip; it was stepping into a fairy tale. The joy on my children's faces was priceless, and the attention to detail made it a special family memory."
+      },
+      {
+        "name": "Liam O'Sullivan",
+        "occupation": "Ski Instructor",
+        "testimonial": "As a ski instructor, I've experienced many ski trips, but Finuo's ski trip was top-notch. The perfect balance of thrill and safety, with luxury accommodations, made it stand out. Highly recommended for both beginners and pros."
+      },
+      {
+        "name": "Anna Petrova",
+        "occupation": "Travel Influencer",
+        "testimonial": "The snowmobile adventure organized by Finuo was exhilarating! Racing across the snow-covered landscapes was a thrilling experience, and their team ensured everything was seamless from start to finish. The gear provided was first-rate, making the adventure not only thrilling but also safe."
+      },
+      {
+        "name": "Oliver Thomson",
+        "occupation": "Documentary Filmmaker",
+        "testimonial": "Documenting the Nordic cities with Finuo was an extraordinary journey. Their city tours are well-curated, combining historical depth with modern vibrancy. The insights provided by our guides were invaluable for our project."
+      }
+    ],
+    "education": [
+      {
+        "name": "Emma Thompson",
+        "occupation": "Graduate Student",
+        "testimonial": "Finuo's guidance was pivotal in my journey to securing a place at my dream university. Their personalized approach and expert advice on application strategies truly made all the difference."
+      },
+      {
+        "name": "Liam Johnson",
+        "occupation": "Aspiring Engineer",
+        "testimonial": "With Finuo's help, I navigated the complex world of college applications with ease. Their workshops and one-on-one sessions provided me with the tools I needed to succeed."
+      },
+      {
+        "name": "Olivia Brown",
+        "occupation": "Future Medical Professional",
+        "testimonial": "I was overwhelmed by the medical school application process, but Finuo's consultants were there every step of the way. Their support and insights were invaluable."
+      },
+      {
+        "name": "Noah Wilson",
+        "occupation": "Business Analyst Intern",
+        "testimonial": "The career counseling services at Finuo have been a game-changer for my professional development. Their tailored advice helped me land a competitive internship in my field."
+      },
+      {
+        "name": "Ava Martinez",
+        "occupation": "PhD Candidate",
+        "testimonial": "Choosing Finuo for my PhD application process was the best decision I made. Their expertise in crafting compelling research proposals set me apart from other candidates."
+      },
+      {
+        "name": "William Garcia",
+        "occupation": "Undergraduate Student",
+        "testimonial": "Thanks to Finuo, I received several university offers with scholarships. Their personalized mentorship and strategic planning were key to highlighting my strengths."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How do I contact customer support if I have a question or issue?",
+    "a1": "You can reach our customer support team by emailing <link>support@email.com</link> or calling our toll-free number. We're here to assist you promptly.",
+    "q2": "Can I return the product if it doesn't meet my expectations?",
+    "a2": "Absolutely! We offer a hassle-free return policy. If you're not completely satisfied, you can return the product within [number of days] days for a full refund or exchange.",
+    "q3": "What makes your product stand out from others in the market?",
+    "a3": "Our product distinguishes itself through its adaptability, durability, and innovative features. We prioritize user satisfaction and continually strive to exceed expectations in every aspect.",
+    "q4": "Is there a warranty on the product, and what does it cover?",
+    "a4": "Yes, our product comes with a [length of warranty] warranty. It covers defects in materials and workmanship. If you encounter any issues covered by the warranty, please contact our customer support for assistance."
+  },
+  "footer": {
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Subscribe to our newsletter for weekly updates and promotions.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "product": "Product",
+    "features": "Features",
+    "highlights": "Highlights",
+    "pricing": "Pricing",
+    "faqs": "FAQs",
+    "company": "Company",
+    "aboutUs": "About us",
+    "careers": "Careers",
+    "press": "Press",
+    "legal": "Legal",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "educationServices": {
+    "title": "Education Services",
+    "description": "Finuo Education Consulting is your trusted partner in making your dreams of studying abroad a reality. Our comprehensive range of services is designed to support students at every step of their journey:",
+    "close": "Close",
+    "items": [
+      {
+        "title": "Promoting Local Finnish Educational Resources",
+        "description": "We connect students with a wide range of educational opportunities in Finland, including renowned universities, vocational schools, and high schools. We provide detailed information about these institutions, their programs, and their unique offerings."
+      },
+      {
+        "title": "School and Program Selection Assistance",
+        "description": "We understand that choosing the right school and program is crucial for students' academic and career aspirations. Our experienced consultants work closely with students to assess their academic interests, career goals, and personal preferences. Based on this information, we provide personalized guidance to help students make informed decisions."
+      },
+      {
+        "title": "Application Guidance and Support",
+        "description": "Navigating the application process can be overwhelming. We offer comprehensive guidance and support to ensure students meet all application requirements. Our consultants assist students in preparing their application materials, such as resumes, essays, and recommendation letters, to maximize their chances of success."
+      },
+      {
+        "title": "Visa and Immigration Assistance",
+        "description": "We provide valuable support in the visa and immigration process. Our team assists students with document preparation, appointment scheduling, and guidance on fulfilling the necessary requirements. We strive to simplify the visa process and ensure a smooth transition for students."
+      },
+      {
+        "title": "Accommodation and Adaptation Support",
+        "description": "Moving to a new country can be challenging. We offer guidance on finding suitable accommodation options that align with students' preferences and budgets. Additionally, we provide cultural orientation and language training to help students adapt to their new environment and make the most of their study abroad experience."
+      },
+      {
+        "title": "Scholarship and Financial Aid Support",
+        "description": "We recognize the importance of financial considerations in pursuing an education abroad. Our consultants provide guidance on available scholarships and financial aid opportunities, helping students explore options to fund their studies and alleviate financial burdens."
+      }
+    ]
+  }
+}

@@ -1,28 +1,14 @@
 import * as React from 'react';
-import { alpha } from '@mui/material';
+import { alpha, useTheme } from '@mui/material';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
-
-import {  useTheme } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
   const theme = useTheme();
+  const { t } = useTranslation();
   return (
     <Box
       id="hero"
@@ -65,12 +51,12 @@ export default function Hero() {
                   theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
               }}
             >
-     Experience 
+              {t('hero.experienceTitle')}
             </Typography>
           </Typography>
           <Typography variant="body1" textAlign="center" color="text.secondary">
-     Experience the Majesty of the Nordics: Landscapes That Stir the Spirit, Adventures That Feed the Soul.
-      </Typography>
+            {t('hero.experienceTagline')}
+          </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
             alignSelf="center"
@@ -103,18 +89,16 @@ export default function Hero() {
         style={{
           height: '100%',
           width: '100%',
-          borderRadius: '10px', // Ensure the borderRadius matches the Box for consistency
-          objectFit: 'cover', // This ensures the video covers the area without stretching
+          borderRadius: '10px',
+          objectFit: 'cover',
         }}
         autoPlay
         loop
         muted
-        playsInline // This attribute is important for autoplay on mobile devices
+        playsInline
       >
         <source
-          src={
-              '/videos/hero.mp4' // Assuming you have a light mode video
-          }
+          src={'/videos/hero.mp4'}
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -122,6 +106,5 @@ export default function Hero() {
     </Box>
       </Container>
     </Box>
-
   );
 }

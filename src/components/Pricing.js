@@ -11,64 +11,15 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import { useTranslation } from 'react-i18next';
 
+const prices = ['200', '750', '1800', 'Custom'];
+const buttonVariants = ['outlined', 'contained', 'outlined', 'outlined'];
 
-const tiers = [
-  {
-    title: 'Single Customer',
-    price: '200',
-    description: [
-      'Private tour for one',
-      'Personalized itinerary',
-      'Dedicated tour guide',
-      'Special access to select locations',
-    ],
-    buttonText: 'Book Now',
-    buttonVariant: 'outlined',
-  },
-  {
-    title: 'Small Group',
-    subheader: 'Ideal for Families',
-    price: '750',
-    description: [
-      'Up to 4 people',
-      'Custom family-friendly itinerary',
-      'Private transportation',
-      'Discounts on attractions',
-      'Dedicated tour guide',
-    ],
-    buttonText: 'Book for Family',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Large Group',
-    subheader: 'Perfect for Companies',
-    price: '1800',
-    description: [
-      'Up to 10 people',
-      'Team-building activities included',
-      'Corporate discounts',
-      'Customized group itinerary',
-      'Priority support',
-    ],
-    buttonText: 'Book for Group',
-    buttonVariant: 'outlined',
-  },
-  {
-    title: 'Special Purpose',
-    price: 'Custom',
-    description: [
-      'Ideal for filming, competitions, and other special events',
-      'Tailored services to meet event needs',
-      'Logistical support for equipment and personnel',
-      'Exclusive access to locations',
-      'Dedicated project manager',
-    ],
-    buttonText: 'Contact for Quote',
-    buttonVariant: 'outlined',
-  },
-];
 export default function Pricing() {
+  const { t } = useTranslation();
+  const tiers = t('pricing.tiers', { returnObjects: true });
+
   return (
     <Container
       id="pricing"
@@ -89,19 +40,19 @@ export default function Pricing() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Pricing
+          {t('pricing.title')}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-      We offer different pricing structure to meet the need for groups of different sizes.
-                  </Typography>
+          {t('pricing.description')}
+        </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
-        {tiers.map((tier) => (
+        {tiers.map((tier, index) => (
           <Grid
             item
             key={tier.title}
             xs={12}
-            sm={tier.title === 'Small Group' ? 12 : 6}
+            sm={tier.title === tiers[1].title ? 12 : 6}
             md={3}
           >
             <Card
@@ -110,11 +61,10 @@ export default function Pricing() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 4,
-                border: tier.title === 'Small Group' ? '1px solid' : undefined,
-                borderColor:
-                  tier.title === 'Small Group' ? 'primary.main' : undefined,
+                border: index === 1 ? '1px solid' : undefined,
+                borderColor: index === 1 ? 'primary.main' : undefined,
                 background:
-                  tier.title === 'Small Group'
+                  index === 1
                     ? 'linear-gradient(#033363, #9fc5e8)'
                     : undefined,
               }}
@@ -126,14 +76,12 @@ export default function Pricing() {
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    color:
-                      tier.title === 'Professional' ? 'primary.contrastText' : '',
                   }}
                 >
                   <Typography component="h3" variant="h6">
                     {tier.title}
                   </Typography>
-                  {tier.title === 'Professional' && (
+                  {tier.subheader && (
                     <Chip
                       icon={<AutoAwesomeIcon />}
                       label={tier.subheader}
@@ -156,17 +104,13 @@ export default function Pricing() {
                   sx={{
                     display: 'flex',
                     alignItems: 'baseline',
-                    color:
-                      tier.title === 'Professional'
-                        ? 'primary.contrastText'
-                        : undefined,
                   }}
                 >
                   <Typography component="h3" variant="h2">
-                    ${tier.price}
+                    ${prices[index]}
                   </Typography>
                   <Typography component="h3" variant="h6">
-                    &nbsp; per month
+                    &nbsp; {t('pricing.perMonth')}
                   </Typography>
                 </Box>
                 <Divider
@@ -189,21 +133,12 @@ export default function Pricing() {
                     <CheckCircleRoundedIcon
                       sx={{
                         width: 20,
-                        color:
-                          tier.title === 'Professional'
-                            ? 'primary.light'
-                            : 'primary.main',
+                        color: 'primary.main',
                       }}
                     />
                     <Typography
                       component="text"
                       variant="subtitle2"
-                      sx={{
-                        color:
-                          tier.title === 'Professional'
-                            ? 'primary.contrastText'
-                            : undefined,
-                      }}
                     >
                       {line}
                     </Typography>
@@ -213,7 +148,7 @@ export default function Pricing() {
               <CardActions>
                 <Button
                   fullWidth
-                  variant={tier.buttonVariant}
+                  variant={buttonVariants[index]}
                   component="a"
                   href="/material-ui/getting-started/templates/checkout/"
                   target="_blank"

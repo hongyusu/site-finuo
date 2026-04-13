@@ -8,52 +8,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
+import { useTranslation } from 'react-i18next';
 
-
-const userTestimonials = [
-  {
-    avatar: <Avatar alt="Emma Thompson" src="/static/images/avatar/1.jpg" />,
-    name: 'Emma Thompson',
-    occupation: 'Graduate Student',
-    testimonial:
-      "Finuo's guidance was pivotal in my journey to securing a place at my dream university. Their personalized approach and expert advice on application strategies truly made all the difference.",
-  },
-  {
-    avatar: <Avatar alt="Liam Johnson" src="/static/images/avatar/2.jpg" />,
-    name: 'Liam Johnson',
-    occupation: 'Aspiring Engineer',
-    testimonial:
-      "With Finuo's help, I navigated the complex world of college applications with ease. Their workshops and one-on-one sessions provided me with the tools I needed to succeed.",
-  },
-  {
-    avatar: <Avatar alt="Olivia Brown" src="/static/images/avatar/3.jpg" />,
-    name: 'Olivia Brown',
-    occupation: 'Future Medical Professional',
-    testimonial:
-      "I was overwhelmed by the medical school application process, but Finuo's consultants were there every step of the way. Their support and insights were invaluable.",
-  },
-  {
-    avatar: <Avatar alt="Noah Wilson" src="/static/images/avatar/4.jpg" />,
-    name: 'Noah Wilson',
-    occupation: 'Business Analyst Intern',
-    testimonial:
-      "The career counseling services at Finuo have been a game-changer for my professional development. Their tailored advice helped me land a competitive internship in my field.",
-  },
-  {
-    avatar: <Avatar alt="Ava Martinez" src="/static/images/avatar/5.jpg" />,
-    name: 'Ava Martinez',
-    occupation: 'PhD Candidate',
-    testimonial:
-      "Choosing Finuo for my PhD application process was the best decision I made. Their expertise in crafting compelling research proposals set me apart from other candidates.",
-  },
-  {
-    avatar: <Avatar alt="William Garcia" src="/static/images/avatar/6.jpg" />,
-    name: 'William Garcia',
-    occupation: 'Undergraduate Student',
-    testimonial:
-      "Thanks to Finuo, I received several university offers with scholarships. Their personalized mentorship and strategic planning were key to highlighting my strengths.",
-  },
-];
 const whiteLogos = [
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d520d0517ae8e8ddf13_Bern-white.svg',
@@ -80,6 +36,9 @@ const logoStyle = {
 export default function Testimonials() {
   const theme = useTheme();
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
+  const { t } = useTranslation();
+
+  const userTestimonials = t('testimonials.education', { returnObjects: true });
 
   return (
     <Container
@@ -101,12 +60,10 @@ export default function Testimonials() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Testimonials
+          {t('testimonials.title')}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          See what our customers love about our products. Discover how we excel in
-          efficiency, durability, and satisfaction. Join us for quality, innovation,
-          and reliable support.
+          {t('testimonials.description')}
         </Typography>
       </Box>
       <Grid container spacing={2}>
@@ -135,7 +92,7 @@ export default function Testimonials() {
                 }}
               >
                 <CardHeader
-                  avatar={testimonial.avatar}
+                  avatar={<Avatar alt={testimonial.name} src={`/static/images/avatar/${index + 1}.jpg`} />}
                   title={testimonial.name}
                   subheader={testimonial.occupation}
                 />

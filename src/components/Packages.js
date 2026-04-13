@@ -15,7 +15,6 @@ import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -26,200 +25,47 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
+const icons = [
+  <ViewQuiltRoundedIcon />,
+  <EdgesensorHighRoundedIcon />,
+  <DevicesRoundedIcon />,
+  <DevicesRoundedIcon />,
+];
 
-const items = [
-  {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Fjord Explorer Journey',
-    days: 'Duration: 3 days',
-    description: 'Embark on a voyage through the serene waters of the Nordic fjords, witnessing breathtaking landscapes and pristine nature.',
-    imageLight: 'url("/images/1_light.jpg")',
-    imageDark: 'url("/images/1_dark.jpg")',
-    tasks: [
-      {
-        time: '08:00',
-        name: 'Boarding the vessel',
-        type: 'Preparation',
-        description: 'Meet at the harbor to board our state-of-the-art exploration vessel.'
-      },
-      {
-        time: '09:00',
-        name: 'Fjord navigation briefing',
-        type: 'Education',
-        description: 'Receive a comprehensive briefing on fjord geography and navigation techniques.'
-      },
-      {
-        time: '11:00',
-        name: 'Wildlife spotting',
-        type: 'Activity',
-        description: 'Spot and learn about local wildlife, including seals, eagles, and dolphins.'
-      },
-      {
-        time: '13:00',
-        name: 'Lunch at a remote cove',
-        type: 'Meal',
-        description: 'Enjoy a gourmet lunch prepared by our onboard chef in a secluded cove.'
-      },
-      {
-        time: '15:00',
-        name: 'Kayaking adventure',
-        type: 'Adventure',
-        description: 'Explore the fjords up close in a kayak, guided by our expert instructors.'
-      },
-      {
-        time: '18:00',
-        name: 'Evening reflections',
-        type: 'Relaxation',
-        description: 'Reflect on the day’s adventures over dinner as we anchor in a peaceful bay.'
-      },
-    ]
-  },
-  {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Midnight Sun Hiking',
-    days: 'Duration: 3 days',
-    description: 'Discover the magic of the midnight sun with guided hikes through the untouched Nordic wilderness, offering unparalleled views and solitude.',
-    imageLight: 'url("/images/2_light.jpg")',
-    imageDark: 'url("/images/2_dark.jpg")',
-    tasks: [
-      {
-        time: '20:00',
-        name: 'Pre-hike orientation',
-        type: 'Preparation',
-        description: 'Gather for an orientation session on the unique phenomena of the midnight sun.'
-      },
-      {
-        time: '21:00',
-        name: 'Hike commencement',
-        type: 'Departure',
-        description: 'Begin the hike under the ethereal light of the midnight sun, with stops at scenic outlooks.'
-      },
-      {
-        time: '23:00',
-        name: 'Mid-hike campfire',
-        type: 'Activity',
-        description: 'Enjoy stories and local delicacies by the campfire, surrounded by the tranquil night.'
-      },
-      {
-        time: '01:00',
-        name: 'Summit at midnight',
-        type: 'Highlight',
-        description: 'Reach the summit to experience the full majesty of the sun at midnight, a moment of awe and serenity.'
-      },
-      {
-        time: '03:00',
-        name: 'Descent and return',
-        type: 'Return',
-        description: 'Descend under the still-bright sky, returning with memories of an unforgettable journey.'
-      },
-    ]
-  },
-  {
-    icon: <DevicesRoundedIcon />,
-    title: 'Viking Heritage Tour',
-    days: 'Duration: 3 days',
-    description: 'Step back in time on a cultural odyssey exploring the rich Viking heritage of the Nordics, from ancient ruins to historic villages.',
-    imageLight: 'url("/images/3_light.jpg")',
-    imageDark: 'url("/images/3_dark.jpg")',
-    tasks: [
-      {
-        time: '10:00',
-        name: 'Museum visit',
-        type: 'Cultural',
-        description: 'Start the day with a guided tour of the National Viking Museum, showcasing rare artifacts.'
-      },
-      {
-        time: '12:00',
-        name: 'Traditional Viking lunch',
-        type: 'Meal',
-        description: 'Enjoy a meal of traditional Viking fare in a reconstructed longhouse.'
-      },
-      {
-        time: '14:00',
-        name: 'Archaeological site exploration',
-        type: 'Adventure',
-        description: 'Explore an archaeological site with remnants from the Viking Age, guided by an expert historian.'
-      },
-      {
-        time: '16:00',
-        name: 'Viking shipbuilding workshop',
-        type: 'Education',
-        description: 'Participate in a workshop on ancient shipbuilding techniques, crafting a miniature Viking ship.'
-      },
-      {
-        time: '18:00',
-        name: 'Evening saga storytelling',
-        type: 'Entertainment',
-        description: 'Conclude the day with an evening of Viking sagas and legends, narrated by a local skald.'
-      },
-    ]
-  },
-  {
-    icon: <DevicesRoundedIcon />,
-    title: 'Arctic Survival Challenge',
-    days: 'Duration: 3 days',
-    description: 'Test your limits with an immersive survival experience in the Arctic wilderness, guided by seasoned survival experts.',
-    imageLight: 'url("/images/4_light.jpg")',
-    imageDark: 'url("/images/4_dark.jpg")',
-    tasks: [
-      {
-        time: '07:00',
-        name: 'Survival skills briefing',
-        type: 'Preparation',
-        description: 'Begin with a briefing on essential survival skills and gear preparation.'
-      },
-      {
-        time: '09:00',
-        name: 'Shelter building',
-        type: 'Activity',
-        description: 'Learn to build a shelter using natural materials found in the Arctic environment.'
-      },
-      {
-        time: '12:00',
-        name: 'Ice fishing',
-        type: 'Activity',
-        description: 'Try your hand at ice fishing, learning techniques to catch fish in frozen lakes.'
-      },
-      {
-        time: '15:00',
-        name: 'Wilderness navigation',
-        type: 'Education',
-        description: 'Navigate through the wilderness using traditional and modern tools under expert guidance.'
-      },
-      {
-        time: '18:00',
-        name: 'Campfire cooking',
-        type: 'Meal',
-        description: 'Prepare a meal with your catch of the day, cooking over an open campfire.'
-      },
-      {
-        time: '20:00',
-        name: 'Arctic survival tactics',
-        type: 'Education',
-        description: 'Evening discussion on advanced survival tactics and strategies for the Arctic environment.'
-      },
-    ]
-  },
+const images = [
+  { imageLight: 'url("/images/1_light.jpg")', imageDark: 'url("/images/1_dark.jpg")' },
+  { imageLight: 'url("/images/2_light.jpg")', imageDark: 'url("/images/2_dark.jpg")' },
+  { imageLight: 'url("/images/3_light.jpg")', imageDark: 'url("/images/3_dark.jpg")' },
+  { imageLight: 'url("/images/4_light.jpg")', imageDark: 'url("/images/4_dark.jpg")' },
+];
+
+const times = [
+  ['08:00', '09:00', '11:00', '13:00', '15:00', '18:00'],
+  ['20:00', '21:00', '23:00', '01:00', '03:00'],
+  ['10:00', '12:00', '14:00', '16:00', '18:00'],
+  ['07:00', '09:00', '12:00', '15:00', '18:00', '20:00'],
 ];
 
 export default function Packages() {
-
+  const { t } = useTranslation();
   const [openDialog, setOpenDialog] = useState(false);
   const [currentItem, setCurrentItem] = useState(null);
 
-  const handleOpenDialog = (item) => () => {
-    setCurrentItem(item);
+  const items = t('packages.items', { returnObjects: true });
+
+  const handleOpenDialog = (index) => () => {
+    setCurrentItem(index);
     setOpenDialog(true);
   };
 
   const handleCloseDialog = () => {
     setOpenDialog(false);
-    setCurrentItem(null); // Reset current item when closing the dialog
+    setCurrentItem(null);
   };
-    
-  const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
+  const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index) => {
     setSelectedItemIndex(index);
@@ -233,21 +79,21 @@ export default function Packages() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-             Popular destinations and routes 
+              {t('packages.title')}
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-      Here you find a selection of travel packages around Nordics.
+              {t('packages.description')}
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
-            {items.map(({ title }, index) => (
+            {items.map((item, index) => (
               <Chip
                 key={index}
-                label={title}
+                label={item.title}
                 onClick={() => handleItemClick(index)}
                 sx={{
                   borderColor: (theme) => {
@@ -282,8 +128,8 @@ export default function Packages() {
               sx={{
                 backgroundImage: (theme) =>
                   theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                    ? images[selectedItemIndex].imageLight
+                    : images[selectedItemIndex].imageDark,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 minHeight: 280,
@@ -310,7 +156,7 @@ export default function Packages() {
                   '&:hover > svg': { transform: 'translateX(2px)' },
                 }}
               >
-                <span>Learn more</span>
+                <span>{t('packages.learnMore')}</span>
                 <ChevronRightRoundedIcon
                   fontSize="small"
                   sx={{ mt: '1px', ml: '2px' }}
@@ -372,7 +218,7 @@ export default function Packages() {
                       },
                     }}
                   >
-                    {item.icon}
+                    {icons[index]}
                   </Box>
                   <div>
                     <Typography
@@ -406,32 +252,27 @@ export default function Packages() {
                         '& > svg': { transition: '0.2s' },
                         '&:hover > svg': { transform: 'translateX(2px)' },
                       }}
-                      //onClick={(event) => {
-                      //  event.stopPropagation();
-                      //}}
-
-        onClick={handleOpenDialog(item)} // Modified to open the dialog
+                      onClick={handleOpenDialog(index)}
                     >
-                      <span>Learn more and book</span>
+                      <span>{t('packages.learnMoreBook')}</span>
                       <ChevronRightRoundedIcon
                         fontSize="small"
                         sx={{ mt: '1px', ml: '2px' }}
                       />
                     </Link>
 
-              {currentItem && (
+              {currentItem !== null && (
         <Dialog
           open={openDialog}
           onClose={handleCloseDialog}
           aria-labelledby="dialog-title"
           aria-describedby="dialog-description"
         >
-        <DialogTitle>{"Explore Our Adventures"}</DialogTitle>
+        <DialogTitle>{t('packages.dialogTitle')}</DialogTitle>
         <DialogContent>
           <Typography>{items[selectedItemIndex].description}</Typography>
           <Timeline position="alternate">
             {items[selectedItemIndex].tasks.map((task, index1) => (
-
                 <TimelineItem key={index1}>
                     <TimelineOppositeContent
                     sx={{ m: 'auto 0' }}
@@ -439,7 +280,7 @@ export default function Packages() {
                     variant="body2"
                     color="text.secondary"
                     >
-                            {task.time}
+                            {times[selectedItemIndex][index1]}
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                     <TimelineConnector />
@@ -454,7 +295,6 @@ export default function Packages() {
                     </Typography>
                     <Typography>
                             {task.description}
-                            {task.title}
                             </Typography>
                     </TimelineContent>
                 </TimelineItem>
@@ -462,7 +302,7 @@ export default function Packages() {
           </Timeline>
         </DialogContent>
         <DialogActions>
-            <Button onClick={handleCloseDialog}>Close</Button>
+            <Button onClick={handleCloseDialog}>{t('packages.close')}</Button>
         </DialogActions>
       </Dialog>)}
                   </div>
@@ -492,12 +332,12 @@ export default function Packages() {
                 width: 500,
                 height: 600,
                 backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat', // Prevents the background image from repeating
-                backgroundPosition: 'center', // Centers the background image
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
                 backgroundImage: (theme) =>
                   theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                    ? images[selectedItemIndex].imageLight
+                    : images[selectedItemIndex].imageDark,
               }}
             />
           </Card>
