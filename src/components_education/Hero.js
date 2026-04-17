@@ -1,110 +1,49 @@
 import * as React from 'react';
-import { alpha, useTheme } from '@mui/material';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
-  const theme = useTheme();
-  const { t } = useTranslation();
   return (
     <Box
       id="hero"
-      sx={(theme) => ({
-        width: '100%',
-        backgroundImage:
-          theme.palette.mode === 'light'
-            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
-            : 'linear-gradient(#02294F, #090E10)',
-        backgroundSize: '100% 20%',
-        backgroundRepeat: 'no-repeat',
-      })}
-    >
-      <Container
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          pt: { xs: 14, sm: 20 },
-          pb: { xs: 8, sm: 12 },
-        }}
-      >
-        <Stack spacing={2} useFlexGap sx={{ width: { xs: '100%', sm: '70%' } }}>
-          <Typography
-            component="h1"
-            variant="h1"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              alignSelf: 'center',
-              textAlign: 'center',
-            }}
-          >
-            FINUO&nbsp;
-            <Typography
-              component="span"
-              variant="h1"
-              sx={{
-                color: (theme) =>
-                  theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
-              }}
-            >
-              {t('hero.educationTitle')}
-            </Typography>
-          </Typography>
-          <Typography variant="body1" textAlign="center" color="text.secondary">
-            {t('hero.educationTagline')}
-          </Typography>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            alignSelf="center"
-            spacing={1}
-            useFlexGap
-            sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
-          >
-         </Stack>
-        </Stack>
-    <Box
-      id="video"
       sx={{
-        mt: { xs: 8, sm: 0 },
-        alignSelf: 'center',
-        height: { xs: 1200, sm: 700 },
+        position: 'relative',
         width: '100%',
-        borderRadius: '10px',
-        outline: '1px solid',
-        outlineColor:
-          theme.palette.mode === 'light'
-            ? alpha('#BFCCD9', 0.5)
-            : alpha('#9CCCFC', 0.1),
-        boxShadow:
-          theme.palette.mode === 'light'
-            ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
-            : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
+        height: '100vh',
+        minHeight: 600,
+        overflow: 'hidden',
       }}
     >
       <video
-        style={{
-          height: '100%',
-          width: '100%',
-          borderRadius: '10px',
-          objectFit: 'cover',
-        }}
-        autoPlay
-        loop
-        muted
-        playsInline
+        autoPlay muted loop playsInline
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
       >
-        <source
-          src={'/videos/hero_education.mp4'}
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
+        <source src="/videos/hero_education.mp4" type="video/mp4" />
       </video>
-    </Box>
-      </Container>
+
+      <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,13,13,0.7) 0%, transparent 30%)', zIndex: 1 }} />
+
+      <Box
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        sx={{
+          position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)',
+          zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1,
+        }}
+      >
+        <Typography sx={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(245,242,237,0.4)' }}>
+          Scroll
+        </Typography>
+        <Box sx={{
+          width: 1, height: 40,
+          background: 'linear-gradient(to bottom, rgba(245,242,237,0.4), transparent)',
+          animation: 'scrollPulse 2s ease-in-out infinite',
+          '@keyframes scrollPulse': { '0%, 100%': { opacity: 0.3 }, '50%': { opacity: 0.8 } },
+        }} />
+      </Box>
     </Box>
   );
 }

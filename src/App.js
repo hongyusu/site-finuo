@@ -9,15 +9,10 @@ import LandingPage1 from './LandingPage1';
 import getLPTheme from './getLPTheme';
 
 function App() {
-  const [mode, setMode] = useState('light');
   const [activeSite, setActiveSite] = useState('experience');
   const { t } = useTranslation();
 
-  const theme = createTheme(getLPTheme(mode));
-
-  const toggleColorMode = () => {
-    setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
+  const theme = createTheme(getLPTheme('dark'));
 
   const experienceNavItems = [
     { label: t('nav.packages'), sectionId: 'packages' },
@@ -41,8 +36,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppAppBar
-        mode={mode}
-        toggleColorMode={toggleColorMode}
         activeSite={activeSite}
         onSiteChange={setActiveSite}
         navItems={navItems}

@@ -1,30 +1,16 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
-import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import Drawer from '@mui/material/Drawer';
+import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import LanguageIcon from '@mui/icons-material/Language';
-import ToggleColorMode from './ToggleColorMode';
 
-const logoStyle = {
-  width: '60px',
-  height: 'auto',
-  cursor: 'pointer',
-};
-
-function AppAppBar({ mode, toggleColorMode, activeSite, onSiteChange, navItems }) {
+function AppAppBar({ activeSite, onSiteChange, navItems }) {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState('');
@@ -34,12 +20,8 @@ function AppAppBar({ mode, toggleColorMode, activeSite, onSiteChange, navItems }
     i18n.changeLanguage(i18n.language === 'zh' ? 'en' : 'zh');
   };
 
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
-  };
-
   React.useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -48,324 +30,220 @@ function AppAppBar({ mode, toggleColorMode, activeSite, onSiteChange, navItems }
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
       { rootMargin: '-20% 0px -80% 0px' }
     );
-
     const timeoutId = setTimeout(() => {
       navItems.forEach((item) => {
         const el = document.getElementById(item.sectionId);
         if (el) observer.observe(el);
       });
     }, 100);
-
-    return () => {
-      clearTimeout(timeoutId);
-      observer.disconnect();
-    };
+    return () => { clearTimeout(timeoutId); observer.disconnect(); };
   }, [navItems, activeSite]);
 
   const scrollToSection = (sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    const offset = 100;
-    if (sectionElement) {
-      const targetScroll = sectionElement.offsetTop - offset;
-      window.scrollTo({
-        top: targetScroll,
-        behavior: 'smooth',
-      });
+    const el = document.getElementById(sectionId);
+    if (el) {
+      window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
       setOpen(false);
     }
   };
 
-  const handleSiteChange = (event, newValue) => {
-    if (newValue !== null) {
-      onSiteChange(newValue);
-      setActiveSection('');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+  const switchSite = (site) => {
+    onSiteChange(site);
+    setActiveSection('');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setOpen(false);
   };
 
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        boxShadow: 0,
-        bgcolor: 'transparent',
-        backgroundImage: 'none',
-        mt: scrolled ? 0 : 2,
-        transition: 'margin-top 0.3s ease',
-      }}
-    >
-      <Container maxWidth="lg">
-        <Toolbar
-          variant="regular"
-          sx={(theme) => ({
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexShrink: 0,
-            borderRadius: scrolled ? '12px' : '999px',
-            bgcolor:
-              theme.palette.mode === 'light'
-                ? scrolled
-                  ? 'rgba(255, 255, 255, 0.92)'
-                  : 'rgba(255, 255, 255, 0.4)'
-                : scrolled
-                  ? 'rgba(0, 0, 0, 0.88)'
-                  : 'rgba(0, 0, 0, 0.4)',
-            backdropFilter: 'blur(24px)',
-            minHeight: 56,
-            border: '1px solid',
-            borderColor: 'divider',
-            boxShadow:
-              theme.palette.mode === 'light'
-                ? scrolled
-                  ? '0 2px 12px rgba(85, 166, 246, 0.12)'
-                  : '0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)'
-                : scrolled
-                  ? '0 2px 12px rgba(2, 31, 59, 0.4)'
-                  : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
-            transition: 'all 0.3s ease',
-          })}
-        >
-          {/* Logo + Site Switcher */}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <img
-              src="/images/finuo_logo.svg"
-              style={logoStyle}
-              alt="Finuo logo"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            />
-            <Tabs
-              value={activeSite}
-              onChange={handleSiteChange}
-              sx={{
-                display: { xs: 'none', md: 'flex' },
-                minHeight: 36,
-                '& .MuiTabs-indicator': {
-                  height: 3,
-                  borderRadius: '3px 3px 0 0',
-                },
-                '& .MuiTab-root': {
-                  minHeight: 36,
-                  textTransform: 'none',
-                  fontSize: '0.85rem',
-                  fontWeight: 600,
-                  px: 1.5,
-                  py: 0.5,
-                },
-              }}
-            >
-              <Tab label={t('nav.experience')} value="experience" />
-              <Tab label={t('nav.education')} value="education" />
-            </Tabs>
+    <>
+      <AppBar
+        position="fixed"
+        elevation={0}
+        sx={{
+          background: scrolled ? 'rgba(13, 13, 13, 0.85)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(20px)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(245, 242, 237, 0.06)' : 'none',
+          transition: 'all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)',
+        }}
+      >
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: { xs: 3, md: 6 }, py: 2, maxWidth: 1400, mx: 'auto', width: '100%' }}>
+          {/* Logo */}
+          <Box
+            sx={{ display: 'flex', alignItems: 'center', gap: 1.5, cursor: 'pointer' }}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <img src="/images/finuo_logo.svg" style={{ width: 48, height: 'auto' }} alt="Finuo" />
+            <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.3rem', fontWeight: 500, letterSpacing: '0.05em', color: '#F5F2ED' }}>
+              Finuo
+            </Typography>
           </Box>
 
-          {/* Desktop Nav Items */}
-          <Box
-            sx={{
-              display: { xs: 'none', md: 'flex' },
-              gap: 0.5,
-              alignItems: 'center',
-            }}
-          >
+          {/* Desktop Nav */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 4 }}>
+            {/* Site Switcher */}
+            <Box sx={{ display: 'flex', gap: 3 }}>
+              {['experience', 'education'].map((site) => (
+                <Typography
+                  key={site}
+                  onClick={() => switchSite(site)}
+                  sx={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: '0.8rem',
+                    fontWeight: 500,
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    color: activeSite === site ? '#C4A35A' : 'rgba(245, 242, 237, 0.4)',
+                    cursor: 'pointer',
+                    transition: 'color 0.3s ease',
+                    '&:hover': { color: '#F5F2ED' },
+                  }}
+                >
+                  {t(`nav.${site}`)}
+                </Typography>
+              ))}
+            </Box>
+
+            {/* Divider */}
+            <Box sx={{ width: 1, height: 16, bgcolor: 'rgba(245, 242, 237, 0.12)' }} />
+
+            {/* Section Nav */}
             {navItems.map((item) => (
-              <Button
+              <Typography
                 key={item.sectionId}
-                variant="text"
-                size="small"
                 onClick={() => scrollToSection(item.sectionId)}
                 sx={{
-                  color: 'text.primary',
-                  fontWeight: activeSection === item.sectionId ? 600 : 400,
-                  fontSize: '0.875rem',
-                  textTransform: 'none',
-                  px: 1.5,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: '0.8rem',
+                  fontWeight: 400,
+                  letterSpacing: '0.05em',
+                  textTransform: 'uppercase',
+                  color: activeSection === item.sectionId ? '#F5F2ED' : 'rgba(245, 242, 237, 0.4)',
+                  cursor: 'pointer',
+                  transition: 'color 0.3s ease',
                   position: 'relative',
                   '&::after': {
                     content: '""',
                     position: 'absolute',
-                    bottom: 4,
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: activeSection === item.sectionId ? '60%' : '0%',
-                    height: 2,
-                    bgcolor: 'primary.main',
-                    borderRadius: 1,
+                    bottom: -4,
+                    left: 0,
+                    width: activeSection === item.sectionId ? '100%' : '0%',
+                    height: 1,
+                    bgcolor: '#C4A35A',
                     transition: 'width 0.3s ease',
                   },
-                  '&:hover::after': {
-                    width: '60%',
-                  },
+                  '&:hover': { color: '#F5F2ED' },
+                  '&:hover::after': { width: '100%' },
                 }}
               >
                 {item.label}
-              </Button>
+              </Typography>
             ))}
-            <Divider
-              orientation="vertical"
-              flexItem
-              sx={{ mx: 0.5, height: 24, alignSelf: 'center' }}
-            />
-            <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-            <Button
-              variant="text"
-              size="small"
+
+            {/* Language */}
+            <Typography
               onClick={toggleLanguage}
               sx={{
-                minWidth: '32px',
-                height: '32px',
-                p: '4px',
-                color: 'text.primary',
                 fontSize: '0.75rem',
-                fontWeight: 600,
+                fontWeight: 500,
+                letterSpacing: '0.1em',
+                color: 'rgba(245, 242, 237, 0.4)',
+                cursor: 'pointer',
+                transition: 'color 0.3s ease',
+                '&:hover': { color: '#F5F2ED' },
               }}
-              startIcon={<LanguageIcon fontSize="small" />}
             >
               {i18n.language === 'zh' ? 'EN' : '中文'}
-            </Button>
-            <Button color="primary" variant="text" size="small" href="#">
-              {t('nav.signIn')}
-            </Button>
-            <Button color="primary" variant="contained" size="small" href="#">
-              {t('nav.signUp')}
-            </Button>
+            </Typography>
           </Box>
 
-          {/* Mobile Menu */}
-          <Box sx={{ display: { md: 'none' } }}>
-            <IconButton
-              color="primary"
-              aria-label="open menu"
-              onClick={toggleDrawer(true)}
+          {/* Mobile Hamburger */}
+          <IconButton
+            onClick={() => setOpen(true)}
+            sx={{ display: { md: 'none' }, color: '#F5F2ED' }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Box>
+      </AppBar>
+
+      {/* Mobile Drawer — Full Screen Overlay */}
+      <Drawer
+        anchor="top"
+        open={open}
+        onClose={() => setOpen(false)}
+        PaperProps={{
+          sx: {
+            width: '100%',
+            height: '100dvh',
+            background: '#0D0D0D',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: 3,
+          },
+        }}
+      >
+        <IconButton
+          onClick={() => setOpen(false)}
+          sx={{ position: 'absolute', top: 24, right: 24, color: '#F5F2ED' }}
+        >
+          <CloseIcon />
+        </IconButton>
+
+        {/* Site Switcher */}
+        <Box sx={{ display: 'flex', gap: 4, mb: 4 }}>
+          {['experience', 'education'].map((site) => (
+            <Typography
+              key={site}
+              onClick={() => switchSite(site)}
+              sx={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '1.5rem',
+                color: activeSite === site ? '#C4A35A' : 'rgba(245, 242, 237, 0.3)',
+                cursor: 'pointer',
+              }}
             >
-              <MenuIcon />
-            </IconButton>
-            <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-              <Box
-                sx={{
-                  minWidth: '60dvw',
-                  p: 2,
-                  backgroundColor: 'background.paper',
-                  flexGrow: 1,
-                }}
-              >
-                {/* Drawer Header */}
-                <Box
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    mb: 2,
-                  }}
-                >
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <img
-                      src="/images/finuo_logo.svg"
-                      style={{ width: '40px', height: 'auto' }}
-                      alt="Finuo logo"
-                    />
-                    <Typography variant="subtitle2" fontWeight={600}>
-                      Finuo{' '}
-                      {activeSite === 'experience' ? t('nav.experience') : t('nav.education')}
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                    <ToggleColorMode
-                      mode={mode}
-                      toggleColorMode={toggleColorMode}
-                    />
-                    <Button
-                      variant="text"
-                      size="small"
-                      onClick={toggleLanguage}
-                      sx={{
-                        minWidth: '32px',
-                        height: '32px',
-                        p: '4px',
-                        fontSize: '0.75rem',
-                        fontWeight: 600,
-                      }}
-                      startIcon={<LanguageIcon fontSize="small" />}
-                    >
-                      {i18n.language === 'zh' ? 'EN' : '中文'}
-                    </Button>
-                    <IconButton onClick={toggleDrawer(false)} size="small">
-                      <CloseIcon />
-                    </IconButton>
-                  </Box>
-                </Box>
+              {t(`nav.${site}`)}
+            </Typography>
+          ))}
+        </Box>
 
-                {/* Site Switcher */}
-                <Tabs
-                  value={activeSite}
-                  onChange={handleSiteChange}
-                  variant="fullWidth"
-                  sx={{
-                    mb: 2,
-                    minHeight: 40,
-                    '& .MuiTab-root': {
-                      minHeight: 40,
-                      textTransform: 'none',
-                      fontWeight: 600,
-                    },
-                  }}
-                >
-                  <Tab label={t('nav.experience')} value="experience" />
-                  <Tab label={t('nav.education')} value="education" />
-                </Tabs>
+        {/* Nav Links */}
+        {navItems.map((item) => (
+          <Typography
+            key={item.sectionId}
+            onClick={() => scrollToSection(item.sectionId)}
+            sx={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: '2rem',
+              color: 'rgba(245, 242, 237, 0.6)',
+              cursor: 'pointer',
+              transition: 'color 0.3s ease',
+              '&:hover': { color: '#F5F2ED' },
+            }}
+          >
+            {item.label}
+          </Typography>
+        ))}
 
-                <Divider sx={{ mb: 1 }} />
-
-                {/* Nav Items */}
-                {navItems.map((item) => (
-                  <Button
-                    key={item.sectionId}
-                    fullWidth
-                    onClick={() => scrollToSection(item.sectionId)}
-                    sx={{
-                      justifyContent: 'flex-start',
-                      py: 1,
-                      px: 2,
-                      color: 'text.primary',
-                      fontWeight: activeSection === item.sectionId ? 600 : 400,
-                      textTransform: 'none',
-                    }}
-                  >
-                    {item.label}
-                  </Button>
-                ))}
-
-                <Divider sx={{ my: 1 }} />
-                <Button
-                  color="primary"
-                  variant="contained"
-                  fullWidth
-                  href="#"
-                  sx={{ mb: 1 }}
-                >
-                  {t('nav.signUp')}
-                </Button>
-                <Button color="primary" variant="outlined" fullWidth href="#">
-                  {t('nav.signIn')}
-                </Button>
-              </Box>
-            </Drawer>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+        <Button
+          onClick={toggleLanguage}
+          sx={{ mt: 4, color: 'rgba(245, 242, 237, 0.4)', fontSize: '0.85rem', letterSpacing: '0.1em' }}
+        >
+          {i18n.language === 'zh' ? 'English' : '中文'}
+        </Button>
+      </Drawer>
+    </>
   );
 }
 
 AppAppBar.propTypes = {
-  mode: PropTypes.oneOf(['dark', 'light']).isRequired,
-  toggleColorMode: PropTypes.func.isRequired,
   activeSite: PropTypes.oneOf(['experience', 'education']).isRequired,
   onSiteChange: PropTypes.func.isRequired,
   navItems: PropTypes.arrayOf(
