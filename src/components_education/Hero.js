@@ -10,8 +10,8 @@ export default function Hero() {
       sx={{
         position: 'relative',
         width: '100%',
-        height: '100vh',
-        minHeight: 600,
+        height: '80vh',
+        minHeight: 500,
         overflow: 'hidden',
       }}
     >
