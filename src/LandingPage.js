@@ -208,7 +208,7 @@ export default function LandingPage() {
       <Statement text={t('hero.experienceTagline')} />
 
       {/* 3. Destination Grid — Magazine Layout */}
-      <Box sx={{ py: { xs: 4, md: 8 }, px: { xs: 2, md: 4 } }}>
+      <Box id="packages" sx={{ py: { xs: 4, md: 8 }, px: { xs: 2, md: 4 } }}>
         <Container maxWidth="xl" disableGutters>
           <Box component={motion.div} {...fadeIn} sx={{ px: { xs: 1, md: 2 }, mb: 4 }}>
             <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C4A35A', mb: 2 }}>
@@ -230,6 +230,7 @@ export default function LandingPage() {
       </Box>
 
       {/* 4. Editorial: Featured Experience */}
+      <Box id="highlights" />
       <EditorialSection
         image="/images/destinations/husky.jpg"
         title="Husky Sled Adventures"
@@ -257,6 +258,7 @@ export default function LandingPage() {
       />
 
       {/* 8. Big Testimonial */}
+      <Box id="testimonials" />
       <BigTestimonial
         quote={firstTestimonial.testimonial || "The Northern Lights trip was beyond magical. The photography expertise of the guides helped us capture moments we'll treasure forever."}
         name={firstTestimonial.name || "Elsa Nygard"}

@@ -178,7 +178,7 @@ export default function LandingPage1() {
       <Statement text={t('hero.educationTagline')} />
 
       {/* 3. Services Grid — Magazine Layout */}
-      <Box sx={{ py: { xs: 4, md: 8 }, px: { xs: 2, md: 4 } }}>
+      <Box id="services" sx={{ py: { xs: 4, md: 8 }, px: { xs: 2, md: 4 } }}>
         <Container maxWidth="xl" disableGutters>
           <Box component={motion.div} {...fadeIn} sx={{ px: { xs: 1, md: 2 }, mb: 4 }}>
             <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C4A35A', mb: 2 }}>
@@ -226,6 +226,7 @@ export default function LandingPage1() {
       />
 
       {/* 8. Big Testimonial */}
+      <Box id="testimonials" />
       <BigTestimonial
         quote={firstTestimonial.testimonial || "The guidance I received was exceptional. From university selection to visa preparation, every step was handled with care and expertise."}
         name={firstTestimonial.name || "Emma Thompson"}
