@@ -237,13 +237,12 @@ function NordicTabs({ active, onChange, labels }) {
                 cursor: 'pointer',
                 borderLeft: i === 0 ? 'none' : '1px solid rgba(245,242,237,0.08)',
                 borderBottom: { xs: i < labels.length - 1 ? '1px solid rgba(245,242,237,0.08)' : 'none', md: 'none' },
-                bgcolor: active === it.key ? 'rgba(196,163,90,0.06)' : 'transparent',
                 transition: 'all 0.3s ease',
                 position: 'relative',
-                '&:hover': { bgcolor: 'rgba(196,163,90,0.04)' },
+                '&:hover .nt-label': { color: CREAM },
                 '&::after': active === it.key ? {
                   content: '""',
-                  position: 'absolute', bottom: -1, left: 0, right: 0, height: 2, bgcolor: GOLD,
+                  position: 'absolute', bottom: '-1px', left: 0, right: 0, height: '2px', bgcolor: GOLD,
                 } : {},
               }}
             >
@@ -254,12 +253,16 @@ function NordicTabs({ active, onChange, labels }) {
               }}>
                 {it.num}
               </Typography>
-              <Typography sx={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: { xs: '1.3rem', md: '1.7rem' },
-                color: active === it.key ? CREAM : 'rgba(245,242,237,0.6)',
-                lineHeight: 1.1,
-              }}>
+              <Typography
+                className="nt-label"
+                sx={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: { xs: '1.3rem', md: '1.7rem' },
+                  color: active === it.key ? CREAM : 'rgba(245,242,237,0.6)',
+                  lineHeight: 1.1,
+                  transition: 'color 0.3s ease',
+                }}
+              >
                 {it.label}
               </Typography>
             </Box>

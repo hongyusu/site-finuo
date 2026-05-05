@@ -111,7 +111,7 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
             </Box>
 
             {/* Divider */}
-            <Box sx={{ width: '1px', height: 16, bgcolor: 'rgba(245, 242, 237, 0.12)', flexShrink: 0 }} />
+            <Box sx={{ width: '1px', height: '16px', bgcolor: 'rgba(245, 242, 237, 0.12)', flexShrink: 0 }} />
 
             {/* Section Nav */}
             {navItems.map((item) => (
@@ -133,10 +133,10 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
                   '&::after': {
                     content: '""',
                     position: 'absolute',
-                    bottom: -4,
+                    bottom: '-4px',
                     left: 0,
                     width: activeSection === item.sectionId ? '100%' : '0%',
-                    height: 1,
+                    height: '1px',
                     bgcolor: '#C4A35A',
                     transition: 'width 0.3s ease',
                   },
