@@ -32,6 +32,10 @@ const EXT = {
   shanghai: 'https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1600&auto=format&fit=crop&q=80',  // Shanghai skyline ✓
   norwayCoast: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop&q=80', // Mountains/sunset (Norway-fitting) ✓
   silkRoad: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&auto=format&fit=crop&q=80',  // Mosque/Islamic arch — fits Silk Road ✓
+  // East-Asian aesthetic stand-ins (verified Asian content even if not specifically the city)
+  pagoda: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&auto=format&fit=crop&q=80',      // Kyoto pagoda + city sunset → Hangzhou
+  karstSunset: 'https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=1600&auto=format&fit=crop&q=80', // Mountain ridges sunset → Guilin
+  coastalVillage: 'https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=1600&auto=format&fit=crop&q=80', // Mediterranean village → Xiamen/Gulangyu
 };
 
 // Hero panels for each country: image used at the top of each section
@@ -227,9 +231,20 @@ export default function LandingPage() {
   const norwayImages = [EXT.norwayCoast, '/images/destinations/fjord.jpg', '/images/destinations/aurora.jpg', '/images/destinations/midnight.jpg', '/images/destinations/lake.jpg', '/images/destinations/forest.jpg'];
   const icelandImages = ['/images/destinations/iceland.jpg', '/images/destinations/forest.jpg', '/images/destinations/lake.jpg'];
   const denmarkImages = ['/images/destinations/lake.jpg', '/images/destinations/iceland.jpg', '/images/destinations/cabin.jpg'];
-  // China cities: only Beijing & Shanghai have verified-correct external photos.
-  // Others use null → typography-only card (better than wrong-subject photo).
-  const chinaImages = [EXT.beijing, EXT.shanghai, null, null, null, null, null, null];
+  // China cities: photos for cities with verified-correct or visually-fitting
+  // East-Asian images. Cities without a good photo get a typography-only card
+  // (Xi'an, Chengdu, Lijiang) — better than a wrong-subject photo.
+  // Order matches zh.json: Beijing, Shanghai, Xi'an, Chengdu, Hangzhou, Guilin, Lijiang, Xiamen
+  const chinaImages = [
+    EXT.beijing,         // Beijing — Forbidden City ✓
+    EXT.shanghai,        // Shanghai — skyline ✓
+    null,                // Xi'an — typography card
+    null,                // Chengdu — typography card
+    EXT.pagoda,          // Hangzhou — Kyoto pagoda+city (Asian temple feel)
+    EXT.karstSunset,     // Guilin — mountain ridges sunset (karst-like)
+    null,                // Lijiang — typography card
+    EXT.coastalVillage,  // Xiamen — Mediterranean village (Gulangyu-like)
+  ];
   // Itineraries: West gets verified mosque (Silk Road); others typography-only.
   const itineraryImages = [null, null, EXT.silkRoad, EXT.silkRoad];
 
