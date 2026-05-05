@@ -61,15 +61,46 @@ export function AboutSection() {
   );
 }
 
+const FORMSPREE_URL = 'https://formspree.io/f/xkoybgvn';
+
 export function ContactSection() {
   const { t } = useTranslation();
-  const [submitted, setSubmitted] = React.useState(false);
+  const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
+  const [errorMsg, setErrorMsg] = React.useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    if (status === 'sending') return;
+    const form = e.target;
+    const data = new FormData(form);
+    setStatus('sending');
+    setErrorMsg('');
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setStatus('sent');
+        form.reset();
+        setTimeout(() => setStatus('idle'), 6000);
+      } else {
+        const body = await res.json().catch(() => ({}));
+        const msg = body.errors?.[0]?.message || `Error ${res.status}`;
+        setErrorMsg(msg);
+        setStatus('error');
+      }
+    } catch (err) {
+      setErrorMsg('Network error — please try again or email booking@finuo.fi');
+      setStatus('error');
+    }
   };
+
+  const buttonLabel =
+    status === 'sending' ? '...' :
+    status === 'sent'    ? '✓ Sent' :
+    t('contact.formSubmit');
 
   return (
     <Box id="contact" sx={{ py: { xs: 10, md: 16 }, px: { xs: 2, md: 4 }, bgcolor: '#0A0A0A' }}>
@@ -94,6 +125,7 @@ export function ContactSection() {
             >
               <TextField
                 required
+                name="name"
                 placeholder={t('contact.formName')}
                 variant="standard"
                 InputProps={{ disableUnderline: false, sx: inputSx }}
@@ -102,6 +134,7 @@ export function ContactSection() {
               <TextField
                 required
                 type="email"
+                name="email"
                 placeholder={t('contact.formEmail')}
                 variant="standard"
                 InputProps={{ sx: inputSx }}
@@ -111,19 +144,22 @@ export function ContactSection() {
                 required
                 multiline
                 minRows={4}
+                name="message"
                 placeholder={t('contact.formMessage')}
                 variant="standard"
                 InputProps={{ sx: inputSx }}
                 sx={fieldSx}
               />
+              {/* Honeypot for spam (Formspree convention) */}
+              <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
               <Button
                 type="submit"
-                disabled={submitted}
+                disabled={status === 'sending' || status === 'sent'}
                 sx={{
                   alignSelf: 'flex-start', mt: 2, px: 4, py: 1.5,
                   borderRadius: 0,
                   border: `1px solid ${GOLD}`,
-                  color: submitted ? GOLD : CREAM,
+                  color: status === 'sent' ? GOLD : CREAM,
                   bgcolor: 'transparent',
                   fontSize: '0.8rem',
                   letterSpacing: '0.15em',
@@ -132,8 +168,18 @@ export function ContactSection() {
                   '&.Mui-disabled': { color: GOLD, borderColor: GOLD },
                 }}
               >
-                {submitted ? '✓' : t('contact.formSubmit')}
+                {buttonLabel}
               </Button>
+              {status === 'error' && (
+                <Typography sx={{ color: '#E57373', fontSize: '0.85rem', mt: 1 }}>
+                  {errorMsg}
+                </Typography>
+              )}
+              {status === 'sent' && (
+                <Typography sx={{ color: GOLD, fontSize: '0.85rem', mt: 1 }}>
+                  Thank you — we'll be in touch shortly.
+                </Typography>
+              )}
             </Box>
           </Grid>
         </Grid>
