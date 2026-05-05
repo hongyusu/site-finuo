@@ -87,7 +87,7 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
           <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 4 }}>
             {/* Site Switcher */}
             <Box sx={{ display: 'flex', gap: 3 }}>
-              {['experience', 'education'].map((site) => (
+              {['experience', 'education', 'mice'].map((site) => (
                 <Typography
                   key={site}
                   onClick={() => switchSite(site)}
@@ -197,8 +197,8 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
         </IconButton>
 
         {/* Site Switcher */}
-        <Box sx={{ display: 'flex', gap: 4, mb: 4 }}>
-          {['experience', 'education'].map((site) => (
+        <Box sx={{ display: 'flex', gap: 4, mb: 4, flexWrap: 'wrap', justifyContent: 'center' }}>
+          {['experience', 'education', 'mice'].map((site) => (
             <Typography
               key={site}
               onClick={() => switchSite(site)}
@@ -244,7 +244,7 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
 }
 
 AppAppBar.propTypes = {
-  activeSite: PropTypes.oneOf(['experience', 'education']).isRequired,
+  activeSite: PropTypes.oneOf(['experience', 'education', 'mice']).isRequired,
   onSiteChange: PropTypes.func.isRequired,
   navItems: PropTypes.arrayOf(
     PropTypes.shape({

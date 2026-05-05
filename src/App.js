@@ -6,6 +6,7 @@ import './i18n';
 import AppAppBar from './components/AppAppBar';
 import LandingPage from './LandingPage';
 import LandingPage1 from './LandingPage1';
+import LandingPageMice from './LandingPageMice';
 import getLPTheme from './getLPTheme';
 
 function App() {
@@ -15,22 +16,41 @@ function App() {
   const theme = createTheme(getLPTheme('dark'));
 
   const experienceNavItems = [
-    { label: t('nav.packages'), sectionId: 'packages' },
-    { label: t('nav.highlights'), sectionId: 'highlights' },
+    { label: t('nav.nordic'), sectionId: 'nordic' },
+    { label: t('nav.china'), sectionId: 'china' },
     { label: t('nav.testimonials'), sectionId: 'testimonials' },
-    { label: t('nav.pricing'), sectionId: 'pricing' },
     { label: t('nav.faq'), sectionId: 'faq' },
+    { label: t('nav.contact'), sectionId: 'contact' },
   ];
 
   const educationNavItems = [
-    { label: t('nav.services'), sectionId: 'services' },
-    { label: t('nav.testimonials'), sectionId: 'testimonials' },
-    { label: t('nav.pricing'), sectionId: 'pricing' },
+    { label: t('nav.schools'), sectionId: 'schools' },
+    { label: t('nav.training'), sectionId: 'training' },
+    { label: t('nav.studyTours'), sectionId: 'studyTours' },
     { label: t('nav.faq'), sectionId: 'faq' },
+    { label: t('nav.contact'), sectionId: 'contact' },
   ];
 
-  const navItems =
-    activeSite === 'experience' ? experienceNavItems : educationNavItems;
+  const miceNavItems = [
+    { label: t('nav.miceList'), sectionId: 'miceList' },
+    { label: t('nav.miceServices'), sectionId: 'miceServices' },
+    { label: t('nav.testimonials'), sectionId: 'testimonials' },
+    { label: t('nav.contact'), sectionId: 'contact' },
+  ];
+
+  const navItemsBySite = {
+    experience: experienceNavItems,
+    education: educationNavItems,
+    mice: miceNavItems,
+  };
+  const navItems = navItemsBySite[activeSite] || experienceNavItems;
+
+  const renderSite = () => {
+    if (activeSite === 'experience') return <LandingPage />;
+    if (activeSite === 'education') return <LandingPage1 />;
+    if (activeSite === 'mice') return <LandingPageMice />;
+    return <LandingPage />;
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -40,7 +60,7 @@ function App() {
         onSiteChange={setActiveSite}
         navItems={navItems}
       />
-      {activeSite === 'experience' ? <LandingPage /> : <LandingPage1 />}
+      {renderSite()}
     </ThemeProvider>
   );
 }
