@@ -78,7 +78,7 @@ export function ContactSection() {
         <Grid container spacing={6} sx={{ mt: 2 }}>
           <Grid item xs={12} md={5}>
             <Box component={motion.div} {...fadeIn} sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              <ContactRow label={t('contact.email')} value="hello@finuo.fi" />
+              <ContactRow label={t('contact.email')} value="booking@finuo.fi" />
               <ContactRow label={t('contact.phone')} value="+358 40 000 0000" />
               <ContactRow label={t('contact.wechat')} value="finuo_helsinki" />
               <ContactRow label={t('contact.whatsapp')} value="+358 40 000 0000" />
