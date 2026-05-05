@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Hero from './components/Hero';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -214,8 +214,65 @@ function BigTestimonial({ quote, name, role }) {
   );
 }
 
+function NordicTabs({ active, onChange, labels }) {
+  return (
+    <Box sx={{ mb: 4, px: { xs: 2, md: 4 } }}>
+      <Container maxWidth="xl" disableGutters>
+        <Box sx={{
+          display: 'flex',
+          gap: { xs: 0, md: 1 },
+          borderTop: '1px solid rgba(245,242,237,0.08)',
+          borderBottom: '1px solid rgba(245,242,237,0.08)',
+          flexWrap: { xs: 'wrap', md: 'nowrap' },
+        }}>
+          {labels.map((it, i) => (
+            <Box
+              key={it.key}
+              onClick={() => onChange(it.key)}
+              sx={{
+                flex: 1,
+                minWidth: { xs: '50%', md: 'auto' },
+                py: { xs: 2, md: 3 },
+                px: 2,
+                cursor: 'pointer',
+                borderLeft: i === 0 ? 'none' : '1px solid rgba(245,242,237,0.08)',
+                borderBottom: { xs: i < labels.length - 1 ? '1px solid rgba(245,242,237,0.08)' : 'none', md: 'none' },
+                bgcolor: active === it.key ? 'rgba(196,163,90,0.06)' : 'transparent',
+                transition: 'all 0.3s ease',
+                position: 'relative',
+                '&:hover': { bgcolor: 'rgba(196,163,90,0.04)' },
+                '&::after': active === it.key ? {
+                  content: '""',
+                  position: 'absolute', bottom: -1, left: 0, right: 0, height: 2, bgcolor: GOLD,
+                } : {},
+              }}
+            >
+              <Typography sx={{
+                fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase',
+                color: active === it.key ? GOLD : 'rgba(245,242,237,0.4)',
+                mb: 0.5,
+              }}>
+                {it.num}
+              </Typography>
+              <Typography sx={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: { xs: '1.3rem', md: '1.7rem' },
+                color: active === it.key ? CREAM : 'rgba(245,242,237,0.6)',
+                lineHeight: 1.1,
+              }}>
+                {it.label}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+      </Container>
+    </Box>
+  );
+}
+
 export default function LandingPage() {
   const { t } = useTranslation();
+  const [activeCountry, setActiveCountry] = React.useState('finland');
 
   const finlandExperiences = t('tourism.finland.experiences', { returnObjects: true }) || [];
   const finlandHotels = t('tourism.finland.hotelsItems', { returnObjects: true }) || [];
@@ -271,93 +328,124 @@ export default function LandingPage() {
       </Box>
       <FullBleedImage image={NORDIC_HEADER} alt="Nordic landscape" height={{ xs: 250, md: 380 }} />
 
-      {/* 4. FINLAND DEEP DIVE */}
-      <CountrySection
-        id="finland"
-        eyebrow="01 — Finland"
-        title={t('tourism.finland.title')}
-        intro={t('tourism.finland.intro')}
-        image={FINLAND_HEADER}
-      >
-        {/* Hotels block */}
-        <Box sx={{ mb: 8 }}>
-          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
-            {t('tourism.finland.hotels')}
-          </Typography>
-          <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 700 }}>
-            {t('tourism.finland.hotelsDesc')}
-          </Typography>
-          <FinlandHotels items={finlandHotels} ext={EXT} />
-        </Box>
-        {/* Activities block */}
-        <Box sx={{ mb: 6 }}>
-          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
-            {t('tourism.finland.activities')}
-          </Typography>
-          <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4 }}>
-            {t('tourism.finland.activitiesDesc')}
-          </Typography>
-          <FinlandActivities items={finlandExperiences} />
-        </Box>
-      </CountrySection>
+      {/* 4. NORDIC COUNTRY TABS — click to switch */}
+      <NordicTabs
+        active={activeCountry}
+        onChange={(c) => {
+          setActiveCountry(c);
+          setTimeout(() => {
+            const el = document.getElementById(c);
+            if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+          }, 50);
+        }}
+        labels={[
+          { key: 'finland', num: '01', label: t('tourism.finland.title') },
+          { key: 'norway',  num: '02', label: t('tourism.norway.title') },
+          { key: 'iceland', num: '03', label: t('tourism.iceland.title') },
+          { key: 'denmark', num: '04', label: t('tourism.denmark.title') },
+        ]}
+      />
 
-      {/* 5. NORWAY */}
-      <CountrySection
-        id="norway"
-        eyebrow="02 — Norway"
-        title={t('tourism.norway.title')}
-        intro={t('tourism.norway.intro')}
-        image={NORWAY_HEADER}
-      >
-        <Box sx={{ mb: 6 }}>
-          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-            {t('tourism.norway.routes')}
-          </Typography>
-          <CountryRoutesGrid items={norwayRoutes} images={norwayImages} height={220} />
-        </Box>
-        <Box>
-          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-            {t('tourism.norway.activities')}
-          </Typography>
-          <ListBlock items={norwayActs} columns={3} />
-        </Box>
-      </CountrySection>
+      {/* 4b. ACTIVE COUNTRY CONTENT */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeCountry}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.4 }}
+        >
+          {activeCountry === 'finland' && (
+            <CountrySection
+              id="finland"
+              eyebrow="01 — Finland"
+              title={t('tourism.finland.title')}
+              intro={t('tourism.finland.intro')}
+              image={FINLAND_HEADER}
+            >
+              <Box sx={{ mb: 8 }}>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+                  {t('tourism.finland.hotels')}
+                </Typography>
+                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 700 }}>
+                  {t('tourism.finland.hotelsDesc')}
+                </Typography>
+                <FinlandHotels items={finlandHotels} />
+              </Box>
+              <Box sx={{ mb: 6 }}>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+                  {t('tourism.finland.activities')}
+                </Typography>
+                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4 }}>
+                  {t('tourism.finland.activitiesDesc')}
+                </Typography>
+                <FinlandActivities items={finlandExperiences} />
+              </Box>
+            </CountrySection>
+          )}
 
-      {/* 6. ICELAND */}
-      <CountrySection
-        id="iceland"
-        eyebrow="03 — Iceland"
-        title={t('tourism.iceland.title')}
-        intro={t('tourism.iceland.intro')}
-        image={ICELAND_HEADER}
-      >
-        <Box sx={{ mb: 6 }}>
-          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-            {t('tourism.iceland.routes')}
-          </Typography>
-          <CountryRoutesGrid items={icelandRoutes} images={icelandImages} />
-        </Box>
-        <Box>
-          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-            {t('tourism.iceland.activities')}
-          </Typography>
-          <ListBlock items={icelandActs} columns={3} />
-        </Box>
-      </CountrySection>
+          {activeCountry === 'norway' && (
+            <CountrySection
+              id="norway"
+              eyebrow="02 — Norway"
+              title={t('tourism.norway.title')}
+              intro={t('tourism.norway.intro')}
+              image={NORWAY_HEADER}
+            >
+              <Box sx={{ mb: 6 }}>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
+                  {t('tourism.norway.routes')}
+                </Typography>
+                <CountryRoutesGrid items={norwayRoutes} images={norwayImages} height={220} />
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
+                  {t('tourism.norway.activities')}
+                </Typography>
+                <ListBlock items={norwayActs} columns={3} />
+              </Box>
+            </CountrySection>
+          )}
 
-      {/* 7. DENMARK / FAROE / GREENLAND */}
-      <CountrySection
-        id="denmark"
-        eyebrow="04 — Denmark"
-        title={t('tourism.denmark.title')}
-        intro={t('tourism.denmark.intro')}
-        image={DENMARK_HEADER}
-      >
-        <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-          {t('tourism.denmark.routes')}
-        </Typography>
-        <CountryRoutesGrid items={denmarkRoutes} images={denmarkImages} />
-      </CountrySection>
+          {activeCountry === 'iceland' && (
+            <CountrySection
+              id="iceland"
+              eyebrow="03 — Iceland"
+              title={t('tourism.iceland.title')}
+              intro={t('tourism.iceland.intro')}
+              image={ICELAND_HEADER}
+            >
+              <Box sx={{ mb: 6 }}>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
+                  {t('tourism.iceland.routes')}
+                </Typography>
+                <CountryRoutesGrid items={icelandRoutes} images={icelandImages} />
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
+                  {t('tourism.iceland.activities')}
+                </Typography>
+                <ListBlock items={icelandActs} columns={3} />
+              </Box>
+            </CountrySection>
+          )}
+
+          {activeCountry === 'denmark' && (
+            <CountrySection
+              id="denmark"
+              eyebrow="04 — Denmark"
+              title={t('tourism.denmark.title')}
+              intro={t('tourism.denmark.intro')}
+              image={DENMARK_HEADER}
+            >
+              <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
+                {t('tourism.denmark.routes')}
+              </Typography>
+              <CountryRoutesGrid items={denmarkRoutes} images={denmarkImages} />
+            </CountrySection>
+          )}
+        </motion.div>
+      </AnimatePresence>
 
       {/* 8. CHINA SECTION HEADER */}
       <Box id="china" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 }, bgcolor: '#0A0A0A' }}>
