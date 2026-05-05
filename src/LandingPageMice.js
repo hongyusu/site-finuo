@@ -20,7 +20,7 @@ const CREAM = '#F5F2ED';
 const DIM = 'rgba(245,242,237,0.5)';
 
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1800&auto=format&fit=crop&q=80';
-const HELSINKI_IMAGE = 'https://images.unsplash.com/photo-1564495528050-bca4abd0d9ee?w=1600&auto=format&fit=crop&q=80';
+const HELSINKI_IMAGE = 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=1600&auto=format&fit=crop&q=80';
 
 function MiceHero() {
   const { t } = useTranslation();

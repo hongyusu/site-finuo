@@ -29,8 +29,8 @@ const DIM = 'rgba(245,242,237,0.5)';
 const EXT = {
   lofoten: 'https://images.unsplash.com/photo-1531168556467-80aace0d0144?w=1600&auto=format&fit=crop&q=80',
   norwayCoast: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop&q=80',
-  faroe: 'https://images.unsplash.com/photo-1554435517-50bbd02fc9bf?w=1600&auto=format&fit=crop&q=80',
-  greenland: 'https://images.unsplash.com/photo-1601057275065-2bbd80b3afad?w=1600&auto=format&fit=crop&q=80',
+  faroe: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1600&auto=format&fit=crop&q=80',
+  greenland: 'https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=1600&auto=format&fit=crop&q=80',
   beijing: 'https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1600&auto=format&fit=crop&q=80',
   shanghai: 'https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1600&auto=format&fit=crop&q=80',
   hk: 'https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1600&auto=format&fit=crop&q=80',
@@ -38,8 +38,16 @@ const EXT = {
   guilin: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&auto=format&fit=crop&q=80',
   chengdu: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1600&auto=format&fit=crop&q=80',
   hangzhou: 'https://images.unsplash.com/photo-1599394022918-6c2776530abb?w=1600&auto=format&fit=crop&q=80',
-  lijiang: 'https://images.unsplash.com/photo-1583062091717-a6ec0f0a3d2a?w=1600&auto=format&fit=crop&q=80',
+  lijiang: 'https://images.unsplash.com/photo-1546412414-e1885259563a?w=1600&auto=format&fit=crop&q=80',
   xiamen: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1600&auto=format&fit=crop&q=80',
+  // Finland hotels
+  glassIgloo: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1600&auto=format&fit=crop&q=80',
+  helsinkiHotel: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=1600&auto=format&fit=crop&q=80',
+  lakeCabin: 'https://images.unsplash.com/photo-1517825738774-7de9363ef735?w=1600&auto=format&fit=crop&q=80',
+  // China itineraries
+  itineraryClassic: 'https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=1600&auto=format&fit=crop&q=80',
+  itinerarySouth: 'https://images.unsplash.com/photo-1564859228273-274232fdb516?w=1600&auto=format&fit=crop&q=80',
+  itineraryWest: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&auto=format&fit=crop&q=80',
 };
 
 // Hero panels for each country: image used at the top of each section
@@ -68,6 +76,45 @@ function FinlandActivities({ items }) {
             title={it.title}
             subtitle={it.desc}
             height={300}
+          />
+        </Grid>
+      ))}
+    </Grid>
+  );
+}
+
+function FinlandHotels({ items, ext }) {
+  const images = [ext.glassIgloo, ext.helsinkiHotel, '/images/destinations/cabin.jpg', '/images/destinations/university.jpg', ext.lakeCabin, '/images/destinations/midnight.jpg'];
+  return (
+    <Grid container spacing={2}>
+      {items.map((h, i) => (
+        <Grid item xs={12} sm={6} md={4} key={i}>
+          <MediaCard
+            index={i}
+            image={images[i % images.length]}
+            title={h.name}
+            subtitle={h.desc}
+            meta={h.type}
+            height={300}
+          />
+        </Grid>
+      ))}
+    </Grid>
+  );
+}
+
+function ChinaItineraries({ items, images }) {
+  return (
+    <Grid container spacing={2}>
+      {items.map((it, i) => (
+        <Grid item xs={12} sm={6} md={3} key={i}>
+          <MediaCard
+            index={i}
+            image={images[i % images.length]}
+            title={it.name}
+            subtitle={it.desc}
+            meta={it.route}
+            height={280}
           />
         </Grid>
       ))}
@@ -175,18 +222,21 @@ export default function LandingPage() {
   const { t } = useTranslation();
 
   const finlandExperiences = t('tourism.finland.experiences', { returnObjects: true }) || [];
+  const finlandHotels = t('tourism.finland.hotelsItems', { returnObjects: true }) || [];
   const norwayRoutes = t('tourism.norway.routesItems', { returnObjects: true }) || [];
   const norwayActs = t('tourism.norway.activitiesItems', { returnObjects: true }) || [];
   const icelandRoutes = t('tourism.iceland.routesItems', { returnObjects: true }) || [];
   const icelandActs = t('tourism.iceland.activitiesItems', { returnObjects: true }) || [];
   const denmarkRoutes = t('tourism.denmark.routesItems', { returnObjects: true }) || [];
   const chinaCities = t('tourism.china.cities', { returnObjects: true }) || [];
+  const chinaItineraries = t('tourism.china.itinerariesItems', { returnObjects: true }) || [];
   const forumTags = t('tourism.china.forum.tags', { returnObjects: true }) || [];
 
   const norwayImages = [EXT.lofoten, EXT.norwayCoast, '/images/destinations/aurora.jpg', '/images/destinations/fjord.jpg', '/images/destinations/midnight.jpg', '/images/destinations/lake.jpg'];
   const icelandImages = ['/images/destinations/iceland.jpg', '/images/destinations/forest.jpg', '/images/destinations/lake.jpg'];
   const denmarkImages = [EXT.greenland, EXT.faroe, '/images/destinations/iceland.jpg'];
   const chinaImages = [EXT.beijing, EXT.shanghai, EXT.xian, EXT.chengdu, EXT.hangzhou, EXT.guilin, EXT.lijiang, EXT.xiamen];
+  const itineraryImages = [EXT.itineraryClassic, EXT.itinerarySouth, EXT.itineraryWest, EXT.xian];
 
   const testimonials = t('testimonials.experience', { returnObjects: true }) || [];
   const firstTestimonial = testimonials[0] || {};
@@ -219,6 +269,17 @@ export default function LandingPage() {
         intro={t('tourism.finland.intro')}
         image={FINLAND_HEADER}
       >
+        {/* Hotels block */}
+        <Box sx={{ mb: 8 }}>
+          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+            {t('tourism.finland.hotels')}
+          </Typography>
+          <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 700 }}>
+            {t('tourism.finland.hotelsDesc')}
+          </Typography>
+          <FinlandHotels items={finlandHotels} ext={EXT} />
+        </Box>
+        {/* Activities block */}
         <Box sx={{ mb: 6 }}>
           <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
             {t('tourism.finland.activities')}
@@ -305,6 +366,14 @@ export default function LandingPage() {
         <Container maxWidth="xl" disableGutters>
           <SectionHeader eyebrow="China · Cities" title={t('tourism.china.citiesTitle')} subtitle={t('tourism.china.intro')} />
           <ChinaCities cities={chinaCities} images={chinaImages} />
+        </Container>
+      </Box>
+
+      {/* 9b. CHINA ITINERARIES */}
+      <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
+        <Container maxWidth="xl" disableGutters>
+          <SectionHeader eyebrow="China · Routes" title={t('tourism.china.itineraries')} subtitle={t('tourism.china.itinerariesIntro')} />
+          <ChinaItineraries items={chinaItineraries} images={itineraryImages} />
         </Container>
       </Box>
 

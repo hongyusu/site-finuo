@@ -44,7 +44,15 @@
       "subtitle": "Land of Auroras, Lakes, and Forests",
       "intro": "Our home market. From Lapland's wilderness to the Lakeland forests, with hotel bookings, custom activities, and deep local experiences.",
       "hotels": "Curated Hotels",
-      "hotelsDesc": "From Lapland glass igloos to Helsinki design hotels, all price tiers covered.",
+      "hotelsDesc": "From Lapland glass igloos to Helsinki design hotels, all price tiers covered. Long-term local partnerships secure scarce peak-season inventory at preferred rates.",
+      "hotelsItems": [
+        { "name": "Kakslauttanen Arctic Resort", "type": "Glass Igloos · Saariselkä", "desc": "Watch the auroras from your bed in glass-domed igloos — among the world's top aurora hotels" },
+        { "name": "Arctic SnowHotel", "type": "Ice Hotel · Rovaniemi", "desc": "Rebuilt every winter, with ice sauna and aurora ice suites" },
+        { "name": "Hotel Kämp", "type": "Luxury Classic · Helsinki", "desc": "150-year-old landmark, steps from Senate Square" },
+        { "name": "Hotel St. George", "type": "Design Boutique · Helsinki", "desc": "New Nordic design, art collection, Michelin dining" },
+        { "name": "Punkaharju Hotel", "type": "Lakeland Resort · Savonlinna", "desc": "Century-old lakeside lodge, sauna, canoe, forest" },
+        { "name": "Levi Hotel Spa", "type": "Ski Resort · Levi", "desc": "Slope-side ski resort with spa and family facilities" }
+      ],
       "activities": "Activities",
       "activitiesDesc": "Aurora viewing, ski instruction, sailing, photography sessions — every season delivers.",
       "experiences": [
@@ -125,6 +133,13 @@
         { "name": "Xiamen", "desc": "Garden city by the sea, Gulangyu, Min culture" }
       ],
       "itineraries": "Recommended Itineraries",
+      "itinerariesIntro": "Classic routes, fully customizable in days and city pairing.",
+      "itinerariesItems": [
+        { "name": "Classic North · 8 days", "route": "Beijing → Xi'an → Shanghai", "desc": "History + culture + modernity — the canonical first-time China trip" },
+        { "name": "Southern Landscapes · 10 days", "route": "Shanghai → Hangzhou → Guilin → Yangshuo → Xiamen", "desc": "Jiangnan watertowns to karst landscapes" },
+        { "name": "Western Frontier · 12 days", "route": "Chengdu → Jiuzhaigou → Lijiang → Shangri-La", "desc": "Pandas, snow mountains, and Tibetan culture in depth" },
+        { "name": "Silk Road · 14 days", "route": "Xi'an → Lanzhou → Jiayuguan → Dunhuang → Urumqi → Kashgar", "desc": "The ancient Silk Road, ultimate cultural depth" }
+      ],
       "forum": {
         "title": "Travel Forum",
         "subtitle": "Forum — Real Travelers, Real Voices",
