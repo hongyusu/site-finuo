@@ -5,16 +5,18 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { motion } from 'framer-motion';
 
+// Use `animate` (not `whileInView`) so content is reliably visible regardless
+// of scroll position — IntersectionObserver was missing some images on initial
+// load and inside fullPage screenshots.
 export const fadeIn = {
-  initial: { opacity: 0, y: 40 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-100px' },
-  transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] },
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
 };
 
 export const stagger = (i) => ({
   ...fadeIn,
-  transition: { ...fadeIn.transition, delay: i * 0.1 },
+  transition: { ...fadeIn.transition, delay: Math.min(i, 8) * 0.05 },
 });
 
 const GOLD = '#C4A35A';
@@ -53,8 +55,51 @@ export function Statement({ text, light = false }) {
   );
 }
 
-// Card grid item for routes/cities/activities — image with text overlay
+// Card grid item for routes/cities/activities — image with text overlay.
+// If image is falsy, renders a typography-only card with no image.
 export function MediaCard({ image, title, subtitle, meta, height = 300, index = 0 }) {
+  // Fallback handler: if image fails to load, swap to a known-good local image
+  const handleError = (e) => {
+    if (!e.target.dataset.fallback) {
+      e.target.dataset.fallback = '1';
+      e.target.src = '/images/destinations/cabin.jpg';
+    }
+  };
+
+  if (!image) {
+    return (
+      <Box
+        component={motion.div}
+        {...stagger(index)}
+        sx={{
+          position: 'relative',
+          height,
+          cursor: 'pointer',
+          background: 'linear-gradient(135deg, rgba(196,163,90,0.08) 0%, rgba(13,13,13,1) 60%)',
+          border: '1px solid rgba(245,242,237,0.08)',
+          transition: 'all 0.4s ease',
+          display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+          p: { xs: 2.5, md: 3 },
+          '&:hover': { borderColor: GOLD, transform: 'translateY(-2px)' },
+        }}
+      >
+        {meta && (
+          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+            {meta}
+          </Typography>
+        )}
+        <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.6rem', md: '2rem' }, color: CREAM, mb: subtitle ? 0.75 : 0, lineHeight: 1.1 }}>
+          {title}
+        </Typography>
+        {subtitle && (
+          <Typography sx={{ fontSize: '0.82rem', color: DIM, lineHeight: 1.5 }}>
+            {subtitle}
+          </Typography>
+        )}
+      </Box>
+    );
+  }
+
   return (
     <Box
       component={motion.div}
@@ -72,6 +117,7 @@ export function MediaCard({ image, title, subtitle, meta, height = 300, index = 
         component="img"
         src={image}
         alt={title}
+        onError={handleError}
         sx={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1)' }}
       />
       <Box

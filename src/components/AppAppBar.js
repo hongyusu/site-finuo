@@ -84,9 +84,9 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
           </Box>
 
           {/* Desktop Nav */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 4 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: { md: 2.5, lg: 4 } }}>
             {/* Site Switcher */}
-            <Box sx={{ display: 'flex', gap: 3 }}>
+            <Box sx={{ display: 'flex', gap: { md: 2, lg: 3 } }}>
               {['experience', 'education', 'mice'].map((site) => (
                 <Typography
                   key={site}
@@ -100,6 +100,8 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
                     color: activeSite === site ? '#C4A35A' : 'rgba(245, 242, 237, 0.4)',
                     cursor: 'pointer',
                     transition: 'color 0.3s ease',
+                    whiteSpace: 'nowrap',
+                    flexShrink: 0,
                     '&:hover': { color: '#F5F2ED' },
                   }}
                 >
@@ -109,7 +111,7 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
             </Box>
 
             {/* Divider */}
-            <Box sx={{ width: 1, height: 16, bgcolor: 'rgba(245, 242, 237, 0.12)' }} />
+            <Box sx={{ width: '1px', height: 16, bgcolor: 'rgba(245, 242, 237, 0.12)', flexShrink: 0 }} />
 
             {/* Section Nav */}
             {navItems.map((item) => (
@@ -126,6 +128,8 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
                   cursor: 'pointer',
                   transition: 'color 0.3s ease',
                   position: 'relative',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
                   '&::after': {
                     content: '""',
                     position: 'absolute',
@@ -154,6 +158,8 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
                 color: 'rgba(245, 242, 237, 0.4)',
                 cursor: 'pointer',
                 transition: 'color 0.3s ease',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
                 '&:hover': { color: '#F5F2ED' },
               }}
             >

@@ -25,29 +25,13 @@ const CREAM = '#F5F2ED';
 const DIM = 'rgba(245,242,237,0.5)';
 
 // External Unsplash photos for sections we don't have local images for.
-// Stable CDN URLs — replace with our own when available.
+// Subjects verified against the actual photo content.
 const EXT = {
-  lofoten: 'https://images.unsplash.com/photo-1531168556467-80aace0d0144?w=1600&auto=format&fit=crop&q=80',
-  norwayCoast: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop&q=80',
-  faroe: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1600&auto=format&fit=crop&q=80',
-  greenland: 'https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=1600&auto=format&fit=crop&q=80',
-  beijing: 'https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1600&auto=format&fit=crop&q=80',
-  shanghai: 'https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1600&auto=format&fit=crop&q=80',
-  hk: 'https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1600&auto=format&fit=crop&q=80',
-  xian: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1600&auto=format&fit=crop&q=80',
-  guilin: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&auto=format&fit=crop&q=80',
-  chengdu: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1600&auto=format&fit=crop&q=80',
-  hangzhou: 'https://images.unsplash.com/photo-1599394022918-6c2776530abb?w=1600&auto=format&fit=crop&q=80',
-  lijiang: 'https://images.unsplash.com/photo-1546412414-e1885259563a?w=1600&auto=format&fit=crop&q=80',
-  xiamen: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1600&auto=format&fit=crop&q=80',
-  // Finland hotels
-  glassIgloo: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1600&auto=format&fit=crop&q=80',
-  helsinkiHotel: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=1600&auto=format&fit=crop&q=80',
-  lakeCabin: 'https://images.unsplash.com/photo-1517825738774-7de9363ef735?w=1600&auto=format&fit=crop&q=80',
-  // China itineraries
-  itineraryClassic: 'https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=1600&auto=format&fit=crop&q=80',
-  itinerarySouth: 'https://images.unsplash.com/photo-1564859228273-274232fdb516?w=1600&auto=format&fit=crop&q=80',
-  itineraryWest: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&auto=format&fit=crop&q=80',
+  // Verified-correct (from contact-sheet review)
+  beijing: 'https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1600&auto=format&fit=crop&q=80',     // Forbidden City ✓
+  shanghai: 'https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1600&auto=format&fit=crop&q=80',  // Shanghai skyline ✓
+  norwayCoast: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop&q=80', // Mountains/sunset (Norway-fitting) ✓
+  silkRoad: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&auto=format&fit=crop&q=80',  // Mosque/Islamic arch — fits Silk Road ✓
 };
 
 // Hero panels for each country: image used at the top of each section
@@ -55,7 +39,7 @@ const NORDIC_HEADER = '/images/destinations/aurora.jpg';
 const FINLAND_HEADER = '/images/destinations/cabin.jpg';
 const NORWAY_HEADER = '/images/destinations/fjord.jpg';
 const ICELAND_HEADER = '/images/destinations/iceland.jpg';
-const DENMARK_HEADER = EXT.faroe;
+const DENMARK_HEADER = '/images/destinations/lake.jpg';
 const CHINA_HEADER = EXT.beijing;
 
 function FinlandActivities({ items }) {
@@ -83,8 +67,16 @@ function FinlandActivities({ items }) {
   );
 }
 
-function FinlandHotels({ items, ext }) {
-  const images = [ext.glassIgloo, ext.helsinkiHotel, '/images/destinations/cabin.jpg', '/images/destinations/university.jpg', ext.lakeCabin, '/images/destinations/midnight.jpg'];
+function FinlandHotels({ items }) {
+  // All-local Nordic images so subjects are reliably scenic
+  const images = [
+    '/images/destinations/cabin.jpg',
+    '/images/destinations/aurora.jpg',
+    '/images/destinations/university.jpg',
+    '/images/destinations/midnight.jpg',
+    '/images/destinations/lake.jpg',
+    '/images/destinations/forest.jpg',
+  ];
   return (
     <Grid container spacing={2}>
       {items.map((h, i) => (
@@ -232,11 +224,14 @@ export default function LandingPage() {
   const chinaItineraries = t('tourism.china.itinerariesItems', { returnObjects: true }) || [];
   const forumTags = t('tourism.china.forum.tags', { returnObjects: true }) || [];
 
-  const norwayImages = [EXT.lofoten, EXT.norwayCoast, '/images/destinations/aurora.jpg', '/images/destinations/fjord.jpg', '/images/destinations/midnight.jpg', '/images/destinations/lake.jpg'];
+  const norwayImages = [EXT.norwayCoast, '/images/destinations/fjord.jpg', '/images/destinations/aurora.jpg', '/images/destinations/midnight.jpg', '/images/destinations/lake.jpg', '/images/destinations/forest.jpg'];
   const icelandImages = ['/images/destinations/iceland.jpg', '/images/destinations/forest.jpg', '/images/destinations/lake.jpg'];
-  const denmarkImages = [EXT.greenland, EXT.faroe, '/images/destinations/iceland.jpg'];
-  const chinaImages = [EXT.beijing, EXT.shanghai, EXT.xian, EXT.chengdu, EXT.hangzhou, EXT.guilin, EXT.lijiang, EXT.xiamen];
-  const itineraryImages = [EXT.itineraryClassic, EXT.itinerarySouth, EXT.itineraryWest, EXT.xian];
+  const denmarkImages = ['/images/destinations/lake.jpg', '/images/destinations/iceland.jpg', '/images/destinations/cabin.jpg'];
+  // China cities: only Beijing & Shanghai have verified-correct external photos.
+  // Others use null → typography-only card (better than wrong-subject photo).
+  const chinaImages = [EXT.beijing, EXT.shanghai, null, null, null, null, null, null];
+  // Itineraries: West gets verified mosque (Silk Road); others typography-only.
+  const itineraryImages = [null, null, EXT.silkRoad, EXT.silkRoad];
 
   const testimonials = t('testimonials.experience', { returnObjects: true }) || [];
   const firstTestimonial = testimonials[0] || {};
