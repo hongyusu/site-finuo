@@ -287,6 +287,19 @@
           ]
         }
       ],
+      "anhuiLabels": {
+        "eyebrow": "3 Days · Departing Hefei",
+        "expandLabel": "+ View Day-by-Day",
+        "hideLabel": "— Hide Itinerary",
+        "detailLabel": "Full Itinerary →",
+        "dayByDay": "Day by Day",
+        "highlights": "Trip Highlights",
+        "gallery": "Photo Gallery",
+        "included": "What's Included",
+        "bookCta": "Inquire & Book",
+        "back": "← Back",
+        "from": "From"
+      },
       "anhuiServiceTitle": "What's Included",
       "anhuiServiceItems": [
         "Transport: 38-seat air-conditioned coach throughout",

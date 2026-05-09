@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
@@ -7,11 +7,25 @@ import AppAppBar from './components/AppAppBar';
 import LandingPage from './LandingPage';
 import LandingPage1 from './LandingPage1';
 import LandingPageMice from './LandingPageMice';
+import TourDetailPage from './TourDetailPage';
 import getLPTheme from './getLPTheme';
+
+function parseTourFromHash() {
+  const hash = window.location.hash || '';
+  const m = hash.match(/^#\/tour\/([a-z]+)/i);
+  return m ? m[1] : null;
+}
 
 function App() {
   const [activeSite, setActiveSite] = useState('experience');
+  const [tourId, setTourId] = useState(parseTourFromHash);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const onHashChange = () => setTourId(parseTourFromHash());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   const theme = createTheme(getLPTheme('dark'));
 
@@ -52,15 +66,26 @@ function App() {
     return <LandingPage />;
   };
 
+  const goBackToLanding = () => {
+    window.location.hash = '';
+    setTourId(null);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppAppBar
-        activeSite={activeSite}
-        onSiteChange={setActiveSite}
-        navItems={navItems}
-      />
-      {renderSite()}
+      {tourId ? (
+        <TourDetailPage tourId={tourId} onBack={goBackToLanding} />
+      ) : (
+        <>
+          <AppAppBar
+            activeSite={activeSite}
+            onSiteChange={setActiveSite}
+            navItems={navItems}
+          />
+          {renderSite()}
+        </>
+      )}
     </ThemeProvider>
   );
 }

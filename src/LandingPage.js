@@ -144,7 +144,7 @@ function AnhuiItineraryCard({ tour, image, expanded, onToggle, index }) {
         <Box sx={{ flex: 1, p: { xs: 3, md: 4 }, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', mb: 1.5, flexWrap: 'wrap', gap: 1 }}>
             <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD }}>
-              3 Days · {tour.titleEn}
+              {tour.eyebrow}
             </Typography>
             <Typography sx={{ fontSize: '0.85rem', color: GOLD, fontWeight: 500 }}>
               {tour.price}
@@ -159,9 +159,24 @@ function AnhuiItineraryCard({ tour, image, expanded, onToggle, index }) {
           <Typography sx={{ color: DIM, fontSize: '0.88rem', lineHeight: 1.6 }}>
             {tour.summary}
           </Typography>
-          <Typography sx={{ mt: 2, fontSize: '0.75rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD }}>
-            {expanded ? '— Hide Itinerary' : '+ View Day-by-Day'}
-          </Typography>
+          <Box sx={{ mt: 2, display: 'flex', gap: 3, flexWrap: 'wrap' }}>
+            <Typography sx={{ fontSize: '0.75rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD }}>
+              {expanded ? tour.hideLabel : tour.expandLabel}
+            </Typography>
+            <Typography
+              component="a"
+              href={`#/tour/${tour.id}`}
+              onClick={(e) => e.stopPropagation()}
+              sx={{
+                fontSize: '0.75rem', letterSpacing: '0.15em', textTransform: 'uppercase',
+                color: 'rgba(245,242,237,0.6)', textDecoration: 'none',
+                borderBottom: '1px solid rgba(245,242,237,0.3)',
+                '&:hover': { color: CREAM, borderBottomColor: GOLD },
+              }}
+            >
+              {tour.detailLabel}
+            </Typography>
+          </Box>
         </Box>
       </Box>
 
@@ -378,7 +393,15 @@ export default function LandingPage() {
   const [activeCountry, setActiveCountry] = React.useState('finland');
   const [expandedTour, setExpandedTour] = React.useState('huangshan');
 
-  const anhuiTours = t('tourism.china.anhuiTours', { returnObjects: true }) || [];
+  const anhuiToursRaw = t('tourism.china.anhuiTours', { returnObjects: true }) || [];
+  const anhuiLabels = t('tourism.china.anhuiLabels', { returnObjects: true }) || {};
+  const anhuiTours = anhuiToursRaw.map((tour) => ({
+    ...tour,
+    eyebrow: anhuiLabels.eyebrow,
+    expandLabel: anhuiLabels.expandLabel,
+    hideLabel: anhuiLabels.hideLabel,
+    detailLabel: anhuiLabels.detailLabel,
+  }));
   const anhuiServiceItems = t('tourism.china.anhuiServiceItems', { returnObjects: true }) || [];
   const anhuiHeroImages = {
     huangshan: '/images/anhui/huangshan-3.jpeg',  // Huangshan peaks

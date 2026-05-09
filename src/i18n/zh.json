@@ -287,6 +287,19 @@
           ]
         }
       ],
+      "anhuiLabels": {
+        "eyebrow": "三天行程 · 合肥出发",
+        "expandLabel": "+ 展开每日行程",
+        "hideLabel": "— 收起",
+        "detailLabel": "查看完整介绍 →",
+        "dayByDay": "每日行程",
+        "highlights": "行程亮点",
+        "gallery": "实景图片",
+        "included": "服务标准",
+        "bookCta": "立即咨询预订",
+        "back": "← 返回",
+        "from": "起价"
+      },
       "anhuiServiceTitle": "服务标准",
       "anhuiServiceItems": [
         "交通：全程 38 座空调旅游巴士",
