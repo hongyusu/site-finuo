@@ -119,8 +119,185 @@
     },
     "china": {
       "title": "China",
-      "subtitle": "A Panorama of Millennial Civilization",
-      "intro": "City-deep itineraries and themed routes for Chinese diaspora and inbound European travelers, with full local concierge.",
+      "subtitle": "Southern Anhui · Huizhou — A Thousand Years of Heritage",
+      "intro": "Our China itineraries focus on southern Anhui — Huangshan, ancient Huizhou towns, Qiyun Mountain, and Jingchuan — with carefully crafted three-day programs including transport, 4-star accommodation, meals, attraction tickets, full guide service, and travel insurance.",
+      "anhuiToursTitle": "Three-Day Tours of Southern Anhui",
+      "anhuiToursSubtitle": "Three-Day Tours · Huangshan · Huizhou · Qiyun · Jingchuan",
+      "anhuiToursIntro": "Four classic three-day itineraries departing from Hefei, exploring the Huizhou region of southern Anhui in depth. Each tour includes a 38-seat air-conditioned coach, 2 nights at a 4-star hotel, 5 full meals, attraction tickets, accompanying & local guides, and travel insurance. Available for individuals or groups.",
+      "anhuiTours": [
+        {
+          "id": "huangshan",
+          "title": "Three-Day Tour of Huangshan",
+          "titleEn": "黄山三日游",
+          "price": "RMB 1,750 / pp",
+          "tagline": "After Huangshan, no other mountain is worth seeing",
+          "summary": "Huangshan Scenic Area + Chengkan ancient village + Tunxi Old Street + Xixinan Wetland — combining hiking and cable car for the iconic pines and sea of clouds.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — Chengkan — Tangkou",
+              "meals": "Lunch / Dinner",
+              "stay": "Tangkou Town",
+              "items": [
+                { "time": "08:00-12:30", "name": "Depart Hefei to Huangshan by coach" },
+                { "time": "14:00-16:00", "name": "Chengkan ancient village", "desc": "Praised by Zhu Xi as 'the number one village in Jiangnan' — millennium-old Huizhou village with exquisite carvings, evening fish-lantern performance" },
+                { "time": "16:30", "name": "Hotel check-in, Tangkou" },
+                { "time": "18:00-19:00", "name": "Dinner" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Huangshan Scenic Area",
+              "meals": "Breakfast / Lunch / Dinner",
+              "stay": "Huangshan City",
+              "items": [
+                { "time": "09:10-16:30", "name": "National AAAAA Huangshan Scenic Area", "desc": "Coach to Yungu Temple, cable car or hike to Bai'e Ridge, Shixin Peak, Bright Summit, Yuping Tower — view the famous Huangshan pines" },
+                { "time": "18:30-20:30", "name": "Tunxi Old Street by night", "desc": "Built in the Song Dynasty, best-preserved Song-Ming-Qing pedestrian street in China" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Xixinan Wetland — Return",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "09:30-11:30", "name": "Xixinan Wetland", "desc": "Surrounded by maple-poplar forest, streams and stone bridges — pastoral poetry in morning mist" },
+                { "time": "13:00-17:30", "name": "Return to Hefei" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "huizhou",
+          "title": "Three-Day Tour of Huizhou",
+          "titleEn": "徽州三日游",
+          "price": "RMB 1,430 / pp",
+          "tagline": "White walls, dark tiles, water under bridges",
+          "summary": "Tangyue Archways + Huizhou Ancient City + Xin'an River Gallery + Xixinan + Tunxi Old Street + Hongcun — Huizhou cultural deep-dive.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — She County",
+              "meals": "Lunch / Dinner",
+              "stay": "She County",
+              "items": [
+                { "time": "08:00-12:30", "name": "Depart Hefei for She County" },
+                { "time": "13:30-14:30", "name": "Tangyue Archway Group", "desc": "'The Number One Village in Jiangnan' — seven ancient archways, ancestral halls, live filial-piety performances" },
+                { "time": "14:50-17:00", "name": "Huizhou Ancient City", "desc": "Birthplace of Huizhou learning, three-carving art, ancient government office, evening fish-lantern parade" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Xin'an River — Xixinan — Tunxi Old Street",
+              "meals": "Breakfast / Lunch / Dinner",
+              "stay": "Huangshan City",
+              "items": [
+                { "time": "09:00-12:00", "name": "Xin'an River Scenic Gallery boat tour", "desc": "100-mile picturesque corridor, ancient Huizhou merchant route, riverside villages, millennial camphor trees" },
+                { "time": "14:30-16:00", "name": "Xixinan Wetland", "desc": "Real-life Wizard of Oz — maple forest, streams, stone bridges, Jiangnan charm" },
+                { "time": "16:30-18:00", "name": "Tunxi Old Street", "desc": "Best-preserved pedestrian commercial street in China, Song-Ming-Qing architecture" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Hongcun — Hefei",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "10:00-12:00", "name": "Hongcun ancient village", "desc": "'The village in Chinese paintings' — unique ox-shaped water system, exquisite carvings at Chengzhi Hall — known as the 'Folk Palace Museum'" },
+                { "time": "13:30-18:00", "name": "Return to Hefei" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qiyun",
+          "title": "Three-Day Trip to Qiyun Mountain",
+          "titleEn": "齐云山三日游",
+          "price": "RMB 1,500 / pp",
+          "tagline": "Danxia landform · Taoist culture · No.1 mountain in Jiangnan",
+          "summary": "Huizhou Grand Canyon + Qiyun Mountain + Yuehua Street + Chengkan + Qiankou Residential Houses — landscape meets Taoism.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — Huizhou Grand Canyon",
+              "meals": "Lunch / Dinner",
+              "stay": "Xiuning County",
+              "items": [
+                { "time": "08:00-12:30", "name": "Depart Hefei for Huangshan" },
+                { "time": "13:40-17:00", "name": "Huizhou Grand Canyon", "desc": "Cliff waterfalls, turquoise pools, ancient pines — optional thrilling rafting" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Qiyun Mountain",
+              "meals": "Breakfast / Lunch / Dinner",
+              "stay": "Xiuning County",
+              "items": [
+                { "time": "09:00-11:30", "name": "Qiyun Mountain", "desc": "Danxia landform, Taoist heritage, 'No.1 mountain in Jiangnan', countless historic stone carvings" },
+                { "time": "13:00-15:00", "name": "Bamboo rafting at Qiyun foothill", "desc": "Banks lined with millennial trees, graceful river scenery" },
+                { "time": "19:00-20:30", "name": "Yuehua Street by night" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Chengkan — Qiankou Residential — Hefei",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "09:30-12:30", "name": "Chengkan", "desc": "Naturally formed Bagua-pattern village, two national-treasure ancient buildings, Hui-style carvings" },
+                { "time": "afternoon", "name": "Qiankou Residential Houses", "desc": "'For palaces go to Beijing; for residential houses come to Qiankou' — Ming-dynasty Hui-style ensemble" },
+                { "time": "13:30-18:00", "name": "Return to Hefei" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "anhui",
+          "title": "Three-Day Tour of Southern Anhui & Jingchuan",
+          "titleEn": "皖南泾川三日游",
+          "price": "RMB 1,380 / pp",
+          "tagline": "Li Bai's Peach Blossom Pond · Chinese Xuan paper culture",
+          "summary": "Peach Blossom Pond + Chaji ancient village + Moon Bay + Pingyuan secret realm + China Xuan Paper Culture Park.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — Jing County — Pingyuan — Moon Bay",
+              "meals": "Lunch / Dinner",
+              "items": [
+                { "time": "09:00-11:30", "name": "Depart Hefei for Jing County" },
+                { "time": "13:00-15:00", "name": "Pingyuan secret realm", "desc": "'Mini Li River of southern Anhui' — bamboo raft amongst rocks, Fengyang market team-building" },
+                { "time": "16:30-17:30", "name": "Moon Bay Scenic Area", "desc": "100-mile bamboo forest, classic film & TV location" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Peach Blossom Pond — Chaji village",
+              "meals": "Breakfast / Lunch / Dinner",
+              "items": [
+                { "time": "10:00-11:30", "name": "Peach Blossom Pond (Taohuatan)", "desc": "Made famous by Li Bai's poem 'Farewell to Wang Lun' — emerald ripples, ancient riverbank trees" },
+                { "time": "13:00-15:00", "name": "Chaji ancient village", "desc": "Small bridges and flowing water, Ming-Qing carved-beam buildings, ancient ancestral halls" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Chinese Xuan Paper Museum — Hefei",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "09:00-11:00", "name": "Chinese Xuan Paper Culture Park", "desc": "National intangible heritage — handmade Xuan paper process, optional papermaking & rubbing experience" },
+                { "time": "12:30-15:30", "name": "Return to Hefei" }
+              ]
+            }
+          ]
+        }
+      ],
+      "anhuiServiceTitle": "What's Included",
+      "anhuiServiceItems": [
+        "Transport: 38-seat air-conditioned coach throughout",
+        "Accommodation: 2 nights at 4-star hotel (twin room, breakfast included)",
+        "Meals: 5 full meals (RMB 50 / person / meal standard)",
+        "Tickets: All attractions in itinerary",
+        "Guide: Accompanying guide + local guide throughout",
+        "Insurance: Travel personal accident insurance, RMB 200,000 / person",
+        "Extras: 2 bottles of mineral water per person per day"
+      ],
+      "anhuiBookCta": "Inquire & Book",
       "citiesTitle": "City Destinations",
       "cities": [
         { "name": "Beijing", "desc": "Imperial capital — Forbidden City, Great Wall, hutongs" },

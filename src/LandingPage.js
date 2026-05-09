@@ -24,18 +24,10 @@ const GOLD = '#C4A35A';
 const CREAM = '#F5F2ED';
 const DIM = 'rgba(245,242,237,0.5)';
 
-// External Unsplash photos for sections we don't have local images for.
-// Subjects verified against the actual photo content.
+// External Unsplash photos. China content now uses local Anhui photos
+// (extracted from real tour brochures) so no external Chinese images needed.
 const EXT = {
-  // Verified-correct (from contact-sheet review)
-  beijing: 'https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1600&auto=format&fit=crop&q=80',     // Forbidden City ✓
-  shanghai: 'https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1600&auto=format&fit=crop&q=80',  // Shanghai skyline ✓
-  norwayCoast: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop&q=80', // Mountains/sunset (Norway-fitting) ✓
-  silkRoad: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&auto=format&fit=crop&q=80',  // Mosque/Islamic arch — fits Silk Road ✓
-  // East-Asian aesthetic stand-ins (verified Asian content even if not specifically the city)
-  pagoda: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&auto=format&fit=crop&q=80',      // Kyoto pagoda + city sunset → Hangzhou
-  karstSunset: 'https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=1600&auto=format&fit=crop&q=80', // Mountain ridges sunset → Guilin
-  coastalVillage: 'https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=1600&auto=format&fit=crop&q=80', // Mediterranean village → Xiamen/Gulangyu
+  norwayCoast: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop&q=80',
 };
 
 // Hero panels for each country: image used at the top of each section
@@ -44,7 +36,7 @@ const FINLAND_HEADER = '/images/destinations/cabin.jpg';
 const NORWAY_HEADER = '/images/destinations/fjord.jpg';
 const ICELAND_HEADER = '/images/destinations/iceland.jpg';
 const DENMARK_HEADER = '/images/destinations/lake.jpg';
-const CHINA_HEADER = EXT.beijing;
+const CHINA_HEADER = '/images/anhui/huangshan-3.jpeg';
 
 function FinlandActivities({ items }) {
   return (
@@ -99,25 +91,6 @@ function FinlandHotels({ items }) {
   );
 }
 
-function ChinaItineraries({ items, images }) {
-  return (
-    <Grid container spacing={2}>
-      {items.map((it, i) => (
-        <Grid item xs={12} sm={6} md={3} key={i}>
-          <MediaCard
-            index={i}
-            image={images[i % images.length]}
-            title={it.name}
-            subtitle={it.desc}
-            meta={it.route}
-            height={280}
-          />
-        </Grid>
-      ))}
-    </Grid>
-  );
-}
-
 function CountryRoutesGrid({ items, images, height = 240 }) {
   return (
     <Grid container spacing={2}>
@@ -136,21 +109,148 @@ function CountryRoutesGrid({ items, images, height = 240 }) {
   );
 }
 
-function ChinaCities({ cities, images }) {
+function AnhuiItineraryCard({ tour, image, expanded, onToggle, index }) {
   return (
-    <Grid container spacing={2}>
-      {cities.map((c, i) => (
-        <Grid item xs={12} sm={6} md={3} key={i}>
-          <MediaCard
-            index={i}
-            image={images[i % images.length]}
-            title={c.name}
-            subtitle={c.desc}
-            height={280}
+    <Box
+      component={motion.div}
+      {...stagger(index)}
+      sx={{
+        border: '1px solid rgba(245,242,237,0.08)',
+        bgcolor: '#0F0F0F',
+        overflow: 'hidden',
+        transition: 'border-color 0.3s ease',
+        ...(expanded && { borderColor: GOLD }),
+      }}
+    >
+      {/* Header (always visible, click to expand) */}
+      <Box
+        onClick={onToggle}
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          cursor: 'pointer',
+          '&:hover .at-img': { transform: 'scale(1.03)' },
+        }}
+      >
+        <Box sx={{ width: { xs: '100%', md: 360 }, height: { xs: 220, md: 240 }, overflow: 'hidden', flexShrink: 0 }}>
+          <Box
+            className="at-img"
+            component="img"
+            src={image}
+            alt={tour.title}
+            sx={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
           />
-        </Grid>
+        </Box>
+        <Box sx={{ flex: 1, p: { xs: 3, md: 4 }, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', mb: 1.5, flexWrap: 'wrap', gap: 1 }}>
+            <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD }}>
+              3 Days · {tour.titleEn}
+            </Typography>
+            <Typography sx={{ fontSize: '0.85rem', color: GOLD, fontWeight: 500 }}>
+              {tour.price}
+            </Typography>
+          </Box>
+          <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.6rem', md: '2rem' }, color: CREAM, mb: 1, lineHeight: 1.15 }}>
+            {tour.title}
+          </Typography>
+          <Typography sx={{ color: 'rgba(245,242,237,0.7)', fontSize: '0.95rem', fontStyle: 'italic', mb: 1.5 }}>
+            {tour.tagline}
+          </Typography>
+          <Typography sx={{ color: DIM, fontSize: '0.88rem', lineHeight: 1.6 }}>
+            {tour.summary}
+          </Typography>
+          <Typography sx={{ mt: 2, fontSize: '0.75rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD }}>
+            {expanded ? '— Hide Itinerary' : '+ View Day-by-Day'}
+          </Typography>
+        </Box>
+      </Box>
+
+      {/* Expandable day-by-day */}
+      <AnimatePresence initial={false}>
+        {expanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ overflow: 'hidden' }}
+          >
+            <Box sx={{ borderTop: '1px solid rgba(245,242,237,0.08)', p: { xs: 3, md: 4 } }}>
+              <Grid container spacing={3}>
+                {(tour.days || []).map((d, di) => (
+                  <Grid item xs={12} md={4} key={di}>
+                    <Box sx={{ borderTop: `2px solid ${GOLD}`, pt: 2 }}>
+                      <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.6rem', color: CREAM, lineHeight: 1.1, mb: 0.5 }}>
+                        {d.day} · {d.title}
+                      </Typography>
+                      <Typography sx={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: GOLD, mb: 2 }}>
+                        {d.meals}{d.stay ? ` · ${d.stay}` : ''}
+                      </Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                        {(d.items || []).map((it, ii) => (
+                          <Box key={ii}>
+                            <Typography sx={{ fontSize: '0.72rem', color: GOLD, letterSpacing: '0.05em', mb: 0.25 }}>
+                              {it.time}
+                            </Typography>
+                            <Typography sx={{ color: CREAM, fontSize: '0.92rem', mb: 0.25, fontWeight: 500 }}>
+                              {it.name}
+                            </Typography>
+                            {it.desc && (
+                              <Typography sx={{ color: DIM, fontSize: '0.82rem', lineHeight: 1.55 }}>
+                                {it.desc}
+                              </Typography>
+                            )}
+                          </Box>
+                        ))}
+                      </Box>
+                    </Box>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </Box>
+  );
+}
+
+function AnhuiTours({ tours, images, expanded, onToggle }) {
+  return (
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+      {tours.map((tour, i) => (
+        <AnhuiItineraryCard
+          key={tour.id}
+          tour={tour}
+          image={images[tour.id]}
+          expanded={expanded === tour.id}
+          onToggle={() => onToggle(expanded === tour.id ? null : tour.id)}
+          index={i}
+        />
       ))}
-    </Grid>
+    </Box>
+  );
+}
+
+function ServiceStandards({ title, items }) {
+  return (
+    <Box sx={{ mt: 6, p: { xs: 3, md: 4 }, border: '1px solid rgba(245,242,237,0.08)', bgcolor: '#0F0F0F' }}>
+      <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
+        {title}
+      </Typography>
+      <Grid container spacing={2}>
+        {items.map((it, i) => (
+          <Grid item xs={12} sm={6} md={4} key={i}>
+            <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
+              <Typography sx={{ color: GOLD, fontSize: '0.9rem', flexShrink: 0 }}>·</Typography>
+              <Typography sx={{ color: 'rgba(245,242,237,0.8)', fontSize: '0.9rem', lineHeight: 1.6 }}>
+                {it}
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 }
 
@@ -276,6 +376,16 @@ function NordicTabs({ active, onChange, labels }) {
 export default function LandingPage() {
   const { t } = useTranslation();
   const [activeCountry, setActiveCountry] = React.useState('finland');
+  const [expandedTour, setExpandedTour] = React.useState('huangshan');
+
+  const anhuiTours = t('tourism.china.anhuiTours', { returnObjects: true }) || [];
+  const anhuiServiceItems = t('tourism.china.anhuiServiceItems', { returnObjects: true }) || [];
+  const anhuiHeroImages = {
+    huangshan: '/images/anhui/huangshan-3.jpeg',  // Huangshan peaks
+    huizhou: '/images/anhui/huizhou-7.jpeg',       // Huizhou street
+    qiyun: '/images/anhui/qiyun-3.jpeg',           // Qiyun stone
+    anhui: '/images/anhui/anhui-1.jpeg',            // Jingchuan landscape
+  };
 
   const finlandExperiences = t('tourism.finland.experiences', { returnObjects: true }) || [];
   const finlandHotels = t('tourism.finland.hotelsItems', { returnObjects: true }) || [];
@@ -284,29 +394,11 @@ export default function LandingPage() {
   const icelandRoutes = t('tourism.iceland.routesItems', { returnObjects: true }) || [];
   const icelandActs = t('tourism.iceland.activitiesItems', { returnObjects: true }) || [];
   const denmarkRoutes = t('tourism.denmark.routesItems', { returnObjects: true }) || [];
-  const chinaCities = t('tourism.china.cities', { returnObjects: true }) || [];
-  const chinaItineraries = t('tourism.china.itinerariesItems', { returnObjects: true }) || [];
   const forumTags = t('tourism.china.forum.tags', { returnObjects: true }) || [];
 
   const norwayImages = [EXT.norwayCoast, '/images/destinations/fjord.jpg', '/images/destinations/aurora.jpg', '/images/destinations/midnight.jpg', '/images/destinations/lake.jpg', '/images/destinations/forest.jpg'];
   const icelandImages = ['/images/destinations/iceland.jpg', '/images/destinations/forest.jpg', '/images/destinations/lake.jpg'];
   const denmarkImages = ['/images/destinations/lake.jpg', '/images/destinations/iceland.jpg', '/images/destinations/cabin.jpg'];
-  // China cities: photos for cities with verified-correct or visually-fitting
-  // East-Asian images. Cities without a good photo get a typography-only card
-  // (Xi'an, Chengdu, Lijiang) — better than a wrong-subject photo.
-  // Order matches zh.json: Beijing, Shanghai, Xi'an, Chengdu, Hangzhou, Guilin, Lijiang, Xiamen
-  const chinaImages = [
-    EXT.beijing,         // Beijing — Forbidden City ✓
-    EXT.shanghai,        // Shanghai — skyline ✓
-    null,                // Xi'an — typography card
-    null,                // Chengdu — typography card
-    EXT.pagoda,          // Hangzhou — Kyoto pagoda+city (Asian temple feel)
-    EXT.karstSunset,     // Guilin — mountain ridges sunset (karst-like)
-    null,                // Lijiang — typography card
-    EXT.coastalVillage,  // Xiamen — Mediterranean village (Gulangyu-like)
-  ];
-  // Itineraries: West gets verified mosque (Silk Road); others typography-only.
-  const itineraryImages = [null, null, EXT.silkRoad, EXT.silkRoad];
 
   const testimonials = t('testimonials.experience', { returnObjects: true }) || [];
   const firstTestimonial = testimonials[0] || {};
@@ -462,19 +554,24 @@ export default function LandingPage() {
       </Box>
       <FullBleedImage image={CHINA_HEADER} alt="China" height={{ xs: 250, md: 380 }} />
 
-      {/* 9. CHINA CITIES */}
+      {/* 9. ANHUI THREE-DAY TOURS — featured product */}
       <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
         <Container maxWidth="xl" disableGutters>
-          <SectionHeader eyebrow="China · Cities" title={t('tourism.china.citiesTitle')} subtitle={t('tourism.china.intro')} />
-          <ChinaCities cities={chinaCities} images={chinaImages} />
-        </Container>
-      </Box>
-
-      {/* 9b. CHINA ITINERARIES */}
-      <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
-        <Container maxWidth="xl" disableGutters>
-          <SectionHeader eyebrow="China · Routes" title={t('tourism.china.itineraries')} subtitle={t('tourism.china.itinerariesIntro')} />
-          <ChinaItineraries items={chinaItineraries} images={itineraryImages} />
+          <SectionHeader
+            eyebrow={t('tourism.china.anhuiToursTitle')}
+            title={t('tourism.china.anhuiToursSubtitle')}
+            subtitle={t('tourism.china.anhuiToursIntro')}
+          />
+          <AnhuiTours
+            tours={anhuiTours}
+            images={anhuiHeroImages}
+            expanded={expandedTour}
+            onToggle={setExpandedTour}
+          />
+          <ServiceStandards
+            title={t('tourism.china.anhuiServiceTitle')}
+            items={anhuiServiceItems}
+          />
         </Container>
       </Box>
 
