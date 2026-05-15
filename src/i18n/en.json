@@ -119,17 +119,17 @@
     },
     "china": {
       "title": "China",
-      "subtitle": "Southern Anhui · Huizhou — A Thousand Years of Heritage",
-      "intro": "Our China itineraries focus on southern Anhui — Huangshan, ancient Huizhou towns, Qiyun Mountain, and Jingchuan — with carefully crafted three-day programs including transport, 4-star accommodation, meals, attraction tickets, full guide service, and travel insurance.",
-      "anhuiToursTitle": "Three-Day Tours of Southern Anhui",
-      "anhuiToursSubtitle": "Three-Day Tours · Huangshan · Huizhou · Qiyun · Jingchuan",
-      "anhuiToursIntro": "Four classic three-day itineraries departing from Hefei, exploring the Huizhou region of southern Anhui in depth. Each tour includes a 38-seat air-conditioned coach, 2 nights at a 4-star hotel, 5 full meals, attraction tickets, accompanying & local guides, and travel insurance. Available for individuals or groups.",
+      "subtitle": "Jiangnan — Eight Curated Three-Day Tours",
+      "intro": "Our China itineraries cover the Jiangnan classics — southern Anhui's Huizhou heritage villages, Suzhou's classical gardens, Hangzhou's West Lake, and Shanghai's metropolitan elegance — across eight carefully crafted three-day programs with transport, 4-star accommodation, meals, attraction tickets, English-speaking guide, and travel insurance.",
+      "anhuiToursTitle": "Curated Three-Day Tours",
+      "anhuiToursSubtitle": "Three-Day Tours · Huangshan · Huizhou · Qiyun · Anhui · Suzhou · Hangzhou · Suzhou-Hangzhou · Shanghai",
+      "anhuiToursIntro": "Eight three-day itineraries spanning the Huizhou heritage of southern Anhui to the gardens and water-towns of Jiangnan and the cosmopolitan elegance of Shanghai. Anhui routes depart from Hefei (38-seat coach, RMB 50/meal, 4-star hotel); Jiangnan/Shanghai routes include airport pickup (37-seat coach, RMB 60/meal, 4-diamond hotel). All tours include English-speaking guide, attraction tickets, and travel personal accident insurance.",
       "anhuiTours": [
         {
           "id": "huangshan",
           "title": "Three-Day Tour of Huangshan",
           "titleEn": "黄山三日游",
-          "price": "RMB 1,750 / pp",
+          "price": "RMB 1,727 / pp",
           "tagline": "After Huangshan, no other mountain is worth seeing",
           "summary": "Huangshan Scenic Area + Chengkan ancient village + Tunxi Old Street + Xixinan Wetland — combining hiking and cable car for the iconic pines and sea of clouds.",
           "days": [
@@ -170,7 +170,7 @@
           "id": "huizhou",
           "title": "Three-Day Tour of Huizhou",
           "titleEn": "徽州三日游",
-          "price": "RMB 1,430 / pp",
+          "price": "RMB 1,535 / pp",
           "tagline": "White walls, dark tiles, water under bridges",
           "summary": "Tangyue Archways + Huizhou Ancient City + Xin'an River Gallery + Xixinan + Tunxi Old Street + Hongcun — Huizhou cultural deep-dive.",
           "days": [
@@ -211,7 +211,7 @@
           "id": "qiyun",
           "title": "Three-Day Trip to Qiyun Mountain",
           "titleEn": "齐云山三日游",
-          "price": "RMB 1,500 / pp",
+          "price": "RMB 1,629 / pp",
           "tagline": "Danxia landform · Taoist culture · No.1 mountain in Jiangnan",
           "summary": "Huizhou Grand Canyon + Qiyun Mountain + Yuehua Street + Chengkan + Qiankou Residential Houses — landscape meets Taoism.",
           "days": [
@@ -252,7 +252,7 @@
           "id": "anhui",
           "title": "Three-Day Tour of Southern Anhui & Jingchuan",
           "titleEn": "皖南泾川三日游",
-          "price": "RMB 1,380 / pp",
+          "price": "RMB 1,491 / pp",
           "tagline": "Li Bai's Peach Blossom Pond · Chinese Xuan paper culture",
           "summary": "Peach Blossom Pond + Chaji ancient village + Moon Bay + Pingyuan secret realm + China Xuan Paper Culture Park.",
           "days": [
@@ -285,6 +285,171 @@
               ]
             }
           ]
+        },
+        {
+          "id": "suzhou",
+          "title": "Three-Day Tour of Suzhou",
+          "titleEn": "苏州三日游",
+          "price": "RMB 1,756 / pp",
+          "tagline": "Heaven on earth, gardens above all",
+          "summary": "Tiger Hill + Humble Administrator's Garden + Hanshan Temple + Lingering Garden + Zhouzhuang — two of China's four famous gardens plus the No.1 water town.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Airport pickup — Tiger Hill",
+              "meals": "Lunch / Dinner",
+              "stay": "Suzhou",
+              "items": [
+                { "time": "10:30-12:30", "name": "Travel to Suzhou" },
+                { "time": "14:00-17:00", "name": "Tiger Hill", "desc": "'The top scenic spot in Wu' — centered around the thousand-year leaning Yunyan Pagoda and Spring-Autumn Sword Pool, iconic 2500-year Wu culture site" },
+                { "time": "17:30-18:30", "name": "Dinner, hotel check-in" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Humble Administrator's Garden — Hanshan Temple — Lingering Garden",
+              "meals": "Breakfast / Lunch / Dinner",
+              "stay": "Suzhou",
+              "items": [
+                { "time": "09:30-11:30", "name": "Humble Administrator's Garden (Zhuozheng Yuan)", "desc": "Suzhou's largest surviving classical garden, World Heritage site, water-soul, changing view at every step — pinnacle of Jiangnan gardens" },
+                { "time": "13:20-15:00", "name": "Hanshan Temple", "desc": "Made world-famous by Zhang Ji's poem 'A Night Mooring by Maple Bridge', a millennium-old Suzhou temple, classic 'Maple Bridge at Night' landmark" },
+                { "time": "15:10-17:10", "name": "Lingering Garden (Liu Yuan)", "desc": "One of China's four famous gardens, World Heritage site, renowned for architectural spatial art, 700-m winding corridors and Guanyun Peak's rare stones — recreating worlds within inches" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Zhouzhuang — Airport transfer",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "09:30-12:30", "name": "Zhouzhuang", "desc": "'China's No.1 Water Town', 900-year history, well-shaped waterways, 14 ancient bridges, Ming-Qing residences. Shuangqiao, Shenting, Zhangting are landmarks — quintessential Jiangnan small bridges & flowing water" },
+                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hangzhou",
+          "title": "Three-Day Tour of Hangzhou",
+          "titleEn": "杭州三日游",
+          "price": "RMB 1,805 / pp",
+          "tagline": "West Lake serenity · Lingyin Temple Zen",
+          "summary": "Lingyin Temple + West Lake + Xixi Wetland + Songcheng + Liangzhu Cultural Heritage Park — World Heritage sites plus 5,000-year civilization site.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Airport pickup — Lingyin Temple — West Lake",
+              "meals": "Lunch / Dinner",
+              "stay": "Hangzhou",
+              "items": [
+                { "time": "10:00-12:00", "name": "Lingyin Temple", "desc": "Also known as 'Yunlin Temple', at the foot of Lingyin Mountain west of West Lake — serene and quiet, the earliest famous temple in Hangzhou, preserving rare relics from many dynasties" },
+                { "time": "14:30-17:00", "name": "West Lake Scenic Area", "desc": "Witnessed the development of Chinese Buddhist, Taoist culture and tea-Zen traditions. Inscribed on the World Heritage List on June 24, 2011" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Xixi Wetland — Songcheng",
+              "meals": "Breakfast / Lunch / Dinner",
+              "stay": "Hangzhou",
+              "items": [
+                { "time": "09:30-11:30", "name": "Xixi National Wetland Park", "desc": "China's first national wetland park integrating urban, agricultural and cultural wetlands. 5A-level attraction, picturesque 'a stream of water, a wisp of mist'" },
+                { "time": "13:00-17:00", "name": "Songcheng", "desc": "Crossing past and present, twenty theaters and hundreds of performances — one day is not enough to see everything" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Liangzhu Cultural Heritage Park — Airport",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "10:00-12:30", "name": "Liangzhu Cultural Heritage Park", "desc": "Dating back ~5,300-4,300 years, an important representative of early regional civilization in China, the 'Holy Land that provides evidence for 5,000 years of Chinese civilization'" },
+                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "suzhou-hangzhou",
+          "title": "Three-Day Tour of Suzhou & Hangzhou",
+          "titleEn": "苏杭三日游",
+          "price": "RMB 1,846 / pp",
+          "tagline": "Jiangnan double-city — gardens meet West Lake",
+          "summary": "Humble Administrator's Garden + Hanshan Temple + Wuzhen + Songcheng + West Lake — best of Suzhou and Hangzhou in one trip.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Airport pickup — Humble Administrator's Garden — Hanshan Temple",
+              "meals": "Lunch / Dinner",
+              "stay": "Suzhou",
+              "items": [
+                { "time": "10:00-12:00", "name": "Travel to Suzhou" },
+                { "time": "13:30-15:30", "name": "Humble Administrator's Garden", "desc": "Suzhou's largest classical garden, World Heritage site, water-focused with a new view at every step — pinnacle of Jiangnan gardens" },
+                { "time": "16:00-17:30", "name": "Hanshan Temple", "desc": "Famous worldwide thanks to Zhang Ji's 'A Night Mooring by Maple Bridge' — a thousand-year-old Suzhou temple, classic 'Night Mooring' landmark" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Wuzhen — Songcheng",
+              "meals": "Breakfast / Lunch / Dinner",
+              "stay": "Hangzhou",
+              "items": [
+                { "time": "11:00-12:30", "name": "Wuzhen", "desc": "5A-level ancient town in Tongxiang, Zhejiang — millennium-old Jiangnan water-town, 'the last waterside residence in China', permanent venue of the World Internet Conference" },
+                { "time": "15:00-19:00", "name": "Songcheng", "desc": "Spans past and present — twenty theaters, hundreds of performances, never enough time for everything" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "West Lake — Airport",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "09:30-12:30", "name": "West Lake Scenic Area", "desc": "Witnessed Chinese Buddhist, Taoist, tea-Zen traditions — World Heritage site" },
+                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shanghai",
+          "title": "Three-Day Shanghai Itinerary",
+          "titleEn": "上海三日游",
+          "price": "RMB 1,842 / pp",
+          "tagline": "Magic City nights — history meets modernity",
+          "summary": "Yu Garden + City God Temple + Sinan Road + Nanjing Road + Shanghai Museum + Xintiandi + Tianzifang + Oriental Pearl + the Bund + Postal Museum — Shanghai's classics in 3 days.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Airport pickup — Yu Garden — City God Temple — Sinan Rd — Nanjing Rd",
+              "meals": "Lunch / Dinner",
+              "stay": "Shanghai",
+              "items": [
+                { "time": "09:00-10:30", "name": "Yu Garden", "desc": "Originally a Ming-Dynasty private garden, ranks first among Shanghai's five existing classical gardens" },
+                { "time": "10:40-12:10", "name": "City God Temple", "desc": "Built in the Ming Dynasty, a Taoist temple of the Orthodox Unity Sect — together with City God snacks, Lotus Pond, Mid-Lake Pavilion and Nine-Turn Bridge forms Shanghai's iconic Old Town" },
+                { "time": "13:30-15:00", "name": "Sinan Road", "desc": "Stroll or cycle along plane-tree avenues and admire French-style villas lining both sides" },
+                { "time": "15:30-17:30", "name": "Nanjing Road Pedestrian Street", "desc": "Asymmetrical layout with a 4.2-meter 'Golden Belt' through the entire street, 34 differently-designed flower beds" }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Shanghai Museum — Xintiandi — Tianzifang — Oriental Pearl — Huangpu ferry",
+              "meals": "Breakfast / Lunch / Dinner",
+              "stay": "Shanghai",
+              "items": [
+                { "time": "09:00-11:30", "name": "Shanghai Museum (People's Square Branch)", "desc": "Rich collections of bronzes, ceramics, calligraphy and paintings, jade — deep dive into Chinese history" },
+                { "time": "13:00-15:00", "name": "Xintiandi", "desc": "Boutique shops, treasure hunting, relaxing café moments" },
+                { "time": "15:00-15:40", "name": "Tianzifang", "desc": "Rebuilt from Shanghai's unique Shikumen architecture — creative base for artists, maze-like alleyways, retro handmade craft shops" },
+                { "time": "16:10-16:30", "name": "Oriental Pearl Tower (exterior)", "desc": "Standing in Lujiazui, Pudong, facing the Bund across the Huangpu River — 468 m, eleven spheres inspired by 'big and small pearls falling on a jade plate'" },
+                { "time": "16:30", "name": "Huangpu River ferry (Jinling East Rd — Dongchang Rd)", "desc": "Admire the exotic Bund architecture, gaze across to the Lujiazui skyscrapers — history and modernity in perfect blend" }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Postal Museum — the Bund — Airport",
+              "meals": "Breakfast / Lunch",
+              "items": [
+                { "time": "09:00-10:30", "name": "Shanghai Postal Museum", "desc": "Located in the Shanghai General Post Office Building — train-carriage post offices, vintage mailboxes, the history of Chinese postal service" },
+                { "time": "11:00-12:00", "name": "The Bund", "desc": "Along the Huangpu River for ~1.5 km — Shanghai's symbolic landmark, famous for its international architecture and the stunning night view" },
+                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+              ]
+            }
+          ]
         }
       ],
       "anhuiLabels": {
@@ -302,11 +467,11 @@
       },
       "anhuiServiceTitle": "What's Included",
       "anhuiServiceItems": [
-        "Transport: 38-seat air-conditioned coach throughout",
-        "Accommodation: 2 nights at 4-star hotel (twin room, breakfast included)",
-        "Meals: 5 full meals (RMB 50 / person / meal standard)",
+        "Transport: 38-seat coach (Anhui routes) or 37-seat coach (Jiangnan/Shanghai)",
+        "Accommodation: 2 nights at 4-star hotel or 4-diamond rated boutique (twin room, breakfast)",
+        "Meals: 5 full meals (RMB 50 Anhui / RMB 60 Jiangnan & Shanghai per person per meal)",
         "Tickets: All attractions in itinerary",
-        "Guide: Accompanying guide + local guide throughout",
+        "Guide: 3 days of service by one English-speaking guide",
         "Insurance: Travel personal accident insurance, RMB 200,000 / person",
         "Extras: 2 bottles of mineral water per person per day"
       ],

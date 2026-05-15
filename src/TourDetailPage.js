@@ -23,29 +23,35 @@ const fadeIn = {
 const TOUR_GALLERIES = {
   huangshan: [
     '/images/anhui/huangshan-3.jpeg',  // mountain peaks
-    '/images/anhui/huangshan-1.jpeg',
-    '/images/anhui/huangshan-2.jpeg',
-    '/images/anhui/huangshan-4.jpeg',
-    '/images/anhui/huangshan-5.jpeg',
-    '/images/anhui/huangshan-7.jpeg',
-    '/images/anhui/huangshan-8.jpeg',
+    '/images/anhui/huangshan-4.jpeg',  // pine + mountain
+    '/images/anhui/huangshan-1.jpeg',  // fish lantern
+    '/images/anhui/huangshan-2.jpeg',  // village + water
+    '/images/anhui/huangshan-5.jpeg',  // Tunxi street
+    '/images/anhui/huangshan-6.png',   // Tunxi night
+    '/images/anhui/huangshan-7.jpeg',  // cow in forest
+    '/images/anhui/huangshan-8.jpeg',  // wetland bridge
   ],
   huizhou: [
-    '/images/anhui/huizhou-7.jpeg',
+    '/images/anhui/huizhou-1.jpeg',
     '/images/anhui/huizhou-2.jpeg',
+    '/images/anhui/huizhou-3.jpeg',
     '/images/anhui/huizhou-4.jpeg',
     '/images/anhui/huizhou-5.jpeg',
     '/images/anhui/huizhou-6.jpeg',
+    '/images/anhui/huizhou-7.jpeg',
     '/images/anhui/huizhou-8.jpeg',
     '/images/anhui/huizhou-9.jpeg',
     '/images/anhui/huizhou-10.jpeg',
+    '/images/anhui/huizhou-11.jpeg',
+    '/images/anhui/huizhou-12.jpeg',
+    '/images/anhui/huizhou-13.jpeg',
   ],
   qiyun: [
-    '/images/anhui/qiyun-3.jpeg',
-    '/images/anhui/qiyun-1.jpeg',
-    '/images/anhui/qiyun-2.jpeg',
-    '/images/anhui/qiyun-4.jpeg',
-    '/images/anhui/qiyun-6.jpeg',
+    '/images/anhui/qiyun-3.jpeg',     // Danxia rock
+    '/images/anhui/qiyun-1.jpeg',     // gate
+    '/images/anhui/qiyun-2.jpeg',     // rafting
+    '/images/anhui/qiyun-4.jpeg',     // mountain summit
+    '/images/anhui/qiyun-6.jpeg',     // ancient gateway
   ],
   anhui: [
     '/images/anhui/anhui-1.jpeg',
@@ -59,13 +65,76 @@ const TOUR_GALLERIES = {
     '/images/anhui/anhui-9.jpeg',
     '/images/anhui/anhui-10.jpeg',
   ],
+  suzhou: [
+    '/images/anhui/suzhou-3.jpeg',    // Humble Admin garden aerial
+    '/images/anhui/suzhou-1.jpeg',    // Tiger Hill from afar
+    '/images/anhui/suzhou-2.jpeg',    // Tiger Hill pagoda
+    '/images/anhui/suzhou-4.jpeg',    // garden pavilion
+    '/images/anhui/suzhou-5.jpeg',    // Hanshan Temple
+    '/images/anhui/suzhou-6.jpeg',    // Lingering Garden
+    '/images/anhui/suzhou-7.jpeg',    // Lingering pavilion
+    '/images/anhui/suzhou-8.jpeg',    // Lingering corridor
+    '/images/anhui/suzhou-9.jpeg',    // Zhouzhuang water town
+    '/images/anhui/suzhou-10.jpeg',   // Zhouzhuang boat
+  ],
+  hangzhou: [
+    '/images/anhui/hangzhou-9.jpeg',  // West Lake peach blossom
+    '/images/anhui/hangzhou-1.jpeg',  // Lingyin pavilion
+    '/images/anhui/hangzhou-2.jpeg',  // Xixi wetland aerial
+    '/images/anhui/hangzhou-3.jpeg',  // pagoda
+    '/images/anhui/hangzhou-4.jpeg',  // garden
+    '/images/anhui/hangzhou-5.jpeg',  // Wuzhen waterway
+    '/images/anhui/hangzhou-6.jpeg',  // Wuzhen village
+    '/images/anhui/hangzhou-7.jpeg',  // Songcheng night
+    '/images/anhui/hangzhou-8.jpeg',  // Songcheng performance
+    '/images/anhui/hangzhou-10.jpeg', // West Lake bridge
+  ],
+  'suzhou-hangzhou': [
+    '/images/anhui/hangzhou-5.jpeg',  // Wuzhen waterway hero
+    '/images/anhui/suzhou-4.jpeg',    // Suzhou garden
+    '/images/anhui/hangzhou-3.jpeg',  // pagoda
+    '/images/anhui/suzhou-5.jpeg',    // Hanshan Temple
+    '/images/anhui/hangzhou-6.jpeg',  // Wuzhen village
+    '/images/anhui/hangzhou-7.jpeg',  // Songcheng night
+    '/images/anhui/hangzhou-8.jpeg',  // Songcheng performance
+    '/images/anhui/hangzhou-9.jpeg',  // West Lake peach
+    '/images/anhui/hangzhou-10.jpeg', // West Lake bridge
+    '/images/anhui/suzhou-9.jpeg',    // Zhouzhuang
+  ],
+  shanghai: [
+    '/images/anhui/shanghai-18.jpeg', // skyline night
+    '/images/anhui/shanghai-1.jpeg',  // Yu Garden
+    '/images/anhui/shanghai-2.jpeg',  // garden
+    '/images/anhui/shanghai-3.jpeg',  // City God Temple
+    '/images/anhui/shanghai-4.jpeg',  // City God night
+    '/images/anhui/shanghai-5.jpeg',  // alley
+    '/images/anhui/shanghai-6.jpeg',  // Sinan Road
+    '/images/anhui/shanghai-7.jpeg',  // Nanjing Road
+    '/images/anhui/shanghai-9.jpeg',  // Shanghai Museum
+    '/images/anhui/shanghai-10.jpeg', // museum interior
+    '/images/anhui/shanghai-11.jpeg', // Xintiandi
+    '/images/anhui/shanghai-12.jpeg', // Tianzifang
+    '/images/anhui/shanghai-13.jpeg', // alley
+    '/images/anhui/shanghai-14.jpeg', // Tianzifang gateway
+    '/images/anhui/shanghai-15.jpeg', // Pearl Tower day
+    '/images/anhui/shanghai-16.jpeg', // Pearl Tower night
+    '/images/anhui/shanghai-17.jpeg', // Bund skyline
+    '/images/anhui/shanghai-19.jpeg', // Postal Museum
+    '/images/anhui/shanghai-20.jpeg', // alley
+    '/images/anhui/shanghai-21.jpeg', // Bund night
+    '/images/anhui/shanghai-22.jpeg', // street
+  ],
 };
 
 const TOUR_HEROES = {
   huangshan: '/images/anhui/huangshan-3.jpeg',
-  huizhou: '/images/anhui/huizhou-7.jpeg',
+  huizhou: '/images/anhui/huizhou-6.jpeg',
   qiyun: '/images/anhui/qiyun-3.jpeg',
-  anhui: '/images/anhui/anhui-1.jpeg',
+  anhui: '/images/anhui/anhui-2.jpeg',
+  suzhou: '/images/anhui/suzhou-4.jpeg',
+  hangzhou: '/images/anhui/hangzhou-9.jpeg',
+  'suzhou-hangzhou': '/images/anhui/hangzhou-5.jpeg',
+  shanghai: '/images/anhui/shanghai-18.jpeg',
 };
 
 function Hero({ image, eyebrow, title, tagline, price, fromLabel }) {

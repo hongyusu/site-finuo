@@ -404,10 +404,14 @@ export default function LandingPage() {
   }));
   const anhuiServiceItems = t('tourism.china.anhuiServiceItems', { returnObjects: true }) || [];
   const anhuiHeroImages = {
-    huangshan: '/images/anhui/huangshan-3.jpeg',  // Huangshan peaks
-    huizhou: '/images/anhui/huizhou-7.jpeg',       // Huizhou street
-    qiyun: '/images/anhui/qiyun-3.jpeg',           // Qiyun stone
-    anhui: '/images/anhui/anhui-1.jpeg',            // Jingchuan landscape
+    huangshan: '/images/anhui/huangshan-3.jpeg',          // Huangshan peaks
+    huizhou: '/images/anhui/huizhou-6.jpeg',               // Huizhou ancient gateway
+    qiyun: '/images/anhui/qiyun-3.jpeg',                   // Qiyun Danxia rock
+    anhui: '/images/anhui/anhui-2.jpeg',                   // Jingchuan river
+    suzhou: '/images/anhui/suzhou-4.jpeg',                 // Suzhou Humble Admin garden
+    hangzhou: '/images/anhui/hangzhou-9.jpeg',             // West Lake peach blossom
+    'suzhou-hangzhou': '/images/anhui/hangzhou-5.jpeg',    // Wuzhen waterway
+    shanghai: '/images/anhui/shanghai-18.jpeg',            // Shanghai night skyline
   };
 
   const finlandExperiences = t('tourism.finland.experiences', { returnObjects: true }) || [];
