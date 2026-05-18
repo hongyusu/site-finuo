@@ -62,6 +62,165 @@
         { "title": "极光旅拍", "desc": "专业摄影师拍摄全家福/情侣/写真，含后期" },
         { "title": "森林湖泊度假", "desc": "湖区木屋深度游，桑拿、独木舟、采蘑菇" },
         { "title": "雪地摩托", "desc": "拉普兰原野雪地摩托驾驶，含教学与装备" }
+      ],
+      "helsinki": "赫尔辛基景点",
+      "helsinkiDesc": "波罗的海女儿。从白色大教堂到岩石教堂、从世界遗产芬兰堡到现代图书馆 Oodi——15 处精选打卡景点。",
+      "helsinkiAttractions": [
+        { "name": "Helsinki Cathedral 赫尔辛基大教堂", "type": "地标建筑", "desc": "白色新古典主义大教堂，参议院广场制高点，城市最具代表性的天际线" },
+        { "name": "Suomenlinna 芬兰堡", "type": "世界遗产", "desc": "海上堡垒群岛，UNESCO 世界遗产。15 分钟轮渡可达，适合海景散步野餐" },
+        { "name": "Temppeliaukio Church 岩石教堂", "type": "建筑景点", "desc": "直接凿入花岗岩的圆形教堂，北欧极简设计典范，音响效果绝佳" },
+        { "name": "Kauppatori 海港集市", "type": "海港市场", "desc": "市中心海边集市，必尝芬兰三文鱼汤 lohikeitto，纪念品与北欧小吃" },
+        { "name": "Oodi Library 颂歌中央图书馆", "type": "现代建筑", "desc": "芬兰国家图书馆，2018 年开放，世界级现代建筑设计，免费入内" },
+        { "name": "Design District Helsinki 设计区", "type": "文艺街区", "desc": "200+ 北欧设计店、画廊、咖啡馆、买手店组成的核心创意街区" },
+        { "name": "Löyly", "type": "桑拿体验", "desc": "Hernesaari 海边木质建筑，公共桑拿 + 海水冷浴，芬兰桑拿文化体验首选" },
+        { "name": "Allas Sea Pool", "type": "海水泳池", "desc": "市中心 Katajanokka 露天海水泳池 + 桑拿，景观无敌" },
+        { "name": "Esplanadi Park 埃斯普拉纳迪公园", "type": "城市公园", "desc": "最有赫尔辛基氛围的中央林荫大道，夏季 Kappeli 户外露台必坐" },
+        { "name": "Seurasaari 自然岛", "type": "自然文化", "desc": "户外博物馆岛屿，迁建的芬兰各地传统木屋，森林漫步与野餐" },
+        { "name": "Uspenski Cathedral 乌斯别斯基大教堂", "type": "东正教教堂", "desc": "北欧最大东正教教堂，红砖俄式建筑，俯瞰港口" },
+        { "name": "Sibelius Monument 西贝柳斯纪念碑", "type": "艺术地标", "desc": "纪念芬兰国宝级作曲家西贝柳斯，600 根管风琴管雕塑" },
+        { "name": "Kiasma", "type": "现代艺术馆", "desc": "北欧现代艺术代表，建筑本身即艺术品" },
+        { "name": "Ateneum", "type": "美术馆", "desc": "芬兰国家美术馆，黄金时代艺术收藏，含 Gallen-Kallela 等大师" },
+        { "name": "Old Market Hall 老市场大厅", "type": "美食市场", "desc": "1889 年开业的室内市场，传统芬兰食品、咖啡甜点、海鲜熟食" }
+      ],
+      "dayTrips": "赫尔辛基周边短途",
+      "dayTripsDesc": "以赫尔辛基为基地的 4 条北欧短途路线，从半日到三日不等，覆盖芬兰本土名胜与跨海邻国名城。",
+      "dayTripsItems": [
+        { "name": "Porvoo 波尔沃", "country": "芬兰", "duration": "半天 ~ 1 天", "transport": "巴士约 1 小时", "desc": "芬兰最美古城，红色木屋老城、河边集市、咖啡馆与手工艺品店" },
+        { "name": "Fiskars Village 菲斯卡斯村", "country": "芬兰", "duration": "1 天", "transport": "火车 + 巴士约 1.5–2 小时", "desc": "北欧设计圣地，老铸铁厂改造的艺术家村落，工坊、画廊、餐厅" },
+        { "name": "Tallinn 塔林", "country": "爱沙尼亚", "duration": "1–2 天", "transport": "邮轮约 2 小时", "desc": "UNESCO 中世纪老城，鹅卵石街道、城墙、教堂塔尖，性价比极高" },
+        { "name": "Stockholm 斯德哥尔摩", "country": "瑞典", "duration": "2–3 天", "transport": "邮轮或飞机", "desc": "北欧首都、十四岛城市、皇宫、瓦萨博物馆、群岛巡游" }
+      ],
+      "dining": "餐厅推荐",
+      "diningDesc": "赫尔辛基精选餐厅 — 从米其林高端、新北欧创意到中餐家常与酒店附近便利餐厅，全面覆盖。",
+      "diningCatHotel": "酒店附近便利餐厅",
+      "diningCatWestern": "西餐 · Fine Dining & 中端",
+      "diningCatChinese": "中餐推荐",
+      "diningHotelItems": [
+        {
+          "id": "konnikiwa",
+          "name": "Ravintola Konnikiwa",
+          "type": "自助餐厅 · 阿尔托地铁商场",
+          "distance": "走路 500 米",
+          "desc": "阿尔托地铁站商场内，对面就是超市。自助形式，含寿司、中餐、水果、甜点、咖啡茶，便利且选择丰富。"
+        },
+        {
+          "id": "minmax",
+          "name": "Ravintola Minmax",
+          "type": "中餐 · 川菜 · 桌餐+自助",
+          "distance": "走路 700 米，10 分钟",
+          "desc": "从会场走过去约 700 米。可做桌餐及自助，包子、饺子、汤粉及花卷，偏川菜风格，装修比较简单但味道地道。"
+        },
+        {
+          "id": "sway",
+          "name": "Ravintola Sway",
+          "type": "自助 / 桌餐 · 餐厅环境优",
+          "distance": "1.4 公里，步行 18 分钟",
+          "desc": "餐厅环境很好，可自助也可桌餐。唯一的缺点是步行有点远。"
+        }
+      ],
+      "diningWesternItems": [
+        {
+          "id": "palace",
+          "name": "Ravintola Palace",
+          "type": "米其林 · 双星 · 4.7★",
+          "address": "Eteläranta 10, 00130 Helsinki",
+          "phone": "+358 050 5020718",
+          "desc": "赫尔辛基目前最顶级的米其林餐厅之一，芬兰少数双星代表。海景非常漂亮，整体属于经典北欧高端 Fine Dining。海鲜与北欧风味极强、服务极其正式、Wine pairing 出色。",
+          "best": "商务宴请 · 纪念日 · 第一次体验米其林"
+        },
+        {
+          "id": "olo",
+          "name": "Restaurant Olo",
+          "type": "米其林 · 新北欧 · 4.7★",
+          "address": "Pohjoisesplanadi 5",
+          "desc": "非常典型的新北欧料理，很多本地美食家认为是「最芬兰」的米其林。Tasting Menu 非常完整，北欧森林系风格，鹿肉、菌类、发酵食材极具代表性。",
+          "best": "想体验 Nordic Cuisine 精髓"
+        },
+        {
+          "id": "nokka",
+          "name": "Ravintola Nokka",
+          "type": "芬兰料理 · 4.6★",
+          "address": "Kanavaranta 7 F, 00160 Helsinki",
+          "phone": "09 6128 5600",
+          "desc": "很多亚洲客人反馈非常好，食材高级但味道不会太「野」。北欧野味处理优秀，鹿肉、帝王蟹、鱼类表现稳定，环境舒服不会太拘谨。"
+        },
+        {
+          "id": "demo",
+          "name": "Restaurant Demo",
+          "type": "米其林 · Fine Dining · 4.6★",
+          "address": "Itämerenkatu 25, 00180 Helsinki",
+          "phone": "09 2289 0840",
+          "desc": "赫尔辛基老牌米其林，非常稳定。味道平衡、服务成熟、不会像一些 Nordic 餐厅那么冷淡。"
+        },
+        {
+          "id": "goodwin",
+          "name": "Goodwin The Steak House",
+          "type": "牛排 · 中端 · 4.4★",
+          "address": "Eteläranta 14, 00130 Helsinki",
+          "phone": "050 4198000",
+          "desc": "如果想稳稳吃肉，这家非常安全。牛排质量稳定、海边位置、服务成熟。"
+        },
+        {
+          "id": "zetor",
+          "name": "Restaurant Zetor",
+          "type": "芬兰菜 · 主题餐厅 · 4.2★",
+          "address": "Mannerheimintie 3-5, 00100 Helsinki",
+          "phone": "010 7664450",
+          "desc": "「有趣版芬兰餐厅」。芬兰拖拉机主题（笑），氛围热闹，芬兰传统菜做得不错，适合外国人体验。价格比 Fine Dining 便宜很多，25–50€ 就能吃得很好。"
+        },
+        {
+          "id": "kappeli",
+          "name": "Kappeli Ravintola",
+          "type": "历史地标 · 玻璃温室 · 4.4★",
+          "address": "Eteläesplanadi 1, 00130 Helsinki",
+          "phone": "010 7663880",
+          "desc": "Kappeli 自 1867 年营业至今，被称为「Esplanadi 的明珠」。大面积玻璃温室结构、面向 Esplanadi 公园景观、19 世纪欧式咖啡馆气质。推荐三文鱼汤、驯鹿料理、北欧鱼类。"
+        },
+        {
+          "id": "ragu",
+          "name": "Ravintola Ragu",
+          "type": "现代欧洲 · 4.6★",
+          "address": "Ludviginkatu 3-5, 00130 Helsinki",
+          "phone": "09 596659",
+          "desc": "「最接近米其林水准、但氛围更轻松」的赫尔辛基餐厅之一。芬兰和北欧时令食材，结合意大利料理逻辑与葡萄酒文化，做现代欧洲 Fine Dining。安静、专业但放松。"
+        }
+      ],
+      "diningChineseItems": [
+        {
+          "id": "jinguanting",
+          "name": "锦官庭 Brokadi",
+          "type": "川 · 湘 · 粤 · 川渝火锅",
+          "location": "Tripla 商场 · Pasila",
+          "desc": "近年来旅芬华人及国际访客较为熟知的中式餐饮代表。位于赫尔辛基 Pasila 火车站上方的 Tripla 商场（北欧最大商业综合体），交通极佳，与赫尔辛基中央城区及机场铁路紧密衔接。整体空间设计现代商业餐饮风格融合东方元素，适宜商务接待、文化交流及团体用餐。"
+        },
+        {
+          "id": "liu",
+          "name": "Ravintola Liu 刘家饭店",
+          "type": "中国东北菜 · 机场附近",
+          "location": "万塔 · 机场附近",
+          "desc": "位于赫尔辛基大区万塔市，毗邻赫尔辛基–万塔国际机场，首都圈北部重要交通枢纽。东北传统风味为主，秉承朴实厚重的北方饮食文化，完整保留东北菜鲜香醇厚、讲究火候的传统特点。"
+        },
+        {
+          "id": "happy",
+          "name": "Happy Food Garden 乐园",
+          "type": "四川火锅 · 中式烧烤 · 川菜",
+          "location": "赫尔辛基市中心",
+          "desc": "深受当地华人和国际食客欢迎的中式餐厅，主打四川火锅、中式烧烤及传统川菜。环境热闹，适合朋友聚会、商务聚餐和团队活动。地道中国风味，菜品丰富，有包厢。"
+        },
+        {
+          "id": "dongbei",
+          "name": "Dongbei House 东北虎",
+          "type": "正宗东北菜 · 经典家常菜",
+          "location": "赫尔辛基市中心",
+          "desc": "位于市中心的 Dongbei House（华人常称「东北虎」），以正宗东北菜和经典中式家常菜闻名。环境简洁大方，交通便利，适合商务宴请与朋友聚会。锅包肉、孜然羊肉、地三鲜等特色菜深受华人及当地食客欢迎，有包厢。"
+        },
+        {
+          "id": "leaf",
+          "name": "Leaf Restaurant",
+          "type": "「隐藏中餐」· 川菜口碑佳",
+          "location": "Forum 商场 0 层 · 中央车站附近",
+          "desc": "赫尔辛基市中心 Forum 商场 0 层，离中央火车站步行几分钟。外看像 Sushi Buffet，但真正懂的人会点它的「隐藏中餐菜单」，尤其四川菜口碑不错。水煮类、鱼香类、干锅、川菜、炒面调味更接近国内，是中国留学生和亚洲游客的「解中国胃」选择。"
+        }
       ]
     },
     "norway": {

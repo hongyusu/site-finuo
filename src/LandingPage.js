@@ -38,6 +38,108 @@ const ICELAND_HEADER = '/images/destinations/iceland.jpg';
 const DENMARK_HEADER = '/images/destinations/lake.jpg';
 const CHINA_HEADER = '/images/anhui/huangshan-3.jpeg';
 
+function HelsinkiAttractions({ items, images }) {
+  return (
+    <Grid container spacing={2}>
+      {items.map((it, i) => (
+        <Grid item xs={12} sm={6} md={4} key={i}>
+          <MediaCard
+            index={i}
+            image={images[i] || null}
+            title={it.name}
+            subtitle={it.desc}
+            meta={it.type}
+            height={260}
+          />
+        </Grid>
+      ))}
+    </Grid>
+  );
+}
+
+function DayTripsGrid({ items, images }) {
+  return (
+    <Grid container spacing={2}>
+      {items.map((it, i) => (
+        <Grid item xs={12} sm={6} md={3} key={i}>
+          <MediaCard
+            index={i}
+            image={images[i] || null}
+            title={it.name}
+            subtitle={it.desc}
+            meta={`${it.country} · ${it.duration} · ${it.transport}`}
+            height={300}
+          />
+        </Grid>
+      ))}
+    </Grid>
+  );
+}
+
+function RestaurantCard({ item, image, expanded, onToggle, index, category }) {
+  return (
+    <Box
+      component={motion.div}
+      {...stagger(index)}
+      sx={{
+        border: '1px solid rgba(245,242,237,0.08)',
+        bgcolor: '#0F0F0F',
+        overflow: 'hidden',
+        transition: 'border-color 0.3s ease',
+        ...(expanded && { borderColor: GOLD }),
+      }}
+    >
+      <Box
+        onClick={onToggle}
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          cursor: image ? 'pointer' : 'default',
+          '&:hover .rc-img': { transform: 'scale(1.03)' },
+        }}
+      >
+        {image && (
+          <Box sx={{ width: { xs: '100%', md: 280 }, height: { xs: 180, md: 180 }, overflow: 'hidden', flexShrink: 0 }}>
+            <Box
+              className="rc-img"
+              component="img"
+              src={image}
+              alt={item.name}
+              sx={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
+            />
+          </Box>
+        )}
+        <Box sx={{ flex: 1, p: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+            {item.type}
+          </Typography>
+          <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.3rem', md: '1.55rem' }, color: CREAM, mb: 1, lineHeight: 1.2 }}>
+            {item.name}
+          </Typography>
+          {(item.address || item.location || item.distance) && (
+            <Typography sx={{ fontSize: '0.8rem', color: 'rgba(245,242,237,0.55)', mb: 0.5 }}>
+              {item.address || item.location || item.distance}
+            </Typography>
+          )}
+          {item.phone && (
+            <Typography sx={{ fontSize: '0.8rem', color: 'rgba(245,242,237,0.55)', mb: 1 }}>
+              {item.phone}
+            </Typography>
+          )}
+          <Typography sx={{ color: DIM, fontSize: '0.88rem', lineHeight: 1.6 }}>
+            {item.desc}
+          </Typography>
+          {item.best && (
+            <Typography sx={{ mt: 1.5, fontSize: '0.82rem', color: GOLD, fontStyle: 'italic' }}>
+              {item.best}
+            </Typography>
+          )}
+        </Box>
+      </Box>
+    </Box>
+  );
+}
+
 function FinlandActivities({ items }) {
   return (
     <Grid container spacing={2}>
@@ -416,6 +518,50 @@ export default function LandingPage() {
 
   const finlandExperiences = t('tourism.finland.experiences', { returnObjects: true }) || [];
   const finlandHotels = t('tourism.finland.hotelsItems', { returnObjects: true }) || [];
+  const helsinkiAttractions = t('tourism.finland.helsinkiAttractions', { returnObjects: true }) || [];
+  const dayTripsItems = t('tourism.finland.dayTripsItems', { returnObjects: true }) || [];
+  const diningHotel = t('tourism.finland.diningHotelItems', { returnObjects: true }) || [];
+  const diningWestern = t('tourism.finland.diningWesternItems', { returnObjects: true }) || [];
+  const diningChinese = t('tourism.finland.diningChineseItems', { returnObjects: true }) || [];
+
+  // Helsinki attraction image map (matches order in i18n)
+  const helsinkiImages = [
+    '/images/helsinki/helsinki-cathedral.png',
+    '/images/helsinki/suomenlinna.jpg',
+    '/images/helsinki/temppeliaukio.jpg',
+    '/images/helsinki/kauppatori.jpg',
+    '/images/helsinki/oodi.jpg',
+    '/images/helsinki/design-district.jpg',
+    '/images/helsinki/loyly.jpg',
+    '/images/helsinki/allas-sea-pool.jpg',
+    '/images/helsinki/esplanadi.jpg',
+    '/images/helsinki/seurasaari.jpg',
+    '/images/helsinki/uspenski.jpg',
+    '/images/helsinki/sibelius.jpg',
+    '/images/helsinki/kiasma.jpg',
+    '/images/helsinki/ateneum.jpg',
+    '/images/helsinki/old-market-hall.jpg',
+  ];
+  const dayTripImages = [
+    '/images/helsinki/porvoo.jpg',
+    '/images/helsinki/fiskars-village.jpg',
+    '/images/helsinki/tallinn.jpg',
+    '/images/helsinki/stockholm.jpg',
+  ];
+  // Restaurant images by id
+  const restaurantImage = (id, category) => {
+    const map = {
+      konnikiwa: '/images/helsinki/konnikiwa-2.png',
+      minmax: '/images/helsinki/minmax-1.png',
+      sway: '/images/helsinki/sway-2.png',
+      jinguanting: '/images/helsinki/jinguanting-3.jpg',
+      liu: null, // no photo
+      happy: '/images/helsinki/happyfoodgarden-1.jpg',
+      dongbei: '/images/helsinki/dongbeihu-1.jpg',
+      leaf: '/images/helsinki/leaf-1.jpg',
+    };
+    return map[id] || null;
+  };
   const norwayRoutes = t('tourism.norway.routesItems', { returnObjects: true }) || [];
   const norwayActs = t('tourism.norway.activitiesItems', { returnObjects: true }) || [];
   const icelandRoutes = t('tourism.iceland.routesItems', { returnObjects: true }) || [];
@@ -494,7 +640,7 @@ export default function LandingPage() {
                 </Typography>
                 <FinlandHotels items={finlandHotels} />
               </Box>
-              <Box sx={{ mb: 6 }}>
+              <Box sx={{ mb: 8 }}>
                 <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
                   {t('tourism.finland.activities')}
                 </Typography>
@@ -502,6 +648,99 @@ export default function LandingPage() {
                   {t('tourism.finland.activitiesDesc')}
                 </Typography>
                 <FinlandActivities items={finlandExperiences} />
+              </Box>
+
+              {/* Helsinki Attractions */}
+              <Box sx={{ mb: 8 }}>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+                  {t('tourism.finland.helsinki')}
+                </Typography>
+                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 800 }}>
+                  {t('tourism.finland.helsinkiDesc')}
+                </Typography>
+                <HelsinkiAttractions items={helsinkiAttractions} images={helsinkiImages} />
+              </Box>
+
+              {/* Day Trips */}
+              <Box sx={{ mb: 8 }}>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+                  {t('tourism.finland.dayTrips')}
+                </Typography>
+                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 800 }}>
+                  {t('tourism.finland.dayTripsDesc')}
+                </Typography>
+                <DayTripsGrid items={dayTripsItems} images={dayTripImages} />
+              </Box>
+
+              {/* Dining */}
+              <Box sx={{ mb: 6 }}>
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+                  {t('tourism.finland.dining')}
+                </Typography>
+                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 5, maxWidth: 800 }}>
+                  {t('tourism.finland.diningDesc')}
+                </Typography>
+
+                {/* Sub-section: Hotel */}
+                <Box sx={{ mb: 5 }}>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.7rem' }, color: CREAM, mb: 3, lineHeight: 1.2 }}>
+                    {t('tourism.finland.diningCatHotel')}
+                  </Typography>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    {diningHotel.map((item, i) => (
+                      <RestaurantCard
+                        key={item.id}
+                        item={item}
+                        image={restaurantImage(item.id, 'hotel')}
+                        expanded={false}
+                        onToggle={() => {}}
+                        index={i}
+                        category="hotel"
+                      />
+                    ))}
+                  </Box>
+                </Box>
+
+                {/* Sub-section: Western */}
+                <Box sx={{ mb: 5 }}>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.7rem' }, color: CREAM, mb: 3, lineHeight: 1.2 }}>
+                    {t('tourism.finland.diningCatWestern')}
+                  </Typography>
+                  <Grid container spacing={2}>
+                    {diningWestern.map((item, i) => (
+                      <Grid item xs={12} md={6} key={item.id}>
+                        <RestaurantCard
+                          item={item}
+                          image={null}
+                          expanded={false}
+                          onToggle={() => {}}
+                          index={i}
+                          category="western"
+                        />
+                      </Grid>
+                    ))}
+                  </Grid>
+                </Box>
+
+                {/* Sub-section: Chinese */}
+                <Box>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.7rem' }, color: CREAM, mb: 3, lineHeight: 1.2 }}>
+                    {t('tourism.finland.diningCatChinese')}
+                  </Typography>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    {diningChinese.map((item, i) => (
+                      <RestaurantCard
+                        key={item.id}
+                        item={item}
+                        image={restaurantImage(item.id, 'chinese')}
+                        expanded={false}
+                        onToggle={() => {}}
+                        index={i}
+                        category="chinese"
+                      />
+                    ))}
+                  </Box>
+                </Box>
               </Box>
             </CountrySection>
           )}

@@ -62,6 +62,165 @@
         { "title": "Aurora Photography", "desc": "Professional photographer for family/couple/portrait sessions" },
         { "title": "Lakeland Retreats", "desc": "Cabin getaways with sauna, canoeing, foraging" },
         { "title": "Snowmobiling", "desc": "Lapland wilderness snowmobile tours with instruction and gear" }
+      ],
+      "helsinki": "Helsinki Highlights",
+      "helsinkiDesc": "Daughter of the Baltic. From the white-domed Cathedral to the rock-hewn Temppeliaukio, from the UNESCO sea fortress to the world-class Oodi library — 15 must-see Helsinki attractions.",
+      "helsinkiAttractions": [
+        { "name": "Helsinki Cathedral", "type": "Landmark", "desc": "White neoclassical cathedral atop Senate Square — the city's most iconic skyline" },
+        { "name": "Suomenlinna", "type": "UNESCO World Heritage", "desc": "Sea fortress islands, 15-min ferry from the harbor — perfect for sea-view walks and picnics" },
+        { "name": "Temppeliaukio Church", "type": "Architecture", "desc": "The Rock Church carved into a granite outcrop — a Nordic minimalist masterpiece with exceptional acoustics" },
+        { "name": "Kauppatori Market Square", "type": "Harbor market", "desc": "Seaside market in the city center — must-try Finnish salmon soup (lohikeitto), Nordic snacks, souvenirs" },
+        { "name": "Oodi Library", "type": "Modern architecture", "desc": "Finland's central library, opened 2018 — world-class contemporary architecture, free entry" },
+        { "name": "Design District Helsinki", "type": "Arts & shopping", "desc": "200+ Nordic design shops, galleries, cafés, and boutiques in Helsinki's creative quarter" },
+        { "name": "Löyly", "type": "Sauna experience", "desc": "Wooden seaside complex in Hernesaari — public sauna + sea dip, the essential Finnish sauna experience" },
+        { "name": "Allas Sea Pool", "type": "Sea pool", "desc": "Open-air seawater pools + sauna at Katajanokka in the heart of the city — unbeatable views" },
+        { "name": "Esplanadi Park", "type": "City park", "desc": "Helsinki's signature central boulevard — Kappeli's summer terrace is unmissable" },
+        { "name": "Seurasaari", "type": "Nature & culture", "desc": "Open-air museum island with traditional Finnish wooden buildings relocated from around the country" },
+        { "name": "Uspenski Cathedral", "type": "Orthodox cathedral", "desc": "Northern Europe's largest Orthodox cathedral — red-brick Russian architecture overlooking the harbor" },
+        { "name": "Sibelius Monument", "type": "Art landmark", "desc": "Memorial to Finland's national composer Jean Sibelius — 600 steel organ pipes" },
+        { "name": "Kiasma", "type": "Contemporary art museum", "desc": "Flagship Nordic contemporary art museum — the building itself is a work of art" },
+        { "name": "Ateneum", "type": "Art museum", "desc": "Finland's national gallery — Golden Age art including Gallen-Kallela and other masters" },
+        { "name": "Old Market Hall", "type": "Food market", "desc": "Indoor market open since 1889 — traditional Finnish food, coffee, pastries, seafood, deli" }
+      ],
+      "dayTrips": "Day Trips from Helsinki",
+      "dayTripsDesc": "Four Nordic excursions from Helsinki ranging from half-day to three days — covering Finland's gems plus cross-sea neighboring capitals.",
+      "dayTripsItems": [
+        { "name": "Porvoo", "country": "Finland", "duration": "Half day – 1 day", "transport": "Bus ~1 hr", "desc": "Finland's most photogenic old town — red wooden houses, riverside market, cafés and craft shops" },
+        { "name": "Fiskars Village", "country": "Finland", "duration": "1 day", "transport": "Train + bus ~1.5–2 hr", "desc": "Nordic design pilgrimage — historic ironworks transformed into an artist village with workshops, galleries, restaurants" },
+        { "name": "Tallinn", "country": "Estonia", "duration": "1–2 days", "transport": "Ferry ~2 hr", "desc": "UNESCO medieval old town — cobblestone streets, city walls, church spires, excellent value" },
+        { "name": "Stockholm", "country": "Sweden", "duration": "2–3 days", "transport": "Ferry or flight", "desc": "Nordic capital, fourteen-island city — royal palace, Vasa Museum, archipelago cruises" }
+      ],
+      "dining": "Where to Eat",
+      "diningDesc": "Curated Helsinki restaurants — from Michelin fine dining and new-Nordic creativity, to Chinese home-style and convenient near-hotel options.",
+      "diningCatHotel": "Near-Hotel Convenience",
+      "diningCatWestern": "Western · Fine Dining & Mid-range",
+      "diningCatChinese": "Chinese Restaurants",
+      "diningHotelItems": [
+        {
+          "id": "konnikiwa",
+          "name": "Ravintola Konnikiwa",
+          "type": "Buffet · Aalto Metro mall",
+          "distance": "500 m walk",
+          "desc": "Inside the Aalto Metro station mall, supermarket directly across. Buffet-style — sushi, Chinese dishes, fruit, dessert, coffee and tea. Convenient with broad selection."
+        },
+        {
+          "id": "minmax",
+          "name": "Ravintola Minmax",
+          "type": "Chinese · Sichuan · Table + buffet",
+          "distance": "700 m, 10 min walk",
+          "desc": "About 700 m from the venue. Table service and buffet — steamed buns, dumplings, noodle soup, mantou, leaning Sichuan. Simple interior but authentic flavors."
+        },
+        {
+          "id": "sway",
+          "name": "Ravintola Sway",
+          "type": "Buffet / table · Pleasant ambience",
+          "distance": "1.4 km, 18 min walk",
+          "desc": "Lovely restaurant ambience, both buffet and table service. The only downside is the longer walk."
+        }
+      ],
+      "diningWesternItems": [
+        {
+          "id": "palace",
+          "name": "Ravintola Palace",
+          "type": "Michelin · 2-star · 4.7★",
+          "address": "Eteläranta 10, 00130 Helsinki",
+          "phone": "+358 050 5020718",
+          "desc": "One of Helsinki's top Michelin restaurants — a rare Finnish two-star. Stunning sea views, classic Nordic high-end fine dining. Strong seafood and Nordic flavors, very formal service, excellent wine pairing.",
+          "best": "Business dining · anniversaries · first Michelin experience"
+        },
+        {
+          "id": "olo",
+          "name": "Restaurant Olo",
+          "type": "Michelin · New Nordic · 4.7★",
+          "address": "Pohjoisesplanadi 5",
+          "desc": "Classic new-Nordic cuisine — many local foodies call it the 'most Finnish' Michelin. Complete tasting menu, Nordic forest-driven style, venison, mushrooms, and fermented ingredients shine.",
+          "best": "To experience the essence of Nordic Cuisine"
+        },
+        {
+          "id": "nokka",
+          "name": "Ravintola Nokka",
+          "type": "Finnish · 4.6★",
+          "address": "Kanavaranta 7 F, 00160 Helsinki",
+          "phone": "09 6128 5600",
+          "desc": "Many Asian guests rate this very highly — premium ingredients without being too 'wild'. Excellent handling of Nordic game (venison, king crab, fish), comfortable atmosphere without stiffness."
+        },
+        {
+          "id": "demo",
+          "name": "Restaurant Demo",
+          "type": "Michelin · Fine dining · 4.6★",
+          "address": "Itämerenkatu 25, 00180 Helsinki",
+          "phone": "09 2289 0840",
+          "desc": "Long-established Helsinki Michelin, very consistent. Balanced flavors, mature service, never as cold as some Nordic restaurants."
+        },
+        {
+          "id": "goodwin",
+          "name": "Goodwin The Steak House",
+          "type": "Steak · Mid-range · 4.4★",
+          "address": "Eteläranta 14, 00130 Helsinki",
+          "phone": "050 4198000",
+          "desc": "If you just want a solid steak, this is a safe bet. Reliable steak quality, seaside location, mature service."
+        },
+        {
+          "id": "zetor",
+          "name": "Restaurant Zetor",
+          "type": "Finnish · Themed · 4.2★",
+          "address": "Mannerheimintie 3-5, 00100 Helsinki",
+          "phone": "010 7664450",
+          "desc": "The fun take on Finnish dining — tractor-themed (yes really), lively atmosphere, traditional Finnish dishes well executed, great for visiting foreigners. Much cheaper than fine dining at €25–50 for a great meal."
+        },
+        {
+          "id": "kappeli",
+          "name": "Kappeli Ravintola",
+          "type": "Historic landmark · Glass conservatory · 4.4★",
+          "address": "Eteläesplanadi 1, 00130 Helsinki",
+          "phone": "010 7663880",
+          "desc": "Operating since 1867, the 'pearl of Esplanadi'. Large glass conservatory facing Esplanadi Park, 19th-century European café atmosphere. Try the salmon soup, reindeer, Nordic fish, afternoon coffee."
+        },
+        {
+          "id": "ragu",
+          "name": "Ravintola Ragu",
+          "type": "Modern European · 4.6★",
+          "address": "Ludviginkatu 3-5, 00130 Helsinki",
+          "phone": "09 596659",
+          "desc": "One of the Helsinki restaurants 'closest to Michelin level but more relaxed'. Finnish and Nordic seasonal ingredients combined with Italian cooking logic and wine culture — modern European fine dining, quiet and refined."
+        }
+      ],
+      "diningChineseItems": [
+        {
+          "id": "jinguanting",
+          "name": "Jinguanting Brokadi",
+          "type": "Sichuan · Hunan · Cantonese · Hotpot",
+          "location": "Tripla Mall · Pasila",
+          "desc": "One of Helsinki's most established Chinese restaurants among the Finnish-Chinese community and international visitors. Located inside Tripla mall above Pasila railway station — the largest commercial complex in the Nordics, with seamless connections to central Helsinki and the airport. Modern commercial interior fused with Eastern elements, suitable for business meetings, cultural exchanges, group dining."
+        },
+        {
+          "id": "liu",
+          "name": "Ravintola Liu",
+          "type": "Northeastern Chinese · Near airport",
+          "location": "Vantaa · Near the airport",
+          "desc": "Located in Vantaa adjacent to Helsinki-Vantaa International Airport, a key transit hub in the northern capital region. Traditional Northeastern Chinese flavors — robust northern Chinese food culture preserving the rich, savory, fire-controlled traditions of Dongbei cuisine."
+        },
+        {
+          "id": "happy",
+          "name": "Happy Food Garden",
+          "type": "Sichuan hotpot · Chinese BBQ · Sichuan",
+          "location": "Helsinki city center",
+          "desc": "Popular among local Chinese and international diners. Specializes in Sichuan hotpot, Chinese BBQ, traditional Sichuan dishes. Lively ambience for friend gatherings, business meals, team activities. Authentic Chinese flavors, rich menu, private rooms available."
+        },
+        {
+          "id": "dongbei",
+          "name": "Dongbei House",
+          "type": "Authentic Northeastern · Home-style",
+          "location": "Helsinki city center",
+          "desc": "Known locally as 'Dongbeihu' (Northeastern Tiger). Famous for authentic Northeastern Chinese and classic home-style dishes. Clean, generous interior, easy access, great for business and friends. Specialties: pork in vinegar sauce, cumin lamb, sautéed eggplant/potato/peppers. Private rooms available."
+        },
+        {
+          "id": "leaf",
+          "name": "Leaf Restaurant",
+          "type": "Hidden Chinese menu · Sichuan",
+          "location": "Forum Mall ground floor · Near Central Station",
+          "desc": "In the basement of Forum Mall, minutes from Helsinki Central Station. Looks like a sushi buffet, but those in the know order from the 'hidden Chinese menu' — Sichuan dishes have a strong reputation. Boiled, fish-flavored, dry-pot, Sichuan, fried noodles closer to mainland flavors — popular with Chinese students and Asian travelers seeking real Chinese taste."
+        }
       ]
     },
     "norway": {
