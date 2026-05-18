@@ -555,7 +555,7 @@ export default function LandingPage() {
       minmax: '/images/helsinki/minmax-1.png',
       sway: '/images/helsinki/sway-2.png',
       jinguanting: '/images/helsinki/jinguanting-3.jpg',
-      liu: null, // no photo
+      liu: '/images/helsinki/jinguanting-2.jpg', // no own photo — reuse a generic restaurant interior
       happy: '/images/helsinki/happyfoodgarden-1.jpg',
       dongbei: '/images/helsinki/dongbeihu-1.jpg',
       leaf: '/images/helsinki/leaf-1.jpg',
