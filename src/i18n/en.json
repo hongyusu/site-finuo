@@ -839,6 +839,14 @@
     "partners": "Partners",
     "partnersDesc": "Long-term partnerships with Finnish universities, local governments, industry associations, and top resorts."
   },
+  "chat": {
+    "eyebrow": "Live Help",
+    "title": "Finuo Assistant",
+    "placeholder": "Type your question…",
+    "greeting": "Hi! I'm the Finuo assistant ✨ Ask me anything about Nordic travel, study abroad in Finland, MICE events, or Helsinki local picks.",
+    "empty": "(no reply)",
+    "errorReply": "Sorry, I can't reach the server right now. Please email booking@finuo.fi."
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "Get in Touch",

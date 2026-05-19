@@ -855,6 +855,14 @@
     "partners": "合作伙伴",
     "partnersDesc": "与芬兰多所大学、地方政府、行业协会及顶级度假村建立长期合作。"
   },
+  "chat": {
+    "eyebrow": "在线咨询",
+    "title": "Finuo 助手",
+    "placeholder": "输入您的问题…",
+    "greeting": "您好！我是 Finuo 在线助手 ✨ 关于北欧旅游、芬兰留学、会展或赫尔辛基本地推荐，欢迎随时提问。",
+    "empty": "（暂无回复）",
+    "errorReply": "抱歉，目前无法连接。请发送邮件至 booking@finuo.fi 联系我们。"
+  },
   "contact": {
     "title": "联系我们",
     "subtitle": "Get in Touch",

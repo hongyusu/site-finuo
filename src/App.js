@@ -8,6 +8,7 @@ import LandingPage from './LandingPage';
 import LandingPage1 from './LandingPage1';
 import LandingPageMice from './LandingPageMice';
 import TourDetailPage from './TourDetailPage';
+import ChatWidget from './components_shared/ChatWidget';
 import getLPTheme from './getLPTheme';
 
 function parseTourFromHash() {
@@ -86,6 +87,7 @@ function App() {
           {renderSite()}
         </>
       )}
+      <ChatWidget />
     </ThemeProvider>
   );
 }
