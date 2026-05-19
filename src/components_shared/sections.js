@@ -110,7 +110,10 @@ export function MediaCard({ image, title, subtitle, meta, height = 300, index = 
         cursor: 'pointer',
         height,
         '&:hover img': { transform: 'scale(1.05)' },
-        '&:hover .overlay': { opacity: 1 },
+        // On hover: image darkens, full overlay fades in, text rises
+        '&:hover .overlay-base': { opacity: 0 },
+        '&:hover .overlay-hover': { opacity: 1 },
+        '&:hover .mc-text': { transform: 'translateY(-6px)' },
       }}
     >
       <Box
@@ -120,15 +123,36 @@ export function MediaCard({ image, title, subtitle, meta, height = 300, index = 
         onError={handleError}
         sx={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1)' }}
       />
+      {/* Default overlay: subtle gradient at bottom only */}
       <Box
-        className="overlay"
+        className="overlay-base"
         sx={{
           position: 'absolute', inset: 0,
           background: 'linear-gradient(to top, rgba(13,13,13,0.85) 0%, rgba(13,13,13,0.2) 60%, transparent 100%)',
           opacity: 0.85,
           transition: 'opacity 0.5s ease',
+          pointerEvents: 'none',
+        }}
+      />
+      {/* Hover overlay: covers ~half the image with darker layer for better text readability */}
+      <Box
+        className="overlay-hover"
+        sx={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(to top, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.75) 50%, rgba(13,13,13,0.1) 100%)',
+          opacity: 0,
+          transition: 'opacity 0.5s ease',
+          pointerEvents: 'none',
+        }}
+      />
+      {/* Text content: lifts on hover */}
+      <Box
+        className="mc-text"
+        sx={{
+          position: 'absolute', inset: 0,
           display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
           p: { xs: 2.5, md: 3 },
+          transition: 'transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)',
         }}
       >
         {meta && (
@@ -140,7 +164,7 @@ export function MediaCard({ image, title, subtitle, meta, height = 300, index = 
           {title}
         </Typography>
         {subtitle && (
-          <Typography sx={{ fontSize: '0.82rem', color: DIM, lineHeight: 1.5 }}>
+          <Typography sx={{ fontSize: '0.82rem', color: 'rgba(245,242,237,0.85)', lineHeight: 1.5 }}>
             {subtitle}
           </Typography>
         )}
