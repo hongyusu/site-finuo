@@ -32,6 +32,18 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Server not configured: missing OPENAI_API_KEY' });
   }
 
+  // Diagnostic mode: GET /api/chat?diag=1 to verify env-var shape (NOT the key)
+  if (req.query?.diag === '1' || req.body?.diag === 1) {
+    return res.status(200).json({
+      keyLength: apiKey.length,
+      keyPrefix: apiKey.slice(0, 8),
+      keySuffix: apiKey.slice(-4),
+      keyHasQuotes: apiKey.startsWith("'") || apiKey.startsWith('"'),
+      keyHasWhitespace: apiKey !== apiKey.trim(),
+      model: MODEL,
+    });
+  }
+
   const { messages = [], lang = 'en' } = req.body || {};
   if (!Array.isArray(messages) || messages.length === 0) {
     return res.status(400).json({ error: 'messages array is required' });
@@ -66,7 +78,10 @@ export default async function handler(req, res) {
     if (!r.ok) {
       const errBody = await r.text();
       console.error('OpenAI error:', r.status, errBody.slice(0, 500));
-      return res.status(502).json({ error: `Upstream LLM error (${r.status})` });
+      // Surface the OpenAI error code/message in dev to make debugging easier
+      let detail;
+      try { detail = JSON.parse(errBody).error?.message; } catch (_) { detail = errBody.slice(0, 200); }
+      return res.status(502).json({ error: `Upstream LLM error (${r.status})`, detail });
     }
 
     const data = await r.json();
