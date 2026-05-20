@@ -32,18 +32,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Server not configured: missing OPENAI_API_KEY' });
   }
 
-  // Diagnostic mode: GET /api/chat?diag=1 to verify env-var shape (NOT the key)
-  if (req.query?.diag === '1' || req.body?.diag === 1) {
-    return res.status(200).json({
-      keyLength: apiKey.length,
-      keyPrefix: apiKey.slice(0, 8),
-      keySuffix: apiKey.slice(-4),
-      keyHasQuotes: apiKey.startsWith("'") || apiKey.startsWith('"'),
-      keyHasWhitespace: apiKey !== apiKey.trim(),
-      model: MODEL,
-    });
-  }
-
   const { messages = [], lang = 'en' } = req.body || {};
   if (!Array.isArray(messages) || messages.length === 0) {
     return res.status(400).json({ error: 'messages array is required' });
