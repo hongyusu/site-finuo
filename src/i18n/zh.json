@@ -855,6 +855,10 @@
     "partners": "合作伙伴",
     "partnersDesc": "与芬兰多所大学、地方政府、行业协会及顶级度假村建立长期合作。"
   },
+  "restaurantModal": {
+    "directions": "获取路线",
+    "openInMaps": "在 Google 地图打开"
+  },
   "chat": {
     "eyebrow": "在线咨询",
     "title": "Finuo 助手",

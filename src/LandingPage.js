@@ -19,6 +19,7 @@ import {
   FullBleedImage,
 } from './components_shared/sections';
 import { AboutSection, ContactSection } from './components_shared/AboutContact';
+import RestaurantModal from './components_shared/RestaurantModal';
 
 const GOLD = '#C4A35A';
 const CREAM = '#F5F2ED';
@@ -76,7 +77,7 @@ function DayTripsGrid({ items, images }) {
   );
 }
 
-function RestaurantCard({ item, image, expanded, onToggle, index, category }) {
+function RestaurantCard({ item, image, expanded, onToggle, onOpenDetail, index, category }) {
   return (
     <Box
       component={motion.div}
@@ -85,17 +86,18 @@ function RestaurantCard({ item, image, expanded, onToggle, index, category }) {
         border: '1px solid rgba(245,242,237,0.08)',
         bgcolor: '#0F0F0F',
         overflow: 'hidden',
-        transition: 'border-color 0.3s ease',
+        cursor: 'pointer',
+        transition: 'all 0.3s ease',
         ...(expanded && { borderColor: GOLD }),
+        '&:hover': { borderColor: GOLD },
+        '&:hover .rc-img': { transform: 'scale(1.03)' },
       }}
+      onClick={() => onOpenDetail && onOpenDetail(item, image)}
     >
       <Box
-        onClick={onToggle}
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
-          cursor: image ? 'pointer' : 'default',
-          '&:hover .rc-img': { transform: 'scale(1.03)' },
         }}
       >
         {image && (
@@ -134,6 +136,9 @@ function RestaurantCard({ item, image, expanded, onToggle, index, category }) {
               {item.best}
             </Typography>
           )}
+          <Typography sx={{ mt: 1.5, fontSize: '0.72rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(245,242,237,0.45)' }}>
+            📍 view on map →
+          </Typography>
         </Box>
       </Box>
     </Box>
@@ -494,6 +499,10 @@ export default function LandingPage() {
   const { t } = useTranslation();
   const [activeCountry, setActiveCountry] = React.useState('finland');
   const [expandedTour, setExpandedTour] = React.useState('huangshan');
+  const [restaurantDetail, setRestaurantDetail] = React.useState(null);
+
+  const openRestaurant = (item, image) => setRestaurantDetail({ item, image });
+  const closeRestaurant = () => setRestaurantDetail(null);
 
   const anhuiToursRaw = t('tourism.china.anhuiTours', { returnObjects: true }) || [];
   const anhuiLabels = t('tourism.china.anhuiLabels', { returnObjects: true }) || {};
@@ -694,6 +703,7 @@ export default function LandingPage() {
                         image={restaurantImage(item.id, 'hotel')}
                         expanded={false}
                         onToggle={() => {}}
+                        onOpenDetail={openRestaurant}
                         index={i}
                         category="hotel"
                       />
@@ -714,6 +724,7 @@ export default function LandingPage() {
                           image={null}
                           expanded={false}
                           onToggle={() => {}}
+                          onOpenDetail={openRestaurant}
                           index={i}
                           category="western"
                         />
@@ -735,6 +746,7 @@ export default function LandingPage() {
                         image={restaurantImage(item.id, 'chinese')}
                         expanded={false}
                         onToggle={() => {}}
+                        onOpenDetail={openRestaurant}
                         index={i}
                         category="chinese"
                       />
@@ -867,6 +879,14 @@ export default function LandingPage() {
 
       {/* 15. Footer */}
       <Footer />
+
+      {/* Restaurant detail modal — Google Maps + full info */}
+      <RestaurantModal
+        open={!!restaurantDetail}
+        item={restaurantDetail?.item}
+        image={restaurantDetail?.image}
+        onClose={closeRestaurant}
+      />
     </Box>
   );
 }

@@ -839,6 +839,10 @@
     "partners": "Partners",
     "partnersDesc": "Long-term partnerships with Finnish universities, local governments, industry associations, and top resorts."
   },
+  "restaurantModal": {
+    "directions": "Get Directions",
+    "openInMaps": "Open in Google Maps"
+  },
   "chat": {
     "eyebrow": "Live Help",
     "title": "Finuo Assistant",
