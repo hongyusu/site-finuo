@@ -31,8 +31,8 @@ function App() {
   const theme = createTheme(getLPTheme('dark'));
 
   const experienceNavItems = [
-    { label: t('nav.nordic'), sectionId: 'nordic' },
     { label: t('nav.china'), sectionId: 'china' },
+    { label: t('nav.nordic'), sectionId: 'nordic' },
     { label: t('nav.testimonials'), sectionId: 'testimonials' },
     { label: t('nav.faq'), sectionId: 'faq' },
     { label: t('nav.contact'), sectionId: 'contact' },

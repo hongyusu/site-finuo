@@ -593,7 +593,48 @@ export default function LandingPage() {
       {/* 2. Tourism Intro Statement */}
       <Statement text={t('tourism.intro')} light />
 
-      {/* 3. NORDIC SECTION HEADER */}
+      {/* 3. CHINA SECTION HEADER */}
+      <Box id="china" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 }, bgcolor: '#0A0A0A' }}>
+        <Container maxWidth="xl" disableGutters>
+          <SectionHeader
+            eyebrow={t('tourism.regions')}
+            title={t('tourism.chinaTitle')}
+            subtitle={t('tourism.chinaSubtitle')}
+          />
+        </Container>
+      </Box>
+      <FullBleedImage image={CHINA_HEADER} alt="China" height={{ xs: 250, md: 380 }} />
+
+      {/* 4. ANHUI THREE-DAY TOURS — featured product */}
+      <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
+        <Container maxWidth="xl" disableGutters>
+          <SectionHeader
+            eyebrow={t('tourism.china.anhuiToursTitle')}
+            title={t('tourism.china.anhuiToursSubtitle')}
+            subtitle={t('tourism.china.anhuiToursIntro')}
+          />
+          <AnhuiTours
+            tours={anhuiTours}
+            images={anhuiHeroImages}
+            expanded={expandedTour}
+            onToggle={setExpandedTour}
+          />
+          <ServiceStandards
+            title={t('tourism.china.anhuiServiceTitle')}
+            items={anhuiServiceItems}
+          />
+        </Container>
+      </Box>
+
+      {/* 5. FORUM */}
+      <ForumBlock
+        title={t('tourism.china.forum.title')}
+        subtitle={t('tourism.china.forum.subtitle')}
+        intro={t('tourism.china.forum.intro')}
+        tags={forumTags}
+      />
+
+      {/* 6. NORDIC SECTION HEADER */}
       <Box id="nordic" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
         <Container maxWidth="xl" disableGutters>
           <SectionHeader
@@ -605,7 +646,7 @@ export default function LandingPage() {
       </Box>
       <FullBleedImage image={NORDIC_HEADER} alt="Nordic landscape" height={{ xs: 250, md: 380 }} />
 
-      {/* 4. NORDIC COUNTRY TABS — click to switch */}
+      {/* 7. NORDIC COUNTRY TABS — click to switch */}
       <NordicTabs
         active={activeCountry}
         onChange={(c) => {
@@ -623,7 +664,7 @@ export default function LandingPage() {
         ]}
       />
 
-      {/* 4b. ACTIVE COUNTRY CONTENT */}
+      {/* 7b. ACTIVE COUNTRY CONTENT */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeCountry}
@@ -820,64 +861,23 @@ export default function LandingPage() {
         </motion.div>
       </AnimatePresence>
 
-      {/* 8. CHINA SECTION HEADER */}
-      <Box id="china" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 }, bgcolor: '#0A0A0A' }}>
-        <Container maxWidth="xl" disableGutters>
-          <SectionHeader
-            eyebrow={t('tourism.regions')}
-            title={t('tourism.chinaTitle')}
-            subtitle={t('tourism.chinaSubtitle')}
-          />
-        </Container>
-      </Box>
-      <FullBleedImage image={CHINA_HEADER} alt="China" height={{ xs: 250, md: 380 }} />
-
-      {/* 9. ANHUI THREE-DAY TOURS — featured product */}
-      <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
-        <Container maxWidth="xl" disableGutters>
-          <SectionHeader
-            eyebrow={t('tourism.china.anhuiToursTitle')}
-            title={t('tourism.china.anhuiToursSubtitle')}
-            subtitle={t('tourism.china.anhuiToursIntro')}
-          />
-          <AnhuiTours
-            tours={anhuiTours}
-            images={anhuiHeroImages}
-            expanded={expandedTour}
-            onToggle={setExpandedTour}
-          />
-          <ServiceStandards
-            title={t('tourism.china.anhuiServiceTitle')}
-            items={anhuiServiceItems}
-          />
-        </Container>
-      </Box>
-
-      {/* 10. FORUM */}
-      <ForumBlock
-        title={t('tourism.china.forum.title')}
-        subtitle={t('tourism.china.forum.subtitle')}
-        intro={t('tourism.china.forum.intro')}
-        tags={forumTags}
-      />
-
-      {/* 11. Big Testimonial */}
+      {/* 8. Big Testimonial */}
       <BigTestimonial
         quote={firstTestimonial.testimonial || "The Northern Lights trip was beyond magical."}
         name={firstTestimonial.name || "Elsa Nygard"}
         role={firstTestimonial.occupation || "Adventure Photographer"}
       />
 
-      {/* 12. FAQ */}
+      {/* 9. FAQ */}
       <FAQ />
 
-      {/* 13. About */}
+      {/* 10. About */}
       <AboutSection />
 
-      {/* 14. Contact */}
+      {/* 11. Contact */}
       <ContactSection />
 
-      {/* 15. Footer */}
+      {/* 12. Footer */}
       <Footer />
 
       {/* Restaurant detail modal — Google Maps + full info */}
