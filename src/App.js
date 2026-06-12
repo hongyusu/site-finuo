@@ -8,22 +8,26 @@ import LandingPage from './LandingPage';
 import LandingPage1 from './LandingPage1';
 import LandingPageMice from './LandingPageMice';
 import TourDetailPage from './TourDetailPage';
+import InstitutionDetailPage from './InstitutionDetailPage';
 import ChatWidget from './components_shared/ChatWidget';
 import getLPTheme from './getLPTheme';
 
-function parseTourFromHash() {
+function parseRouteFromHash() {
   const hash = window.location.hash || '';
-  const m = hash.match(/^#\/tour\/([a-z]+)/i);
-  return m ? m[1] : null;
+  let m = hash.match(/^#\/tour\/([a-z-]+)/i);
+  if (m) return { type: 'tour', id: m[1] };
+  m = hash.match(/^#\/institution\/([a-z-]+)/i);
+  if (m) return { type: 'institution', id: m[1] };
+  return null;
 }
 
 function App() {
   const [activeSite, setActiveSite] = useState('experience');
-  const [tourId, setTourId] = useState(parseTourFromHash);
+  const [route, setRoute] = useState(parseRouteFromHash);
   const { t } = useTranslation();
 
   useEffect(() => {
-    const onHashChange = () => setTourId(parseTourFromHash());
+    const onHashChange = () => setRoute(parseRouteFromHash());
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
@@ -69,15 +73,18 @@ function App() {
   };
 
   const goBackToLanding = () => {
+    if (route?.type === 'institution') setActiveSite('education');
     window.location.hash = '';
-    setTourId(null);
+    setRoute(null);
   };
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {tourId ? (
-        <TourDetailPage tourId={tourId} onBack={goBackToLanding} />
+      {route?.type === 'tour' ? (
+        <TourDetailPage tourId={route.id} onBack={goBackToLanding} />
+      ) : route?.type === 'institution' ? (
+        <InstitutionDetailPage institutionId={route.id} onBack={goBackToLanding} />
       ) : (
         <>
           <AppAppBar

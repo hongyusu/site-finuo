@@ -17,6 +17,7 @@ import {
   FullBleedImage,
 } from './components_shared/sections';
 import { AboutSection, ContactSection } from './components_shared/AboutContact';
+import { INSTITUTION_HEROES } from './InstitutionDetailPage';
 
 const GOLD = '#C4A35A';
 const CREAM = '#F5F2ED';
@@ -25,7 +26,7 @@ const DIM = 'rgba(245,242,237,0.5)';
 function StatsSection() {
   const stats = [
     { number: '97%', label: 'Acceptance Rate' },
-    { number: '50+', label: 'Partner Universities' },
+    { number: '50+', label: 'Institutions Covered' },
     { number: '1,200+', label: 'Students Placed' },
     { number: '15+', label: 'Years of Experience' },
   ];
@@ -51,8 +52,8 @@ function StatsSection() {
   );
 }
 
-function SchoolGrid({ schools }) {
-  const images = [
+function SchoolGrid({ schools, detailHint }) {
+  const fallbackImages = [
     '/images/destinations/university.jpg',
     '/images/destinations/campus.jpg',
     '/images/destinations/classroom.jpg',
@@ -63,15 +64,29 @@ function SchoolGrid({ schools }) {
   return (
     <Grid container spacing={2}>
       {schools.map((s, i) => (
-        <Grid item xs={12} sm={6} md={4} key={i}>
-          <MediaCard
-            index={i}
-            image={images[i % images.length]}
-            title={s.name}
-            subtitle={s.desc}
-            meta={s.type}
-            height={300}
-          />
+        <Grid item xs={12} sm={6} md={4} key={s.id || i}>
+          <Box
+            onClick={() => { if (s.id) window.location.hash = `#/institution/${s.id}`; }}
+            sx={{
+              cursor: s.id ? 'pointer' : 'default',
+              height: '100%',
+              '&:hover .school-hint': { color: GOLD },
+            }}
+          >
+            <MediaCard
+              index={i}
+              image={INSTITUTION_HEROES[s.id] || fallbackImages[i % fallbackImages.length]}
+              title={s.name}
+              subtitle={s.desc}
+              meta={s.type}
+              height={300}
+            />
+            {s.id && detailHint && (
+              <Typography className="school-hint" sx={{ mt: 1.5, fontSize: '0.72rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(245,242,237,0.45)', transition: 'color 0.3s ease' }}>
+                {detailHint}
+              </Typography>
+            )}
+          </Box>
         </Grid>
       ))}
     </Grid>
@@ -169,7 +184,7 @@ export default function LandingPage1() {
             title={t('education.schoolsSubtitle')}
             subtitle={t('education.schoolsIntro')}
           />
-          <SchoolGrid schools={schools} />
+          <SchoolGrid schools={schools} detailHint={t('education.institutionLabels.detailHint')} />
         </Container>
       </Box>
 
