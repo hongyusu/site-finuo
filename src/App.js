@@ -32,6 +32,7 @@ function App() {
 
   const experienceNavItems = [
     { label: t('nav.china'), sectionId: 'china' },
+    { label: t('nav.chinaGuide'), sectionId: 'chinaGuide' },
     { label: t('nav.nordic'), sectionId: 'nordic' },
     { label: t('nav.testimonials'), sectionId: 'testimonials' },
     { label: t('nav.faq'), sectionId: 'faq' },

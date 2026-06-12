@@ -13,7 +13,8 @@
     "services": "Services",
     "nordic": "Nordic",
     "china": "China",
-    "schools": "Schools",
+    "chinaGuide": "China Guide",
+    "schools": "Institutions",
     "training": "Training",
     "studyTours": "Study Tours",
     "miceList": "Calendar",
@@ -635,6 +636,27 @@
         "Extras: 2 bottles of mineral water per person per day"
       ],
       "anhuiBookCta": "Inquire & Book",
+      "regionsTitle": "Browse by Destination",
+      "regionTabs": [
+        { "key": "anhui", "label": "Anhui" },
+        { "key": "jiangzhe", "label": "Suzhou & Hangzhou" },
+        { "key": "shanghai", "label": "Shanghai" },
+        { "key": "hunan", "label": "Hunan" }
+      ],
+      "regionComingSoon": "Itineraries for this region are in the works — coming soon. Contact us for a custom program.",
+      "guide": {
+        "title": "China Travel Guide",
+        "subtitle": "First Time in China — A Practical Guide for International Visitors",
+        "intro": "Everything you need to sort out before landing in China: entry rules, flights, transfers, staying connected, and how to pay. On our tours we handle everything on the ground — this is what to prepare before you fly.",
+        "items": [
+          { "title": "Visa & Entry", "body": "Finland and most European passports currently enjoy 30-day visa-free entry to China (policy in force through the end of 2026). Travelers from other countries can often use the 240-hour visa-free transit when continuing to a third country, or apply for a standard L tourist visa. On arrival you complete an arrival card and fingerprint scan — keep your hotel address and onward ticket handy." },
+          { "title": "Flights & Getting There", "body": "Direct flights connect Helsinki with Shanghai in about 9–10 hours. For our Jiangnan tours, fly into Shanghai Pudong (PVG): Suzhou and Hangzhou are under two hours away by high-speed rail, Hefei about three. We can also arrange connecting domestic flights for itineraries further inland." },
+          { "title": "Transfers & Getting Around", "body": "Our packages include airport pickup and a private coach throughout the tour. For independent days: high-speed rail tickets are bought with your passport (12306 app or station counters), DiDi — China's Uber — works in English, and metro systems accept Alipay QR codes. Always carry your passport; it is required for trains and hotel check-in." },
+          { "title": "SIM Cards & Internet", "body": "Easiest option: an international eSIM (e.g. Airalo, Holafly) activated before landing — roaming data reaches Google, WhatsApp, and Instagram normally. Local SIM cards from China Unicom or China Mobile at the airport are cheaper but run on the local network, where most Western apps and sites are blocked. Hotel Wi-Fi is everywhere but subject to the same restrictions." },
+          { "title": "Payments", "body": "China is nearly cashless — Alipay and WeChat Pay cover almost every shop, taxi, and street stall. Both accept foreign Visa and Mastercard: download the app, verify with your passport, link your card, and pay by scanning QR codes. Foreign bank cards are accepted at major hotels only, so keep a small amount of cash (RMB 200–500) as a fallback. Tipping is not expected anywhere." },
+          { "title": "Useful Apps", "body": "Set these up before departure: Alipay (payments, transport, translation mini-apps), WeChat (messaging — universal in China), DiDi (ride-hailing), Amap or Apple Maps (Google Maps is unreliable in China), and a translator app. Our guides speak English throughout the tour, so apps are mainly for your free time." }
+        ]
+      },
       "citiesTitle": "City Destinations",
       "cities": [
         { "name": "Beijing", "desc": "Imperial capital — Forbidden City, Great Wall, hutongs" },
@@ -776,10 +798,13 @@
     ]
   },
   "education": {
-    "schoolsTitle": "Partner Schools",
-    "schoolsSubtitle": "Schools — Top Finnish & European Institutions",
-    "schoolsIntro": "Universities, polytechnics, and high schools. Detailed institution profiles, admission requirements, and partnership programs.",
+    "schoolsTitle": "Institutions",
+    "schoolsSubtitle": "Institutions — Top Finnish & European Education Providers",
+    "schoolsIntro": "Universities, polytechnics, high schools, and specialist institutes such as science centres and sports academies. Detailed institution profiles, admission requirements, and program information.",
     "schools": [
+      { "name": "Heureka Science Centre", "type": "Science Education · Vantaa", "desc": "Finland's interactive science centre for hands-on STEAM learning" },
+      { "name": "Kisakallio Sports Institute", "type": "Sports · Lohja", "desc": "Sports institute for training camps, coaching, and physical education" },
+      { "name": "Kuortane Olympic Training Center", "type": "Sports · Kuortane", "desc": "Olympic-level training environment and sports education" },
       { "name": "University of Helsinki", "type": "Comprehensive · QS Top 100", "desc": "Finland's flagship research university" },
       { "name": "Aalto University", "type": "Engineering · Business · Design", "desc": "Multidisciplinary tech and design powerhouse" },
       { "name": "Haaga-Helia UAS", "type": "Applied Sciences", "desc": "Practice-oriented business and service management" },

@@ -354,6 +354,56 @@ function AnhuiTours({ tours, images, expanded, onToggle }) {
   );
 }
 
+// Tour id -> region key, drives the region tabs above the China tours
+const TOUR_REGIONS = {
+  huangshan: 'anhui',
+  huizhou: 'anhui',
+  qiyun: 'anhui',
+  anhui: 'anhui',
+  suzhou: 'jiangzhe',
+  hangzhou: 'jiangzhe',
+  'suzhou-hangzhou': 'jiangzhe',
+  shanghai: 'shanghai',
+};
+
+function ChinaGuide({ title, subtitle, intro, items }) {
+  return (
+    <Box id="chinaGuide" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 }, bgcolor: '#0A0A0A' }}>
+      <Container maxWidth="xl" disableGutters>
+        <SectionHeader eyebrow={title} title={subtitle} subtitle={intro} />
+        <Grid container spacing={2}>
+          {items.map((it, i) => (
+            <Grid item xs={12} md={6} key={i}>
+              <Box
+                component={motion.div}
+                {...stagger(i)}
+                sx={{
+                  height: '100%',
+                  p: { xs: 3, md: 4 },
+                  border: '1px solid rgba(245,242,237,0.08)',
+                  bgcolor: '#0F0F0F',
+                  transition: 'border-color 0.3s ease',
+                  '&:hover': { borderColor: GOLD },
+                }}
+              >
+                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
+                  {String(i + 1).padStart(2, '0')}
+                </Typography>
+                <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.7rem' }, color: CREAM, mb: 1.5, lineHeight: 1.2 }}>
+                  {it.title}
+                </Typography>
+                <Typography sx={{ color: DIM, fontSize: '0.9rem', lineHeight: 1.7 }}>
+                  {it.body}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
+
 function ServiceStandards({ title, items }) {
   return (
     <Box sx={{ mt: 6, p: { xs: 3, md: 4 }, border: '1px solid rgba(245,242,237,0.08)', bgcolor: '#0F0F0F' }}>
@@ -498,6 +548,7 @@ function NordicTabs({ active, onChange, labels }) {
 export default function LandingPage() {
   const { t } = useTranslation();
   const [activeCountry, setActiveCountry] = React.useState('finland');
+  const [activeRegion, setActiveRegion] = React.useState('anhui');
   const [expandedTour, setExpandedTour] = React.useState('huangshan');
   const [restaurantDetail, setRestaurantDetail] = React.useState(null);
 
@@ -514,6 +565,14 @@ export default function LandingPage() {
     detailLabel: anhuiLabels.detailLabel,
   }));
   const anhuiServiceItems = t('tourism.china.anhuiServiceItems', { returnObjects: true }) || [];
+  const regionTabs = t('tourism.china.regionTabs', { returnObjects: true }) || [];
+  const guideItems = t('tourism.china.guide.items', { returnObjects: true }) || [];
+  const regionTours = anhuiTours.filter((tour) => TOUR_REGIONS[tour.id] === activeRegion);
+  const switchRegion = (key) => {
+    setActiveRegion(key);
+    const first = anhuiTours.find((tour) => TOUR_REGIONS[tour.id] === key);
+    setExpandedTour(first ? first.id : null);
+  };
   const anhuiHeroImages = {
     huangshan: '/images/anhui/huangshan-3.jpeg',          // Huangshan peaks
     huizhou: '/images/anhui/huizhou-6.jpeg',               // Huizhou ancient gateway
@@ -613,18 +672,62 @@ export default function LandingPage() {
             title={t('tourism.china.anhuiToursSubtitle')}
             subtitle={t('tourism.china.anhuiToursIntro')}
           />
-          <AnhuiTours
-            tours={anhuiTours}
-            images={anhuiHeroImages}
-            expanded={expandedTour}
-            onToggle={setExpandedTour}
-          />
+        </Container>
+      </Box>
+
+      {/* 4b. REGION TABS — click a province/city to see its itineraries */}
+      <NordicTabs
+        active={activeRegion}
+        onChange={switchRegion}
+        labels={regionTabs.map((r, i) => ({
+          key: r.key,
+          num: String(i + 1).padStart(2, '0'),
+          label: r.label,
+        }))}
+      />
+      <Box sx={{ pb: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
+        <Container maxWidth="xl" disableGutters>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeRegion}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
+              {regionTours.length > 0 ? (
+                <AnhuiTours
+                  tours={regionTours}
+                  images={anhuiHeroImages}
+                  expanded={expandedTour}
+                  onToggle={setExpandedTour}
+                />
+              ) : (
+                <Box sx={{ py: { xs: 6, md: 10 }, textAlign: 'center', border: '1px solid rgba(245,242,237,0.08)', bgcolor: '#0F0F0F' }}>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.8rem' }, color: CREAM, mb: 1.5 }}>
+                    {regionTabs.find((r) => r.key === activeRegion)?.label}
+                  </Typography>
+                  <Typography sx={{ color: DIM, fontSize: '0.95rem' }}>
+                    {t('tourism.china.regionComingSoon')}
+                  </Typography>
+                </Box>
+              )}
+            </motion.div>
+          </AnimatePresence>
           <ServiceStandards
             title={t('tourism.china.anhuiServiceTitle')}
             items={anhuiServiceItems}
           />
         </Container>
       </Box>
+
+      {/* 4c. CHINA TRAVEL GUIDE for international visitors */}
+      <ChinaGuide
+        title={t('tourism.china.guide.title')}
+        subtitle={t('tourism.china.guide.subtitle')}
+        intro={t('tourism.china.guide.intro')}
+        items={guideItems}
+      />
 
       {/* 5. FORUM */}
       <ForumBlock
