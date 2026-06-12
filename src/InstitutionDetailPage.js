@@ -11,7 +11,6 @@ import { ContactSection } from './components_shared/AboutContact';
 
 const GOLD = '#C4A35A';
 const CREAM = '#F5F2ED';
-const DIM = 'rgba(245,242,237,0.5)';
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
