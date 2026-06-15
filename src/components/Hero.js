@@ -15,16 +15,25 @@ export default function Hero() {
         overflow: 'hidden',
       }}
     >
-      {/* Video Background */}
-      <video
-        autoPlay muted loop playsInline
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
+      {/* Video Background — click to open the booking site */}
+      <Box
+        component="a"
+        href="http://178.104.206.21:8083/destinations"
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{ position: 'absolute', inset: 0, zIndex: 0, cursor: 'pointer', display: 'block' }}
+        aria-label="Open destinations"
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+        <video
+          autoPlay muted loop playsInline
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+      </Box>
 
       {/* Subtle bottom gradient for scroll transition */}
-      <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,13,13,0.7) 0%, transparent 30%)', zIndex: 1 }} />
+      <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,13,13,0.7) 0%, transparent 30%)', zIndex: 1, pointerEvents: 'none' }} />
 
       {/* Scroll Indicator */}
       <Box
