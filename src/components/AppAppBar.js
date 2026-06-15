@@ -116,9 +116,14 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
             {/* Section Nav */}
             {navItems.map((item) => (
               <Typography
-                key={item.sectionId}
-                onClick={() => scrollToSection(item.sectionId)}
+                key={item.sectionId || item.href}
+                component={item.href ? 'a' : 'div'}
+                href={item.href}
+                target={item.href ? '_blank' : undefined}
+                rel={item.href ? 'noopener noreferrer' : undefined}
+                onClick={item.href ? undefined : () => scrollToSection(item.sectionId)}
                 sx={{
+                  textDecoration: 'none',
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: '0.8rem',
                   fontWeight: 400,
@@ -223,13 +228,18 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
         {/* Nav Links */}
         {navItems.map((item) => (
           <Typography
-            key={item.sectionId}
-            onClick={() => scrollToSection(item.sectionId)}
+            key={item.sectionId || item.href}
+            component={item.href ? 'a' : 'div'}
+            href={item.href}
+            target={item.href ? '_blank' : undefined}
+            rel={item.href ? 'noopener noreferrer' : undefined}
+            onClick={item.href ? () => setOpen(false) : () => scrollToSection(item.sectionId)}
             sx={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: '2rem',
               color: 'rgba(245, 242, 237, 0.6)',
               cursor: 'pointer',
+              textDecoration: 'none',
               transition: 'color 0.3s ease',
               '&:hover': { color: '#F5F2ED' },
             }}
@@ -255,7 +265,8 @@ AppAppBar.propTypes = {
   navItems: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      sectionId: PropTypes.string.isRequired,
+      sectionId: PropTypes.string,
+      href: PropTypes.string,
     })
   ).isRequired,
 };
