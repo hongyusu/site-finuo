@@ -1,6 +1,6 @@
 {
   "short_name": "Finuo",
-  "name": "Finuo - Nordic Experience & Education",
+  "name": "Finuo - Nordic Travel, Education & Events",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0A66C2",
-  "background_color": "#ffffff"
+  "theme_color": "#0D0D0D",
+  "background_color": "#0D0D0D"
 }

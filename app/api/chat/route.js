@@ -1,19 +1,12 @@
-// Vercel Serverless Function: /api/chat
-//
-// Proxies chat messages from the ChatWidget to OpenAI's chat completions API.
-// The API key is read from the OPENAI_API_KEY environment variable
-// (set in Vercel project settings → Environment Variables).
+// App Router route handler: POST /api/chat
+// Proxies the ChatWidget to OpenAI; mirrors the original Vercel function.
+import enContent from '../../../src/i18n/en.json';
 
-// Single source of truth for tour pricing: the i18n content file. Falls back to a
-// static list if the import is unavailable at runtime.
 function buildChinaToursLine() {
   try {
-    const en = require('../src/i18n/en.json');
-    const tours = en?.tourism?.china?.anhuiTours || [];
-    if (tours.length) {
-      return tours.map((t) => `${t.title} (${t.price})`).join('; ');
-    }
-  } catch (_) { /* fall through to static */ }
+    const tours = enContent?.tourism?.china?.anhuiTours || [];
+    if (tours.length) return tours.map((t) => `${t.title} (${t.price})`).join('; ');
+  } catch (_) { /* fall through */ }
   return 'Huangshan ¥1,727, Huizhou ¥1,535, Qiyun ¥1,629, Anhui & Jingchuan ¥1,491, '
     + 'Suzhou ¥1,756, Hangzhou ¥1,805, Suzhou-Hangzhou ¥1,846, Shanghai ¥1,842';
 }
@@ -25,7 +18,6 @@ Finuo offers:
 - China tours: 8 curated 3-day itineraries — ${buildChinaToursLine()}
 - Helsinki guide: 15 attractions (Cathedral, Suomenlinna, Temppeliaukio, Kauppatori, Oodi, Design District, Löyly, Allas Sea Pool, Esplanadi, Seurasaari, Uspenski, Sibelius, Kiasma, Ateneum, Old Market Hall)
 - Day trips: Porvoo, Fiskars Village, Tallinn, Stockholm
-- Restaurants: Aalto-area convenience (Konnikiwa, Minmax, Sway), Western fine dining (Palace, Olo, Nokka, Demo, Goodwin, Zetor, Kappeli, Ragu), Chinese (Jinguanting, Ravintola Liu, Happy Food Garden, Dongbei House, Leaf)
 - Education: Study abroad in Finland (Helsinki, Aalto, Haaga-Helia, Jyväskylä, Turku), teacher/student training, study tours
 - MICE: Conferences in Helsinki (Slush, Habitare, Nordic Business Forum, FinnBuild, EduExpo), team building, hospitality
 
@@ -35,24 +27,25 @@ Respond in the user's language (Chinese or English). Keep replies concise — 2-
 
 const MODEL = process.env.OPENAI_MODEL || 'gpt-4o-mini';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
+export async function POST(request) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: 'Server not configured: missing OPENAI_API_KEY' });
+    return Response.json({ error: 'Server not configured: missing OPENAI_API_KEY' }, { status: 500 });
   }
 
-  const { messages = [], lang = 'en' } = req.body || {};
+  let body;
+  try {
+    body = await request.json();
+  } catch (_) {
+    return Response.json({ error: 'Invalid JSON body' }, { status: 400 });
+  }
+
+  const { messages = [], lang = 'en' } = body || {};
   if (!Array.isArray(messages) || messages.length === 0) {
-    return res.status(400).json({ error: 'messages array is required' });
+    return Response.json({ error: 'messages array is required' }, { status: 400 });
   }
 
-  // Trim to last 20 messages to keep cost predictable
-  const trimmed = messages.slice(-20).map(m => ({
+  const trimmed = messages.slice(-20).map((m) => ({
     role: m.role === 'assistant' ? 'assistant' : 'user',
     content: String(m.content || '').slice(0, 2000),
   }));
@@ -65,10 +58,7 @@ export default async function handler(req, res) {
   try {
     const r = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
       body: JSON.stringify({
         model: MODEL,
         max_tokens: 400,
@@ -79,19 +69,15 @@ export default async function handler(req, res) {
 
     if (!r.ok) {
       const errBody = await r.text();
-      console.error('OpenAI error:', r.status, errBody.slice(0, 500));
-      // Surface the OpenAI error code/message in dev to make debugging easier
       let detail;
       try { detail = JSON.parse(errBody).error?.message; } catch (_) { detail = errBody.slice(0, 200); }
-      return res.status(502).json({ error: `Upstream LLM error (${r.status})`, detail });
+      return Response.json({ error: `Upstream LLM error (${r.status})`, detail }, { status: 502 });
     }
 
     const data = await r.json();
     const reply = data.choices?.[0]?.message?.content?.trim() || '';
-
-    return res.status(200).json({ reply, usage: data.usage });
+    return Response.json({ reply, usage: data.usage });
   } catch (err) {
-    console.error('Chat handler error:', err.message);
-    return res.status(500).json({ error: 'Internal server error' });
+    return Response.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

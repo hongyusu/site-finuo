@@ -12,25 +12,40 @@ import InstitutionDetailPage from './InstitutionDetailPage';
 import ChatWidget from './components_shared/ChatWidget';
 import getLPTheme from './getLPTheme';
 
-function parseRouteFromHash() {
+// Parse the hash into a detail route (tour/institution) and/or an active sub-site.
+// Sub-sites are real, shareable URLs: #/education, #/mice (travel is the bare root).
+function parseHash() {
   const hash = window.location.hash || '';
   let m = hash.match(/^#\/tour\/([a-z-]+)/i);
-  if (m) return { type: 'tour', id: m[1] };
+  if (m) return { detail: { type: 'tour', id: m[1] }, site: null };
   m = hash.match(/^#\/institution\/([a-z-]+)/i);
-  if (m) return { type: 'institution', id: m[1] };
-  return null;
+  if (m) return { detail: { type: 'institution', id: m[1] }, site: 'education' };
+  m = hash.match(/^#\/(education|mice)\b/i);
+  if (m) return { detail: null, site: m[1].toLowerCase() };
+  return { detail: null, site: 'experience' };
 }
 
 function App() {
-  const [activeSite, setActiveSite] = useState('experience');
-  const [route, setRoute] = useState(parseRouteFromHash);
+  const initial = parseHash();
+  const [activeSite, setActiveSite] = useState(initial.site || 'experience');
+  const [route, setRoute] = useState(initial.detail);
   const { t } = useTranslation();
 
   useEffect(() => {
-    const onHashChange = () => setRoute(parseRouteFromHash());
+    const onHashChange = () => {
+      const parsed = parseHash();
+      setRoute(parsed.detail);
+      if (parsed.site) setActiveSite(parsed.site);
+    };
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
+
+  // Switch sub-site and reflect it in the URL so it is shareable / back-navigable.
+  const handleSiteChange = (site) => {
+    setActiveSite(site);
+    window.location.hash = site === 'experience' ? '' : `/${site}`;
+  };
 
   const theme = createTheme(getLPTheme('dark'));
 
@@ -74,9 +89,10 @@ function App() {
   };
 
   const goBackToLanding = () => {
-    if (route?.type === 'institution') setActiveSite('education');
-    window.location.hash = '';
+    const site = route?.type === 'institution' ? 'education' : 'experience';
     setRoute(null);
+    setActiveSite(site);
+    window.location.hash = site === 'experience' ? '' : `/${site}`;
   };
 
   return (
@@ -90,7 +106,7 @@ function App() {
         <>
           <AppAppBar
             activeSite={activeSite}
-            onSiteChange={setActiveSite}
+            onSiteChange={handleSiteChange}
             navItems={navItems}
           />
           {renderSite()}

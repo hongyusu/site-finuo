@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,8 +7,8 @@ import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Hero from './components_education/Hero';
-import FAQ from './components_education/FAQ';
-import Footer from './components_education/Footer';
+import FAQ from './components_shared/FAQ';
+import Footer from './components_shared/Footer';
 import {
   fadeIn,
   stagger,

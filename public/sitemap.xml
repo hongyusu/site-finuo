@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://finuo.fi/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://finuo.fi/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://finuo.fi/education</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://finuo.fi/mice</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://finuo.fi/tour/huangshan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/tour/huizhou</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/tour/qiyun</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/tour/anhui</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/tour/suzhou</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/tour/hangzhou</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/tour/suzhou-hangzhou</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/tour/shanghai</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finuo.fi/institution/heureka</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/kisakallio</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/kuortane</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/helsinki</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/aalto</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/haagahelia</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/lab</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/jyvaskyla</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://finuo.fi/institution/turku</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

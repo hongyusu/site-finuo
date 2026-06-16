@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -109,10 +110,10 @@ export function ContactSection() {
         <Grid container spacing={6} sx={{ mt: 2 }}>
           <Grid item xs={12} md={5}>
             <Box component={motion.div} {...fadeIn} sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              <ContactRow label={t('contact.email')} value="booking@finuo.fi" />
-              <ContactRow label={t('contact.phone')} value="+358 40 000 0000" />
+              <ContactRow label={t('contact.email')} value="booking@finuo.fi" href="mailto:booking@finuo.fi" />
+              <ContactRow label={t('contact.phone')} value="+358 44 582 0927" href="tel:+358445820927" />
               <ContactRow label={t('contact.wechat')} value="finuo_helsinki" />
-              <ContactRow label={t('contact.whatsapp')} value="+358 40 000 0000" />
+              <ContactRow label={t('contact.whatsapp')} value="+358 44 582 0927" href="https://wa.me/358445820927" />
               <ContactRow label={t('contact.address')} value={t('contact.addressValue')} />
             </Box>
           </Grid>
@@ -188,13 +189,26 @@ export function ContactSection() {
   );
 }
 
-function ContactRow({ label, value }) {
+function ContactRow({ label, value, href }) {
+  const isLink = Boolean(href);
   return (
     <Box sx={{ borderBottom: '1px solid rgba(245,242,237,0.08)', pb: 2 }}>
       <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD, mb: 0.5 }}>
         {label}
       </Typography>
-      <Typography sx={{ color: CREAM, fontSize: '1rem' }}>
+      <Typography
+        component={isLink ? 'a' : 'div'}
+        href={href}
+        {...(href && href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        sx={{
+          color: CREAM,
+          fontSize: '1rem',
+          textDecoration: 'none',
+          display: 'inline-block',
+          transition: 'color 0.3s ease',
+          ...(isLink && { cursor: 'pointer', '&:hover': { color: GOLD } }),
+        }}
+      >
         {value}
       </Typography>
     </Box>

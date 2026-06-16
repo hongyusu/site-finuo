@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,7 +7,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import Footer from './components/Footer';
+import Footer from './components_shared/Footer';
 import { ContactSection } from './components_shared/AboutContact';
 
 const GOLD = '#C4A35A';
@@ -33,13 +34,13 @@ const TOUR_GALLERIES = {
   ],
   huizhou: [
     '/images/anhui/huizhou-1.jpeg',
-    '/images/anhui/huizhou-2.jpeg',
+    '/images/anhui/huizhou-2.png',
     '/images/anhui/huizhou-3.jpeg',
-    '/images/anhui/huizhou-4.jpeg',
+    '/images/anhui/huizhou-4.png',
     '/images/anhui/huizhou-5.jpeg',
     '/images/anhui/huizhou-6.jpeg',
     '/images/anhui/huizhou-7.jpeg',
-    '/images/anhui/huizhou-8.jpeg',
+    '/images/anhui/huizhou-8.png',
     '/images/anhui/huizhou-9.jpeg',
     '/images/anhui/huizhou-10.jpeg',
     '/images/anhui/huizhou-11.jpeg',

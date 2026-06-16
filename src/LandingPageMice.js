@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -5,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import Footer from './components/Footer';
+import Footer from './components_shared/Footer';
 import {
   fadeIn,
   stagger,

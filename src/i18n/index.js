@@ -13,6 +13,10 @@ i18n.use(initReactI18next).init({
   interpolation: {
     escapeValue: false,
   },
+  react: {
+    // Render synchronously (no Suspense) so translated content is present during SSR.
+    useSuspense: false,
+  },
 });
 
 export default i18n;

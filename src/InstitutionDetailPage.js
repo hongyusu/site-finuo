@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,7 +7,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import Footer from './components_education/Footer';
+import Footer from './components_shared/Footer';
 import { ContactSection } from './components_shared/AboutContact';
 
 const GOLD = '#C4A35A';
