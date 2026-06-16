@@ -4,7 +4,7 @@ import Providers from './Providers';
 import NavBar from './NavBar';
 import ChatWidget from '../src/components_shared/ChatWidget';
 
-const GA_ID = 'G-Z79Z16SB4L';
+const GA_ID = 'G-TPTK4RZE3D';
 
 const DESC =
   'Finuo is a Helsinki-based travel agency in Finland offering Nordic tours, Finland aurora trips, '
