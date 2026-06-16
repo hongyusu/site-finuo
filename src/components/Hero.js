@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 const GOLD = '#C4A35A';
 const CREAM = '#F5F2ED';
-const BOOKING_URL = 'http://178.104.206.21:8083/destinations';
+const BOOKING_URL = 'http://178.104.206.21:8083/search?vendor_id=14';
 
 const scrollToSection = (id) => {
   const el = document.getElementById(id);

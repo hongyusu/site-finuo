@@ -53,7 +53,7 @@ function App() {
     { label: t('nav.china'), sectionId: 'china' },
     { label: t('nav.chinaGuide'), sectionId: 'chinaGuide' },
     { label: t('nav.nordic'), sectionId: 'nordic' },
-    { label: t('nav.book'), href: 'http://178.104.206.21:8083/destinations' },
+    { label: t('nav.book'), href: 'http://178.104.206.21:8083/search?vendor_id=14' },
     { label: t('nav.testimonials'), sectionId: 'testimonials' },
     { label: t('nav.faq'), sectionId: 'faq' },
     { label: t('nav.contact'), sectionId: 'contact' },
