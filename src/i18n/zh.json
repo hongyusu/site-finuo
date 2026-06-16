@@ -1378,6 +1378,16 @@
         "name": "Hanna Virtanen",
         "occupation": "婚礼策划师",
         "testimonial": "我们在拉普兰的玻璃穹顶屋策划了求婚，Finuo 把每个细节都安排得完美无瑕。"
+      },
+      {
+        "name": "Yuki Tanaka",
+        "occupation": "美食旅行作家",
+        "testimonial": "赫尔辛基的米其林餐厅与本地市集，Finuo 的安排让我吃遍了北欧的味道。"
+      },
+      {
+        "name": "刘洋",
+        "occupation": "亲子游家长",
+        "testimonial": "带孩子看圣诞老人、坐驯鹿雪橇，Finuo 的家庭行程贴心又省心。"
       }
     ],
     "education": [
@@ -1420,6 +1430,16 @@
         "name": "Daniel Korhonen",
         "occupation": "交换生",
         "testimonial": "北欧研学项目让我近距离感受到了芬兰教育的精髓。"
+      },
+      {
+        "name": "Sofia Lindgren",
+        "occupation": "硕士在读",
+        "testimonial": "Finuo 帮我对接了导师和实习，留学之路比想象中顺利。"
+      },
+      {
+        "name": "赵敏",
+        "occupation": "高中生家长",
+        "testimonial": "从语言准备到行前指导，顾问们非常耐心，孩子如愿赴芬交换。"
       }
     ],
     "mice": [
@@ -1457,6 +1477,21 @@
         "name": "Antti Mäkinen",
         "occupation": "参展商",
         "testimonial": "北欧能源展的展位搭建与现场协调，Finuo 专业高效。"
+      },
+      {
+        "name": "Petri Salo",
+        "occupation": "科技峰会制作人",
+        "testimonial": "上千人的峰会，Finuo 的现场统筹与供应商协调让我们零压力。"
+      },
+      {
+        "name": "林婷",
+        "occupation": "品牌市场总监",
+        "testimonial": "北欧巡展的每一站都安排得井井有条，本地资源对接非常到位。"
+      },
+      {
+        "name": "Johan Berg",
+        "occupation": "行业协会秘书长",
+        "testimonial": "年度大会的接待、翻译与文化活动，Finuo 都做得极其专业。"
       }
     ]
   },

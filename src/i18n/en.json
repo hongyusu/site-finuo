@@ -1378,6 +1378,16 @@
         "name": "Hanna Virtanen",
         "occupation": "Wedding Planner",
         "testimonial": "We staged a proposal in a Lapland glass igloo — Finuo got every single detail perfect."
+      },
+      {
+        "name": "Yuki Tanaka",
+        "occupation": "Food & Travel Writer",
+        "testimonial": "From Helsinki's Michelin tables to local markets, Finuo's planning let me taste the whole of the Nordics."
+      },
+      {
+        "name": "Liu Yang",
+        "occupation": "Family Traveler",
+        "testimonial": "Meeting Santa and riding a reindeer sleigh with the kids — Finuo's family itinerary was thoughtful and stress-free."
       }
     ],
     "education": [
@@ -1420,6 +1430,16 @@
         "name": "Daniel Korhonen",
         "occupation": "Exchange Student",
         "testimonial": "The Nordic study tour let me experience the essence of Finnish education up close."
+      },
+      {
+        "name": "Sofia Lindgren",
+        "occupation": "Master's Student",
+        "testimonial": "Finuo connected me with a supervisor and an internship — studying abroad was smoother than I expected."
+      },
+      {
+        "name": "Zhao Min",
+        "occupation": "Parent",
+        "testimonial": "From language prep to pre-departure guidance, the consultants were patient — my child got the Finland exchange they wanted."
       }
     ],
     "mice": [
@@ -1457,6 +1477,21 @@
         "name": "Antti Mäkinen",
         "occupation": "Exhibitor",
         "testimonial": "Booth setup and on-site coordination at the Nordic energy expo — professional and efficient."
+      },
+      {
+        "name": "Petri Salo",
+        "occupation": "Tech Summit Producer",
+        "testimonial": "For a thousand-person summit, Finuo's on-site coordination and vendor management made it stress-free."
+      },
+      {
+        "name": "Lin Ting",
+        "occupation": "Brand Marketing Director",
+        "testimonial": "Every stop of our Nordic roadshow was perfectly organized, with excellent local resource matchmaking."
+      },
+      {
+        "name": "Johan Berg",
+        "occupation": "Association Secretary-General",
+        "testimonial": "Hosting, translation, and cultural activities for our annual congress — Finuo handled it all with great professionalism."
       }
     ]
   },
