@@ -1,7 +1,10 @@
 import '../src/index.css';
+import Script from 'next/script';
 import Providers from './Providers';
 import NavBar from './NavBar';
 import ChatWidget from '../src/components_shared/ChatWidget';
+
+const GA_ID = 'G-Z79Z16SB4L';
 
 const DESC =
   'Finuo is a Helsinki-based travel agency in Finland offering Nordic tours, Finland aurora trips, '
@@ -70,6 +73,18 @@ export default function RootLayout({ children }) {
           {children}
           <ChatWidget />
         </Providers>
+
+        {/* Google Analytics 4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );
