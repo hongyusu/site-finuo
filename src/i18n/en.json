@@ -53,49 +53,175 @@
       "hotels": "Curated Hotels",
       "hotelsDesc": "From Lapland glass igloos to Helsinki design hotels, all price tiers covered. Long-term local partnerships secure scarce peak-season inventory at preferred rates.",
       "hotelsItems": [
-        { "name": "Kakslauttanen Arctic Resort", "type": "Glass Igloos · Saariselkä", "desc": "Watch the auroras from your bed in glass-domed igloos — among the world's top aurora hotels" },
-        { "name": "Arctic SnowHotel", "type": "Ice Hotel · Rovaniemi", "desc": "Rebuilt every winter, with ice sauna and aurora ice suites" },
-        { "name": "Hotel Kämp", "type": "Luxury Classic · Helsinki", "desc": "150-year-old landmark, steps from Senate Square" },
-        { "name": "Hotel St. George", "type": "Design Boutique · Helsinki", "desc": "New Nordic design, art collection, Michelin dining" },
-        { "name": "Punkaharju Hotel", "type": "Lakeland Resort · Savonlinna", "desc": "Century-old lakeside lodge, sauna, canoe, forest" },
-        { "name": "Levi Hotel Spa", "type": "Ski Resort · Levi", "desc": "Slope-side ski resort with spa and family facilities" }
+        {
+          "name": "Kakslauttanen Arctic Resort",
+          "type": "Glass Igloos · Saariselkä",
+          "desc": "Watch the auroras from your bed in glass-domed igloos — among the world's top aurora hotels"
+        },
+        {
+          "name": "Arctic SnowHotel",
+          "type": "Ice Hotel · Rovaniemi",
+          "desc": "Rebuilt every winter, with ice sauna and aurora ice suites"
+        },
+        {
+          "name": "Hotel Kämp",
+          "type": "Luxury Classic · Helsinki",
+          "desc": "150-year-old landmark, steps from Senate Square"
+        },
+        {
+          "name": "Hotel St. George",
+          "type": "Design Boutique · Helsinki",
+          "desc": "New Nordic design, art collection, Michelin dining"
+        },
+        {
+          "name": "Punkaharju Hotel",
+          "type": "Lakeland Resort · Savonlinna",
+          "desc": "Century-old lakeside lodge, sauna, canoe, forest"
+        },
+        {
+          "name": "Levi Hotel Spa",
+          "type": "Ski Resort · Levi",
+          "desc": "Slope-side ski resort with spa and family facilities"
+        }
       ],
       "activities": "Activities",
       "activitiesDesc": "Aurora viewing, ski instruction, sailing, photography sessions — every season delivers.",
       "experiences": [
-        { "title": "Aurora Hunting", "desc": "Rovaniemi/Inari professional aurora tours with real-time forecasting" },
-        { "title": "Ski Instruction", "desc": "Levi/Ylläs resort ski instructors, beginner to advanced 1:1" },
-        { "title": "Archipelago Sailing", "desc": "Turku archipelago/Helsinki summer sailing with skipper" },
-        { "title": "Aurora Photography", "desc": "Professional photographer for family/couple/portrait sessions" },
-        { "title": "Lakeland Retreats", "desc": "Cabin getaways with sauna, canoeing, foraging" },
-        { "title": "Snowmobiling", "desc": "Lapland wilderness snowmobile tours with instruction and gear" }
+        {
+          "title": "Aurora Hunting",
+          "desc": "Rovaniemi/Inari professional aurora tours with real-time forecasting"
+        },
+        {
+          "title": "Ski Instruction",
+          "desc": "Levi/Ylläs resort ski instructors, beginner to advanced 1:1"
+        },
+        {
+          "title": "Archipelago Sailing",
+          "desc": "Turku archipelago/Helsinki summer sailing with skipper"
+        },
+        {
+          "title": "Aurora Photography",
+          "desc": "Professional photographer for family/couple/portrait sessions"
+        },
+        {
+          "title": "Lakeland Retreats",
+          "desc": "Cabin getaways with sauna, canoeing, foraging"
+        },
+        {
+          "title": "Snowmobiling",
+          "desc": "Lapland wilderness snowmobile tours with instruction and gear"
+        }
       ],
       "helsinki": "Helsinki Highlights",
       "helsinkiDesc": "Daughter of the Baltic. From the white-domed Cathedral to the rock-hewn Temppeliaukio, from the UNESCO sea fortress to the world-class Oodi library — 15 must-see Helsinki attractions.",
       "helsinkiAttractions": [
-        { "name": "Helsinki Cathedral", "type": "Landmark", "desc": "White neoclassical cathedral atop Senate Square — the city's most iconic skyline" },
-        { "name": "Suomenlinna", "type": "UNESCO World Heritage", "desc": "Sea fortress islands, 15-min ferry from the harbor — perfect for sea-view walks and picnics" },
-        { "name": "Temppeliaukio Church", "type": "Architecture", "desc": "The Rock Church carved into a granite outcrop — a Nordic minimalist masterpiece with exceptional acoustics" },
-        { "name": "Kauppatori Market Square", "type": "Harbor market", "desc": "Seaside market in the city center — must-try Finnish salmon soup (lohikeitto), Nordic snacks, souvenirs" },
-        { "name": "Oodi Library", "type": "Modern architecture", "desc": "Finland's central library, opened 2018 — world-class contemporary architecture, free entry" },
-        { "name": "Design District Helsinki", "type": "Arts & shopping", "desc": "200+ Nordic design shops, galleries, cafés, and boutiques in Helsinki's creative quarter" },
-        { "name": "Löyly", "type": "Sauna experience", "desc": "Wooden seaside complex in Hernesaari — public sauna + sea dip, the essential Finnish sauna experience" },
-        { "name": "Allas Sea Pool", "type": "Sea pool", "desc": "Open-air seawater pools + sauna at Katajanokka in the heart of the city — unbeatable views" },
-        { "name": "Esplanadi Park", "type": "City park", "desc": "Helsinki's signature central boulevard — Kappeli's summer terrace is unmissable" },
-        { "name": "Seurasaari", "type": "Nature & culture", "desc": "Open-air museum island with traditional Finnish wooden buildings relocated from around the country" },
-        { "name": "Uspenski Cathedral", "type": "Orthodox cathedral", "desc": "Northern Europe's largest Orthodox cathedral — red-brick Russian architecture overlooking the harbor" },
-        { "name": "Sibelius Monument", "type": "Art landmark", "desc": "Memorial to Finland's national composer Jean Sibelius — 600 steel organ pipes" },
-        { "name": "Kiasma", "type": "Contemporary art museum", "desc": "Flagship Nordic contemporary art museum — the building itself is a work of art" },
-        { "name": "Ateneum", "type": "Art museum", "desc": "Finland's national gallery — Golden Age art including Gallen-Kallela and other masters" },
-        { "name": "Old Market Hall", "type": "Food market", "desc": "Indoor market open since 1889 — traditional Finnish food, coffee, pastries, seafood, deli" }
+        {
+          "name": "Helsinki Cathedral",
+          "type": "Landmark",
+          "desc": "White neoclassical cathedral atop Senate Square — the city's most iconic skyline"
+        },
+        {
+          "name": "Suomenlinna",
+          "type": "UNESCO World Heritage",
+          "desc": "Sea fortress islands, 15-min ferry from the harbor — perfect for sea-view walks and picnics"
+        },
+        {
+          "name": "Temppeliaukio Church",
+          "type": "Architecture",
+          "desc": "The Rock Church carved into a granite outcrop — a Nordic minimalist masterpiece with exceptional acoustics"
+        },
+        {
+          "name": "Kauppatori Market Square",
+          "type": "Harbor market",
+          "desc": "Seaside market in the city center — must-try Finnish salmon soup (lohikeitto), Nordic snacks, souvenirs"
+        },
+        {
+          "name": "Oodi Library",
+          "type": "Modern architecture",
+          "desc": "Finland's central library, opened 2018 — world-class contemporary architecture, free entry"
+        },
+        {
+          "name": "Design District Helsinki",
+          "type": "Arts & shopping",
+          "desc": "200+ Nordic design shops, galleries, cafés, and boutiques in Helsinki's creative quarter"
+        },
+        {
+          "name": "Löyly",
+          "type": "Sauna experience",
+          "desc": "Wooden seaside complex in Hernesaari — public sauna + sea dip, the essential Finnish sauna experience"
+        },
+        {
+          "name": "Allas Sea Pool",
+          "type": "Sea pool",
+          "desc": "Open-air seawater pools + sauna at Katajanokka in the heart of the city — unbeatable views"
+        },
+        {
+          "name": "Esplanadi Park",
+          "type": "City park",
+          "desc": "Helsinki's signature central boulevard — Kappeli's summer terrace is unmissable"
+        },
+        {
+          "name": "Seurasaari",
+          "type": "Nature & culture",
+          "desc": "Open-air museum island with traditional Finnish wooden buildings relocated from around the country"
+        },
+        {
+          "name": "Uspenski Cathedral",
+          "type": "Orthodox cathedral",
+          "desc": "Northern Europe's largest Orthodox cathedral — red-brick Russian architecture overlooking the harbor"
+        },
+        {
+          "name": "Sibelius Monument",
+          "type": "Art landmark",
+          "desc": "Memorial to Finland's national composer Jean Sibelius — 600 steel organ pipes"
+        },
+        {
+          "name": "Kiasma",
+          "type": "Contemporary art museum",
+          "desc": "Flagship Nordic contemporary art museum — the building itself is a work of art"
+        },
+        {
+          "name": "Ateneum",
+          "type": "Art museum",
+          "desc": "Finland's national gallery — Golden Age art including Gallen-Kallela and other masters"
+        },
+        {
+          "name": "Old Market Hall",
+          "type": "Food market",
+          "desc": "Indoor market open since 1889 — traditional Finnish food, coffee, pastries, seafood, deli"
+        }
       ],
       "dayTrips": "Day Trips from Helsinki",
       "dayTripsDesc": "Four Nordic excursions from Helsinki ranging from half-day to three days — covering Finland's gems plus cross-sea neighboring capitals.",
       "dayTripsItems": [
-        { "name": "Porvoo", "country": "Finland", "duration": "Half day – 1 day", "transport": "Bus ~1 hr", "desc": "Finland's most photogenic old town — red wooden houses, riverside market, cafés and craft shops" },
-        { "name": "Fiskars Village", "country": "Finland", "duration": "1 day", "transport": "Train + bus ~1.5–2 hr", "desc": "Nordic design pilgrimage — historic ironworks transformed into an artist village with workshops, galleries, restaurants" },
-        { "name": "Tallinn", "country": "Estonia", "duration": "1–2 days", "transport": "Ferry ~2 hr", "desc": "UNESCO medieval old town — cobblestone streets, city walls, church spires, excellent value" },
-        { "name": "Stockholm", "country": "Sweden", "duration": "2–3 days", "transport": "Ferry or flight", "desc": "Nordic capital, fourteen-island city — royal palace, Vasa Museum, archipelago cruises" }
+        {
+          "name": "Porvoo",
+          "country": "Finland",
+          "duration": "Half day – 1 day",
+          "transport": "Bus ~1 hr",
+          "desc": "Finland's most photogenic old town — red wooden houses, riverside market, cafés and craft shops"
+        },
+        {
+          "name": "Fiskars Village",
+          "country": "Finland",
+          "duration": "1 day",
+          "transport": "Train + bus ~1.5–2 hr",
+          "desc": "Nordic design pilgrimage — historic ironworks transformed into an artist village with workshops, galleries, restaurants"
+        },
+        {
+          "name": "Tallinn",
+          "country": "Estonia",
+          "duration": "1–2 days",
+          "transport": "Ferry ~2 hr",
+          "desc": "UNESCO medieval old town — cobblestone streets, city walls, church spires, excellent value"
+        },
+        {
+          "name": "Stockholm",
+          "country": "Sweden",
+          "duration": "2–3 days",
+          "transport": "Ferry or flight",
+          "desc": "Nordic capital, fourteen-island city — royal palace, Vasa Museum, archipelago cruises"
+        }
       ],
       "dining": "Where to Eat",
       "diningDesc": "Curated Helsinki restaurants — from Michelin fine dining and new-Nordic creativity, to Chinese home-style and convenient near-hotel options.",
@@ -236,22 +362,61 @@
       "intro": "From Tromsø to Lofoten, Geirangerfjord to the Atlantic Road — Norway's most breathtaking northern landscapes.",
       "routes": "Featured Routes",
       "routesItems": [
-        { "name": "Lofoten Islands", "desc": "Red fishing villages, snow peaks meeting the sea" },
-        { "name": "Alta", "desc": "Aurora capital, UNESCO rock-art" },
-        { "name": "Tromsø", "desc": "Gateway to the Arctic, husky sledding & auroras" },
-        { "name": "Trondheim", "desc": "Viking capital, Nidaros Cathedral" },
-        { "name": "Atlantic Road", "desc": "One of the world's most scenic drives" },
-        { "name": "Geirangerfjord", "desc": "UNESCO heritage, Seven Sisters waterfall" },
-        { "name": "Kristiansand", "desc": "South coast, summer cottages" },
-        { "name": "Molde", "desc": "City of Roses, Hundred Hills viewpoint" },
-        { "name": "Ålesund", "desc": "Art Nouveau architecture" },
-        { "name": "Longyearbyen", "desc": "Svalbard — the edge of the Arctic wilderness" }
+        {
+          "name": "Lofoten Islands",
+          "desc": "Red fishing villages, snow peaks meeting the sea"
+        },
+        {
+          "name": "Alta",
+          "desc": "Aurora capital, UNESCO rock-art"
+        },
+        {
+          "name": "Tromsø",
+          "desc": "Gateway to the Arctic, husky sledding & auroras"
+        },
+        {
+          "name": "Trondheim",
+          "desc": "Viking capital, Nidaros Cathedral"
+        },
+        {
+          "name": "Atlantic Road",
+          "desc": "One of the world's most scenic drives"
+        },
+        {
+          "name": "Geirangerfjord",
+          "desc": "UNESCO heritage, Seven Sisters waterfall"
+        },
+        {
+          "name": "Kristiansand",
+          "desc": "South coast, summer cottages"
+        },
+        {
+          "name": "Molde",
+          "desc": "City of Roses, Hundred Hills viewpoint"
+        },
+        {
+          "name": "Ålesund",
+          "desc": "Art Nouveau architecture"
+        },
+        {
+          "name": "Longyearbyen",
+          "desc": "Svalbard — the edge of the Arctic wilderness"
+        }
       ],
       "activities": "Signature Experiences",
       "activitiesItems": [
-        { "name": "King Crab Safari", "desc": "Northern Norway king crab fishing with on-site tasting" },
-        { "name": "Whale Watching", "desc": "Tromsø orca and humpback observation" },
-        { "name": "Coastal Cruise", "desc": "Bergen to Kirkenes coastal voyage" }
+        {
+          "name": "King Crab Safari",
+          "desc": "Northern Norway king crab fishing with on-site tasting"
+        },
+        {
+          "name": "Whale Watching",
+          "desc": "Tromsø orca and humpback observation"
+        },
+        {
+          "name": "Coastal Cruise",
+          "desc": "Bergen to Kirkenes coastal voyage"
+        }
       ]
     },
     "iceland": {
@@ -260,16 +425,37 @@
       "intro": "Waterfalls, glaciers, geysers, black-sand beaches — every inch of Iceland is a geological marvel.",
       "routes": "Classic Routes",
       "routesItems": [
-        { "name": "Golden Circle", "desc": "Þingvellir National Park + Geysir + Gullfoss waterfall" },
-        { "name": "South Coast Glaciers", "desc": "Jökulsárlón lagoon, Diamond Beach, Vatnajökull" },
-        { "name": "Ring Road", "desc": "Classic 7-10 day circumnavigation on Route 1" },
-        { "name": "Snæfellsnes Peninsula", "desc": "Iceland in miniature — volcanoes, waterfalls, black church" }
+        {
+          "name": "Golden Circle",
+          "desc": "Þingvellir National Park + Geysir + Gullfoss waterfall"
+        },
+        {
+          "name": "South Coast Glaciers",
+          "desc": "Jökulsárlón lagoon, Diamond Beach, Vatnajökull"
+        },
+        {
+          "name": "Ring Road",
+          "desc": "Classic 7-10 day circumnavigation on Route 1"
+        },
+        {
+          "name": "Snæfellsnes Peninsula",
+          "desc": "Iceland in miniature — volcanoes, waterfalls, black church"
+        }
       ],
       "activities": "Activities",
       "activitiesItems": [
-        { "name": "Blue Lagoon", "desc": "Geothermal spa experience" },
-        { "name": "Ice Caves", "desc": "Vatnajökull blue ice caves (Nov-Mar)" },
-        { "name": "Aurora Hunting", "desc": "Winter aurora tours" }
+        {
+          "name": "Blue Lagoon",
+          "desc": "Geothermal spa experience"
+        },
+        {
+          "name": "Ice Caves",
+          "desc": "Vatnajökull blue ice caves (Nov-Mar)"
+        },
+        {
+          "name": "Aurora Hunting",
+          "desc": "Winter aurora tours"
+        }
       ]
     },
     "denmark": {
@@ -278,9 +464,18 @@
       "intro": "Beyond Copenhagen, Denmark's most rewarding destinations are its remote territories — Greenland and the Faroe Islands.",
       "routes": "Recommended Routes",
       "routesItems": [
-        { "name": "Greenland", "desc": "Ilulissat icefjord, Nuuk Arctic culture, midnight sun" },
-        { "name": "Faroe Islands", "desc": "Cliffs, waterfalls, grass-roof villages, North Atlantic isolation" },
-        { "name": "Copenhagen", "desc": "Fairytale city, birthplace of Nordic design and New Nordic cuisine" }
+        {
+          "name": "Greenland",
+          "desc": "Ilulissat icefjord, Nuuk Arctic culture, midnight sun"
+        },
+        {
+          "name": "Faroe Islands",
+          "desc": "Cliffs, waterfalls, grass-roof villages, North Atlantic isolation"
+        },
+        {
+          "name": "Copenhagen",
+          "desc": "Fairytale city, birthplace of Nordic design and New Nordic cuisine"
+        }
       ]
     },
     "china": {
@@ -305,10 +500,23 @@
               "meals": "Lunch / Dinner",
               "stay": "Tangkou Town",
               "items": [
-                { "time": "08:00-12:30", "name": "Depart Hefei to Huangshan by coach" },
-                { "time": "14:00-16:00", "name": "Chengkan ancient village", "desc": "Praised by Zhu Xi as 'the number one village in Jiangnan' — millennium-old Huizhou village with exquisite carvings, evening fish-lantern performance" },
-                { "time": "16:30", "name": "Hotel check-in, Tangkou" },
-                { "time": "18:00-19:00", "name": "Dinner" }
+                {
+                  "time": "08:00-12:30",
+                  "name": "Depart Hefei to Huangshan by coach"
+                },
+                {
+                  "time": "14:00-16:00",
+                  "name": "Chengkan ancient village",
+                  "desc": "Praised by Zhu Xi as 'the number one village in Jiangnan' — millennium-old Huizhou village with exquisite carvings, evening fish-lantern performance"
+                },
+                {
+                  "time": "16:30",
+                  "name": "Hotel check-in, Tangkou"
+                },
+                {
+                  "time": "18:00-19:00",
+                  "name": "Dinner"
+                }
               ]
             },
             {
@@ -317,8 +525,16 @@
               "meals": "Breakfast / Lunch / Dinner",
               "stay": "Huangshan City",
               "items": [
-                { "time": "09:10-16:30", "name": "National AAAAA Huangshan Scenic Area", "desc": "Coach to Yungu Temple, cable car or hike to Bai'e Ridge, Shixin Peak, Bright Summit, Yuping Tower — view the famous Huangshan pines" },
-                { "time": "18:30-20:30", "name": "Tunxi Old Street by night", "desc": "Built in the Song Dynasty, best-preserved Song-Ming-Qing pedestrian street in China" }
+                {
+                  "time": "09:10-16:30",
+                  "name": "National AAAAA Huangshan Scenic Area",
+                  "desc": "Coach to Yungu Temple, cable car or hike to Bai'e Ridge, Shixin Peak, Bright Summit, Yuping Tower — view the famous Huangshan pines"
+                },
+                {
+                  "time": "18:30-20:30",
+                  "name": "Tunxi Old Street by night",
+                  "desc": "Built in the Song Dynasty, best-preserved Song-Ming-Qing pedestrian street in China"
+                }
               ]
             },
             {
@@ -326,8 +542,15 @@
               "title": "Xixinan Wetland — Return",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "09:30-11:30", "name": "Xixinan Wetland", "desc": "Surrounded by maple-poplar forest, streams and stone bridges — pastoral poetry in morning mist" },
-                { "time": "13:00-17:30", "name": "Return to Hefei" }
+                {
+                  "time": "09:30-11:30",
+                  "name": "Xixinan Wetland",
+                  "desc": "Surrounded by maple-poplar forest, streams and stone bridges — pastoral poetry in morning mist"
+                },
+                {
+                  "time": "13:00-17:30",
+                  "name": "Return to Hefei"
+                }
               ]
             }
           ]
@@ -346,9 +569,20 @@
               "meals": "Lunch / Dinner",
               "stay": "She County",
               "items": [
-                { "time": "08:00-12:30", "name": "Depart Hefei for She County" },
-                { "time": "13:30-14:30", "name": "Tangyue Archway Group", "desc": "'The Number One Village in Jiangnan' — seven ancient archways, ancestral halls, live filial-piety performances" },
-                { "time": "14:50-17:00", "name": "Huizhou Ancient City", "desc": "Birthplace of Huizhou learning, three-carving art, ancient government office, evening fish-lantern parade" }
+                {
+                  "time": "08:00-12:30",
+                  "name": "Depart Hefei for She County"
+                },
+                {
+                  "time": "13:30-14:30",
+                  "name": "Tangyue Archway Group",
+                  "desc": "'The Number One Village in Jiangnan' — seven ancient archways, ancestral halls, live filial-piety performances"
+                },
+                {
+                  "time": "14:50-17:00",
+                  "name": "Huizhou Ancient City",
+                  "desc": "Birthplace of Huizhou learning, three-carving art, ancient government office, evening fish-lantern parade"
+                }
               ]
             },
             {
@@ -357,9 +591,21 @@
               "meals": "Breakfast / Lunch / Dinner",
               "stay": "Huangshan City",
               "items": [
-                { "time": "09:00-12:00", "name": "Xin'an River Scenic Gallery boat tour", "desc": "100-mile picturesque corridor, ancient Huizhou merchant route, riverside villages, millennial camphor trees" },
-                { "time": "14:30-16:00", "name": "Xixinan Wetland", "desc": "Real-life Wizard of Oz — maple forest, streams, stone bridges, Jiangnan charm" },
-                { "time": "16:30-18:00", "name": "Tunxi Old Street", "desc": "Best-preserved pedestrian commercial street in China, Song-Ming-Qing architecture" }
+                {
+                  "time": "09:00-12:00",
+                  "name": "Xin'an River Scenic Gallery boat tour",
+                  "desc": "100-mile picturesque corridor, ancient Huizhou merchant route, riverside villages, millennial camphor trees"
+                },
+                {
+                  "time": "14:30-16:00",
+                  "name": "Xixinan Wetland",
+                  "desc": "Real-life Wizard of Oz — maple forest, streams, stone bridges, Jiangnan charm"
+                },
+                {
+                  "time": "16:30-18:00",
+                  "name": "Tunxi Old Street",
+                  "desc": "Best-preserved pedestrian commercial street in China, Song-Ming-Qing architecture"
+                }
               ]
             },
             {
@@ -367,8 +613,15 @@
               "title": "Hongcun — Hefei",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "10:00-12:00", "name": "Hongcun ancient village", "desc": "'The village in Chinese paintings' — unique ox-shaped water system, exquisite carvings at Chengzhi Hall — known as the 'Folk Palace Museum'" },
-                { "time": "13:30-18:00", "name": "Return to Hefei" }
+                {
+                  "time": "10:00-12:00",
+                  "name": "Hongcun ancient village",
+                  "desc": "'The village in Chinese paintings' — unique ox-shaped water system, exquisite carvings at Chengzhi Hall — known as the 'Folk Palace Museum'"
+                },
+                {
+                  "time": "13:30-18:00",
+                  "name": "Return to Hefei"
+                }
               ]
             }
           ]
@@ -387,8 +640,15 @@
               "meals": "Lunch / Dinner",
               "stay": "Xiuning County",
               "items": [
-                { "time": "08:00-12:30", "name": "Depart Hefei for Huangshan" },
-                { "time": "13:40-17:00", "name": "Huizhou Grand Canyon", "desc": "Cliff waterfalls, turquoise pools, ancient pines — optional thrilling rafting" }
+                {
+                  "time": "08:00-12:30",
+                  "name": "Depart Hefei for Huangshan"
+                },
+                {
+                  "time": "13:40-17:00",
+                  "name": "Huizhou Grand Canyon",
+                  "desc": "Cliff waterfalls, turquoise pools, ancient pines — optional thrilling rafting"
+                }
               ]
             },
             {
@@ -397,9 +657,20 @@
               "meals": "Breakfast / Lunch / Dinner",
               "stay": "Xiuning County",
               "items": [
-                { "time": "09:00-11:30", "name": "Qiyun Mountain", "desc": "Danxia landform, Taoist heritage, 'No.1 mountain in Jiangnan', countless historic stone carvings" },
-                { "time": "13:00-15:00", "name": "Bamboo rafting at Qiyun foothill", "desc": "Banks lined with millennial trees, graceful river scenery" },
-                { "time": "19:00-20:30", "name": "Yuehua Street by night" }
+                {
+                  "time": "09:00-11:30",
+                  "name": "Qiyun Mountain",
+                  "desc": "Danxia landform, Taoist heritage, 'No.1 mountain in Jiangnan', countless historic stone carvings"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Bamboo rafting at Qiyun foothill",
+                  "desc": "Banks lined with millennial trees, graceful river scenery"
+                },
+                {
+                  "time": "19:00-20:30",
+                  "name": "Yuehua Street by night"
+                }
               ]
             },
             {
@@ -407,9 +678,20 @@
               "title": "Chengkan — Qiankou Residential — Hefei",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "09:30-12:30", "name": "Chengkan", "desc": "Naturally formed Bagua-pattern village, two national-treasure ancient buildings, Hui-style carvings" },
-                { "time": "afternoon", "name": "Qiankou Residential Houses", "desc": "'For palaces go to Beijing; for residential houses come to Qiankou' — Ming-dynasty Hui-style ensemble" },
-                { "time": "13:30-18:00", "name": "Return to Hefei" }
+                {
+                  "time": "09:30-12:30",
+                  "name": "Chengkan",
+                  "desc": "Naturally formed Bagua-pattern village, two national-treasure ancient buildings, Hui-style carvings"
+                },
+                {
+                  "time": "afternoon",
+                  "name": "Qiankou Residential Houses",
+                  "desc": "'For palaces go to Beijing; for residential houses come to Qiankou' — Ming-dynasty Hui-style ensemble"
+                },
+                {
+                  "time": "13:30-18:00",
+                  "name": "Return to Hefei"
+                }
               ]
             }
           ]
@@ -427,9 +709,20 @@
               "title": "Hefei — Jing County — Pingyuan — Moon Bay",
               "meals": "Lunch / Dinner",
               "items": [
-                { "time": "09:00-11:30", "name": "Depart Hefei for Jing County" },
-                { "time": "13:00-15:00", "name": "Pingyuan secret realm", "desc": "'Mini Li River of southern Anhui' — bamboo raft amongst rocks, Fengyang market team-building" },
-                { "time": "16:30-17:30", "name": "Moon Bay Scenic Area", "desc": "100-mile bamboo forest, classic film & TV location" }
+                {
+                  "time": "09:00-11:30",
+                  "name": "Depart Hefei for Jing County"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Pingyuan secret realm",
+                  "desc": "'Mini Li River of southern Anhui' — bamboo raft amongst rocks, Fengyang market team-building"
+                },
+                {
+                  "time": "16:30-17:30",
+                  "name": "Moon Bay Scenic Area",
+                  "desc": "100-mile bamboo forest, classic film & TV location"
+                }
               ]
             },
             {
@@ -437,8 +730,16 @@
               "title": "Peach Blossom Pond — Chaji village",
               "meals": "Breakfast / Lunch / Dinner",
               "items": [
-                { "time": "10:00-11:30", "name": "Peach Blossom Pond (Taohuatan)", "desc": "Made famous by Li Bai's poem 'Farewell to Wang Lun' — emerald ripples, ancient riverbank trees" },
-                { "time": "13:00-15:00", "name": "Chaji ancient village", "desc": "Small bridges and flowing water, Ming-Qing carved-beam buildings, ancient ancestral halls" }
+                {
+                  "time": "10:00-11:30",
+                  "name": "Peach Blossom Pond (Taohuatan)",
+                  "desc": "Made famous by Li Bai's poem 'Farewell to Wang Lun' — emerald ripples, ancient riverbank trees"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Chaji ancient village",
+                  "desc": "Small bridges and flowing water, Ming-Qing carved-beam buildings, ancient ancestral halls"
+                }
               ]
             },
             {
@@ -446,8 +747,15 @@
               "title": "Chinese Xuan Paper Museum — Hefei",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "09:00-11:00", "name": "Chinese Xuan Paper Culture Park", "desc": "National intangible heritage — handmade Xuan paper process, optional papermaking & rubbing experience" },
-                { "time": "12:30-15:30", "name": "Return to Hefei" }
+                {
+                  "time": "09:00-11:00",
+                  "name": "Chinese Xuan Paper Culture Park",
+                  "desc": "National intangible heritage — handmade Xuan paper process, optional papermaking & rubbing experience"
+                },
+                {
+                  "time": "12:30-15:30",
+                  "name": "Return to Hefei"
+                }
               ]
             }
           ]
@@ -466,9 +774,19 @@
               "meals": "Lunch / Dinner",
               "stay": "Suzhou",
               "items": [
-                { "time": "10:30-12:30", "name": "Travel to Suzhou" },
-                { "time": "14:00-17:00", "name": "Tiger Hill", "desc": "'The top scenic spot in Wu' — centered around the thousand-year leaning Yunyan Pagoda and Spring-Autumn Sword Pool, iconic 2500-year Wu culture site" },
-                { "time": "17:30-18:30", "name": "Dinner, hotel check-in" }
+                {
+                  "time": "10:30-12:30",
+                  "name": "Travel to Suzhou"
+                },
+                {
+                  "time": "14:00-17:00",
+                  "name": "Tiger Hill",
+                  "desc": "'The top scenic spot in Wu' — centered around the thousand-year leaning Yunyan Pagoda and Spring-Autumn Sword Pool, iconic 2500-year Wu culture site"
+                },
+                {
+                  "time": "17:30-18:30",
+                  "name": "Dinner, hotel check-in"
+                }
               ]
             },
             {
@@ -477,9 +795,21 @@
               "meals": "Breakfast / Lunch / Dinner",
               "stay": "Suzhou",
               "items": [
-                { "time": "09:30-11:30", "name": "Humble Administrator's Garden (Zhuozheng Yuan)", "desc": "Suzhou's largest surviving classical garden, World Heritage site, water-soul, changing view at every step — pinnacle of Jiangnan gardens" },
-                { "time": "13:20-15:00", "name": "Hanshan Temple", "desc": "Made world-famous by Zhang Ji's poem 'A Night Mooring by Maple Bridge', a millennium-old Suzhou temple, classic 'Maple Bridge at Night' landmark" },
-                { "time": "15:10-17:10", "name": "Lingering Garden (Liu Yuan)", "desc": "One of China's four famous gardens, World Heritage site, renowned for architectural spatial art, 700-m winding corridors and Guanyun Peak's rare stones — recreating worlds within inches" }
+                {
+                  "time": "09:30-11:30",
+                  "name": "Humble Administrator's Garden (Zhuozheng Yuan)",
+                  "desc": "Suzhou's largest surviving classical garden, World Heritage site, water-soul, changing view at every step — pinnacle of Jiangnan gardens"
+                },
+                {
+                  "time": "13:20-15:00",
+                  "name": "Hanshan Temple",
+                  "desc": "Made world-famous by Zhang Ji's poem 'A Night Mooring by Maple Bridge', a millennium-old Suzhou temple, classic 'Maple Bridge at Night' landmark"
+                },
+                {
+                  "time": "15:10-17:10",
+                  "name": "Lingering Garden (Liu Yuan)",
+                  "desc": "One of China's four famous gardens, World Heritage site, renowned for architectural spatial art, 700-m winding corridors and Guanyun Peak's rare stones — recreating worlds within inches"
+                }
               ]
             },
             {
@@ -487,8 +817,15 @@
               "title": "Zhouzhuang — Airport transfer",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "09:30-12:30", "name": "Zhouzhuang", "desc": "'China's No.1 Water Town', 900-year history, well-shaped waterways, 14 ancient bridges, Ming-Qing residences. Shuangqiao, Shenting, Zhangting are landmarks — quintessential Jiangnan small bridges & flowing water" },
-                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+                {
+                  "time": "09:30-12:30",
+                  "name": "Zhouzhuang",
+                  "desc": "'China's No.1 Water Town', 900-year history, well-shaped waterways, 14 ancient bridges, Ming-Qing residences. Shuangqiao, Shenting, Zhangting are landmarks — quintessential Jiangnan small bridges & flowing water"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lunch, airport transfer, end of tour"
+                }
               ]
             }
           ]
@@ -507,8 +844,16 @@
               "meals": "Lunch / Dinner",
               "stay": "Hangzhou",
               "items": [
-                { "time": "10:00-12:00", "name": "Lingyin Temple", "desc": "Also known as 'Yunlin Temple', at the foot of Lingyin Mountain west of West Lake — serene and quiet, the earliest famous temple in Hangzhou, preserving rare relics from many dynasties" },
-                { "time": "14:30-17:00", "name": "West Lake Scenic Area", "desc": "Witnessed the development of Chinese Buddhist, Taoist culture and tea-Zen traditions. Inscribed on the World Heritage List on June 24, 2011" }
+                {
+                  "time": "10:00-12:00",
+                  "name": "Lingyin Temple",
+                  "desc": "Also known as 'Yunlin Temple', at the foot of Lingyin Mountain west of West Lake — serene and quiet, the earliest famous temple in Hangzhou, preserving rare relics from many dynasties"
+                },
+                {
+                  "time": "14:30-17:00",
+                  "name": "West Lake Scenic Area",
+                  "desc": "Witnessed the development of Chinese Buddhist, Taoist culture and tea-Zen traditions. Inscribed on the World Heritage List on June 24, 2011"
+                }
               ]
             },
             {
@@ -517,8 +862,16 @@
               "meals": "Breakfast / Lunch / Dinner",
               "stay": "Hangzhou",
               "items": [
-                { "time": "09:30-11:30", "name": "Xixi National Wetland Park", "desc": "China's first national wetland park integrating urban, agricultural and cultural wetlands. 5A-level attraction, picturesque 'a stream of water, a wisp of mist'" },
-                { "time": "13:00-17:00", "name": "Songcheng", "desc": "Crossing past and present, twenty theaters and hundreds of performances — one day is not enough to see everything" }
+                {
+                  "time": "09:30-11:30",
+                  "name": "Xixi National Wetland Park",
+                  "desc": "China's first national wetland park integrating urban, agricultural and cultural wetlands. 5A-level attraction, picturesque 'a stream of water, a wisp of mist'"
+                },
+                {
+                  "time": "13:00-17:00",
+                  "name": "Songcheng",
+                  "desc": "Crossing past and present, twenty theaters and hundreds of performances — one day is not enough to see everything"
+                }
               ]
             },
             {
@@ -526,8 +879,15 @@
               "title": "Liangzhu Cultural Heritage Park — Airport",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "10:00-12:30", "name": "Liangzhu Cultural Heritage Park", "desc": "Dating back ~5,300-4,300 years, an important representative of early regional civilization in China, the 'Holy Land that provides evidence for 5,000 years of Chinese civilization'" },
-                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+                {
+                  "time": "10:00-12:30",
+                  "name": "Liangzhu Cultural Heritage Park",
+                  "desc": "Dating back ~5,300-4,300 years, an important representative of early regional civilization in China, the 'Holy Land that provides evidence for 5,000 years of Chinese civilization'"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lunch, airport transfer, end of tour"
+                }
               ]
             }
           ]
@@ -546,9 +906,20 @@
               "meals": "Lunch / Dinner",
               "stay": "Suzhou",
               "items": [
-                { "time": "10:00-12:00", "name": "Travel to Suzhou" },
-                { "time": "13:30-15:30", "name": "Humble Administrator's Garden", "desc": "Suzhou's largest classical garden, World Heritage site, water-focused with a new view at every step — pinnacle of Jiangnan gardens" },
-                { "time": "16:00-17:30", "name": "Hanshan Temple", "desc": "Famous worldwide thanks to Zhang Ji's 'A Night Mooring by Maple Bridge' — a thousand-year-old Suzhou temple, classic 'Night Mooring' landmark" }
+                {
+                  "time": "10:00-12:00",
+                  "name": "Travel to Suzhou"
+                },
+                {
+                  "time": "13:30-15:30",
+                  "name": "Humble Administrator's Garden",
+                  "desc": "Suzhou's largest classical garden, World Heritage site, water-focused with a new view at every step — pinnacle of Jiangnan gardens"
+                },
+                {
+                  "time": "16:00-17:30",
+                  "name": "Hanshan Temple",
+                  "desc": "Famous worldwide thanks to Zhang Ji's 'A Night Mooring by Maple Bridge' — a thousand-year-old Suzhou temple, classic 'Night Mooring' landmark"
+                }
               ]
             },
             {
@@ -557,8 +928,16 @@
               "meals": "Breakfast / Lunch / Dinner",
               "stay": "Hangzhou",
               "items": [
-                { "time": "11:00-12:30", "name": "Wuzhen", "desc": "5A-level ancient town in Tongxiang, Zhejiang — millennium-old Jiangnan water-town, 'the last waterside residence in China', permanent venue of the World Internet Conference" },
-                { "time": "15:00-19:00", "name": "Songcheng", "desc": "Spans past and present — twenty theaters, hundreds of performances, never enough time for everything" }
+                {
+                  "time": "11:00-12:30",
+                  "name": "Wuzhen",
+                  "desc": "5A-level ancient town in Tongxiang, Zhejiang — millennium-old Jiangnan water-town, 'the last waterside residence in China', permanent venue of the World Internet Conference"
+                },
+                {
+                  "time": "15:00-19:00",
+                  "name": "Songcheng",
+                  "desc": "Spans past and present — twenty theaters, hundreds of performances, never enough time for everything"
+                }
               ]
             },
             {
@@ -566,8 +945,15 @@
               "title": "West Lake — Airport",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "09:30-12:30", "name": "West Lake Scenic Area", "desc": "Witnessed Chinese Buddhist, Taoist, tea-Zen traditions — World Heritage site" },
-                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+                {
+                  "time": "09:30-12:30",
+                  "name": "West Lake Scenic Area",
+                  "desc": "Witnessed Chinese Buddhist, Taoist, tea-Zen traditions — World Heritage site"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lunch, airport transfer, end of tour"
+                }
               ]
             }
           ]
@@ -586,10 +972,26 @@
               "meals": "Lunch / Dinner",
               "stay": "Shanghai",
               "items": [
-                { "time": "09:00-10:30", "name": "Yu Garden", "desc": "Originally a Ming-Dynasty private garden, ranks first among Shanghai's five existing classical gardens" },
-                { "time": "10:40-12:10", "name": "City God Temple", "desc": "Built in the Ming Dynasty, a Taoist temple of the Orthodox Unity Sect — together with City God snacks, Lotus Pond, Mid-Lake Pavilion and Nine-Turn Bridge forms Shanghai's iconic Old Town" },
-                { "time": "13:30-15:00", "name": "Sinan Road", "desc": "Stroll or cycle along plane-tree avenues and admire French-style villas lining both sides" },
-                { "time": "15:30-17:30", "name": "Nanjing Road Pedestrian Street", "desc": "Asymmetrical layout with a 4.2-meter 'Golden Belt' through the entire street, 34 differently-designed flower beds" }
+                {
+                  "time": "09:00-10:30",
+                  "name": "Yu Garden",
+                  "desc": "Originally a Ming-Dynasty private garden, ranks first among Shanghai's five existing classical gardens"
+                },
+                {
+                  "time": "10:40-12:10",
+                  "name": "City God Temple",
+                  "desc": "Built in the Ming Dynasty, a Taoist temple of the Orthodox Unity Sect — together with City God snacks, Lotus Pond, Mid-Lake Pavilion and Nine-Turn Bridge forms Shanghai's iconic Old Town"
+                },
+                {
+                  "time": "13:30-15:00",
+                  "name": "Sinan Road",
+                  "desc": "Stroll or cycle along plane-tree avenues and admire French-style villas lining both sides"
+                },
+                {
+                  "time": "15:30-17:30",
+                  "name": "Nanjing Road Pedestrian Street",
+                  "desc": "Asymmetrical layout with a 4.2-meter 'Golden Belt' through the entire street, 34 differently-designed flower beds"
+                }
               ]
             },
             {
@@ -598,11 +1000,31 @@
               "meals": "Breakfast / Lunch / Dinner",
               "stay": "Shanghai",
               "items": [
-                { "time": "09:00-11:30", "name": "Shanghai Museum (People's Square Branch)", "desc": "Rich collections of bronzes, ceramics, calligraphy and paintings, jade — deep dive into Chinese history" },
-                { "time": "13:00-15:00", "name": "Xintiandi", "desc": "Boutique shops, treasure hunting, relaxing café moments" },
-                { "time": "15:00-15:40", "name": "Tianzifang", "desc": "Rebuilt from Shanghai's unique Shikumen architecture — creative base for artists, maze-like alleyways, retro handmade craft shops" },
-                { "time": "16:10-16:30", "name": "Oriental Pearl Tower (exterior)", "desc": "Standing in Lujiazui, Pudong, facing the Bund across the Huangpu River — 468 m, eleven spheres inspired by 'big and small pearls falling on a jade plate'" },
-                { "time": "16:30", "name": "Huangpu River ferry (Jinling East Rd — Dongchang Rd)", "desc": "Admire the exotic Bund architecture, gaze across to the Lujiazui skyscrapers — history and modernity in perfect blend" }
+                {
+                  "time": "09:00-11:30",
+                  "name": "Shanghai Museum (People's Square Branch)",
+                  "desc": "Rich collections of bronzes, ceramics, calligraphy and paintings, jade — deep dive into Chinese history"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Xintiandi",
+                  "desc": "Boutique shops, treasure hunting, relaxing café moments"
+                },
+                {
+                  "time": "15:00-15:40",
+                  "name": "Tianzifang",
+                  "desc": "Rebuilt from Shanghai's unique Shikumen architecture — creative base for artists, maze-like alleyways, retro handmade craft shops"
+                },
+                {
+                  "time": "16:10-16:30",
+                  "name": "Oriental Pearl Tower (exterior)",
+                  "desc": "Standing in Lujiazui, Pudong, facing the Bund across the Huangpu River — 468 m, eleven spheres inspired by 'big and small pearls falling on a jade plate'"
+                },
+                {
+                  "time": "16:30",
+                  "name": "Huangpu River ferry (Jinling East Rd — Dongchang Rd)",
+                  "desc": "Admire the exotic Bund architecture, gaze across to the Lujiazui skyscrapers — history and modernity in perfect blend"
+                }
               ]
             },
             {
@@ -610,9 +1032,20 @@
               "title": "Postal Museum — the Bund — Airport",
               "meals": "Breakfast / Lunch",
               "items": [
-                { "time": "09:00-10:30", "name": "Shanghai Postal Museum", "desc": "Located in the Shanghai General Post Office Building — train-carriage post offices, vintage mailboxes, the history of Chinese postal service" },
-                { "time": "11:00-12:00", "name": "The Bund", "desc": "Along the Huangpu River for ~1.5 km — Shanghai's symbolic landmark, famous for its international architecture and the stunning night view" },
-                { "time": "12:30-13:30", "name": "Lunch, airport transfer, end of tour" }
+                {
+                  "time": "09:00-10:30",
+                  "name": "Shanghai Postal Museum",
+                  "desc": "Located in the Shanghai General Post Office Building — train-carriage post offices, vintage mailboxes, the history of Chinese postal service"
+                },
+                {
+                  "time": "11:00-12:00",
+                  "name": "The Bund",
+                  "desc": "Along the Huangpu River for ~1.5 km — Shanghai's symbolic landmark, famous for its international architecture and the stunning night view"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lunch, airport transfer, end of tour"
+                }
               ]
             }
           ]
@@ -644,10 +1077,22 @@
       "anhuiBookCta": "Inquire & Book",
       "regionsTitle": "Browse by Destination",
       "regionTabs": [
-        { "key": "anhui", "label": "Anhui" },
-        { "key": "jiangzhe", "label": "Suzhou & Hangzhou" },
-        { "key": "shanghai", "label": "Shanghai" },
-        { "key": "hunan", "label": "Hunan" }
+        {
+          "key": "anhui",
+          "label": "Anhui"
+        },
+        {
+          "key": "jiangzhe",
+          "label": "Suzhou & Hangzhou"
+        },
+        {
+          "key": "shanghai",
+          "label": "Shanghai"
+        },
+        {
+          "key": "hunan",
+          "label": "Hunan"
+        }
       ],
       "regionComingSoon": "Itineraries for this region are in the works — coming soon. Contact us for a custom program.",
       "guide": {
@@ -655,38 +1100,101 @@
         "subtitle": "First Time in China — A Practical Guide for International Visitors",
         "intro": "Everything you need to sort out before landing in China: entry rules, flights, transfers, staying connected, and how to pay. On our tours we handle everything on the ground — this is what to prepare before you fly.",
         "items": [
-          { "title": "Visa & Entry", "body": "Finland and most European passports currently enjoy 30-day visa-free entry to China (policy in force through the end of 2026). Travelers from other countries can often use the 240-hour visa-free transit when continuing to a third country, or apply for a standard L tourist visa. On arrival you complete an arrival card and fingerprint scan — keep your hotel address and onward ticket handy." },
-          { "title": "Flights & Getting There", "body": "Direct flights connect Helsinki with Shanghai in about 9–10 hours. For our Jiangnan tours, fly into Shanghai Pudong (PVG): Suzhou and Hangzhou are under two hours away by high-speed rail, Hefei about three. We can also arrange connecting domestic flights for itineraries further inland." },
-          { "title": "Transfers & Getting Around", "body": "Our packages include airport pickup and a private coach throughout the tour. For independent days: high-speed rail tickets are bought with your passport (12306 app or station counters), DiDi — China's Uber — works in English, and metro systems accept Alipay QR codes. Always carry your passport; it is required for trains and hotel check-in." },
-          { "title": "SIM Cards & Internet", "body": "Easiest option: an international eSIM (e.g. Airalo, Holafly) activated before landing — roaming data reaches Google, WhatsApp, and Instagram normally. Local SIM cards from China Unicom or China Mobile at the airport are cheaper but run on the local network, where most Western apps and sites are blocked. Hotel Wi-Fi is everywhere but subject to the same restrictions." },
-          { "title": "Payments", "body": "China is nearly cashless — Alipay and WeChat Pay cover almost every shop, taxi, and street stall. Both accept foreign Visa and Mastercard: download the app, verify with your passport, link your card, and pay by scanning QR codes. Foreign bank cards are accepted at major hotels only, so keep a small amount of cash (RMB 200–500) as a fallback. Tipping is not expected anywhere." },
-          { "title": "Useful Apps", "body": "Set these up before departure: Alipay (payments, transport, translation mini-apps), WeChat (messaging — universal in China), DiDi (ride-hailing), Amap or Apple Maps (Google Maps is unreliable in China), and a translator app. Our guides speak English throughout the tour, so apps are mainly for your free time." }
+          {
+            "title": "Visa & Entry",
+            "body": "Finland and most European passports currently enjoy 30-day visa-free entry to China (policy in force through the end of 2026). Travelers from other countries can often use the 240-hour visa-free transit when continuing to a third country, or apply for a standard L tourist visa. On arrival you complete an arrival card and fingerprint scan — keep your hotel address and onward ticket handy."
+          },
+          {
+            "title": "Flights & Getting There",
+            "body": "Direct flights connect Helsinki with Shanghai in about 9–10 hours. For our Jiangnan tours, fly into Shanghai Pudong (PVG): Suzhou and Hangzhou are under two hours away by high-speed rail, Hefei about three. We can also arrange connecting domestic flights for itineraries further inland."
+          },
+          {
+            "title": "Transfers & Getting Around",
+            "body": "Our packages include airport pickup and a private coach throughout the tour. For independent days: high-speed rail tickets are bought with your passport (12306 app or station counters), DiDi — China's Uber — works in English, and metro systems accept Alipay QR codes. Always carry your passport; it is required for trains and hotel check-in."
+          },
+          {
+            "title": "SIM Cards & Internet",
+            "body": "Easiest option: an international eSIM (e.g. Airalo, Holafly) activated before landing — roaming data reaches Google, WhatsApp, and Instagram normally. Local SIM cards from China Unicom or China Mobile at the airport are cheaper but run on the local network, where most Western apps and sites are blocked. Hotel Wi-Fi is everywhere but subject to the same restrictions."
+          },
+          {
+            "title": "Payments",
+            "body": "China is nearly cashless — Alipay and WeChat Pay cover almost every shop, taxi, and street stall. Both accept foreign Visa and Mastercard: download the app, verify with your passport, link your card, and pay by scanning QR codes. Foreign bank cards are accepted at major hotels only, so keep a small amount of cash (RMB 200–500) as a fallback. Tipping is not expected anywhere."
+          },
+          {
+            "title": "Useful Apps",
+            "body": "Set these up before departure: Alipay (payments, transport, translation mini-apps), WeChat (messaging — universal in China), DiDi (ride-hailing), Amap or Apple Maps (Google Maps is unreliable in China), and a translator app. Our guides speak English throughout the tour, so apps are mainly for your free time."
+          }
         ]
       },
       "citiesTitle": "City Destinations",
       "cities": [
-        { "name": "Beijing", "desc": "Imperial capital — Forbidden City, Great Wall, hutongs" },
-        { "name": "Shanghai", "desc": "The Bund, contemporary art, Michelin dining" },
-        { "name": "Xi'an", "desc": "Silk Road origin — Terracotta Army, city walls" },
-        { "name": "Chengdu", "desc": "Land of Plenty — pandas, Sichuan cuisine, slow life" },
-        { "name": "Hangzhou", "desc": "West Lake, Longjing tea, Song-dynasty heritage" },
-        { "name": "Guilin", "desc": "Karst landscapes — Li River, Yangshuo" },
-        { "name": "Lijiang", "desc": "Ancient town, Jade Dragon Snow Mountain" },
-        { "name": "Xiamen", "desc": "Garden city by the sea, Gulangyu, Min culture" }
+        {
+          "name": "Beijing",
+          "desc": "Imperial capital — Forbidden City, Great Wall, hutongs"
+        },
+        {
+          "name": "Shanghai",
+          "desc": "The Bund, contemporary art, Michelin dining"
+        },
+        {
+          "name": "Xi'an",
+          "desc": "Silk Road origin — Terracotta Army, city walls"
+        },
+        {
+          "name": "Chengdu",
+          "desc": "Land of Plenty — pandas, Sichuan cuisine, slow life"
+        },
+        {
+          "name": "Hangzhou",
+          "desc": "West Lake, Longjing tea, Song-dynasty heritage"
+        },
+        {
+          "name": "Guilin",
+          "desc": "Karst landscapes — Li River, Yangshuo"
+        },
+        {
+          "name": "Lijiang",
+          "desc": "Ancient town, Jade Dragon Snow Mountain"
+        },
+        {
+          "name": "Xiamen",
+          "desc": "Garden city by the sea, Gulangyu, Min culture"
+        }
       ],
       "itineraries": "Recommended Itineraries",
       "itinerariesIntro": "Classic routes, fully customizable in days and city pairing.",
       "itinerariesItems": [
-        { "name": "Classic North · 8 days", "route": "Beijing → Xi'an → Shanghai", "desc": "History + culture + modernity — the canonical first-time China trip" },
-        { "name": "Southern Landscapes · 10 days", "route": "Shanghai → Hangzhou → Guilin → Yangshuo → Xiamen", "desc": "Jiangnan watertowns to karst landscapes" },
-        { "name": "Western Frontier · 12 days", "route": "Chengdu → Jiuzhaigou → Lijiang → Shangri-La", "desc": "Pandas, snow mountains, and Tibetan culture in depth" },
-        { "name": "Silk Road · 14 days", "route": "Xi'an → Lanzhou → Jiayuguan → Dunhuang → Urumqi → Kashgar", "desc": "The ancient Silk Road, ultimate cultural depth" }
+        {
+          "name": "Classic North · 8 days",
+          "route": "Beijing → Xi'an → Shanghai",
+          "desc": "History + culture + modernity — the canonical first-time China trip"
+        },
+        {
+          "name": "Southern Landscapes · 10 days",
+          "route": "Shanghai → Hangzhou → Guilin → Yangshuo → Xiamen",
+          "desc": "Jiangnan watertowns to karst landscapes"
+        },
+        {
+          "name": "Western Frontier · 12 days",
+          "route": "Chengdu → Jiuzhaigou → Lijiang → Shangri-La",
+          "desc": "Pandas, snow mountains, and Tibetan culture in depth"
+        },
+        {
+          "name": "Silk Road · 14 days",
+          "route": "Xi'an → Lanzhou → Jiayuguan → Dunhuang → Urumqi → Kashgar",
+          "desc": "The ancient Silk Road, ultimate cultural depth"
+        }
       ],
       "forum": {
         "title": "Travel Forum",
         "subtitle": "Forum — Real Travelers, Real Voices",
         "intro": "User-driven content: budget travel guides, off-the-beaten-path city tips, easy-going travel essays.",
-        "tags": ["Sharing & Discussion", "Budget Travel", "Fun & Lifestyle", "Travel Diaries"]
+        "tags": [
+          "Sharing & Discussion",
+          "Budget Travel",
+          "Fun & Lifestyle",
+          "Travel Diaries"
+        ]
       }
     }
   },
@@ -698,10 +1206,26 @@
     "dialogTitle": "Explore Our Adventures",
     "close": "Close",
     "items": [
-      { "title": "Fjord Explorer Journey", "days": "Duration: 3 days", "description": "Embark on a voyage through the serene waters of the Nordic fjords." },
-      { "title": "Midnight Sun Hiking", "days": "Duration: 3 days", "description": "Discover the magic of the midnight sun with guided hikes." },
-      { "title": "Viking Heritage Tour", "days": "Duration: 3 days", "description": "Step back in time on a cultural odyssey exploring Viking heritage." },
-      { "title": "Arctic Survival Challenge", "days": "Duration: 3 days", "description": "Test your limits with an immersive survival experience." }
+      {
+        "title": "Fjord Explorer Journey",
+        "days": "Duration: 3 days",
+        "description": "Embark on a voyage through the serene waters of the Nordic fjords."
+      },
+      {
+        "title": "Midnight Sun Hiking",
+        "days": "Duration: 3 days",
+        "description": "Discover the magic of the midnight sun with guided hikes."
+      },
+      {
+        "title": "Viking Heritage Tour",
+        "days": "Duration: 3 days",
+        "description": "Step back in time on a cultural odyssey exploring Viking heritage."
+      },
+      {
+        "title": "Arctic Survival Challenge",
+        "days": "Duration: 3 days",
+        "description": "Test your limits with an immersive survival experience."
+      }
     ]
   },
   "highlights": {
@@ -709,18 +1233,54 @@
     "description": "Explore our services and connections to our partners.",
     "close": "Close",
     "items": [
-      { "title": "Viking Line Cruise", "description": "Embark on a majestic journey through the Baltic Sea." },
-      { "title": "VR Train Expeditions", "description": "Experience the beauty of the Nordic landscapes through VR." },
-      { "title": "Husky Sled Adventures", "description": "Steer your own sled team across frozen landscapes." },
-      { "title": "Sailing Cruise Trip", "description": "Set sail on a breathtaking cruise discovering secluded islands." },
-      { "title": "Aurora Borealis Tours", "description": "Chase the mesmerizing Northern Lights." },
-      { "title": "Ski and Snowboard Escapes", "description": "Hit the slopes with our premium packages." },
-      { "title": "Wildlife Photography Safaris", "description": "Capture the majestic beauty of Nordic wildlife." },
-      { "title": "Kayak Expeditions", "description": "Paddle through serene fjords." },
-      { "title": "Guided Hiking Tours", "description": "Explore breathtaking trails." },
-      { "title": "Nordic Culinary Experiences", "description": "Savor the flavors of the North." },
-      { "title": "Cultural Festival Tours", "description": "Immerse yourself in Nordic culture." },
-      { "title": "Castle and Heritage Sites", "description": "Visit ancient castles and UNESCO sites." }
+      {
+        "title": "Viking Line Cruise",
+        "description": "Embark on a majestic journey through the Baltic Sea."
+      },
+      {
+        "title": "VR Train Expeditions",
+        "description": "Experience the beauty of the Nordic landscapes through VR."
+      },
+      {
+        "title": "Husky Sled Adventures",
+        "description": "Steer your own sled team across frozen landscapes."
+      },
+      {
+        "title": "Sailing Cruise Trip",
+        "description": "Set sail on a breathtaking cruise discovering secluded islands."
+      },
+      {
+        "title": "Aurora Borealis Tours",
+        "description": "Chase the mesmerizing Northern Lights."
+      },
+      {
+        "title": "Ski and Snowboard Escapes",
+        "description": "Hit the slopes with our premium packages."
+      },
+      {
+        "title": "Wildlife Photography Safaris",
+        "description": "Capture the majestic beauty of Nordic wildlife."
+      },
+      {
+        "title": "Kayak Expeditions",
+        "description": "Paddle through serene fjords."
+      },
+      {
+        "title": "Guided Hiking Tours",
+        "description": "Explore breathtaking trails."
+      },
+      {
+        "title": "Nordic Culinary Experiences",
+        "description": "Savor the flavors of the North."
+      },
+      {
+        "title": "Cultural Festival Tours",
+        "description": "Immerse yourself in Nordic culture."
+      },
+      {
+        "title": "Castle and Heritage Sites",
+        "description": "Visit ancient castles and UNESCO sites."
+      }
     ]
   },
   "pricing": {
@@ -728,34 +1288,176 @@
     "description": "We offer different pricing structure to meet the need for groups of different sizes.",
     "perMonth": "per month",
     "tiers": [
-      { "title": "Single Customer", "description": ["Private tour for one","Personalized itinerary","Dedicated tour guide","Special access to select locations"], "buttonText": "Book Now" },
-      { "title": "Small Group", "subheader": "Ideal for Families", "description": ["Up to 4 people","Custom family-friendly itinerary","Private transportation","Discounts on attractions","Dedicated tour guide"], "buttonText": "Book for Family" },
-      { "title": "Large Group", "subheader": "Perfect for Companies", "description": ["Up to 10 people","Team-building activities included","Corporate discounts","Customized group itinerary","Priority support"], "buttonText": "Book for Group" },
-      { "title": "Special Purpose", "description": ["Ideal for filming, competitions","Tailored services","Logistical support","Exclusive access to locations","Dedicated project manager"], "buttonText": "Contact for Quote" }
+      {
+        "title": "Single Customer",
+        "description": [
+          "Private tour for one",
+          "Personalized itinerary",
+          "Dedicated tour guide",
+          "Special access to select locations"
+        ],
+        "buttonText": "Book Now"
+      },
+      {
+        "title": "Small Group",
+        "subheader": "Ideal for Families",
+        "description": [
+          "Up to 4 people",
+          "Custom family-friendly itinerary",
+          "Private transportation",
+          "Discounts on attractions",
+          "Dedicated tour guide"
+        ],
+        "buttonText": "Book for Family"
+      },
+      {
+        "title": "Large Group",
+        "subheader": "Perfect for Companies",
+        "description": [
+          "Up to 10 people",
+          "Team-building activities included",
+          "Corporate discounts",
+          "Customized group itinerary",
+          "Priority support"
+        ],
+        "buttonText": "Book for Group"
+      },
+      {
+        "title": "Special Purpose",
+        "description": [
+          "Ideal for filming, competitions",
+          "Tailored services",
+          "Logistical support",
+          "Exclusive access to locations",
+          "Dedicated project manager"
+        ],
+        "buttonText": "Contact for Quote"
+      }
     ]
   },
   "testimonials": {
     "title": "Testimonials",
     "description": "See what our customers love about our products.",
     "experience": [
-      { "name": "Elsa Nygard", "occupation": "Adventure Photographer", "testimonial": "Exploring the Arctic wilderness with Finuo's Northern Lights trip was a surreal experience." },
-      { "name": "Mikkel Jensen", "occupation": "Nature Guide", "testimonial": "Finuo's commitment to authentic Nordic experiences shines through their meticulously planned hiking tours." },
-      { "name": "Sofia Karlsson", "occupation": "Cultural Blogger", "testimonial": "The Santa Claus Village tour with Finuo was magical." },
-      { "name": "Liam O'Sullivan", "occupation": "Ski Instructor", "testimonial": "Finuo's ski trip was top-notch — perfect balance of thrill and safety." },
-      { "name": "Anna Petrova", "occupation": "Travel Influencer", "testimonial": "The snowmobile adventure organized by Finuo was exhilarating!" },
-      { "name": "Oliver Thomson", "occupation": "Documentary Filmmaker", "testimonial": "Documenting the Nordic cities with Finuo was an extraordinary journey." }
+      {
+        "name": "Elsa Nygard",
+        "occupation": "Adventure Photographer",
+        "testimonial": "Exploring the Arctic wilderness with Finuo's Northern Lights trip was a surreal experience."
+      },
+      {
+        "name": "Mikkel Jensen",
+        "occupation": "Nature Guide",
+        "testimonial": "Finuo's commitment to authentic Nordic experiences shines through their meticulously planned hiking tours."
+      },
+      {
+        "name": "Sofia Karlsson",
+        "occupation": "Cultural Blogger",
+        "testimonial": "The Santa Claus Village tour with Finuo was magical."
+      },
+      {
+        "name": "Liam O'Sullivan",
+        "occupation": "Ski Instructor",
+        "testimonial": "Finuo's ski trip was top-notch — perfect balance of thrill and safety."
+      },
+      {
+        "name": "Anna Petrova",
+        "occupation": "Travel Influencer",
+        "testimonial": "The snowmobile adventure organized by Finuo was exhilarating!"
+      },
+      {
+        "name": "Oliver Thomson",
+        "occupation": "Documentary Filmmaker",
+        "testimonial": "Documenting the Nordic cities with Finuo was an extraordinary journey."
+      },
+      {
+        "name": "Zhang Wei",
+        "occupation": "Independent Traveler",
+        "testimonial": "My first trip to Finland — the Chinese-speaking guide put my parents at ease, and the aurora night was unforgettable."
+      },
+      {
+        "name": "Hanna Virtanen",
+        "occupation": "Wedding Planner",
+        "testimonial": "We staged a proposal in a Lapland glass igloo — Finuo got every single detail perfect."
+      }
     ],
     "education": [
-      { "name": "Emma Thompson", "occupation": "Graduate Student", "testimonial": "Finuo's guidance was pivotal in my journey to my dream university." },
-      { "name": "Liam Johnson", "occupation": "Aspiring Engineer", "testimonial": "I navigated college applications with ease thanks to Finuo." },
-      { "name": "Olivia Brown", "occupation": "Future Medical Professional", "testimonial": "Finuo's consultants supported me through medical school applications." },
-      { "name": "Noah Wilson", "occupation": "Business Analyst Intern", "testimonial": "Finuo's career counseling has been a game-changer." },
-      { "name": "Ava Martinez", "occupation": "PhD Candidate", "testimonial": "Choosing Finuo for my PhD application was the best decision I made." },
-      { "name": "William Garcia", "occupation": "Undergraduate Student", "testimonial": "Thanks to Finuo, I received offers with scholarships." }
+      {
+        "name": "Emma Thompson",
+        "occupation": "Graduate Student",
+        "testimonial": "Finuo's guidance was pivotal in my journey to my dream university."
+      },
+      {
+        "name": "Liam Johnson",
+        "occupation": "Aspiring Engineer",
+        "testimonial": "I navigated college applications with ease thanks to Finuo."
+      },
+      {
+        "name": "Olivia Brown",
+        "occupation": "Future Medical Professional",
+        "testimonial": "Finuo's consultants supported me through medical school applications."
+      },
+      {
+        "name": "Noah Wilson",
+        "occupation": "Business Analyst Intern",
+        "testimonial": "Finuo's career counseling has been a game-changer."
+      },
+      {
+        "name": "Ava Martinez",
+        "occupation": "PhD Candidate",
+        "testimonial": "Choosing Finuo for my PhD application was the best decision I made."
+      },
+      {
+        "name": "William Garcia",
+        "occupation": "Undergraduate Student",
+        "testimonial": "Thanks to Finuo, I received offers with scholarships."
+      },
+      {
+        "name": "Li Na",
+        "occupation": "Parent",
+        "testimonial": "From school selection to the visa, Finuo guided us the whole way — my child got into Aalto University."
+      },
+      {
+        "name": "Daniel Korhonen",
+        "occupation": "Exchange Student",
+        "testimonial": "The Nordic study tour let me experience the essence of Finnish education up close."
+      }
     ],
     "mice": [
-      { "name": "Marcus Lindberg", "occupation": "Slush Program Director", "testimonial": "Finuo's local resources and execution made our overseas team's landing seamless." },
-      { "name": "Chen Xue", "occupation": "Sino-European Tech Forum Curator", "testimonial": "From venue and translation to hosting, Finuo covered everything end-to-end." }
+      {
+        "name": "Marcus Lindberg",
+        "occupation": "Slush Program Director",
+        "testimonial": "Finuo's local resources and execution made our overseas team's landing seamless."
+      },
+      {
+        "name": "Chen Xue",
+        "occupation": "Sino-European Tech Forum Curator",
+        "testimonial": "From venue and translation to hosting, Finuo covered everything end-to-end."
+      },
+      {
+        "name": "Heidi Laine",
+        "occupation": "Event Manager",
+        "testimonial": "During the Habitare design fair, Finuo's bilingual team made our client hospitality flawless."
+      },
+      {
+        "name": "Wang Lei",
+        "occupation": "Head of Overseas Expansion",
+        "testimonial": "For a Helsinki business trip, Finuo handled the hotels, translation, and the entire itinerary."
+      },
+      {
+        "name": "Sofia Niemi",
+        "occupation": "Forum Operations",
+        "testimonial": "A last-minute simultaneous-interpretation request — Finuo sorted it out within hours."
+      },
+      {
+        "name": "Chen Hao",
+        "occupation": "Investment Partner",
+        "testimonial": "The VIP dinner reception during Slush far exceeded our guests' expectations."
+      },
+      {
+        "name": "Antti Mäkinen",
+        "occupation": "Exhibitor",
+        "testimonial": "Booth setup and on-site coordination at the Nordic energy expo — professional and efficient."
+      }
     ]
   },
   "faq": {
@@ -795,12 +1497,30 @@
     "description": "Finuo Education Consulting is your trusted partner in studying abroad.",
     "close": "Close",
     "items": [
-      { "title": "Promoting Local Finnish Educational Resources", "description": "Detailed information about Finnish universities, vocational schools, and high schools." },
-      { "title": "School and Program Selection Assistance", "description": "Personalized guidance based on academic interests, career goals, and personal preferences." },
-      { "title": "Application Guidance and Support", "description": "Comprehensive support for application materials including resumes, essays, and recommendation letters." },
-      { "title": "Visa and Immigration Assistance", "description": "Document preparation, appointments, and guidance through requirements." },
-      { "title": "Accommodation and Adaptation Support", "description": "Housing guidance plus cultural orientation and language training." },
-      { "title": "Scholarship and Financial Aid Support", "description": "Guidance on available scholarships and financial aid opportunities." }
+      {
+        "title": "Promoting Local Finnish Educational Resources",
+        "description": "Detailed information about Finnish universities, vocational schools, and high schools."
+      },
+      {
+        "title": "School and Program Selection Assistance",
+        "description": "Personalized guidance based on academic interests, career goals, and personal preferences."
+      },
+      {
+        "title": "Application Guidance and Support",
+        "description": "Comprehensive support for application materials including resumes, essays, and recommendation letters."
+      },
+      {
+        "title": "Visa and Immigration Assistance",
+        "description": "Document preparation, appointments, and guidance through requirements."
+      },
+      {
+        "title": "Accommodation and Adaptation Support",
+        "description": "Housing guidance plus cultural orientation and language training."
+      },
+      {
+        "title": "Scholarship and Financial Aid Support",
+        "description": "Guidance on available scholarships and financial aid opportunities."
+      }
     ]
   },
   "education": {
@@ -808,33 +1528,132 @@
     "schoolsSubtitle": "Institutions — Top Finnish & European Education Providers",
     "schoolsIntro": "Universities, polytechnics, high schools, and specialist institutes such as science centres and sports academies. Detailed institution profiles, admission requirements, and program information.",
     "schools": [
-      { "id": "heureka", "name": "Heureka Science Centre", "type": "Science Education · Vantaa", "desc": "Finland's interactive science centre for hands-on STEAM learning",
+      {
+        "id": "heureka",
+        "name": "Heureka Science Centre",
+        "type": "Science Education · Vantaa",
+        "desc": "Finland's interactive science centre for hands-on STEAM learning",
         "intro": "Heureka, the Finnish Science Centre in Vantaa, has made science a hands-on experience since 1989. Its interactive exhibitions, digital planetarium, and learning labs invite visitors of every age to experiment for themselves, making it one of Finland's most visited attractions and a flagship destination for STEAM education. For visiting school groups we arrange guided tours and workshop programs aligned with the Finnish curriculum.",
-        "facts": ["Opened 1989 · Tikkurila, Vantaa", "Interactive exhibitions & digital planetarium", "STEAM workshops for school groups", "Around 300,000 visitors per year", "20 minutes from central Helsinki by train"] },
-      { "id": "kisakallio", "name": "Kisakallio Sports Institute", "type": "Sports · Lohja", "desc": "Sports institute for training camps, coaching, and physical education",
+        "facts": [
+          "Opened 1989 · Tikkurila, Vantaa",
+          "Interactive exhibitions & digital planetarium",
+          "STEAM workshops for school groups",
+          "Around 300,000 visitors per year",
+          "20 minutes from central Helsinki by train"
+        ]
+      },
+      {
+        "id": "kisakallio",
+        "name": "Kisakallio Sports Institute",
+        "type": "Sports · Lohja",
+        "desc": "Sports institute for training camps, coaching, and physical education",
         "intro": "Founded in 1949 on a lakeside campus in Lohja, Kisakallio is one of Finland's leading sports institutes. It combines Olympic-standard training facilities with on-campus accommodation and dining, hosting international training camps, coaching education, and physical education programs for visiting groups of all levels — just an hour from Helsinki.",
-        "facts": ["Founded 1949 · Lohja", "One hour from Helsinki", "Olympic-standard halls, fields & trails", "On-campus accommodation and restaurant", "International camps & PE programs for groups"] },
-      { "id": "kuortane", "name": "Kuortane Olympic Training Center", "type": "Sports · Kuortane", "desc": "Olympic-level training environment and sports education",
+        "facts": [
+          "Founded 1949 · Lohja",
+          "One hour from Helsinki",
+          "Olympic-standard halls, fields & trails",
+          "On-campus accommodation and restaurant",
+          "International camps & PE programs for groups"
+        ]
+      },
+      {
+        "id": "kuortane",
+        "name": "Kuortane Olympic Training Center",
+        "type": "Sports · Kuortane",
+        "desc": "Olympic-level training environment and sports education",
         "intro": "Kuortane Olympic Training Center in western Finland is one of the country's official Olympic training centers. Elite athletes in athletics, wrestling, and volleyball train alongside its sports academy and sports high school, and the center runs year-round camps that combine training, performance testing, and coaching education — open to international groups as well.",
-        "facts": ["Official Finnish Olympic Training Center", "South Ostrobothnia, western Finland", "Sports academy & sports high school", "Athletics hall, ice rinks & testing laboratory", "Hosts international elite and youth camps"] },
-      { "id": "helsinki", "name": "University of Helsinki", "type": "Comprehensive · QS Top 100", "desc": "Finland's flagship research university",
+        "facts": [
+          "Official Finnish Olympic Training Center",
+          "South Ostrobothnia, western Finland",
+          "Sports academy & sports high school",
+          "Athletics hall, ice rinks & testing laboratory",
+          "Hosts international elite and youth camps"
+        ]
+      },
+      {
+        "id": "helsinki",
+        "name": "University of Helsinki",
+        "type": "Comprehensive · QS Top 100",
+        "desc": "Finland's flagship research university",
         "intro": "Founded in 1640, the University of Helsinki is Finland's oldest and largest university and a fixture of the QS world top 100. Its eleven faculties span sciences, humanities, law, and medicine, with the neoclassical main building standing on Senate Square in the heart of the capital. Bachelor's and master's programs are offered in English across a wide range of fields.",
-        "facts": ["Founded 1640 · QS world top 100", "Finland's largest university, 11 faculties", "City-centre campus on Senate Square", "Wide selection of English-taught programs", "Strong research across sciences & humanities"] },
-      { "id": "aalto", "name": "Aalto University", "type": "Engineering · Business · Design", "desc": "Multidisciplinary tech and design powerhouse",
+        "facts": [
+          "Founded 1640 · QS world top 100",
+          "Finland's largest university, 11 faculties",
+          "City-centre campus on Senate Square",
+          "Wide selection of English-taught programs",
+          "Strong research across sciences & humanities"
+        ]
+      },
+      {
+        "id": "aalto",
+        "name": "Aalto University",
+        "type": "Engineering · Business · Design",
+        "desc": "Multidisciplinary tech and design powerhouse",
         "intro": "Aalto University was created in 2010 by merging Finland's leading universities of technology, business, and art & design. Its Otaniemi campus in Espoo — including the iconic Dipoli building — is the heart of Finland's startup and innovation scene. Aalto is known for combining engineering with design thinking and for one of Europe's most active entrepreneurship communities.",
-        "facts": ["Formed 2010 · Espoo (Otaniemi campus)", "Technology, business, and art & design", "Heart of Finland's startup ecosystem", "Architecture by Alvar Aalto", "Extensive English-taught master's programs"] },
-      { "id": "haagahelia", "name": "Haaga-Helia UAS", "type": "Applied Sciences", "desc": "Practice-oriented business and service management",
+        "facts": [
+          "Formed 2010 · Espoo (Otaniemi campus)",
+          "Technology, business, and art & design",
+          "Heart of Finland's startup ecosystem",
+          "Architecture by Alvar Aalto",
+          "Extensive English-taught master's programs"
+        ]
+      },
+      {
+        "id": "haagahelia",
+        "name": "Haaga-Helia UAS",
+        "type": "Applied Sciences",
+        "desc": "Practice-oriented business and service management",
         "intro": "Haaga-Helia University of Applied Sciences in Helsinki specialises in business, hospitality, tourism, and communication. Education is practice-oriented and built around close industry partnerships, with the main campus in Pasila a few minutes from central Helsinki. Its hotel and restaurant management programs are among the best known in the Nordics.",
-        "facts": ["Helsinki · main campus in Pasila", "Business, hospitality, tourism & media", "Practice-oriented, industry-connected teaching", "Renowned hotel & restaurant management school", "English-taught bachelor's and master's degrees"] },
-      { "id": "lab", "name": "LAB UAS", "type": "Lahti Region", "desc": "Design, business, and health sciences",
+        "facts": [
+          "Helsinki · main campus in Pasila",
+          "Business, hospitality, tourism & media",
+          "Practice-oriented, industry-connected teaching",
+          "Renowned hotel & restaurant management school",
+          "English-taught bachelor's and master's degrees"
+        ]
+      },
+      {
+        "id": "lab",
+        "name": "LAB UAS",
+        "type": "Lahti Region",
+        "desc": "Design, business, and health sciences",
         "intro": "LAB University of Applied Sciences operates campuses in Lahti and Lappeenranta, with strengths in design, circular economy, health care, and business. Formed in 2020, it works tightly with regional industry and is recognised for its Institute of Design — one of Finland's foremost design schools.",
-        "facts": ["Campuses in Lahti & Lappeenranta", "Design, circular economy, health & business", "Lahti Institute of Design heritage", "Close cooperation with regional industry", "English-taught degree programs"] },
-      { "id": "jyvaskyla", "name": "University of Jyväskylä", "type": "Education Specialty", "desc": "Renowned for educational research",
+        "facts": [
+          "Campuses in Lahti & Lappeenranta",
+          "Design, circular economy, health & business",
+          "Lahti Institute of Design heritage",
+          "Close cooperation with regional industry",
+          "English-taught degree programs"
+        ]
+      },
+      {
+        "id": "jyvaskyla",
+        "name": "University of Jyväskylä",
+        "type": "Education Specialty",
+        "desc": "Renowned for educational research",
         "intro": "The University of Jyväskylä is Finland's leading centre of educational research and teacher training — the heart of the famous Finnish education model. Its Seminaarinmäki campus features buildings by Alvar Aalto, and the university is also nationally unique in sport and health sciences, making it a natural partner for education and sports study programs alike.",
-        "facts": ["Finland's leading education research university", "Birthplace of Finnish teacher training", "Only sport sciences faculty in Finland", "Campus architecture by Alvar Aalto", "Central Finland · lakeside city of Jyväskylä"] },
-      { "id": "turku", "name": "University of Turku", "type": "Comprehensive", "desc": "Marine and life sciences strength",
+        "facts": [
+          "Finland's leading education research university",
+          "Birthplace of Finnish teacher training",
+          "Only sport sciences faculty in Finland",
+          "Campus architecture by Alvar Aalto",
+          "Central Finland · lakeside city of Jyväskylä"
+        ]
+      },
+      {
+        "id": "turku",
+        "name": "University of Turku",
+        "type": "Comprehensive",
+        "desc": "Marine and life sciences strength",
         "intro": "The University of Turku, founded in 1920 in Finland's oldest city, is a comprehensive research university with particular strength in marine and life sciences, medicine, and future technologies. Its riverside campus sits beside Turku Cathedral, and the university is a key partner in the region's biotech and maritime clusters.",
-        "facts": ["Founded 1920 · Finland's oldest city", "Strong in marine & life sciences, medicine", "Comprehensive research university", "Campus beside Turku Cathedral", "English-taught master's programs"] }
+        "facts": [
+          "Founded 1920 · Finland's oldest city",
+          "Strong in marine & life sciences, medicine",
+          "Comprehensive research university",
+          "Campus beside Turku Cathedral",
+          "English-taught master's programs"
+        ]
+      }
     ],
     "institutionLabels": {
       "back": "← Back",
@@ -848,17 +1667,35 @@
     "trainingSubtitle": "Training — Teachers, Students, and Custom",
     "trainingIntro": "Programs designed for Chinese schools visiting Finland: STEAM teacher training, student short courses, and government/school custom solutions.",
     "trainingItems": [
-      { "title": "Teacher Training", "desc": "Finnish education law, phenomenon-based learning, classroom management — 1-2 week intensives" },
-      { "title": "Student Training", "desc": "Summer/winter youth programs with classroom experience, cultural visits, outdoor activities" },
-      { "title": "Custom Training", "desc": "Tailored programs by school or institution focus (arts, design, sustainability, etc.)" }
+      {
+        "title": "Teacher Training",
+        "desc": "Finnish education law, phenomenon-based learning, classroom management — 1-2 week intensives"
+      },
+      {
+        "title": "Student Training",
+        "desc": "Summer/winter youth programs with classroom experience, cultural visits, outdoor activities"
+      },
+      {
+        "title": "Custom Training",
+        "desc": "Tailored programs by school or institution focus (arts, design, sustainability, etc.)"
+      }
     ],
     "studyToursTitle": "Study Tours",
     "studyToursSubtitle": "Study Tours — Nordic · China · Sino-European Exchange",
     "studyToursIntro": "Academic-cultural deep dives, distinct from regular tourism: every route has learning objectives and tangible outcomes.",
     "studyToursItems": [
-      { "title": "Nordic Study Tours", "desc": "Finnish education system + Nordic design + sustainable innovation company visits" },
-      { "title": "China Study Tours", "desc": "China cultural, industrial, and historical exploration for Nordic students (Beijing-Shanghai-Chengdu)" },
-      { "title": "Sino-European Exchange", "desc": "Bidirectional study tours with paired student visits and joint research projects" }
+      {
+        "title": "Nordic Study Tours",
+        "desc": "Finnish education system + Nordic design + sustainable innovation company visits"
+      },
+      {
+        "title": "China Study Tours",
+        "desc": "China cultural, industrial, and historical exploration for Nordic students (Beijing-Shanghai-Chengdu)"
+      },
+      {
+        "title": "Sino-European Exchange",
+        "desc": "Bidirectional study tours with paired student visits and joint research projects"
+      }
     ]
   },
   "mice": {
@@ -868,23 +1705,78 @@
     "listTitle": "Featured Events in Finland",
     "listSubtitle": "Finland MICE — Curated, Worth Watching",
     "listItems": [
-      { "name": "Slush", "desc": "World-class startup & tech summit, every November in Helsinki", "month": "Nov", "city": "Helsinki" },
-      { "name": "Habitare", "desc": "The Nordics' largest design and home interior fair", "month": "Sep", "city": "Helsinki" },
-      { "name": "Helsinki Design Week", "desc": "City-wide design culture festival", "month": "Sep", "city": "Helsinki" },
-      { "name": "Nordic Business Forum", "desc": "Global business leaders forum", "month": "Sep", "city": "Helsinki" },
-      { "name": "Arctic Circle Assembly", "desc": "International Arctic cooperation forum (neighboring Iceland)", "month": "Oct", "city": "Reykjavík" },
-      { "name": "FinnBuild", "desc": "Finland's construction & materials trade fair", "month": "Oct", "city": "Helsinki" },
-      { "name": "PowerExpo", "desc": "Nordic energy technology exhibition", "month": "May", "city": "Helsinki" },
-      { "name": "EduExpo", "desc": "Finnish education and training expo", "month": "Nov", "city": "Helsinki" }
+      {
+        "name": "Slush",
+        "desc": "World-class startup & tech summit, every November in Helsinki",
+        "month": "Nov",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Habitare",
+        "desc": "The Nordics' largest design and home interior fair",
+        "month": "Sep",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Helsinki Design Week",
+        "desc": "City-wide design culture festival",
+        "month": "Sep",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Nordic Business Forum",
+        "desc": "Global business leaders forum",
+        "month": "Sep",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Arctic Circle Assembly",
+        "desc": "International Arctic cooperation forum (neighboring Iceland)",
+        "month": "Oct",
+        "city": "Reykjavík"
+      },
+      {
+        "name": "FinnBuild",
+        "desc": "Finland's construction & materials trade fair",
+        "month": "Oct",
+        "city": "Helsinki"
+      },
+      {
+        "name": "PowerExpo",
+        "desc": "Nordic energy technology exhibition",
+        "month": "May",
+        "city": "Helsinki"
+      },
+      {
+        "name": "EduExpo",
+        "desc": "Finnish education and training expo",
+        "month": "Nov",
+        "city": "Helsinki"
+      }
     ],
     "servicesTitle": "What We Do",
     "servicesSubtitle": "Services — A Resource Gateway",
     "servicesItems": [
-      { "title": "MICE Services", "desc": "Finnish & Nordic resource matchmaking, conference organization, on-the-ground execution" },
-      { "title": "Custom Programs", "desc": "Bespoke design and delivery to client briefs" },
-      { "title": "Business Conferences", "desc": "International conference planning, agenda design, speaker invitation" },
-      { "title": "Team Building", "desc": "Ice-breaker, outdoor, and cultural immersion programs" },
-      { "title": "Hospitality", "desc": "Airport transfer, hotel coordination, interpretation, business hosting" }
+      {
+        "title": "MICE Services",
+        "desc": "Finnish & Nordic resource matchmaking, conference organization, on-the-ground execution"
+      },
+      {
+        "title": "Custom Programs",
+        "desc": "Bespoke design and delivery to client briefs"
+      },
+      {
+        "title": "Business Conferences",
+        "desc": "International conference planning, agenda design, speaker invitation"
+      },
+      {
+        "title": "Team Building",
+        "desc": "Ice-breaker, outdoor, and cultural immersion programs"
+      },
+      {
+        "title": "Hospitality",
+        "desc": "Airport transfer, hotel coordination, interpretation, business hosting"
+      }
     ]
   },
   "about": {

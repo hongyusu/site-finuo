@@ -18,10 +18,11 @@ import {
 } from './components_shared/sections';
 import { AboutSection, ContactSection } from './components_shared/AboutContact';
 import RestaurantModal from './components_shared/RestaurantModal';
+import TestimonialsMarquee from './components_shared/TestimonialsMarquee';
 import {
   GOLD, CREAM, DIM,
   HelsinkiAttractions, DayTripsGrid, RestaurantCard, FinlandActivities, FinlandHotels,
-  CountryRoutesGrid, AnhuiTours, ChinaGuide, ServiceStandards, ForumBlock, BigTestimonial, NordicTabs,
+  CountryRoutesGrid, AnhuiTours, ChinaGuide, ServiceStandards, ForumBlock, NordicTabs,
 } from './components_shared/landingSections';
 
 // All imagery is self-hosted under /public/images (no external CDN dependency).
@@ -142,7 +143,6 @@ export default function LandingPage() {
   const denmarkImages = ['/images/destinations/lake.jpg', '/images/destinations/iceland.jpg', '/images/destinations/cabin.jpg'];
 
   const testimonials = t('testimonials.experience', { returnObjects: true }) || [];
-  const firstTestimonial = testimonials[0] || {};
 
   return (
     <Box sx={{ bgcolor: '#0D0D0D', minHeight: '100vh' }}>
@@ -464,12 +464,8 @@ export default function LandingPage() {
         </motion.div>
       </AnimatePresence>
 
-      {/* 8. Big Testimonial */}
-      <BigTestimonial
-        quote={firstTestimonial.testimonial || "The Northern Lights trip was beyond magical."}
-        name={firstTestimonial.name || "Elsa Nygard"}
-        role={firstTestimonial.occupation || "Adventure Photographer"}
-      />
+      {/* 8. Testimonials marquee */}
+      <TestimonialsMarquee title={t('testimonials.title')} items={testimonials} direction="left" />
 
       {/* 9. FAQ */}
       <FAQ />

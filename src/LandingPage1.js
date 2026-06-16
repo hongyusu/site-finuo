@@ -9,8 +9,8 @@ import { motion } from 'framer-motion';
 import Hero from './components_education/Hero';
 import FAQ from './components_shared/FAQ';
 import Footer from './components_shared/Footer';
+import TestimonialsMarquee from './components_shared/TestimonialsMarquee';
 import {
-  fadeIn,
   stagger,
   Statement,
   SectionHeader,
@@ -130,24 +130,6 @@ function ProgramTriple({ items, images }) {
   );
 }
 
-function BigTestimonial({ quote, name, role }) {
-  return (
-    <Box id="testimonials" sx={{ py: { xs: 10, md: 16 }, px: { xs: 3, md: 8 }, maxWidth: 1000, mx: 'auto', textAlign: 'center' }}>
-      <Box component={motion.div} {...fadeIn}>
-        <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 4 }}>
-          Student Story
-        </Typography>
-        <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.5rem', md: '2.2rem' }, fontStyle: 'italic', fontWeight: 300, color: CREAM, lineHeight: 1.5, mb: 4 }}>
-          "{quote}"
-        </Typography>
-        <Typography sx={{ color: DIM, fontSize: '0.85rem' }}>
-          {name} — <span style={{ fontStyle: 'italic' }}>{role}</span>
-        </Typography>
-      </Box>
-    </Box>
-  );
-}
-
 export default function LandingPage1() {
   const { t } = useTranslation();
 
@@ -167,7 +149,6 @@ export default function LandingPage1() {
   ];
 
   const testimonials = t('testimonials.education', { returnObjects: true }) || [];
-  const firstTestimonial = testimonials[0] || {};
 
   return (
     <Box sx={{ bgcolor: '#0D0D0D', minHeight: '100vh' }}>
@@ -219,12 +200,8 @@ export default function LandingPage1() {
         </Container>
       </Box>
 
-      {/* 8. Testimonial */}
-      <BigTestimonial
-        quote={firstTestimonial.testimonial || "The guidance I received was exceptional."}
-        name={firstTestimonial.name || "Emma Thompson"}
-        role={firstTestimonial.occupation || "Graduate Student"}
-      />
+      {/* 8. Testimonials marquee */}
+      <TestimonialsMarquee title={t('testimonials.title')} items={testimonials} direction="left" />
 
       {/* 9. FAQ */}
       <FAQ />
