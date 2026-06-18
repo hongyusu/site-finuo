@@ -61,9 +61,9 @@ export default function Footer() {
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
             <Box sx={{ ml: '-15px' }}>
               <img
-                src={'/images/finuo_logo.svg'}
+                src={'/images/finuo_logo_black.png'}
                 style={logoStyle}
-                alt="Finuo logo"
+                alt="Finuo Group logo"
               />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>

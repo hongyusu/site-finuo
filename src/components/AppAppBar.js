@@ -78,10 +78,7 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
             sx={{ display: 'flex', alignItems: 'center', gap: 1.5, cursor: 'pointer' }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <img src="/images/finuo_logo.svg" style={{ width: 48, height: 'auto' }} alt="Finuo" />
-            <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.3rem', fontWeight: 500, letterSpacing: '0.05em', color: '#F5F2ED' }}>
-              Finuo
-            </Typography>
+            <img src="/images/finuo_logo_black.png" style={{ height: 52, width: 'auto' }} alt="Finuo Group" />
           </Box>
 
           {/* Desktop Nav */}

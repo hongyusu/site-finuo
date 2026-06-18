@@ -45,7 +45,7 @@ const ORG_LD = {
   name: 'Finuo Oy',
   alternateName: ['芬诺', 'Finuo'],
   url: 'https://finuo.fi',
-  logo: 'https://finuo.fi/images/finuo_logo.svg',
+  logo: 'https://finuo.fi/images/finuo_logo_blue.png',
   image: 'https://finuo.fi/images/destinations/aurora.jpg',
   description: 'Finland-based travel, study-abroad and MICE consultancy bridging China and Northern Europe.',
   address: { '@type': 'PostalAddress', addressLocality: 'Helsinki', addressCountry: 'FI' },
