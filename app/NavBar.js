@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import AppAppBar from '../src/components/AppAppBar';
 
-const BOOKING_URL = 'http://178.104.206.21:8083/search?vendor_id=14';
+const BOOKING_URL = 'https://travel.finuo.fi/search?vendor_id=14';
 
 function siteFromPathname(pathname) {
   if (pathname.startsWith('/education')) return 'education';
