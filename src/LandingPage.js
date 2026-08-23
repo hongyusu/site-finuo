@@ -152,92 +152,7 @@ export default function LandingPage() {
       {/* 2. Tourism Intro Statement */}
       <Statement text={t('tourism.intro')} light />
 
-      {/* 3. CHINA SECTION HEADER */}
-      <Box id="china" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 }, bgcolor: '#0A0A0A' }}>
-        <Container maxWidth="xl" disableGutters>
-          <SectionHeader
-            eyebrow={t('tourism.regions')}
-            title={t('tourism.chinaTitle')}
-            subtitle={t('tourism.chinaSubtitle')}
-          />
-        </Container>
-      </Box>
-      <FullBleedImage image={CHINA_HEADER} alt="China" height={{ xs: 250, md: 380 }} />
-
-      {/* 4. ANHUI THREE-DAY TOURS — featured product */}
-      <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
-        <Container maxWidth="xl" disableGutters>
-          <SectionHeader
-            eyebrow={t('tourism.china.anhuiToursTitle')}
-            title={t('tourism.china.anhuiToursSubtitle')}
-            subtitle={t('tourism.china.anhuiToursIntro')}
-          />
-        </Container>
-      </Box>
-
-      {/* 4b. REGION TABS — click a province/city to see its itineraries */}
-      <NordicTabs
-        active={activeRegion}
-        onChange={switchRegion}
-        labels={regionTabs.map((r, i) => ({
-          key: r.key,
-          num: String(i + 1).padStart(2, '0'),
-          label: r.label,
-        }))}
-      />
-      <Box sx={{ pb: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
-        <Container maxWidth="xl" disableGutters>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeRegion}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-            >
-              {regionTours.length > 0 ? (
-                <AnhuiTours
-                  tours={regionTours}
-                  images={anhuiHeroImages}
-                  expanded={expandedTour}
-                  onToggle={setExpandedTour}
-                />
-              ) : (
-                <Box sx={{ py: { xs: 6, md: 10 }, textAlign: 'center', border: '1px solid rgba(245,242,237,0.08)', bgcolor: '#0F0F0F' }}>
-                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.8rem' }, color: CREAM, mb: 1.5 }}>
-                    {regionTabs.find((r) => r.key === activeRegion)?.label}
-                  </Typography>
-                  <Typography sx={{ color: DIM, fontSize: '0.95rem' }}>
-                    {t('tourism.china.regionComingSoon')}
-                  </Typography>
-                </Box>
-              )}
-            </motion.div>
-          </AnimatePresence>
-          <ServiceStandards
-            title={t('tourism.china.anhuiServiceTitle')}
-            items={anhuiServiceItems}
-          />
-        </Container>
-      </Box>
-
-      {/* 4c. CHINA TRAVEL GUIDE for international visitors */}
-      <ChinaGuide
-        title={t('tourism.china.guide.title')}
-        subtitle={t('tourism.china.guide.subtitle')}
-        intro={t('tourism.china.guide.intro')}
-        items={guideItems}
-      />
-
-      {/* 5. FORUM */}
-      <ForumBlock
-        title={t('tourism.china.forum.title')}
-        subtitle={t('tourism.china.forum.subtitle')}
-        intro={t('tourism.china.forum.intro')}
-        tags={forumTags}
-      />
-
-      {/* 6. NORDIC SECTION HEADER */}
+      {/* 3. NORDIC SECTION HEADER */}
       <Box id="nordic" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
         <Container maxWidth="xl" disableGutters>
           <SectionHeader
@@ -249,7 +164,7 @@ export default function LandingPage() {
       </Box>
       <FullBleedImage image={NORDIC_HEADER} alt="Nordic landscape" height={{ xs: 250, md: 380 }} />
 
-      {/* 7. NORDIC COUNTRY TABS — click to switch */}
+      {/* 4. NORDIC COUNTRY TABS — click to switch */}
       <NordicTabs
         active={activeCountry}
         onChange={(c) => {
@@ -267,7 +182,7 @@ export default function LandingPage() {
         ]}
       />
 
-      {/* 7b. ACTIVE COUNTRY CONTENT */}
+      {/* 4b. ACTIVE COUNTRY CONTENT */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeCountry}
@@ -463,6 +378,91 @@ export default function LandingPage() {
           )}
         </motion.div>
       </AnimatePresence>
+
+      {/* 5. CHINA SECTION HEADER */}
+      <Box id="china" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 }, bgcolor: '#0A0A0A' }}>
+        <Container maxWidth="xl" disableGutters>
+          <SectionHeader
+            eyebrow={t('tourism.regions')}
+            title={t('tourism.chinaTitle')}
+            subtitle={t('tourism.chinaSubtitle')}
+          />
+        </Container>
+      </Box>
+      <FullBleedImage image={CHINA_HEADER} alt="China" height={{ xs: 250, md: 380 }} />
+
+      {/* 6. ANHUI THREE-DAY TOURS — featured product */}
+      <Box sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
+        <Container maxWidth="xl" disableGutters>
+          <SectionHeader
+            eyebrow={t('tourism.china.anhuiToursTitle')}
+            title={t('tourism.china.anhuiToursSubtitle')}
+            subtitle={t('tourism.china.anhuiToursIntro')}
+          />
+        </Container>
+      </Box>
+
+      {/* 6b. REGION TABS — click a province/city to see its itineraries */}
+      <NordicTabs
+        active={activeRegion}
+        onChange={switchRegion}
+        labels={regionTabs.map((r, i) => ({
+          key: r.key,
+          num: String(i + 1).padStart(2, '0'),
+          label: r.label,
+        }))}
+      />
+      <Box sx={{ pb: { xs: 8, md: 12 }, px: { xs: 2, md: 4 } }}>
+        <Container maxWidth="xl" disableGutters>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeRegion}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
+              {regionTours.length > 0 ? (
+                <AnhuiTours
+                  tours={regionTours}
+                  images={anhuiHeroImages}
+                  expanded={expandedTour}
+                  onToggle={setExpandedTour}
+                />
+              ) : (
+                <Box sx={{ py: { xs: 6, md: 10 }, textAlign: 'center', border: '1px solid rgba(245,242,237,0.08)', bgcolor: '#0F0F0F' }}>
+                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.8rem' }, color: CREAM, mb: 1.5 }}>
+                    {regionTabs.find((r) => r.key === activeRegion)?.label}
+                  </Typography>
+                  <Typography sx={{ color: DIM, fontSize: '0.95rem' }}>
+                    {t('tourism.china.regionComingSoon')}
+                  </Typography>
+                </Box>
+              )}
+            </motion.div>
+          </AnimatePresence>
+          <ServiceStandards
+            title={t('tourism.china.anhuiServiceTitle')}
+            items={anhuiServiceItems}
+          />
+        </Container>
+      </Box>
+
+      {/* 6c. CHINA TRAVEL GUIDE for international visitors */}
+      <ChinaGuide
+        title={t('tourism.china.guide.title')}
+        subtitle={t('tourism.china.guide.subtitle')}
+        intro={t('tourism.china.guide.intro')}
+        items={guideItems}
+      />
+
+      {/* 7. FORUM */}
+      <ForumBlock
+        title={t('tourism.china.forum.title')}
+        subtitle={t('tourism.china.forum.subtitle')}
+        intro={t('tourism.china.forum.intro')}
+        tags={forumTags}
+      />
 
       {/* 8. Testimonials marquee */}
       <TestimonialsMarquee title={t('testimonials.title')} items={testimonials} direction="left" />
