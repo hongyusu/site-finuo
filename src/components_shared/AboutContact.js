@@ -112,7 +112,13 @@ export function ContactSection() {
             <Box component={motion.div} {...fadeIn} sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               <ContactRow label={t('contact.email')} value="booking@finuo.fi" href="mailto:booking@finuo.fi" />
               <ContactRow label={t('contact.phone')} value="+358 44 582 0927" href="tel:+358445820927" />
-              <ContactRow label={t('contact.wechat')} value="finuo_helsinki" />
+              <ContactRow
+                label={t('contact.wechat')}
+                value="finuo_helsinki"
+                copy
+                copyHint={t('contact.wechatCopy')}
+                copiedHint={t('contact.wechatCopied')}
+              />
               <ContactRow label={t('contact.whatsapp')} value="+358 44 582 0927" href="https://wa.me/358445820927" />
               <ContactRow label={t('contact.address')} value={t('contact.addressValue')} />
             </Box>
@@ -189,8 +195,28 @@ export function ContactSection() {
   );
 }
 
-function ContactRow({ label, value, href }) {
+function ContactRow({ label, value, href, copy, copyHint, copiedHint }) {
   const isLink = Boolean(href);
+  const [copied, setCopied] = React.useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch (err) {
+      // clipboard API needs a secure context and can be blocked — fall back
+      const ta = document.createElement('textarea');
+      ta.value = value;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) { /* leave the id visible to select by hand */ }
+      document.body.removeChild(ta);
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
   return (
     <Box sx={{ borderBottom: '1px solid rgba(245,242,237,0.08)', pb: 2 }}>
       <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD, mb: 0.5 }}>
@@ -200,17 +226,27 @@ function ContactRow({ label, value, href }) {
         component={isLink ? 'a' : 'div'}
         href={href}
         {...(href && href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        {...(copy ? { onClick: handleCopy, role: 'button', tabIndex: 0,
+                      onKeyDown: (e) => { if (e.key === 'Enter' || e.key === ' ') handleCopy(); } } : {})}
         sx={{
-          color: CREAM,
+          color: copied ? GOLD : CREAM,
           fontSize: '1rem',
           textDecoration: 'none',
           display: 'inline-block',
           transition: 'color 0.3s ease',
-          ...(isLink && { cursor: 'pointer', '&:hover': { color: GOLD } }),
+          ...((isLink || copy) && { cursor: 'pointer', '&:hover': { color: GOLD } }),
         }}
       >
         {value}
       </Typography>
+      {copy && (
+        <Typography
+          component="span"
+          sx={{ ml: 1.5, fontSize: '0.72rem', letterSpacing: '0.05em', color: copied ? GOLD : DIM }}
+        >
+          {copied ? copiedHint : copyHint}
+        </Typography>
+      )}
     </Box>
   );
 }

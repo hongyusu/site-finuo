@@ -1842,6 +1842,8 @@
     "email": "邮箱",
     "phone": "电话",
     "wechat": "微信",
+    "wechatCopy": "点击复制微信号",
+    "wechatCopied": "已复制",
     "whatsapp": "WhatsApp",
     "address": "地址",
     "addressValue": "Helsinki, Finland",

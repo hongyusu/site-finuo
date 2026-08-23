@@ -1842,6 +1842,8 @@
     "email": "Email",
     "phone": "Phone",
     "wechat": "WeChat",
+    "wechatCopy": "tap to copy",
+    "wechatCopied": "copied",
     "whatsapp": "WhatsApp",
     "address": "Address",
     "addressValue": "Helsinki, Finland",
