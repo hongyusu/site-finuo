@@ -200,6 +200,11 @@ export const OG_IMAGES = {
     'suzhou-hangzhou': '/images/anhui/hangzhou-5.jpeg',
     shanghai: '/images/anhui/shanghai-18.jpeg',
   },
+  helsinki: {
+    attractions: '/images/helsinki/helsinki-cathedral.png',
+    'day-trips': '/images/helsinki/porvoo.jpg',
+    restaurants: '/images/helsinki/loyly.jpg',
+  },
   institution: {
     heureka: '/images/institutions/heureka-1.jpg',
     kisakallio: '/images/institutions/kisakallio-1.jpg',
@@ -214,3 +219,57 @@ export const OG_IMAGES = {
 };
 
 export const ogImage = (kind, id) => (OG_IMAGES[kind] && OG_IMAGES[kind][id]) || DEFAULT_OG_IMAGE;
+
+export const HELSINKI_SECTIONS = ['attractions', 'day-trips', 'restaurants'];
+
+// Search-led page titles. The visible heading stays the site's own wording;
+// these are what a searcher actually types.
+const HELSINKI_TITLES = {
+  attractions: {
+    zh: '赫尔辛基景点 · 15 处必去打卡地',
+    en: 'Things to Do in Helsinki — 15 Must-See Attractions',
+    fi: 'Nähtävyydet Helsingissä — 15 kohdetta, jotka kannattaa nähdä',
+  },
+  'day-trips': {
+    zh: '赫尔辛基周边一日游 · 波尔沃、菲斯卡斯、塔林、斯德哥尔摩',
+    en: 'Day Trips from Helsinki — Porvoo, Fiskars, Tallinn, Stockholm',
+    fi: 'Päiväretket Helsingistä — Porvoo, Fiskars, Tallinna, Tukholma',
+  },
+  restaurants: {
+    zh: '赫尔辛基餐厅推荐 · 米其林、北欧与中餐精选',
+    en: 'Best Restaurants in Helsinki — Michelin, Nordic and Chinese',
+    fi: 'Ravintolat Helsingissä — Michelin, pohjoismainen ja kiinalainen',
+  },
+};
+
+export const helsinkiTitle = (lang, section) =>
+  (HELSINKI_TITLES[section] || {})[lang] || null;
+
+const HELSINKI_KEYS = {
+  attractions: ['helsinki', 'helsinkiDesc', 'helsinkiAttractions'],
+  'day-trips': ['dayTrips', 'dayTripsDesc', 'dayTripsItems'],
+  restaurants: ['dining', 'diningDesc', null],
+};
+
+/** Title, description and item names for one Helsinki guide, in one language. */
+export function helsinkiSectionFor(lang, section) {
+  const keys = HELSINKI_KEYS[section];
+  if (!keys) return null;
+  const fin = t(lang).tourism.finland;
+  const [titleKey, descKey, itemsKey] = keys;
+  const items = itemsKey
+    ? (fin[itemsKey] || []).map((x) => x.name)
+    : ['diningHotelItems', 'diningWesternItems', 'diningChineseItems']
+        .flatMap((k) => (fin[k] || []).map((x) => x.name));
+  return {
+    title: fin[titleKey],
+    desc: fin[descKey],
+    countryTitle: fin.title,
+    items,
+  };
+}
+
+/** The China practicalities guide in one language. */
+export function chinaGuideFor(lang) {
+  return t(lang).tourism.china.guide;
+}

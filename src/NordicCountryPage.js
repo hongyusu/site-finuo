@@ -37,6 +37,7 @@ export default function NordicCountryPage({ country }) {
 
       <NordicCountry
         country={country}
+        compact
         footer={
           <Box sx={{ mt: 6, pt: 4, borderTop: '1px solid rgba(245,242,237,0.08)' }}>
             <Typography

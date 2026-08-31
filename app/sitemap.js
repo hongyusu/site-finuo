@@ -1,4 +1,4 @@
-import { BASE, LANGS, TOUR_IDS, INSTITUTION_IDS, NORDIC_IDS, localizedPath } from './seo';
+import { BASE, LANGS, TOUR_IDS, INSTITUTION_IDS, NORDIC_IDS, HELSINKI_SECTIONS, localizedPath } from './seo';
 
 // Every page in every language, each entry carrying the full hreflang set.
 const PATHS = [
@@ -6,6 +6,8 @@ const PATHS = [
   { path: '/education', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/mice', changeFrequency: 'monthly', priority: 0.8 },
   ...NORDIC_IDS.map((id) => ({ path: `/nordic/${id}`, changeFrequency: 'monthly', priority: 0.9 })),
+  ...HELSINKI_SECTIONS.map((s) => ({ path: `/helsinki/${s}`, changeFrequency: 'monthly', priority: 0.8 })),
+  { path: '/china/travel-guide', changeFrequency: 'monthly', priority: 0.8 },
   ...TOUR_IDS.map((id) => ({ path: `/tour/${id}`, changeFrequency: 'monthly', priority: 0.7 })),
   ...INSTITUTION_IDS.map((id) => ({ path: `/institution/${id}`, changeFrequency: 'monthly', priority: 0.6 })),
 ];

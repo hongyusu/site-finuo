@@ -18,6 +18,8 @@ const nextConfig = {
         { source: '/tour/:id', destination: '/zh/tour/:id' },
         { source: '/institution/:id', destination: '/zh/institution/:id' },
         { source: '/nordic/:country', destination: '/zh/nordic/:country' },
+        { source: '/helsinki/:section', destination: '/zh/helsinki/:section' },
+        { source: '/china/travel-guide', destination: '/zh/china/travel-guide' },
       ],
     };
   },
