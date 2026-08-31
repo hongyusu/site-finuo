@@ -1,4 +1,5 @@
 import LandingPage1 from '../../src/LandingPage1';
+import { faqLd } from '../seo';
 
 export const metadata = {
   title: 'Finuo · Study Abroad in Finland — Universities, Training, Study Tours | 芬诺留学教育',
@@ -8,5 +9,16 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <LandingPage1 />;
+  const faq = faqLd();
+  return (
+    <>
+      {faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+        />
+      )}
+      <LandingPage1 />
+    </>
+  );
 }

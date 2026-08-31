@@ -1,4 +1,5 @@
 import LandingPage from '../src/LandingPage';
+import { faqLd } from './seo';
 
 export const metadata = {
   title: 'Finuo · Nordic & China Travel — Aurora Trips, Fjords, Curated China Tours | 芬诺旅游',
@@ -8,5 +9,16 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <LandingPage />;
+  const faq = faqLd();
+  return (
+    <>
+      {faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+        />
+      )}
+      <LandingPage />
+    </>
+  );
 }
