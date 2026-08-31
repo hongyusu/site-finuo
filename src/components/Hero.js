@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import HeroVideo from '../components_shared/HeroVideo';
 
 const GOLD = '#C4A35A';
 const CREAM = '#F5F2ED';
@@ -29,16 +30,12 @@ export default function Hero() {
         overflow: 'hidden',
       }}
     >
-      {/* Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+      {/* Video Background — poster first, video only where it is cheap to load */}
+      <HeroVideo
+        src="/videos/hero.mp4"
+        poster="/images/hero-poster.jpg"
+        alt="Nordic landscape"
+      />
 
       {/* Legibility overlay */}
       <Box

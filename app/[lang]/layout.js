@@ -63,6 +63,8 @@ const ORG_LD = {
   areaServed: ['FI', 'NO', 'SE', 'DK', 'IS', 'CN'],
   knowsLanguage: ['zh', 'en', 'fi'],
   email: 'booking@finuo.fi',
+  telephone: '+358445820927',
+  priceRange: '$$',
 };
 
 export default function RootLayout({ children, params }) {

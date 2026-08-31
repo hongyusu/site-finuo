@@ -1,6 +1,6 @@
 import InstitutionClient from '../../../institution-client';
 import {
-  BASE, LANGS, INSTITUTION_IDS, alternatesFor, clip, institutionsFor, localizedPath, ogFor,
+  BASE, LANGS, INSTITUTION_IDS, alternatesFor, clip, institutionsFor, localizedPath, ogFor, ogImage,
 } from '../../../seo';
 
 export const dynamicParams = false;
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: alternatesFor(lang, path),
-    openGraph: ogFor(lang, path, title, description, 'article'),
+    openGraph: ogFor(lang, path, title, description, 'article', ogImage('institution', params.id)),
   };
 }
 

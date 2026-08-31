@@ -31,6 +31,16 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // public/ assets are served with must-revalidate by default, so every
+        // visit re-checks every image. These filenames are stable.
+        source: '/images/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/videos/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }],
+      },
+      {
         // public/index.html is the dormant CRA shell, kept only as a rollback.
         // It renders no content and duplicates "/", so keep it out of the index.
         source: '/index.html',

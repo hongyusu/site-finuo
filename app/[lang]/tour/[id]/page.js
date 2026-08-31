@@ -1,6 +1,6 @@
 import TourClient from '../../../tour-client';
 import {
-  BASE, LANGS, TOUR_IDS, alternatesFor, bookedBy, clip, localizedPath, ogFor, priceValue, toursFor,
+  BASE, LANGS, TOUR_IDS, alternatesFor, bookedBy, clip, localizedPath, ogFor, ogImage, priceValue, toursFor,
 } from '../../../seo';
 
 export const dynamicParams = false;
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: alternatesFor(lang, path),
-    openGraph: ogFor(lang, path, title, description, 'article'),
+    openGraph: ogFor(lang, path, title, description, 'article', ogImage('tour', params.id)),
   };
 }
 

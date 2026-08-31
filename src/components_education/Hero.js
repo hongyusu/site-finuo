@@ -3,6 +3,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
+import HeroVideo from '../components_shared/HeroVideo';
 
 export default function Hero() {
   return (
@@ -16,12 +17,11 @@ export default function Hero() {
         overflow: 'hidden',
       }}
     >
-      <video
-        autoPlay muted loop playsInline
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
-      >
-        <source src="/videos/hero_education.mp4" type="video/mp4" />
-      </video>
+      <HeroVideo
+        src="/videos/hero_education.mp4"
+        poster="/images/hero-education-poster.jpg"
+        alt="Studying in Finland"
+      />
 
       <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,13,13,0.7) 0%, transparent 30%)', zIndex: 1 }} />
 

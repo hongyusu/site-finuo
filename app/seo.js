@@ -166,7 +166,7 @@ export function faqLd(lang) {
 }
 
 /** Shared Open Graph block for a page. */
-export function ogFor(lang, path, title, description, type = 'website') {
+export function ogFor(lang, path, title, description, type = 'website', image) {
   return {
     title,
     description,
@@ -174,5 +174,43 @@ export function ogFor(lang, path, title, description, type = 'website') {
     siteName: 'Finuo',
     type,
     locale: { zh: 'zh_CN', en: 'en_US', fi: 'fi_FI' }[lang] || 'zh_CN',
+    images: [image || DEFAULT_OG_IMAGE],
   };
 }
+
+// Hero image per page, so a shared link previews the actual subject instead of
+// the same aurora photo everywhere. Kept in sync with the image maps in
+// src/LandingPage.js and src/InstitutionDetailPage.js.
+export const DEFAULT_OG_IMAGE = '/images/destinations/aurora.jpg';
+
+export const OG_IMAGES = {
+  nordic: {
+    finland: '/images/destinations/cabin.jpg',
+    norway: '/images/destinations/fjord.jpg',
+    iceland: '/images/destinations/iceland.jpg',
+    denmark: '/images/destinations/lake.jpg',
+  },
+  tour: {
+    huangshan: '/images/anhui/huangshan-3.jpeg',
+    huizhou: '/images/anhui/huizhou-6.jpeg',
+    qiyun: '/images/anhui/qiyun-3.jpeg',
+    anhui: '/images/anhui/anhui-2.jpeg',
+    suzhou: '/images/anhui/suzhou-4.jpeg',
+    hangzhou: '/images/anhui/hangzhou-9.jpeg',
+    'suzhou-hangzhou': '/images/anhui/hangzhou-5.jpeg',
+    shanghai: '/images/anhui/shanghai-18.jpeg',
+  },
+  institution: {
+    heureka: '/images/institutions/heureka-1.jpg',
+    kisakallio: '/images/institutions/kisakallio-1.jpg',
+    kuortane: '/images/institutions/kuortane-1.jpg',
+    helsinki: '/images/institutions/helsinki-1.jpg',
+    aalto: '/images/institutions/aalto-1.jpg',
+    haagahelia: '/images/institutions/haagahelia-1.jpg',
+    lab: '/images/institutions/lab-1.jpg',
+    jyvaskyla: '/images/institutions/jyvaskyla-1.jpg',
+    turku: '/images/institutions/turku-1.jpg',
+  },
+};
+
+export const ogImage = (kind, id) => (OG_IMAGES[kind] && OG_IMAGES[kind][id]) || DEFAULT_OG_IMAGE;

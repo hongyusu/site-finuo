@@ -1,6 +1,6 @@
 import NordicCountryPage from '../../../../src/NordicCountryPage';
 import {
-  BASE, LANGS, NORDIC_IDS, alternatesFor, bookedBy, clip, localizedPath, nordicFor, ogFor,
+  BASE, LANGS, NORDIC_IDS, alternatesFor, bookedBy, clip, localizedPath, nordicFor, ogFor, ogImage,
 } from '../../../seo';
 
 export const dynamicParams = false;
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: alternatesFor(lang, path),
-    openGraph: ogFor(lang, path, title, description, 'article'),
+    openGraph: ogFor(lang, path, title, description, 'article', ogImage('nordic', params.country)),
   };
 }
 
