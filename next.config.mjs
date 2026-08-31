@@ -7,6 +7,27 @@ const nextConfig = {
       transform: '@mui/icons-material/{{member}}',
     },
   },
+  // Chinese keeps the bare URLs it is already indexed under; the app itself
+  // lives entirely under /[lang], so bare paths are rewritten to the zh tree.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: '/', destination: '/zh' },
+        { source: '/education', destination: '/zh/education' },
+        { source: '/mice', destination: '/zh/mice' },
+        { source: '/tour/:id', destination: '/zh/tour/:id' },
+        { source: '/institution/:id', destination: '/zh/institution/:id' },
+        { source: '/nordic/:country', destination: '/zh/nordic/:country' },
+      ],
+    };
+  },
+  // /zh/* would otherwise be a second, indexable copy of every Chinese page.
+  async redirects() {
+    return [
+      { source: '/zh', destination: '/', permanent: true },
+      { source: '/zh/:path*', destination: '/:path*', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

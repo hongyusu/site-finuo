@@ -11,14 +11,21 @@ import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-function AppAppBar({ activeSite, onSiteChange, navItems }) {
+const LANG_LABELS = { zh: '中文', en: 'EN', fi: 'FI' };
+
+function AppAppBar({ activeSite, onSiteChange, navItems, currentLang, languages, onLanguageChange }) {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState('');
   const { t, i18n } = useTranslation();
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'zh' ? 'en' : 'zh');
+  // With URL-per-language routing the navbar navigates; the plain i18n toggle
+  // is the fallback for the dormant CRA build, which has no router.
+  const active = currentLang || i18n.language || 'zh';
+  const others = (languages || ['zh', 'en']).filter((l) => l !== active);
+  const switchTo = (lang) => {
+    if (onLanguageChange) onLanguageChange(lang);
+    else i18n.changeLanguage(lang);
   };
 
   React.useEffect(() => {
@@ -152,22 +159,29 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
             ))}
 
             {/* Language */}
-            <Typography
-              onClick={toggleLanguage}
-              sx={{
-                fontSize: '0.75rem',
-                fontWeight: 500,
-                letterSpacing: '0.1em',
-                color: 'rgba(245, 242, 237, 0.4)',
-                cursor: 'pointer',
-                transition: 'color 0.3s ease',
-                whiteSpace: 'nowrap',
-                flexShrink: 0,
-                '&:hover': { color: '#F5F2ED' },
-              }}
-            >
-              {i18n.language === 'zh' ? 'EN' : '中文'}
-            </Typography>
+            <Box sx={{ display: 'flex', gap: 1, flexShrink: 0 }}>
+              {others.map((lang) => (
+                <Typography
+                  key={lang}
+                  component="a"
+                  href={lang === 'zh' ? '/' : `/${lang}`}
+                  onClick={(e) => { e.preventDefault(); switchTo(lang); }}
+                  sx={{
+                    fontSize: '0.75rem',
+                    fontWeight: 500,
+                    letterSpacing: '0.1em',
+                    color: 'rgba(245, 242, 237, 0.4)',
+                    cursor: 'pointer',
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease',
+                    whiteSpace: 'nowrap',
+                    '&:hover': { color: '#F5F2ED' },
+                  }}
+                >
+                  {LANG_LABELS[lang] || lang.toUpperCase()}
+                </Typography>
+              ))}
+            </Box>
           </Box>
 
           {/* Mobile Hamburger */}
@@ -246,12 +260,17 @@ function AppAppBar({ activeSite, onSiteChange, navItems }) {
           </Typography>
         ))}
 
-        <Button
-          onClick={toggleLanguage}
-          sx={{ mt: 4, color: 'rgba(245, 242, 237, 0.4)', fontSize: '0.85rem', letterSpacing: '0.1em' }}
-        >
-          {i18n.language === 'zh' ? 'English' : '中文'}
-        </Button>
+        <Box sx={{ mt: 4, display: 'flex', gap: 2 }}>
+          {others.map((lang) => (
+            <Button
+              key={lang}
+              onClick={() => switchTo(lang)}
+              sx={{ color: 'rgba(245, 242, 237, 0.4)', fontSize: '0.85rem', letterSpacing: '0.1em' }}
+            >
+              {LANG_LABELS[lang] || lang.toUpperCase()}
+            </Button>
+          ))}
+        </Box>
       </Drawer>
     </>
   );

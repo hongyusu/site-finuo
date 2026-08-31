@@ -1,0 +1,1858 @@
+{
+  "nav": {
+    "experience": "Matkat",
+    "education": "Koulutus",
+    "mice": "Tapahtumat",
+    "signIn": "Kirjaudu",
+    "signUp": "Rekisteröidy",
+    "packages": "Paketit",
+    "highlights": "Kohokohdat",
+    "testimonials": "Asiakkaiden kokemukset",
+    "pricing": "Hinnat",
+    "faq": "UKK",
+    "services": "Palvelut",
+    "nordic": "Pohjola",
+    "book": "Varaa",
+    "china": "Kiina",
+    "chinaGuide": "Kiina-opas",
+    "schools": "Oppilaitokset",
+    "training": "Koulutukset",
+    "studyTours": "Opintomatkat",
+    "miceList": "Kalenteri",
+    "miceServices": "Palvelut",
+    "about": "Tietoa meistä",
+    "contact": "Yhteystiedot"
+  },
+  "hero": {
+    "experienceTitle": "Matkat",
+    "experienceTagline": "Koe Pohjolan mahtavuus: maisemia jotka pysäyttävät ja elämyksiä jotka jäävät mieleen.",
+    "educationTitle": "Koulutus",
+    "educationTagline": "Sytytämme uteliaisuuden ja avaamme tiedon maailman. Opi ilman rajoja.",
+    "miceTitle": "Tapahtumat ja MICE",
+    "miceTagline": "Yhdistämme pohjoismaiset verkostot ja toteutamme onnistuneita tapahtumia — paikallisesta toteutuksesta räätälöityihin ohjelmiin.",
+    "eyebrow": "Helsinki · Kolmikielinen tiimi · Pohjola ja Kiina",
+    "headline": "Koe Pohjolan mahtavuus",
+    "ctaExplore": "Tutustu matkoihin",
+    "ctaBook": "Varaa nyt",
+    "scroll": "Vieritä"
+  },
+  "logoCollection": {
+    "title": "Luotettu kumppani parhaille yrityksille"
+  },
+  "tourism": {
+    "intro": "Juuret Suomessa, syvä tuntemus Pohjolasta, laaja osaaminen Kiinasta. Revontulista vuonoihin, kaupungeista erämaahan.",
+    "regions": "Kohteet",
+    "fullGuide": "Katso koko opas",
+    "otherDestinations": "Muut Pohjolan kohteet",
+    "countryPageCta": "Suunnittele tämä matka",
+    "nordicTitle": "Pohjola",
+    "nordicSubtitle": "Pohjola — revontulten maa, erämaan sydän",
+    "chinaTitle": "Kiina",
+    "chinaSubtitle": "Kiina — vuosituhansien sivilisaatio ja loputon ihmettely",
+    "finland": {
+      "title": "Suomi",
+      "subtitle": "Revontulten, järvien ja metsien maa",
+      "intro": "Kotimarkkinamme. Lapin erämaasta Järvi-Suomen metsiin: hotellivaraukset, räätälöidyt aktiviteetit ja aidot paikalliset elämykset.",
+      "hotels": "Valitut hotellit",
+      "hotelsDesc": "Lapin lasi-igluista Helsingin designhotelleihin, kaikissa hintaluokissa. Pitkäaikaiset paikalliset kumppanuudet takaavat huippusesongin niukat huoneet ja edulliset hinnat.",
+      "hotelsItems": [
+        {
+          "name": "Kakslauttanen Arctic Resort",
+          "type": "Lasi-iglut · Saariselkä",
+          "desc": "Katso revontulia suoraan sängystä lasikupolin alta — yksi maailman parhaista revontulihotelleista"
+        },
+        {
+          "name": "Arctic SnowHotel",
+          "type": "Lumihotelli · Rovaniemi",
+          "desc": "Rakennetaan uudelleen joka talvi; jääsauna ja revontulisviitit"
+        },
+        {
+          "name": "Hotel Kämp",
+          "type": "Klassinen luksus · Helsinki",
+          "desc": "150-vuotias maamerkki muutaman askeleen päässä Senaatintorilta"
+        },
+        {
+          "name": "Hotel St. George",
+          "type": "Design-boutique · Helsinki",
+          "desc": "Uutta pohjoismaista muotoilua, taidekokoelma ja Michelin-ravintola"
+        },
+        {
+          "name": "Punkaharjun hotelli",
+          "type": "Järvimaisema · Savonlinna",
+          "desc": "Satavuotias järvenrantamajatalo, sauna, kanootti ja metsä"
+        },
+        {
+          "name": "Levi Hotel Spa",
+          "type": "Hiihtokeskus · Levi",
+          "desc": "Rinteen vieressä sijaitseva hotelli kylpylällä ja perhepalveluilla"
+        }
+      ],
+      "activities": "Aktiviteetit",
+      "activitiesDesc": "Revontulten katselua, hiihdonopetusta, purjehdusta ja valokuvauksia — jokainen vuodenaika tarjoaa jotain.",
+      "experiences": [
+        {
+          "title": "Revontulten metsästys",
+          "desc": "Rovaniemen ja Inarin ammattimaiset revontuliretket reaaliaikaisin ennustein"
+        },
+        {
+          "title": "Hiihdonopetus",
+          "desc": "Levin ja Ylläksen hiihdonopettajat, yksityistunteja aloittelijasta edistyneeseen"
+        },
+        {
+          "title": "Saaristopurjehdus",
+          "desc": "Kesäpurjehdusta Turun saaristossa ja Helsingin edustalla kippari mukana"
+        },
+        {
+          "title": "Revontulikuvaus",
+          "desc": "Ammattikuvaaja perhe-, pari- ja muotokuvauksiin"
+        },
+        {
+          "title": "Järvi-Suomen retriitit",
+          "desc": "Mökkilomia saunoen, meloen ja luonnonantimia keräten"
+        },
+        {
+          "title": "Moottorikelkkailu",
+          "desc": "Moottorikelkkaretkiä Lapin erämaassa, opastus ja varusteet mukana"
+        }
+      ],
+      "helsinki": "Helsingin kohokohdat",
+      "helsinkiDesc": "Itämeren tytär. Valkoisesta tuomiokirkosta kallioon louhittuun Temppeliaukion kirkkoon, Unescon merilinnoituksesta maailmanluokan Oodi-kirjastoon — 15 Helsingin nähtävyyttä, jotka kannattaa kokea.",
+      "helsinkiAttractions": [
+        {
+          "name": "Helsingin tuomiokirkko",
+          "type": "Maamerkki",
+          "desc": "Valkoinen uusklassinen tuomiokirkko Senaatintorin laidalla — kaupungin tunnetuin maisema"
+        },
+        {
+          "name": "Suomenlinna",
+          "type": "Unescon maailmanperintökohde",
+          "desc": "Merilinnoituksen saaret, 15 minuutin lauttamatka kauppatorilta — täydellinen merimaisemakävelyihin ja piknikille"
+        },
+        {
+          "name": "Temppeliaukion kirkko",
+          "type": "Arkkitehtuuri",
+          "desc": "Kallioon louhittu kirkko — pohjoismaisen pelkistetyn arkkitehtuurin mestariteos, jonka akustiikka on poikkeuksellinen"
+        },
+        {
+          "name": "Kauppatori",
+          "type": "Satamatori",
+          "desc": "Merenrantatori keskustassa — maista ehdottomasti lohikeittoa, pohjoismaisia herkkuja ja tuliaisia"
+        },
+        {
+          "name": "Oodi-kirjasto",
+          "type": "Moderni arkkitehtuuri",
+          "desc": "Helsingin keskustakirjasto vuodelta 2018 — maailmanluokan nykyarkkitehtuuria, vapaa pääsy"
+        },
+        {
+          "name": "Design District Helsinki",
+          "type": "Taide ja ostokset",
+          "desc": "Yli 200 designliikettä, galleriaa, kahvilaa ja putiikkia Helsingin luovassa korttelistossa"
+        },
+        {
+          "name": "Löyly",
+          "type": "Saunaelämys",
+          "desc": "Puinen merenranta-kokonaisuus Hernesaaressa — yleinen sauna ja avanto, aito suomalainen saunaelämys"
+        },
+        {
+          "name": "Allas Sea Pool",
+          "type": "Merikylpylä",
+          "desc": "Ulkoilma-altaita merivedellä ja sauna Katajanokalla aivan keskustassa — vertaansa vailla olevat näkymät"
+        },
+        {
+          "name": "Esplanadin puisto",
+          "type": "Kaupunkipuisto",
+          "desc": "Helsingin tunnetuin bulevardi — Kappelin kesäterassia ei kannata ohittaa"
+        },
+        {
+          "name": "Seurasaari",
+          "type": "Luonto ja kulttuuri",
+          "desc": "Ulkoilmamuseosaari, jonne on siirretty perinteisiä suomalaisia puurakennuksia eri puolilta maata"
+        },
+        {
+          "name": "Uspenskin katedraali",
+          "type": "Ortodoksinen katedraali",
+          "desc": "Pohjois-Euroopan suurin ortodoksinen katedraali — punatiilistä venäläistä arkkitehtuuria sataman yllä"
+        },
+        {
+          "name": "Sibelius-monumentti",
+          "type": "Taidemaamerkki",
+          "desc": "Muistomerkki kansallissäveltäjä Jean Sibeliukselle — 600 teräksistä urkupilliä"
+        },
+        {
+          "name": "Kiasma",
+          "type": "Nykytaiteen museo",
+          "desc": "Pohjoismaiden johtava nykytaiteen museo — rakennus itsessään on taideteos"
+        },
+        {
+          "name": "Ateneum",
+          "type": "Taidemuseo",
+          "desc": "Suomen kansallisgalleria — kultakauden taidetta, muun muassa Gallen-Kallelaa ja muita mestareita"
+        },
+        {
+          "name": "Vanha kauppahalli",
+          "type": "Ruokatori",
+          "desc": "Sisätori vuodesta 1889 — perinteistä suomalaista ruokaa, kahvia, leivonnaisia, merenantimia ja herkkuja"
+        }
+      ],
+      "dayTrips": "Päiväretket Helsingistä",
+      "dayTripsDesc": "Neljä pohjoismaista retkeä Helsingistä puolesta päivästä kolmeen päivään — Suomen helmiä ja meren takaiset naapuripääkaupungit.",
+      "dayTripsItems": [
+        {
+          "name": "Porvoo",
+          "country": "Suomi",
+          "duration": "Puoli päivää – 1 päivä",
+          "transport": "Bussilla n. 1 t",
+          "desc": "Suomen valokuvatuin vanhakaupunki — punaisia puutaloja, jokirannan tori, kahviloita ja käsityöpuoteja"
+        },
+        {
+          "name": "Fiskarsin ruukki",
+          "country": "Suomi",
+          "duration": "1 päivä",
+          "transport": "Juna + bussi n. 1,5–2 t",
+          "desc": "Pohjoismaisen muotoilun pyhiinvaelluskohde — historiallinen ruukki, josta on tullut taiteilijakylä työpajoineen, gallerioineen ja ravintoloineen"
+        },
+        {
+          "name": "Tallinna",
+          "country": "Viro",
+          "duration": "1–2 päivää",
+          "transport": "Laivalla n. 2 t",
+          "desc": "Unescon keskiaikainen vanhakaupunki — mukulakivikatuja, kaupunginmuuri, kirkontornit ja edullinen hintataso"
+        },
+        {
+          "name": "Tukholma",
+          "country": "Ruotsi",
+          "duration": "2–3 päivää",
+          "transport": "Laivalla tai lentäen",
+          "desc": "Pohjoismainen pääkaupunki neljällätoista saarella — kuninkaanlinna, Vasa-museo ja saaristoristeilyt"
+        }
+      ],
+      "dining": "Missä syödä",
+      "diningDesc": "Valikoituja helsinkiläisiä ravintoloita — Michelin-tason fine diningista ja uudesta pohjoismaisesta keittiöstä kiinalaiseen kotiruokaan ja hotellin lähellä oleviin käteviin vaihtoehtoihin.",
+      "diningCatHotel": "Aalto-yliopiston lähellä",
+      "diningCatWestern": "Länsimainen · Fine dining ja keskihintaiset",
+      "diningCatChinese": "Kiinalaiset ravintolat",
+      "diningHotelItems": [
+        {
+          "id": "konnikiwa",
+          "name": "Ravintola Konnikiwa",
+          "type": "Buffet · Aallon metroasema",
+          "distance": "500 m kävellen",
+          "desc": "Aallon metroaseman kauppakeskuksessa, ruokakauppa suoraan vastapäätä. Buffet-tyylinen — sushia, kiinalaisia ruokia, hedelmiä, jälkiruokaa sekä kahvia ja teetä. Kätevä ja valikoima laaja."
+        },
+        {
+          "id": "minmax",
+          "name": "Ravintola Minmax",
+          "type": "Kiinalainen · Sichuan · Annos + buffet",
+          "distance": "700 m, 10 min kävellen",
+          "desc": "Noin 700 metrin päässä. Annosruokaa ja buffet — höyrytettyjä pullia, dumplingeja, nuudelikeittoa ja mantouta, painotus sichuanilaisessa keittiössä. Sisustus on yksinkertainen mutta maut aitoja."
+        },
+        {
+          "id": "sway",
+          "name": "Ravintola Sway",
+          "type": "Buffet / annos · Miellyttävä tunnelma",
+          "distance": "1,4 km, 18 min kävellen",
+          "desc": "Viihtyisä ravintolatunnelma, tarjolla sekä buffet että annosruokaa. Ainoa haittapuoli on hieman pidempi kävelymatka."
+        }
+      ],
+      "diningWesternItems": [
+        {
+          "id": "palace",
+          "name": "Ravintola Palace",
+          "type": "Michelin · 2 tähteä · 4,7★",
+          "address": "Eteläranta 10, 00130 Helsinki",
+          "phone": "+358 050 5020718",
+          "desc": "Yksi Helsingin arvostetuimmista Michelin-ravintoloista ja harvinainen suomalainen kahden tähden kohde. Upeat merinäkymät ja klassista pohjoismaista huippukeittiötä. Merenantimet ja pohjoiset maut ovat vahvoja, palvelu hyvin muodollista ja viinit osuvat kohdalleen.",
+          "best": "Liikelounaat · merkkipäivät · ensimmäinen Michelin-kokemus"
+        },
+        {
+          "id": "olo",
+          "name": "Restaurant Olo",
+          "type": "Michelin · Uusi pohjoismainen · 4,7★",
+          "address": "Pohjoisesplanadi 5",
+          "desc": "Klassista uutta pohjoismaista keittiötä — monen paikallisen ruokaharrastajan mielestä 'suomalaisin' Michelin-ravintola. Kokonainen maistelumenu, pohjoisen metsän maailma, ja riista, sienet sekä fermentoidut raaka-aineet pääsevät oikeuksiinsa.",
+          "best": "Pohjoismaisen keittiön ytimen kokemiseen"
+        },
+        {
+          "id": "nokka",
+          "name": "Ravintola Nokka",
+          "type": "Suomalainen · 4,6★",
+          "address": "Kanavaranta 7 F, 00160 Helsinki",
+          "phone": "09 6128 5600",
+          "desc": "Monet aasialaiset vieraat arvostavat tätä korkealle — laadukkaita raaka-aineita ilman liiallista kokeellisuutta. Pohjoista riistaa (peuraa, kuningasrapua, kalaa) käsitellään taitavasti, ja tunnelma on rento muttei jäykkä."
+        },
+        {
+          "id": "demo",
+          "name": "Restaurant Demo",
+          "type": "Michelin · Fine dining · 4,6★",
+          "address": "Itämerenkatu 25, 00180 Helsinki",
+          "phone": "09 2289 0840",
+          "desc": "Helsingin pitkäaikainen Michelin-ravintola, joka on hyvin tasalaatuinen. Maut ovat tasapainossa, palvelu kypsää eikä koskaan yhtä etäistä kuin joissakin pohjoismaisissa ravintoloissa."
+        },
+        {
+          "id": "goodwin",
+          "name": "Goodwin The Steak House",
+          "type": "Pihvi · Keskihintainen · 4,4★",
+          "address": "Eteläranta 14, 00130 Helsinki",
+          "phone": "050 4198000",
+          "desc": "Jos haluat vain kunnon pihvin, tämä on varma valinta. Liha on tasaisen laadukasta, sijainti merenrannassa ja palvelu rutinoitunutta."
+        },
+        {
+          "id": "zetor",
+          "name": "Restaurant Zetor",
+          "type": "Suomalainen · Teemaravintola · 4,2★",
+          "address": "Mannerheimintie 3-5, 00100 Helsinki",
+          "phone": "010 7664450",
+          "desc": "Hauska tapa syödä suomalaisittain — traktoriteema (kyllä, ihan oikeasti), vilkas tunnelma ja perinteiset suomalaiset ruoat hyvin tehtyinä. Sopii mainiosti ulkomaisille vieraille ja on selvästi fine diningia edullisempi: 25–50 eurolla syö hyvin."
+        },
+        {
+          "id": "kappeli",
+          "name": "Kappeli Ravintola",
+          "type": "Historiallinen maamerkki · Lasikuisti · 4,4★",
+          "address": "Eteläesplanadi 1, 00130 Helsinki",
+          "phone": "010 7663880",
+          "desc": "Vuodesta 1867 toiminut 'Esplanadin helmi'. Suuri lasikuisti avautuu Esplanadin puistoon, ja tunnelma on kuin 1800-luvun eurooppalaisessa kahvilassa. Maista lohikeittoa, poroa, pohjoista kalaa tai nauti iltapäiväkahvit."
+        },
+        {
+          "id": "ragu",
+          "name": "Ravintola Ragu",
+          "type": "Moderni eurooppalainen · 4,6★",
+          "address": "Ludviginkatu 3-5, 00130 Helsinki",
+          "phone": "09 596659",
+          "desc": "Yksi niistä Helsingin ravintoloista, jotka ovat 'lähellä Michelin-tasoa mutta rennompia'. Suomalaisia ja pohjoismaisia sesonkiraaka-aineita yhdistetään italialaiseen ruoanlaiton logiikkaan ja viinikulttuuriin — modernia eurooppalaista fine diningia rauhallisessa ja hillityssä ympäristössä."
+        }
+      ],
+      "diningChineseItems": [
+        {
+          "id": "jinguanting",
+          "name": "Jinguanting Brokadi",
+          "type": "Sichuan · Hunan · Kanton · Hot pot",
+          "location": "Kauppakeskus Tripla · Pasila",
+          "desc": "Yksi Helsingin vakiintuneimmista kiinalaisista ravintoloista sekä paikallisen kiinalaisyhteisön että kansainvälisten vieraiden keskuudessa. Sijaitsee kauppakeskus Triplassa Pasilan aseman yläpuolella — Pohjoismaiden suurimmassa kauppakeskuksessa, josta on saumattomat yhteydet Helsingin keskustaan ja lentoasemalle. Moderniin liiketilaan yhdistyy itämaisia elementtejä, ja paikka sopii liiketapaamisiin, kulttuurivaihtoon ja ryhmäruokailuun."
+        },
+        {
+          "id": "liu",
+          "name": "Ravintola Liu",
+          "type": "Koillis-Kiinan keittiö · Lentoaseman lähellä",
+          "location": "Vantaa · Lentoaseman lähellä",
+          "desc": "Sijaitsee Vantaalla Helsinki-Vantaan kansainvälisen lentoaseman kupeessa, pääkaupunkiseudun pohjoisessa liikenteen solmukohdassa. Perinteisiä Koillis-Kiinan makuja — tuhtia pohjoiskiinalaista ruokakulttuuria, joka vaalii Dongbein keittiön runsaita ja umamikkaita perinteitä."
+        },
+        {
+          "id": "happy",
+          "name": "Happy Food Garden",
+          "type": "Sichuanilainen hot pot · Kiinalainen grilli · Sichuan",
+          "location": "Helsingin keskusta",
+          "desc": "Suosittu sekä paikallisten kiinalaisten että kansainvälisten ruokailijoiden keskuudessa. Erikoisuutena sichuanilainen hot pot, kiinalainen grilli ja perinteiset sichuanilaiset ruoat. Vilkas tunnelma sopii kaveriporukoille, liikelounaille ja työporukan illanviettoihin. Aitoja kiinalaisia makuja, laaja menu ja kabinetit saatavilla."
+        },
+        {
+          "id": "dongbei",
+          "name": "Dongbei House",
+          "type": "Aitoa Koillis-Kiinaa · Kotiruokaa",
+          "location": "Helsingin keskusta",
+          "desc": "Tunnetaan paikallisesti nimellä 'Dongbeihu' (Koillisen tiikeri). Kuuluisa aidoista Koillis-Kiinan ruoista ja klassisesta kotiruoasta. Siisti ja tilava sisustus, helppo saavuttaa, sopii sekä liiketapaamisiin että kaveriporukoille. Erikoisuuksia: guobaorou-possu, kuminalammas sekä paistetut munakoiso-, peruna- ja paprikaruoat. Kabinetit saatavilla."
+        },
+        {
+          "id": "leaf",
+          "name": "Leaf Restaurant",
+          "type": "Salainen kiinalainen menu · Sichuan",
+          "location": "Kauppakeskus Forumin pohjakerros · Rautatieaseman lähellä",
+          "desc": "Kauppakeskus Forumin kellarikerroksessa, muutaman minuutin päässä Helsingin päärautatieasemalta. Näyttää sushibuffetilta, mutta asiaan vihkiytyneet tilaavat 'salaisesta kiinalaisesta menusta' — sichuanilaiset ruoat ovat maineessa. Vesikeitetyt ja kalanmakuiset annokset, kuivapata, sichuanilaiset klassikot ja paistetut nuudelit ovat lähellä mantereen makuja, minkä vuoksi paikka on suosittu kiinalaisten opiskelijoiden ja aitoa kiinalaista ruokaa etsivien matkailijoiden keskuudessa."
+        }
+      ]
+    },
+    "norway": {
+      "title": "Norja",
+      "subtitle": "Vuonot ja revontulten rannikko",
+      "intro": "Tromssasta Lofooteille, Geirangervuonosta Atlantin tielle — Norjan pohjoisen henkeäsalpaavimmat maisemat.",
+      "routes": "Suositut reitit",
+      "routesItems": [
+        {
+          "name": "Lofootit",
+          "desc": "Punaisia kalastajakyliä, lumihuippuja meren rajassa"
+        },
+        {
+          "name": "Alta",
+          "desc": "Revontulten pääkaupunki, Unescon kalliotaidetta"
+        },
+        {
+          "name": "Tromssa",
+          "desc": "Portti arktiselle alueelle, huskysafareita ja revontulia"
+        },
+        {
+          "name": "Trondheim",
+          "desc": "Viikinkien pääkaupunki ja Nidarosin tuomiokirkko"
+        },
+        {
+          "name": "Atlantin tie",
+          "desc": "Yksi maailman näyttävimmistä autoreiteistä"
+        },
+        {
+          "name": "Geirangervuono",
+          "desc": "Unescon kohde ja Seitsemän sisaren vesiputous"
+        },
+        {
+          "name": "Kristiansand",
+          "desc": "Etelärannikko ja kesämökkien maisemat"
+        },
+        {
+          "name": "Molde",
+          "desc": "Ruusujen kaupunki ja Varden näköalapaikka"
+        },
+        {
+          "name": "Ålesund",
+          "desc": "Jugend-arkkitehtuurin helmi"
+        },
+        {
+          "name": "Longyearbyen",
+          "desc": "Huippuvuoret — arktisen erämaan reunalla"
+        }
+      ],
+      "activities": "Erityiset elämykset",
+      "activitiesItems": [
+        {
+          "name": "Kuningasrapusafari",
+          "desc": "Kuningasravun pyyntiä Pohjois-Norjassa ja maistelu paikan päällä"
+        },
+        {
+          "name": "Valaiden katselu",
+          "desc": "Miekkavalaiden ja ryhävalaiden tarkkailua Tromssassa"
+        },
+        {
+          "name": "Rannikkoristeily",
+          "desc": "Rannikkomatka Bergenistä Kirkkoniemeen"
+        }
+      ]
+    },
+    "iceland": {
+      "title": "Islanti",
+      "subtitle": "Tulen ja jään maa",
+      "intro": "Vesiputouksia, jäätiköitä, geysirejä ja mustan hiekan rantoja — Islannin jokainen kolkka on geologinen ihme.",
+      "routes": "Klassiset reitit",
+      "routesItems": [
+        {
+          "name": "Kultainen kierros",
+          "desc": "Þingvellirin kansallispuisto, Geysir ja Gullfossin vesiputous"
+        },
+        {
+          "name": "Etelärannikon jäätiköt",
+          "desc": "Jökulsárlónin laguuni, Timanttiranta ja Vatnajökull"
+        },
+        {
+          "name": "Rengastie",
+          "desc": "Klassinen 7–10 päivän kierros ykköstietä pitkin"
+        },
+        {
+          "name": "Snæfellsnesin niemimaa",
+          "desc": "Islanti pienoiskoossa — tulivuoria, vesiputouksia ja musta kirkko"
+        }
+      ],
+      "activities": "Aktiviteetit",
+      "activitiesItems": [
+        {
+          "name": "Sininen laguuni",
+          "desc": "Geotermisen kylpylän elämys"
+        },
+        {
+          "name": "Jääluolat",
+          "desc": "Vatnajökullin siniset jääluolat (marras–maalis)"
+        },
+        {
+          "name": "Revontulten metsästys",
+          "desc": "Talven revontuliretket"
+        }
+      ]
+    },
+    "denmark": {
+      "title": "Tanska",
+      "subtitle": "Pohjois-Atlantin kätketyt saaret",
+      "intro": "Kööpenhaminan lisäksi Tanskan palkitsevimmat kohteet ovat sen kaukaiset alueet — Grönlanti ja Färsaaret.",
+      "routes": "Suositellut reitit",
+      "routesItems": [
+        {
+          "name": "Grönlanti",
+          "desc": "Ilulissatin jäävuono, Nuukin arktinen kulttuuri ja yötön yö"
+        },
+        {
+          "name": "Färsaaret",
+          "desc": "Jyrkänteitä, vesiputouksia, turvekattoisia kyliä ja Pohjois-Atlantin rauhaa"
+        },
+        {
+          "name": "Kööpenhamina",
+          "desc": "Satukaupunki, pohjoismaisen muotoilun ja uuden pohjoismaisen keittiön synnyinsija"
+        }
+      ]
+    },
+    "china": {
+      "title": "Kiina",
+      "subtitle": "Jiangnan — kahdeksan valittua kolmen päivän kiertomatkaa",
+      "intro": "Kiinan-matkamme kattavat Jiangnanin klassikot — Etelä-Anhuin Huizhoun perinnekylät, Suzhoun klassiset puutarhat, Hangzhoun Länsijärven ja Shanghain suurkaupungin tyylikkyyden — kahdeksana huolella suunniteltuna kolmen päivän ohjelmana, joihin sisältyvät kuljetukset, neljän tähden majoitus, ateriat, pääsyliput, englanninkielinen opas ja matkavakuutus.",
+      "anhuiToursTitle": "Valitut kolmen päivän matkat",
+      "anhuiToursSubtitle": "Kolmen päivän matkat · Huangshan · Huizhou · Qiyun · Anhui · Suzhou · Hangzhou · Suzhou–Hangzhou · Shanghai",
+      "anhuiToursIntro": "Kahdeksan kolmen päivän ohjelmaa Etelä-Anhuin Huizhou-perinteestä Jiangnanin puutarhoihin ja vesikaupunkeihin sekä Shanghain kansainväliseen tunnelmaan. Anhuin reitit lähtevät Hefeistä (38-paikkainen bussi, 50 RMB / ateria, neljän tähden hotelli); Jiangnanin ja Shanghain reitteihin sisältyy lentokenttäkuljetus (37-paikkainen bussi, 60 RMB / ateria, neljän timantin hotelli). Kaikkiin matkoihin kuuluu englanninkielinen opas, pääsyliput ja matkustajan tapaturmavakuutus.",
+      "anhuiTours": [
+        {
+          "id": "huangshan",
+          "title": "Huangshanin kolmen päivän kiertomatka",
+          "titleEn": "黄山三日游",
+          "price": "1 727 RMB / hlö",
+          "tagline": "Huangshanin jälkeen mikään muu vuori ei enää vaikuta samalta",
+          "summary": "Huangshanin maisema-alue + Chengkanin muinaiskylä + Tunxin vanhakatu + Xixinanin kosteikko — vaellusta ja köysirataa yhdistäen, kuuluisat männyt ja pilvimeri.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — Chengkan — Tangkou",
+              "meals": "Lounas / Illallinen",
+              "stay": "Tangkou",
+              "items": [
+                {
+                  "time": "08:00-12:30",
+                  "name": "Lähtö Hefeistä Huangshaniin bussilla"
+                },
+                {
+                  "time": "14:00-16:00",
+                  "name": "Chengkanin muinaiskylä",
+                  "desc": "Zhu Xin ylistämä 'Jiangnanin ykköskylä' — tuhatvuotias Huizhou-kylä hienoine puuleikkauksineen, illalla kalalyhtyesitys"
+                },
+                {
+                  "time": "16:30",
+                  "name": "Majoittuminen hotelliin, Tangkou"
+                },
+                {
+                  "time": "18:00-19:00",
+                  "name": "Illallinen"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Huangshanin maisema-alue",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "stay": "Huangshan",
+              "items": [
+                {
+                  "time": "09:10-16:30",
+                  "name": "Huangshanin kansallinen AAAAA-maisema-alue",
+                  "desc": "Bussilla Yungun temppelille, köysiradalla tai kävellen Bai'en harjanteelle, Shixin-huipulle, Kirkkaalle huipulle ja Yupingin tornille — kuuluisat Huangshanin männyt"
+                },
+                {
+                  "time": "18:30-20:30",
+                  "name": "Tunxin vanhakatu illalla",
+                  "desc": "Song-dynastian aikaan rakennettu, Kiinan parhaiten säilynyt Song-, Ming- ja Qing-kauden kävelykatu"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Xixinanin kosteikko — paluu",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "09:30-11:30",
+                  "name": "Xixinanin kosteikko",
+                  "desc": "Vaahtera- ja poppelimetsän, purojen ja kivisiltojen ympäröimä — pastoraalista runoutta aamu-usvassa"
+                },
+                {
+                  "time": "13:00-17:30",
+                  "name": "Paluu Hefeihin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "huizhou",
+          "title": "Huizhoun kolmen päivän kiertomatka",
+          "titleEn": "徽州三日游",
+          "price": "1 535 RMB / hlö",
+          "tagline": "Valkoisia seiniä, tummia tiiliä ja vettä siltojen alla",
+          "summary": "Tangyuen riemukaaret + Huizhoun vanhakaupunki + Xin'an-joen galleria + Xixinan + Tunxin vanhakatu + Hongcun — syväsukellus Huizhoun kulttuuriin.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — Shen piirikunta",
+              "meals": "Lounas / Illallinen",
+              "stay": "She",
+              "items": [
+                {
+                  "time": "08:00-12:30",
+                  "name": "Lähtö Hefeistä Shen piirikuntaan"
+                },
+                {
+                  "time": "13:30-14:30",
+                  "name": "Tangyuen riemukaariryhmä",
+                  "desc": "'Jiangnanin ykköskylä' — seitsemän muinaista riemukaarta, sukutemppeleitä ja esityksiä lapsenrakkauden perinteestä"
+                },
+                {
+                  "time": "14:50-17:00",
+                  "name": "Huizhoun vanhakaupunki",
+                  "desc": "Huizhou-oppineisuuden syntysija, kolmen kaiverrustaiteen lajin koti, vanha virastotalo ja illan kalalyhtykulkue"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Xin'an-joki — Xixinan — Tunxin vanhakatu",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "stay": "Huangshan",
+              "items": [
+                {
+                  "time": "09:00-12:00",
+                  "name": "Veneretki Xin'an-joen maisemagalleriassa",
+                  "desc": "Sadan mailin maisemakäytävä, muinainen Huizhoun kauppiasreitti, jokivarren kyliä ja tuhatvuotisia kamferipuita"
+                },
+                {
+                  "time": "14:30-16:00",
+                  "name": "Xixinanin kosteikko",
+                  "desc": "Kuin sadusta — vaahterametsää, puroja, kivisiltoja ja Jiangnanin viehätystä"
+                },
+                {
+                  "time": "16:30-18:00",
+                  "name": "Tunxin vanhakatu",
+                  "desc": "Kiinan parhaiten säilynyt kaupallinen kävelykatu, Song-, Ming- ja Qing-kauden arkkitehtuuria"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Hongcun — Hefei",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "10:00-12:00",
+                  "name": "Hongcunin muinaiskylä",
+                  "desc": "'Kylä kiinalaisessa maalauksessa' — ainutlaatuinen härän muotoinen vesijärjestelmä ja Chengzhi-salin hienot kaiverrukset, jota kutsutaan 'kansan Kielletyksi kaupungiksi'"
+                },
+                {
+                  "time": "13:30-18:00",
+                  "name": "Paluu Hefeihin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qiyun",
+          "title": "Qiyun-vuoren kolmen päivän matka",
+          "titleEn": "齐云山三日游",
+          "price": "1 629 RMB / hlö",
+          "tagline": "Danxia-muodostumia · taolaista kulttuuria · Jiangnanin ykkösvuori",
+          "summary": "Huizhoun suuri kanjoni + Qiyun-vuori + Yuehua-katu + Chengkan + Qiankoun asuintalot — maisemat ja taolaisuus kohtaavat.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — Huizhoun suuri kanjoni",
+              "meals": "Lounas / Illallinen",
+              "stay": "Xiuning",
+              "items": [
+                {
+                  "time": "08:00-12:30",
+                  "name": "Lähtö Hefeistä Huangshaniin"
+                },
+                {
+                  "time": "13:40-17:00",
+                  "name": "Huizhoun suuri kanjoni",
+                  "desc": "Kalliovesiputouksia, turkoosinvärisiä altaita ja ikivanhoja mäntyjä — halutessa vauhdikas koskenlasku"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Qiyun-vuori",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "stay": "Xiuning",
+              "items": [
+                {
+                  "time": "09:00-11:30",
+                  "name": "Qiyun-vuori",
+                  "desc": "Danxia-muodostumia, taolaista perintöä, 'Jiangnanin ykkösvuori' ja lukemattomia historiallisia kalliokirjoituksia"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Bambulauttailua Qiyunin juurella",
+                  "desc": "Rannoilla tuhatvuotisia puita ja soljuvaa jokimaisemaa"
+                },
+                {
+                  "time": "19:00-20:30",
+                  "name": "Yuehua-katu illalla"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Chengkan — Qiankoun asuintalot — Hefei",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "09:30-12:30",
+                  "name": "Chengkan",
+                  "desc": "Luonnostaan bagua-kuvion muotoinen kylä, kaksi kansallisaarteeksi luokiteltua rakennusta ja Hui-tyylisiä kaiverruksia"
+                },
+                {
+                  "time": "iltapäivä",
+                  "name": "Qiankoun asuintalot",
+                  "desc": "'Palatsit katsotaan Pekingissä, asuintalot Qiankoussa' — Ming-kauden Hui-tyylinen rakennuskokonaisuus"
+                },
+                {
+                  "time": "13:30-18:00",
+                  "name": "Paluu Hefeihin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "anhui",
+          "title": "Etelä-Anhuin ja Jingchuanin kolmen päivän kiertomatka",
+          "titleEn": "皖南泾川三日游",
+          "price": "1 491 RMB / hlö",
+          "tagline": "Li Bain Persikankukkalampi · kiinalaisen xuan-paperin kulttuuria",
+          "summary": "Persikankukkalampi + Chajin muinaiskylä + Kuunlahti + Pingyuanin salainen maailma + Kiinan xuan-paperin kulttuuripuisto.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Hefei — Jingin piirikunta — Pingyuan — Kuunlahti",
+              "meals": "Lounas / Illallinen",
+              "items": [
+                {
+                  "time": "09:00-11:30",
+                  "name": "Lähtö Hefeistä Jingin piirikuntaan"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Pingyuanin salainen maailma",
+                  "desc": "'Etelä-Anhuin pieni Li-joki' — bambulautalla kallioiden lomassa ja ryhmätoimintaa Fengyangin torilla"
+                },
+                {
+                  "time": "16:30-17:30",
+                  "name": "Kuunlahden maisema-alue",
+                  "desc": "Sadan mailin bambumetsä ja klassinen elokuvien kuvauspaikka"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Persikankukkalampi — Chajin kylä",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "items": [
+                {
+                  "time": "10:00-11:30",
+                  "name": "Persikankukkalampi (Taohuatan)",
+                  "desc": "Kuuluisaksi Li Bain runosta 'Jäähyväiset Wang Lunille' — smaragdinvihreää vettä ja ikivanhoja rantapuita"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Chajin muinaiskylä",
+                  "desc": "Pieniä siltoja ja virtaavaa vettä, Ming- ja Qing-kauden koristeltuja rakennuksia ja vanhoja sukutemppeleitä"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Kiinan xuan-paperin museo — Hefei",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "09:00-11:00",
+                  "name": "Kiinan xuan-paperin kulttuuripuisto",
+                  "desc": "Kansallista aineetonta kulttuuriperintöä — käsintehdyn xuan-paperin valmistus, halutessa paperinteko- ja painantakokeilu"
+                },
+                {
+                  "time": "12:30-15:30",
+                  "name": "Paluu Hefeihin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "suzhou",
+          "title": "Suzhoun kolmen päivän kiertomatka",
+          "titleEn": "苏州三日游",
+          "price": "1 756 RMB / hlö",
+          "tagline": "Taivas maan päällä, puutarhat ylitse muiden",
+          "summary": "Tiikerinkukkula + Vaatimattoman virkamiehen puutarha + Hanshanin temppeli + Viipyilevä puutarha + Zhouzhuang — kaksi Kiinan neljästä kuuluisasta puutarhasta ja maan ykkösvesikaupunki.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Nouto lentokentältä — Tiikerinkukkula",
+              "meals": "Lounas / Illallinen",
+              "stay": "Suzhou",
+              "items": [
+                {
+                  "time": "10:30-12:30",
+                  "name": "Matka Suzhouhun"
+                },
+                {
+                  "time": "14:00-17:00",
+                  "name": "Tiikerinkukkula",
+                  "desc": "'Wun alueen hienoin nähtävyys' — keskiössä tuhatvuotias kallistunut Yunyanin pagodi ja Kevät ja syksy -kauden Miekka-allas, 2500 vuotta vanhan Wu-kulttuurin symboli"
+                },
+                {
+                  "time": "17:30-18:30",
+                  "name": "Illallinen ja majoittuminen hotelliin"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Vaatimattoman virkamiehen puutarha — Hanshanin temppeli — Viipyilevä puutarha",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "stay": "Suzhou",
+              "items": [
+                {
+                  "time": "09:30-11:30",
+                  "name": "Vaatimattoman virkamiehen puutarha (Zhuozheng Yuan)",
+                  "desc": "Suzhoun suurin säilynyt klassinen puutarha ja maailmanperintökohde, jonka sielu on vesi ja jossa maisema vaihtuu joka askeleella — Jiangnanin puutarhataiteen huipentuma"
+                },
+                {
+                  "time": "13:20-15:00",
+                  "name": "Hanshanin temppeli",
+                  "desc": "Zhang Jin runon 'Yöankkurointi vaahterasillalla' kuuluisaksi tekemä tuhatvuotias temppeli, klassinen maamerkki"
+                },
+                {
+                  "time": "15:10-17:10",
+                  "name": "Viipyilevä puutarha (Liu Yuan)",
+                  "desc": "Yksi Kiinan neljästä kuuluisasta puutarhasta ja maailmanperintökohde, tunnettu tilallisesta arkkitehtuuristaan: 700 metriä mutkittelevia käytäviä ja Guanyun-huipun harvinaiset kivet"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Zhouzhuang — kuljetus lentokentälle",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "09:30-12:30",
+                  "name": "Zhouzhuang",
+                  "desc": "'Kiinan ykkösvesikaupunki', 900 vuotta historiaa, ristikkomaiset kanavat, 14 vanhaa siltaa ja Ming- ja Qing-kauden taloja. Shuangqiao, Shenting ja Zhangting ovat sen maamerkkejä — Jiangnanin pieniä siltoja ja virtaavaa vettä puhtaimmillaan"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lounas, kuljetus lentokentälle, matka päättyy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hangzhou",
+          "title": "Hangzhoun kolmen päivän kiertomatka",
+          "titleEn": "杭州三日游",
+          "price": "1 805 RMB / hlö",
+          "tagline": "Länsijärven rauhaa · Lingyinin temppelin zeniä",
+          "summary": "Lingyinin temppeli + Länsijärvi + Xixin kosteikko + Songcheng + Liangzhun kulttuuriperintöpuisto — maailmanperintökohteita ja 5 000 vuotta vanha sivilisaation todiste.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Nouto lentokentältä — Lingyinin temppeli — Länsijärvi",
+              "meals": "Lounas / Illallinen",
+              "stay": "Hangzhou",
+              "items": [
+                {
+                  "time": "10:00-12:00",
+                  "name": "Lingyinin temppeli",
+                  "desc": "Tunnetaan myös nimellä 'Yunlinin temppeli', sijaitsee Lingyin-vuoren juurella Länsijärven länsipuolella — rauhallinen ja hiljainen, Hangzhoun vanhin kuuluisa temppeli, jossa on harvinaisia jäänteitä monelta dynastialta"
+                },
+                {
+                  "time": "14:30-17:00",
+                  "name": "Länsijärven maisema-alue",
+                  "desc": "Todistanut kiinalaisen buddhalaisuuden, taolaisuuden ja teezenin kehitystä. Liitettiin maailmanperintöluetteloon 24. kesäkuuta 2011"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Xixin kosteikko — Songcheng",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "stay": "Hangzhou",
+              "items": [
+                {
+                  "time": "09:30-11:30",
+                  "name": "Xixin kansallinen kosteikkopuisto",
+                  "desc": "Kiinan ensimmäinen kansallinen kosteikkopuisto, joka yhdistää kaupunki-, maatalous- ja kulttuurikosteikot. 5A-tason kohde, jonka maisemaa kuvaillaan sanoin 'puro vettä, häivähdys usvaa'"
+                },
+                {
+                  "time": "13:00-17:00",
+                  "name": "Songcheng",
+                  "desc": "Menneen ja nykyisen kohtaamispaikka: kaksikymmentä teatteria ja satoja esityksiä — yksi päivä ei riitä kaiken näkemiseen"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Liangzhun kulttuuriperintöpuisto — lentokenttä",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "10:00-12:30",
+                  "name": "Liangzhun kulttuuriperintöpuisto",
+                  "desc": "Noin 5 300–4 300 vuotta vanha, merkittävä esimerkki Kiinan varhaisesta alueellisesta sivilisaatiosta ja 'pyhä paikka, joka todistaa Kiinan 5 000-vuotisen sivilisaation'"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lounas, kuljetus lentokentälle, matka päättyy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "suzhou-hangzhou",
+          "title": "Suzhoun ja Hangzhoun kolmen päivän kiertomatka",
+          "titleEn": "苏杭三日游",
+          "price": "1 846 RMB / hlö",
+          "tagline": "Jiangnanin kaksoiskaupungit — puutarhat kohtaavat Länsijärven",
+          "summary": "Vaatimattoman virkamiehen puutarha + Hanshanin temppeli + Wuzhen + Songcheng + Länsijärvi — Suzhoun ja Hangzhoun parhaat puolet yhdellä matkalla.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Nouto lentokentältä — Vaatimattoman virkamiehen puutarha — Hanshanin temppeli",
+              "meals": "Lounas / Illallinen",
+              "stay": "Suzhou",
+              "items": [
+                {
+                  "time": "10:00-12:00",
+                  "name": "Matka Suzhouhun"
+                },
+                {
+                  "time": "13:30-15:30",
+                  "name": "Vaatimattoman virkamiehen puutarha",
+                  "desc": "Suzhoun suurin klassinen puutarha ja maailmanperintökohde, vesikeskeinen ja joka askeleella uusi näkymä — Jiangnanin puutarhataiteen huipentuma"
+                },
+                {
+                  "time": "16:00-17:30",
+                  "name": "Hanshanin temppeli",
+                  "desc": "Maailmankuulu Zhang Jin runon 'Yöankkurointi vaahterasillalla' ansiosta — tuhatvuotias Suzhoun temppeli ja klassinen maamerkki"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Wuzhen — Songcheng",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "stay": "Hangzhou",
+              "items": [
+                {
+                  "time": "11:00-12:30",
+                  "name": "Wuzhen",
+                  "desc": "5A-tason muinaiskaupunki Tongxiangissa Zhejiangissa — tuhatvuotias Jiangnanin vesikaupunki, 'Kiinan viimeinen vesirannan asuinpaikka' ja maailman internetkonferenssin vakituinen tapahtumapaikka"
+                },
+                {
+                  "time": "15:00-19:00",
+                  "name": "Songcheng",
+                  "desc": "Menneen ja nykyisen kohtaamispaikka — kaksikymmentä teatteria ja satoja esityksiä, aika ei tunnu koskaan riittävän"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Länsijärvi — lentokenttä",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "09:30-12:30",
+                  "name": "Länsijärven maisema-alue",
+                  "desc": "Todistanut kiinalaisen buddhalaisuuden, taolaisuuden ja teezenin perinteitä — maailmanperintökohde"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lounas, kuljetus lentokentälle, matka päättyy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shanghai",
+          "title": "Shanghain kolmen päivän ohjelma",
+          "titleEn": "上海三日游",
+          "price": "1 842 RMB / hlö",
+          "tagline": "Maagisen kaupungin yöt — historia kohtaa modernin",
+          "summary": "Yu-puutarha + Kaupunginjumalan temppeli + Sinan-katu + Nanjing-katu + Shanghain museo + Xintiandi + Tianzifang + Itämainen helmi + Bund + postimuseo — Shanghain klassikot kolmessa päivässä.",
+          "days": [
+            {
+              "day": "D1",
+              "title": "Nouto lentokentältä — Yu-puutarha — Kaupunginjumalan temppeli — Sinan-katu — Nanjing-katu",
+              "meals": "Lounas / Illallinen",
+              "stay": "Shanghai",
+              "items": [
+                {
+                  "time": "09:00-10:30",
+                  "name": "Yu-puutarha",
+                  "desc": "Alun perin Ming-dynastian yksityispuutarha, Shanghain viidestä säilyneestä klassisesta puutarhasta arvostetuin"
+                },
+                {
+                  "time": "10:40-12:10",
+                  "name": "Kaupunginjumalan temppeli",
+                  "desc": "Ming-kaudella rakennettu taolainen temppeli, joka yhdessä alueen katuruoan, Lotus-lammen, Järvenkeskuspaviljongin ja Yhdeksän mutkan sillan kanssa muodostaa Shanghain vanhankaupungin"
+                },
+                {
+                  "time": "13:30-15:00",
+                  "name": "Sinan-katu",
+                  "desc": "Kävellen tai pyöräillen plataanien reunustamia katuja pitkin ihaillen ranskalaistyylisiä huviloita"
+                },
+                {
+                  "time": "15:30-17:30",
+                  "name": "Nanjing-kadun kävelykatu",
+                  "desc": "Epäsymmetrinen kokonaisuus, jonka läpi kulkee 4,2 metriä leveä 'kultainen vyö' ja jota reunustaa 34 eri tavoin suunniteltua kukkaistutusta"
+                }
+              ]
+            },
+            {
+              "day": "D2",
+              "title": "Shanghain museo — Xintiandi — Tianzifang — Itämainen helmi — Huangpu-joen lautta",
+              "meals": "Aamiainen / Lounas / Illallinen",
+              "stay": "Shanghai",
+              "items": [
+                {
+                  "time": "09:00-11:30",
+                  "name": "Shanghain museo (Kansanaukion toimipiste)",
+                  "desc": "Runsaat kokoelmat pronssiesineitä, keramiikkaa, kalligrafiaa, maalauksia ja jadea — syvä sukellus Kiinan historiaan"
+                },
+                {
+                  "time": "13:00-15:00",
+                  "name": "Xintiandi",
+                  "desc": "Putiikkeja, löytöjä ja rentoja kahvilahetkiä"
+                },
+                {
+                  "time": "15:00-15:40",
+                  "name": "Tianzifang",
+                  "desc": "Rakennettu Shanghaille ominaisesta shikumen-arkkitehtuurista — taiteilijoiden luova keskittymä, sokkeloisia kujia ja retrohenkisiä käsityöpuoteja"
+                },
+                {
+                  "time": "16:10-16:30",
+                  "name": "Itämaisen helmen torni (ulkoa)",
+                  "desc": "Kohoaa Lujiazuissa Pudongissa vastapäätä Bundia Huangpu-joen toisella puolella — 468 metriä korkea, ja sen yksitoista palloa on saanut inspiraationsa sanonnasta 'suuria ja pieniä helmiä putoaa jadelautaselle'"
+                },
+                {
+                  "time": "16:30",
+                  "name": "Huangpu-joen lautta (Jinling East Rd — Dongchang Rd)",
+                  "desc": "Ihaile Bundin kansainvälistä arkkitehtuuria ja katsele Lujiazuin pilvenpiirtäjiä — historia ja moderni täydellisessä sekoituksessa"
+                }
+              ]
+            },
+            {
+              "day": "D3",
+              "title": "Postimuseo — Bund — lentokenttä",
+              "meals": "Aamiainen / Lounas",
+              "items": [
+                {
+                  "time": "09:00-10:30",
+                  "name": "Shanghain postimuseo",
+                  "desc": "Sijaitsee Shanghain pääpostitalossa — junavaunupostitoimistoja, vanhoja postilaatikoita ja Kiinan postilaitoksen historia"
+                },
+                {
+                  "time": "11:00-12:00",
+                  "name": "Bund",
+                  "desc": "Noin 1,5 kilometriä Huangpu-joen vartta — Shanghain tunnusmerkki, kuuluisa kansainvälisestä arkkitehtuuristaan ja upeasta yönäkymästään"
+                },
+                {
+                  "time": "12:30-13:30",
+                  "name": "Lounas, kuljetus lentokentälle, matka päättyy"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "anhuiLabels": {
+        "eyebrow": "3 päivää · Lähtö Hefeistä",
+        "expandLabel": "+ Katso päiväkohtainen ohjelma",
+        "hideLabel": "— Piilota ohjelma",
+        "detailLabel": "Koko ohjelma →",
+        "dayByDay": "Päivä kerrallaan",
+        "highlights": "Matkan kohokohdat",
+        "gallery": "Kuvagalleria",
+        "included": "Hintaan sisältyy",
+        "bookCta": "Kysy ja varaa",
+        "back": "← Takaisin",
+        "from": "Alkaen"
+      },
+      "anhuiServiceTitle": "Hintaan sisältyy",
+      "anhuiServiceItems": [
+        "Kuljetus: 38-paikkainen bussi (Anhuin reitit) tai 37-paikkainen bussi (Jiangnan/Shanghai)",
+        "Majoitus: 2 yötä neljän tähden hotellissa tai neljän timantin boutique-hotellissa (kahden hengen huone, aamiainen)",
+        "Ateriat: 5 ateriaa (50 RMB Anhui / 60 RMB Jiangnan ja Shanghai henkilöä ja ateriaa kohden)",
+        "Liput: Kaikki ohjelman nähtävyydet",
+        "Opas: 3 päivän palvelu yhdeltä englanninkieliseltä oppaalta",
+        "Vakuutus: Matkustajan tapaturmavakuutus, 200 000 RMB / henkilö",
+        "Lisäksi: 2 pulloa kivennäisvettä henkilöä ja päivää kohden"
+      ],
+      "anhuiBookCta": "Kysy ja varaa",
+      "regionsTitle": "Selaa kohteen mukaan",
+      "regionTabs": [
+        {
+          "key": "anhui",
+          "label": "Anhui"
+        },
+        {
+          "key": "jiangzhe",
+          "label": "Suzhou ja Hangzhou"
+        },
+        {
+          "key": "shanghai",
+          "label": "Shanghai"
+        },
+        {
+          "key": "hunan",
+          "label": "Hunan"
+        }
+      ],
+      "regionComingSoon": "Tämän alueen matkaohjelmat ovat työn alla ja julkaistaan pian. Ota yhteyttä, niin suunnittelemme räätälöidyn ohjelman.",
+      "guide": {
+        "title": "Kiinan matkaopas",
+        "subtitle": "Ensimmäistä kertaa Kiinassa — käytännön opas kansainväliselle matkaajalle",
+        "intro": "Kaikki, mikä kannattaa hoitaa kuntoon ennen Kiinaan saapumista: maahantulosäännöt, lennot, kuljetukset, nettiyhteydet ja maksaminen. Matkoillamme hoidamme kaiken paikan päällä — tämä on se, mikä kannattaa valmistella ennen lähtöä.",
+        "items": [
+          {
+            "title": "Viisumi ja maahantulo",
+            "body": "Suomen ja useimpien Euroopan maiden passeilla pääsee tällä hetkellä Kiinaan ilman viisumia 30 päiväksi (käytäntö voimassa vuoden 2026 loppuun). Muista maista tulevat voivat usein hyödyntää 240 tunnin viisumivapaata kauttakulkua matkatessaan kolmanteen maahan tai hakea tavallista L-turistiviisumia. Saapuessa täytetään maahantulokortti ja otetaan sormenjäljet — pidä hotellin osoite ja jatkolennon lippu käsillä."
+          },
+          {
+            "title": "Lennot ja perillepääsy",
+            "body": "Helsingistä on suora lentoyhteys Shanghaihin, matka-aika noin 9–10 tuntia. Jiangnanin matkoillemme kannattaa lentää Shanghain Pudongiin (PVG): Suzhouhun ja Hangzhouhun pääsee luotijunalla alle kahdessa tunnissa ja Hefeihin noin kolmessa. Järjestämme tarvittaessa myös jatkoyhteydet kotimaan lennoilla sisämaan kohteisiin."
+          },
+          {
+            "title": "Kuljetukset ja liikkuminen",
+            "body": "Pakettiimme sisältyy lentokenttäkuljetus ja oma bussi koko matkan ajaksi. Omatoimipäiviä varten: luotijunaliput ostetaan passilla (12306-sovellus tai aseman lipunmyynti), DiDi — Kiinan Uber — toimii englanniksi, ja metroissa käy Alipayn QR-koodi. Pidä passi aina mukana; sitä tarvitaan sekä junissa että hotelliin kirjautuessa."
+          },
+          {
+            "title": "SIM-kortit ja internet",
+            "body": "Helpoin vaihtoehto on kansainvälinen eSIM (esimerkiksi Airalo tai Holafly), joka aktivoidaan ennen laskeutumista — roaming-datalla Google, WhatsApp ja Instagram toimivat normaalisti. Paikalliset China Unicomin tai China Mobilen SIM-kortit lentoasemalta ovat halvempia, mutta ne toimivat paikallisessa verkossa, jossa useimmat länsimaiset sovellukset ja sivustot on estetty. Hotellien wifi on kattava, mutta samojen rajoitusten alainen."
+          },
+          {
+            "title": "Maksaminen",
+            "body": "Kiina on lähes käteisetön — Alipay ja WeChat Pay käyvät käytännössä joka kaupassa, taksissa ja katukojussa. Molemmat hyväksyvät ulkomaiset Visa- ja Mastercard-kortit: lataa sovellus, vahvista henkilöllisyys passilla, liitä kortti ja maksa QR-koodia skannaamalla. Ulkomaisia pankkikortteja hyväksytään vain suuremmissa hotelleissa, joten pidä varalta pieni määrä käteistä (200–500 RMB). Tippiä ei odoteta missään."
+          },
+          {
+            "title": "Hyödylliset sovellukset",
+            "body": "Asenna nämä ennen lähtöä: Alipay (maksut, liikenne ja käännösminisovellukset), WeChat (viestintä — Kiinassa kaikkialla), DiDi (kyytipalvelu), Amap tai Apple Maps (Google Maps toimii Kiinassa epäluotettavasti) ja käännössovellus. Oppaamme puhuvat englantia koko matkan ajan, joten sovelluksia tarvitset lähinnä vapaa-ajalla."
+          }
+        ]
+      },
+      "citiesTitle": "Kaupunkikohteet",
+      "cities": [
+        {
+          "name": "Peking",
+          "desc": "Keisarillinen pääkaupunki — Kielletty kaupunki, Kiinan muuri ja hutong-kujat"
+        },
+        {
+          "name": "Shanghai",
+          "desc": "Bund, nykytaide ja Michelin-ravintolat"
+        },
+        {
+          "name": "Xi'an",
+          "desc": "Silkkitien lähtöpiste — terrakotta-armeija ja kaupunginmuurit"
+        },
+        {
+          "name": "Chengdu",
+          "desc": "Runsauden maa — pandoja, sichuanilaista ruokaa ja rauhallista elämää"
+        },
+        {
+          "name": "Hangzhou",
+          "desc": "Länsijärvi, Longjing-tee ja Song-dynastian perintö"
+        },
+        {
+          "name": "Guilin",
+          "desc": "Karstimaisemia — Li-joki ja Yangshuo"
+        },
+        {
+          "name": "Lijiang",
+          "desc": "Vanhakaupunki ja Jadelohikäärmevuori"
+        },
+        {
+          "name": "Xiamen",
+          "desc": "Puutarhakaupunki meren äärellä, Gulangyu ja Min-kulttuuri"
+        }
+      ],
+      "itineraries": "Suositellut matkaohjelmat",
+      "itinerariesIntro": "Klassisia reittejä, joiden kesto ja kaupunkiyhdistelmät voi räätälöidä vapaasti.",
+      "itinerariesItems": [
+        {
+          "name": "Klassinen pohjoinen · 8 päivää",
+          "route": "Peking → Xi'an → Shanghai",
+          "desc": "Historiaa, kulttuuria ja modernia Kiinaa — klassinen ensimmäinen Kiinan-matka"
+        },
+        {
+          "name": "Etelän maisemat · 10 päivää",
+          "route": "Shanghai → Hangzhou → Guilin → Yangshuo → Xiamen",
+          "desc": "Jiangnanin vesikaupungeista karstimaisemiin"
+        },
+        {
+          "name": "Läntinen raja · 12 päivää",
+          "route": "Chengdu → Jiuzhaigou → Lijiang → Shangri-La",
+          "desc": "Pandoja, lumihuippuja ja tiibetiläistä kulttuuria syvällisesti"
+        },
+        {
+          "name": "Silkkitie · 14 päivää",
+          "route": "Xi'an → Lanzhou → Jiayuguan → Dunhuang → Ürümqi → Kašgar",
+          "desc": "Muinainen Silkkitie ja kulttuurihistorian syvin sukellus"
+        }
+      ],
+      "forum": {
+        "title": "Matkafoorumi",
+        "subtitle": "Foorumi — aitoja matkaajia, aitoja kokemuksia",
+        "intro": "Käyttäjien tuottamaa sisältöä: budjettimatkailun oppaita, kaupunkien piilotettuja helmiä ja rentoja matkakertomuksia.",
+        "tags": [
+          "Jakaminen ja keskustelu",
+          "Budjettimatkailu",
+          "Vapaa-aika ja elämäntyyli",
+          "Matkapäiväkirjat"
+        ]
+      }
+    }
+  },
+  "packages": {
+    "title": "Suositut kohteet ja reitit",
+    "description": "Tästä löydät valikoiman matkapaketteja Pohjolaan.",
+    "learnMore": "Lue lisää",
+    "learnMoreBook": "Lue lisää ja varaa",
+    "dialogTitle": "Tutustu elämyksiimme",
+    "close": "Sulje",
+    "items": [
+      {
+        "title": "Vuonojen tutkimusmatka",
+        "days": "Kesto: 3 päivää",
+        "description": "Lähde matkalle pohjoismaisten vuonojen tyyniin vesiin."
+      },
+      {
+        "title": "Yöttömän yön vaellus",
+        "days": "Kesto: 3 päivää",
+        "description": "Koe yöttömän yön taika opastetuilla vaelluksilla."
+      },
+      {
+        "title": "Viikinkiperinnön kiertomatka",
+        "days": "Kesto: 3 päivää",
+        "description": "Astu ajassa taaksepäin ja tutustu viikinkien perintöön."
+      },
+      {
+        "title": "Arktinen selviytymishaaste",
+        "days": "Kesto: 3 päivää",
+        "description": "Koettele rajojasi aidossa selviytymiselämyksessä."
+      }
+    ]
+  },
+  "highlights": {
+    "title": "Kohokohdat",
+    "description": "Tutustu palveluihimme ja kumppaneihimme.",
+    "close": "Sulje",
+    "items": [
+      {
+        "title": "Viking Line -risteily",
+        "description": "Lähde vaikuttavalle matkalle Itämerelle."
+      },
+      {
+        "title": "VR:n junaretket",
+        "description": "Koe pohjoismaiset maisemat junan ikkunasta."
+      },
+      {
+        "title": "Huskysafarit",
+        "description": "Ohjaa omaa valjakkoasi jäätyneissä maisemissa."
+      },
+      {
+        "title": "Purjehdusristeily",
+        "description": "Purjehdi saaristoon ja löydä rauhalliset saaret."
+      },
+      {
+        "title": "Revontuliretket",
+        "description": "Lähde revontulten perään."
+      },
+      {
+        "title": "Laskettelu ja lumilautailu",
+        "description": "Suuntaa rinteisiin premium-pakettiemme kanssa."
+      },
+      {
+        "title": "Luontokuvaussafarit",
+        "description": "Vangitse pohjoisen eläimistön kauneus."
+      },
+      {
+        "title": "Melontaretket",
+        "description": "Melo tyynissä vuonoissa."
+      },
+      {
+        "title": "Opastetut vaellukset",
+        "description": "Tutustu henkeäsalpaaviin reitteihin."
+      },
+      {
+        "title": "Pohjoismaiset ruokaelämykset",
+        "description": "Maista pohjoisen makuja."
+      },
+      {
+        "title": "Kulttuurifestivaalit",
+        "description": "Sukella pohjoismaiseen kulttuuriin."
+      },
+      {
+        "title": "Linnat ja kulttuurikohteet",
+        "description": "Vieraile linnoissa ja Unescon kohteissa."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Hinnoittelu",
+    "description": "Tarjoamme erilaisia hinnoittelumalleja eri kokoisille ryhmille.",
+    "perMonth": "kuukaudessa",
+    "tiers": [
+      {
+        "title": "Yksittäinen asiakas",
+        "description": [
+          "Yksityismatka yhdelle",
+          "Henkilökohtainen matkaohjelma",
+          "Oma opas",
+          "Erityispääsy valittuihin kohteisiin"
+        ],
+        "buttonText": "Varaa nyt"
+      },
+      {
+        "title": "Pieni ryhmä",
+        "subheader": "Ihanteellinen perheille",
+        "description": [
+          "Enintään 4 henkilöä",
+          "Perheystävällinen räätälöity ohjelma",
+          "Yksityiskuljetus",
+          "Alennuksia nähtävyyksiin",
+          "Oma opas"
+        ],
+        "buttonText": "Varaa perheelle"
+      },
+      {
+        "title": "Suuri ryhmä",
+        "subheader": "Sopii yrityksille",
+        "description": [
+          "Enintään 10 henkilöä",
+          "Ryhmäytymisohjelma sisältyy",
+          "Yritysalennukset",
+          "Räätälöity ryhmäohjelma",
+          "Ensisijainen tuki"
+        ],
+        "buttonText": "Varaa ryhmälle"
+      },
+      {
+        "title": "Erityistarpeet",
+        "description": [
+          "Sopii kuvauksiin ja kilpailuihin",
+          "Räätälöidyt palvelut",
+          "Logistinen tuki",
+          "Yksinoikeus kohteisiin",
+          "Oma projektipäällikkö"
+        ],
+        "buttonText": "Pyydä tarjous"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Asiakkaiden kokemukset",
+    "description": "Katso, mitä asiakkaamme sanovat palveluistamme.",
+    "experience": [
+      {
+        "name": "Elsa Nygard",
+        "occupation": "Seikkailukuvaaja",
+        "testimonial": "Arktisen erämaan tutkiminen Finuon revontuliretkellä oli epätodellinen kokemus."
+      },
+      {
+        "name": "Mikkel Jensen",
+        "occupation": "Luonto-opas",
+        "testimonial": "Finuon sitoutuminen aitoihin pohjoismaisiin elämyksiin näkyy huolella suunnitelluissa vaellusretkissä."
+      },
+      {
+        "name": "Sofia Karlsson",
+        "occupation": "Kulttuuribloggaaja",
+        "testimonial": "Joulupukin pajakylän retki Finuon kanssa oli taianomainen."
+      },
+      {
+        "name": "Liam O'Sullivan",
+        "occupation": "Hiihdonopettaja",
+        "testimonial": "Finuon hiihtomatka oli huippuluokkaa — täydellinen tasapaino jännityksen ja turvallisuuden välillä."
+      },
+      {
+        "name": "Anna Petrova",
+        "occupation": "Matkavaikuttaja",
+        "testimonial": "Finuon järjestämä moottorikelkkaretki oli huikea!"
+      },
+      {
+        "name": "Oliver Thomson",
+        "occupation": "Dokumenttiohjaaja",
+        "testimonial": "Pohjoismaisten kaupunkien dokumentointi Finuon kanssa oli poikkeuksellinen matka."
+      },
+      {
+        "name": "Zhang Wei",
+        "occupation": "Omatoimimatkaaja",
+        "testimonial": "Ensimmäinen matkani Suomeen — kiinankielinen opas sai vanhempani tuntemaan olonsa turvalliseksi, ja revontuliyö oli unohtumaton."
+      },
+      {
+        "name": "Hanna Virtanen",
+        "occupation": "Hääsuunnittelija",
+        "testimonial": "Järjestimme kosinnan lasi-iglussa Lapissa — Finuo hoiti jokaisen yksityiskohdan täydellisesti."
+      },
+      {
+        "name": "Yuki Tanaka",
+        "occupation": "Ruoka- ja matkatoimittaja",
+        "testimonial": "Helsingin Michelin-pöydistä paikallisille toreille — Finuon suunnittelu antoi minun maistaa koko Pohjolan."
+      },
+      {
+        "name": "Liu Yang",
+        "occupation": "Perhematkaaja",
+        "testimonial": "Joulupukin tapaaminen ja porokyyti lasten kanssa — Finuon perheohjelma oli harkittu ja vaivaton."
+      }
+    ],
+    "education": [
+      {
+        "name": "Emma Thompson",
+        "occupation": "Jatko-opiskelija",
+        "testimonial": "Finuon ohjaus oli ratkaisevaa matkallani unelmieni yliopistoon."
+      },
+      {
+        "name": "Liam Johnson",
+        "occupation": "Tuleva insinööri",
+        "testimonial": "Selvisin yliopistohauista vaivatta Finuon ansiosta."
+      },
+      {
+        "name": "Olivia Brown",
+        "occupation": "Tuleva lääketieteen ammattilainen",
+        "testimonial": "Finuon konsultit tukivat minua lääketieteellisen hakuprosessin läpi."
+      },
+      {
+        "name": "Noah Wilson",
+        "occupation": "Liiketoiminta-analyytikkoharjoittelija",
+        "testimonial": "Finuon uraohjaus muutti kaiken."
+      },
+      {
+        "name": "Ava Martinez",
+        "occupation": "Tohtorikoulutettava",
+        "testimonial": "Finuon valinta väitöskirjahakuuni oli paras päätökseni."
+      },
+      {
+        "name": "William Garcia",
+        "occupation": "Perustutkinto-opiskelija",
+        "testimonial": "Finuon ansiosta sain opiskelupaikkoja ja apurahoja."
+      },
+      {
+        "name": "Li Na",
+        "occupation": "Vanhempi",
+        "testimonial": "Koulun valinnasta viisumiin asti Finuo opasti meitä koko matkan — lapseni pääsi Aalto-yliopistoon."
+      },
+      {
+        "name": "Daniel Korhonen",
+        "occupation": "Vaihto-opiskelija",
+        "testimonial": "Pohjoismainen opintomatka antoi minun kokea suomalaisen koulutuksen ytimen läheltä."
+      },
+      {
+        "name": "Sofia Lindgren",
+        "occupation": "Maisteriopiskelija",
+        "testimonial": "Finuo yhdisti minut ohjaajaan ja harjoittelupaikkaan — ulkomailla opiskelu sujui odotettua helpommin."
+      },
+      {
+        "name": "Zhao Min",
+        "occupation": "Vanhempi",
+        "testimonial": "Kielivalmennuksesta lähtöä edeltävään ohjaukseen konsultit olivat kärsivällisiä — lapseni pääsi haluamaansa vaihtoon Suomeen."
+      }
+    ],
+    "mice": [
+      {
+        "name": "Marcus Lindberg",
+        "occupation": "Slushin ohjelmajohtaja",
+        "testimonial": "Finuon paikalliset verkostot ja toteutus tekivät ulkomaisen tiimimme saapumisesta saumatonta."
+      },
+      {
+        "name": "Chen Xue",
+        "occupation": "Kiinalais-eurooppalaisen teknologiafoorumin kuraattori",
+        "testimonial": "Tiloista ja tulkkauksesta juontamiseen — Finuo hoiti kaiken alusta loppuun."
+      },
+      {
+        "name": "Heidi Laine",
+        "occupation": "Tapahtumapäällikkö",
+        "testimonial": "Habitare-messujen aikana Finuon kaksikielinen tiimi teki asiakasvieraanvaraisuudesta moitteetonta."
+      },
+      {
+        "name": "Wang Lei",
+        "occupation": "Kansainvälisen laajentumisen johtaja",
+        "testimonial": "Helsingin työmatkalla Finuo hoiti hotellit, tulkkauksen ja koko ohjelman."
+      },
+      {
+        "name": "Sofia Niemi",
+        "occupation": "Foorumin operatiivinen vastaava",
+        "testimonial": "Viime hetken simultaanitulkkauspyyntö — Finuo järjesti sen tuntien sisällä."
+      },
+      {
+        "name": "Chen Hao",
+        "occupation": "Sijoituskumppani",
+        "testimonial": "Slushin aikainen VIP-illallinen ylitti vieraidemme odotukset selvästi."
+      },
+      {
+        "name": "Antti Mäkinen",
+        "occupation": "Näytteilleasettaja",
+        "testimonial": "Osaston rakentaminen ja paikan päällä koordinointi Pohjolan energiamessuilla — ammattimaista ja tehokasta."
+      },
+      {
+        "name": "Petri Salo",
+        "occupation": "Teknologiahuippukokouksen tuottaja",
+        "testimonial": "Tuhannen hengen huippukokouksessa Finuon paikallinen koordinointi ja alihankkijoiden hallinta teki siitä vaivatonta."
+      },
+      {
+        "name": "Lin Ting",
+        "occupation": "Brändimarkkinoinnin johtaja",
+        "testimonial": "Pohjoismaisen roadshow'n jokainen etappi oli täydellisesti järjestetty, ja paikalliset kontaktit osuivat kohdalleen."
+      },
+      {
+        "name": "Johan Berg",
+        "occupation": "Järjestön pääsihteeri",
+        "testimonial": "Juontaminen, tulkkaus ja kulttuuriohjelma vuosikokouksessamme — Finuo hoiti kaiken erittäin ammattimaisesti."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "q1": "Miten otan teihin yhteyttä?",
+    "a1": "Lähetä sähköpostia osoitteeseen <link>booking@finuo.fi</link> tai soita meille — vastaamme nopeasti.",
+    "q2": "Voitteko räätälöidä matkaohjelman?",
+    "a2": "Ehdottomasti — räätälöinti on ydinosaamistamme. Kerro budjetti, ajankohta ja kiinnostuksen kohteet, niin suunnittelemme ohjelman.",
+    "q3": "Mikä erottaa teidät muista matkatoimistoista?",
+    "a3": "Olemme Suomessa toimiva tiimi, kolmikielinen (kiina/englanti/suomi), ja meillä on yli 10 vuoden kokemus Pohjolasta.",
+    "q4": "Miten hinnoittelu muodostuu?",
+    "a4": "Tarjous räätälöidään ryhmän koon ja palvelun laajuuden mukaan — kysy lisää."
+  },
+  "footer": {
+    "newsletter": "Uutiskirje",
+    "newsletterDesc": "Tilaa uutiskirjeemme ja saat viikoittain uutuudet ja tarjoukset.",
+    "emailPlaceholder": "Sähköpostiosoitteesi",
+    "subscribe": "Tilaa",
+    "product": "Palvelut",
+    "features": "Ominaisuudet",
+    "highlights": "Kohokohdat",
+    "pricing": "Hinnat",
+    "faqs": "UKK",
+    "company": "Yritys",
+    "aboutUs": "Tietoa meistä",
+    "careers": "Työpaikat",
+    "press": "Media",
+    "legal": "Juridiset tiedot",
+    "terms": "Ehdot",
+    "privacy": "Tietosuoja",
+    "contact": "Yhteystiedot",
+    "privacyPolicy": "Tietosuojaseloste",
+    "termsOfService": "Käyttöehdot"
+  },
+  "educationServices": {
+    "title": "Koulutuspalvelut",
+    "description": "Finuo Education Consulting on luotettava kumppanisi ulkomailla opiskeluun.",
+    "close": "Sulje",
+    "items": [
+      {
+        "title": "Suomalaisen koulutustarjonnan esittely",
+        "description": "Kattavat tiedot suomalaisista yliopistoista, ammatillisista oppilaitoksista ja lukioista."
+      },
+      {
+        "title": "Oppilaitoksen ja ohjelman valinta",
+        "description": "Henkilökohtainen ohjaus opintokiinnostusten, uratavoitteiden ja toiveiden pohjalta."
+      },
+      {
+        "title": "Hakuprosessin ohjaus ja tuki",
+        "description": "Kattava tuki hakuasiakirjoihin, kuten ansioluetteloon, motivaatiokirjeeseen ja suosituksiin."
+      },
+      {
+        "title": "Viisumi- ja oleskelulupa-apu",
+        "description": "Asiakirjojen valmistelu, ajanvaraukset ja opastus vaatimuksiin."
+      },
+      {
+        "title": "Asuminen ja sopeutumisen tuki",
+        "description": "Apua asunnon löytämiseen sekä kulttuuriperehdytys ja kielikoulutus."
+      },
+      {
+        "title": "Apurahat ja rahoitus",
+        "description": "Ohjausta saatavilla oleviin apurahoihin ja rahoitusmahdollisuuksiin."
+      }
+    ]
+  },
+  "education": {
+    "schoolsTitle": "Oppilaitokset",
+    "schoolsSubtitle": "Oppilaitokset — Suomen ja Euroopan parhaat koulutuksen tarjoajat",
+    "schoolsIntro": "Yliopistoja, ammattikorkeakouluja, lukioita ja erikoistuneita laitoksia, kuten tiedekeskuksia ja urheiluopistoja. Yksityiskohtaiset oppilaitosesittelyt, hakuvaatimukset ja tiedot koulutusohjelmista.",
+    "schools": [
+      {
+        "id": "heureka",
+        "name": "Tiedekeskus Heureka",
+        "type": "Tiedekasvatus · Vantaa",
+        "desc": "Suomen vuorovaikutteinen tiedekeskus ja kokeileva STEAM-oppiminen",
+        "intro": "Vantaalla sijaitseva Tiedekeskus Heureka on tehnyt tieteestä kokemuksen vuodesta 1989. Vuorovaikutteiset näyttelyt, digitaalinen planetaario ja oppimislaboratoriot kutsuvat kaikenikäisiä kokeilemaan itse, ja Heureka onkin yksi Suomen vierailluimmista kohteista ja STEAM-kasvatuksen kärkipaikoista. Vieraileville koululaisryhmille järjestämme opastuksia ja työpajaohjelmia, jotka noudattavat suomalaista opetussuunnitelmaa.",
+        "facts": [
+          "Avattu 1989 · Tikkurila, Vantaa",
+          "Vuorovaikutteiset näyttelyt ja digitaalinen planetaario",
+          "STEAM-työpajoja koululaisryhmille",
+          "Noin 300 000 kävijää vuodessa",
+          "20 minuutin junamatka Helsingin keskustasta"
+        ]
+      },
+      {
+        "id": "kisakallio",
+        "name": "Kisakallion Urheiluopisto",
+        "type": "Urheilu · Lohja",
+        "desc": "Urheiluopisto harjoitusleireille, valmentajakoulutukseen ja liikuntakasvatukseen",
+        "intro": "Vuonna 1949 perustettu Kisakallio sijaitsee järven rannalla Lohjalla ja on yksi Suomen johtavista urheiluopistoista. Se yhdistää olympiatason harjoitusolosuhteet majoitukseen ja ravintolapalveluihin ja isännöi kansainvälisiä leirejä, valmentajakoulutusta ja liikuntaohjelmia kaikentasoisille ryhmille — tunnin matkan päässä Helsingistä.",
+        "facts": [
+          "Perustettu 1949 · Lohja",
+          "Tunnin matka Helsingistä",
+          "Olympiatason salit, kentät ja reitit",
+          "Majoitus ja ravintola samalla kampuksella",
+          "Kansainvälisiä leirejä ja liikuntaohjelmia ryhmille"
+        ]
+      },
+      {
+        "id": "kuortane",
+        "name": "Kuortaneen urheiluopisto",
+        "type": "Urheilu · Kuortane",
+        "desc": "Olympiatason harjoitteluympäristö ja urheilukoulutus",
+        "intro": "Länsi-Suomessa sijaitseva Kuortaneen urheiluopisto on yksi Suomen virallisista olympiavalmennuskeskuksista. Yleisurheilun, painin ja lentopallon huippu-urheilijat harjoittelevat siellä urheiluakatemian ja urheilulukion rinnalla, ja keskus järjestää ympäri vuoden leirejä, joissa yhdistyvät harjoittelu, testaus ja valmentajakoulutus — myös kansainvälisille ryhmille.",
+        "facts": [
+          "Suomen virallinen olympiavalmennuskeskus",
+          "Etelä-Pohjanmaa, Länsi-Suomi",
+          "Urheiluakatemia ja urheilulukio",
+          "Yleisurheiluhalli, jäähallit ja testauslaboratorio",
+          "Isännöi kansainvälisiä huippu- ja nuorisoleirejä"
+        ]
+      },
+      {
+        "id": "helsinki",
+        "name": "Helsingin yliopisto",
+        "type": "Monialainen · QS-listan sadan parhaan joukossa",
+        "desc": "Suomen johtava tutkimusyliopisto",
+        "intro": "Vuonna 1640 perustettu Helsingin yliopisto on Suomen vanhin ja suurin yliopisto ja vakiintunut QS-listan sadan parhaan joukkoon. Sen yksitoista tiedekuntaa kattavat luonnontieteet, humanistiset alat, oikeustieteen ja lääketieteen, ja uusklassinen päärakennus seisoo Senaatintorilla pääkaupungin sydämessä. Kandidaatti- ja maisteriohjelmia tarjotaan englanniksi laajalti eri aloilla.",
+        "facts": [
+          "Perustettu 1640 · QS-listan sadan parhaan joukossa",
+          "Suomen suurin yliopisto, 11 tiedekuntaa",
+          "Keskustakampus Senaatintorin laidalla",
+          "Laaja valikoima englanninkielisiä ohjelmia",
+          "Vahvaa tutkimusta luonnontieteissä ja humanistisilla aloilla"
+        ]
+      },
+      {
+        "id": "aalto",
+        "name": "Aalto-yliopisto",
+        "type": "Tekniikka · Kauppa · Muotoilu",
+        "desc": "Monialainen tekniikan ja muotoilun edelläkävijä",
+        "intro": "Aalto-yliopisto syntyi vuonna 2010, kun Suomen johtavat teknillinen, kauppatieteellinen ja taideteollinen korkeakoulu yhdistyivät. Otaniemen kampus Espoossa — mukaan lukien ikoninen Dipoli — on Suomen startup- ja innovaatiotoiminnan keskus. Aalto tunnetaan tekniikan ja muotoiluajattelun yhdistämisestä sekä yhdestä Euroopan aktiivisimmista yrittäjyysyhteisöistä.",
+        "facts": [
+          "Perustettu 2010 · Espoo (Otaniemen kampus)",
+          "Tekniikka, kauppatieteet sekä taide ja muotoilu",
+          "Suomen startup-ekosysteemin ydin",
+          "Alvar Aallon suunnittelemaa arkkitehtuuria",
+          "Laaja valikoima englanninkielisiä maisteriohjelmia"
+        ]
+      },
+      {
+        "id": "haagahelia",
+        "name": "Haaga-Helia ammattikorkeakoulu",
+        "type": "Ammattikorkeakoulu",
+        "desc": "Käytännönläheistä liiketaloutta ja palvelujohtamista",
+        "intro": "Helsinkiläinen Haaga-Helia ammattikorkeakoulu on erikoistunut liiketalouteen, majoitus- ja ravitsemisalaan, matkailuun ja viestintään. Opetus on käytännönläheistä ja rakentuu tiiviille yhteistyölle työelämän kanssa, ja pääkampus Pasilassa on muutaman minuutin päässä Helsingin keskustasta. Sen hotelli- ja ravintola-alan ohjelmat ovat Pohjoismaiden tunnetuimpia.",
+        "facts": [
+          "Helsinki · pääkampus Pasilassa",
+          "Liiketalous, majoitus- ja ravitsemisala, matkailu ja media",
+          "Käytännönläheistä, työelämälähtöistä opetusta",
+          "Arvostettu hotelli- ja ravintola-alan koulutus",
+          "Englanninkielisiä AMK- ja YAMK-tutkintoja"
+        ]
+      },
+      {
+        "id": "lab",
+        "name": "LAB-ammattikorkeakoulu",
+        "type": "Lahden seutu",
+        "desc": "Muotoilua, liiketaloutta ja terveysalaa",
+        "intro": "LAB-ammattikorkeakoululla on kampukset Lahdessa ja Lappeenrannassa, ja sen vahvuuksia ovat muotoilu, kiertotalous, terveysala ja liiketalous. Vuonna 2020 perustettu korkeakoulu tekee tiivistä yhteistyötä alueen elinkeinoelämän kanssa ja tunnetaan Muotoiluinstituutistaan — yhdestä Suomen merkittävimmistä muotoilukouluista.",
+        "facts": [
+          "Kampukset Lahdessa ja Lappeenrannassa",
+          "Muotoilu, kiertotalous, terveysala ja liiketalous",
+          "Lahden Muotoiluinstituutin perintö",
+          "Tiivistä yhteistyötä alueen yritysten kanssa",
+          "Englanninkielisiä tutkinto-ohjelmia"
+        ]
+      },
+      {
+        "id": "jyvaskyla",
+        "name": "Jyväskylän yliopisto",
+        "type": "Kasvatusalan erikoisosaaja",
+        "desc": "Tunnettu kasvatustieteellisestä tutkimuksesta",
+        "intro": "Jyväskylän yliopisto on Suomen johtava kasvatustieteellisen tutkimuksen ja opettajankoulutuksen keskus — kuuluisan suomalaisen koulutusmallin sydän. Seminaarinmäen kampuksella on Alvar Aallon suunnittelemia rakennuksia, ja yliopisto on myös valtakunnallisesti ainutlaatuinen liikunta- ja terveystieteissä, mikä tekee siitä luontevan kumppanin sekä kasvatus- että urheiluohjelmille.",
+        "facts": [
+          "Suomen johtava kasvatustieteen tutkimusyliopisto",
+          "Suomalaisen opettajankoulutuksen syntysija",
+          "Suomen ainoa liikuntatieteellinen tiedekunta",
+          "Kampusarkkitehtuuria Alvar Aallolta",
+          "Keski-Suomi · järvien ympäröimä Jyväskylä"
+        ]
+      },
+      {
+        "id": "turku",
+        "name": "Turun yliopisto",
+        "type": "Monialainen",
+        "desc": "Vahvuutena meri- ja biotieteet",
+        "intro": "Vuonna 1920 Suomen vanhimpaan kaupunkiin perustettu Turun yliopisto on monialainen tutkimusyliopisto, jonka erityisvahvuuksia ovat meri- ja biotieteet, lääketiede ja tulevaisuuden teknologiat. Jokirannan kampus sijaitsee Turun tuomiokirkon vieressä, ja yliopisto on keskeinen kumppani alueen bio- ja meriteollisuuden klustereissa.",
+        "facts": [
+          "Perustettu 1920 · Suomen vanhin kaupunki",
+          "Vahvaa osaamista meri- ja biotieteissä sekä lääketieteessä",
+          "Monialainen tutkimusyliopisto",
+          "Kampus Turun tuomiokirkon vieressä",
+          "Englanninkielisiä maisteriohjelmia"
+        ]
+      }
+    ],
+    "institutionLabels": {
+      "back": "← Takaisin",
+      "about": "Tietoa",
+      "facts": "Lyhyesti",
+      "gallery": "Kuvagalleria",
+      "contactCta": "Kysy ohjelmista ja vierailuista",
+      "detailHint": "Katso tiedot →"
+    },
+    "trainingTitle": "Koulutusohjelmat",
+    "trainingSubtitle": "Koulutus — opettajille, oppilaille ja räätälöitynä",
+    "trainingIntro": "Ohjelmia kiinalaisille kouluille, jotka vierailevat Suomessa: STEAM-opettajakoulutusta, oppilaiden lyhytkursseja sekä räätälöityjä ratkaisuja hallinnolle ja kouluille.",
+    "trainingItems": [
+      {
+        "title": "Opettajakoulutus",
+        "desc": "Suomalainen koulutuslainsäädäntö, ilmiöpohjainen oppiminen ja luokkahuoneen hallinta — 1–2 viikon intensiivijaksot"
+      },
+      {
+        "title": "Oppilaskoulutus",
+        "desc": "Kesä- ja talviohjelmia nuorille: oppitunteja, kulttuurivierailuja ja ulkoilua"
+      },
+      {
+        "title": "Räätälöity koulutus",
+        "desc": "Koulun tai oppilaitoksen painotusten mukaan (taide, muotoilu, kestävä kehitys ym.)"
+      }
+    ],
+    "studyToursTitle": "Opintomatkat",
+    "studyToursSubtitle": "Opintomatkat — Pohjola · Kiina · Kiinan ja Euroopan vaihto",
+    "studyToursIntro": "Syvällisiä akateemis-kulttuurisia matkoja, jotka eroavat tavallisesta turismista: jokaisella reitillä on oppimistavoitteet ja konkreettiset tulokset.",
+    "studyToursItems": [
+      {
+        "title": "Pohjoismaiset opintomatkat",
+        "desc": "Suomalainen koulutusjärjestelmä, pohjoismainen muotoilu ja vierailut kestävän innovaation yrityksiin"
+      },
+      {
+        "title": "Kiinan opintomatkat",
+        "desc": "Kiinan kulttuuriin, teollisuuteen ja historiaan tutustuminen pohjoismaisille opiskelijoille (Peking–Shanghai–Chengdu)"
+      },
+      {
+        "title": "Kiinan ja Euroopan vaihto",
+        "desc": "Kaksisuuntaisia opintomatkoja, joissa opiskelijat vierailevat vastavuoroisesti ja tekevät yhteisiä tutkimusprojekteja"
+      }
+    ]
+  },
+  "mice": {
+    "title": "Tapahtumat ja MICE",
+    "tagline": "Yhdistämme pohjoismaiset verkostot ja toteutamme onnistuneita tapahtumia.",
+    "intro": "Yhdistämme suomalaiset ja pohjoismaiset MICE-resurssit kokonaisuudeksi — tilat, hotellit, tulkkauksen ja paikallisen toteutuksen — ja suunnittelemme täysin räätälöidyt ohjelmat asiakkaan toiveiden mukaan.",
+    "listTitle": "Suomen kiinnostavimmat tapahtumat",
+    "listSubtitle": "Suomen MICE — valikoitu ja seuraamisen arvoinen",
+    "listItems": [
+      {
+        "name": "Slush",
+        "desc": "Maailmanluokan startup- ja teknologiatapahtuma joka marraskuu Helsingissä",
+        "month": "marras",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Habitare",
+        "desc": "Pohjoismaiden suurin design- ja sisustusmessutapahtuma",
+        "month": "syys",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Helsinki Design Week",
+        "desc": "Koko kaupungin laajuinen designkulttuurin festivaali",
+        "month": "syys",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Nordic Business Forum",
+        "desc": "Kansainvälisten liike-elämän johtajien foorumi",
+        "month": "syys",
+        "city": "Helsinki"
+      },
+      {
+        "name": "Arctic Circle Assembly",
+        "desc": "Kansainvälinen arktisen yhteistyön foorumi (naapurimaassa Islannissa)",
+        "month": "loka",
+        "city": "Reykjavík"
+      },
+      {
+        "name": "FinnBuild",
+        "desc": "Suomen rakentamisen ja rakennusmateriaalien ammattimessut",
+        "month": "loka",
+        "city": "Helsinki"
+      },
+      {
+        "name": "PowerExpo",
+        "desc": "Pohjoismainen energiateknologian näyttely",
+        "month": "touko",
+        "city": "Helsinki"
+      },
+      {
+        "name": "EduExpo",
+        "desc": "Suomalaisen koulutuksen ja valmennuksen messut",
+        "month": "marras",
+        "city": "Helsinki"
+      }
+    ],
+    "servicesTitle": "Mitä teemme",
+    "servicesSubtitle": "Palvelut — portti paikallisiin resursseihin",
+    "servicesItems": [
+      {
+        "title": "MICE-palvelut",
+        "desc": "Suomalaisten ja pohjoismaisten kumppanien kartoitus, konferenssien järjestäminen ja paikallinen toteutus"
+      },
+      {
+        "title": "Räätälöidyt ohjelmat",
+        "desc": "Suunnittelu ja toteutus asiakkaan toimeksiannon mukaan"
+      },
+      {
+        "title": "Liiketoimintakonferenssit",
+        "desc": "Kansainvälisten konferenssien suunnittelu, ohjelman rakentaminen ja puhujahankinta"
+      },
+      {
+        "title": "Ryhmäytyminen",
+        "desc": "Tutustumis-, ulkoilu- ja kulttuuriohjelmat"
+      },
+      {
+        "title": "Vieraanvaraisuus",
+        "desc": "Lentokenttäkuljetukset, hotellijärjestelyt, tulkkaus ja liikevieraiden isännöinti"
+      }
+    ]
+  },
+  "about": {
+    "title": "Tietoa meistä",
+    "subtitle": "Finuo — suomalainen matkatoimisto Kiinan ja Pohjois-Euroopan välissä",
+    "intro": "Finuo on helsinkiläinen matkatoimisto, joka yhdistää Kiinan ja Euroopan: pohjoismaiset matkat, opiskelijaneuvonnan ja tapahtumapalvelut. Yli kymmenen vuoden kokemuksella ja kolmikielisellä tiimillä (kiina / englanti / suomi) haluamme olla luotettavin suomalainen kumppanisi — suunnittelitpa revontuliretkeä, räätälöityä kiertomatkaa Norjaan, Islantiin ja Tanskaan, hakua suomalaiseen yliopistoon tai konferenssia Helsingissä.",
+    "team": "Tiimi",
+    "teamDesc": "Paikallisia kiinalaistaustaisia asiantuntijoita ja Pohjolan tuntijoita, jotka ymmärtävät sekä kulttuurin vivahteet että liiketoiminnan logiikan.",
+    "partners": "Kumppanit",
+    "partnersDesc": "Pitkäaikaiset kumppanuudet suomalaisten yliopistojen, kuntien, toimialajärjestöjen ja huippukohteiden kanssa."
+  },
+  "restaurantModal": {
+    "directions": "Reittiohjeet",
+    "openInMaps": "Avaa Google Mapsissa"
+  },
+  "chat": {
+    "eyebrow": "Chat-apu",
+    "title": "Finuo-avustaja",
+    "placeholder": "Kirjoita kysymyksesi…",
+    "greeting": "Hei! Olen Finuon avustaja ✨ Kysy minulta mitä tahansa Pohjolan matkoista, Suomessa opiskelusta, tapahtumista tai Helsingin parhaista paikoista.",
+    "empty": "(ei vastausta)",
+    "errorReply": "Pahoittelut, en saa juuri nyt yhteyttä palvelimeen. Lähetä sähköpostia osoitteeseen booking@finuo.fi."
+  },
+  "contact": {
+    "title": "Yhteystiedot",
+    "subtitle": "Ota yhteyttä",
+    "intro": "Olipa kyse räätälöidystä matkaohjelmasta, opiskeluneuvonnasta tai tapahtumayhteistyöstä — jutellaan.",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "wechat": "WeChat",
+    "wechatCopy": "kopioi napauttamalla",
+    "wechatCopied": "kopioitu",
+    "whatsapp": "WhatsApp",
+    "address": "Osoite",
+    "addressValue": "Helsinki, Suomi",
+    "formName": "Nimesi",
+    "formEmail": "Sähköpostiosoite",
+    "formMessage": "Viesti",
+    "formSubmit": "Lähetä kysely"
+  }
+}

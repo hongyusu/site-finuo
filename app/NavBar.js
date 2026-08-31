@@ -4,6 +4,7 @@ import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import AppAppBar from '../src/components/AppAppBar';
+import { LANGS, localizedPath, splitLangPath } from './paths';
 
 const BOOKING_URL = 'https://travel.finuo.fi/search?vendor_id=14';
 
@@ -13,17 +14,20 @@ function siteFromPathname(pathname) {
   return 'experience';
 }
 
-export default function NavBar() {
+export default function NavBar({ lang = 'zh' }) {
   const pathname = usePathname() || '/';
   const router = useRouter();
   const { t } = useTranslation();
 
+  // The URL keeps Chinese unprefixed, so work from the bare path throughout.
+  const [, barePath] = splitLangPath(pathname);
+
   // Detail pages render their own back-bar; no global navbar there.
-  if (pathname.startsWith('/tour/') || pathname.startsWith('/institution/')) {
+  if (barePath.startsWith('/tour/') || barePath.startsWith('/institution/')) {
     return null;
   }
 
-  const activeSite = siteFromPathname(pathname);
+  const activeSite = siteFromPathname(barePath);
 
   const navItemsBySite = {
     experience: [
@@ -51,7 +55,13 @@ export default function NavBar() {
   };
 
   const handleSiteChange = (site) => {
-    router.push(site === 'experience' ? '/' : `/${site}`);
+    router.push(localizedPath(lang, site === 'experience' ? '/' : `/${site}`));
+  };
+
+  // Switching language navigates to the same page in the other language, so
+  // each language has its own crawlable URL instead of a client-side toggle.
+  const handleLanguageChange = (next) => {
+    router.push(localizedPath(next, barePath));
   };
 
   return (
@@ -59,6 +69,9 @@ export default function NavBar() {
       activeSite={activeSite}
       onSiteChange={handleSiteChange}
       navItems={navItemsBySite[activeSite] || navItemsBySite.experience}
+      currentLang={lang}
+      languages={LANGS}
+      onLanguageChange={handleLanguageChange}
     />
   );
 }

@@ -39,7 +39,9 @@ const TOUR_REGIONS = {
 };
 
 export default function LandingPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  // Chinese lives at the bare paths; the other languages are prefixed.
+  const langPrefix = i18n.language && i18n.language !== 'zh' ? `/${i18n.language}` : '';
   const [activeCountry, setActiveCountry] = React.useState('finland');
   const [activeRegion, setActiveRegion] = React.useState('anhui');
   const [expandedTour, setExpandedTour] = React.useState('huangshan');
@@ -129,7 +131,7 @@ export default function LandingPage() {
               <Box sx={{ mt: 6, pt: 4, borderTop: '1px solid rgba(245,242,237,0.08)' }}>
                 <Typography
                   component="a"
-                  href={`/nordic/${activeCountry}`}
+                  href={`${langPrefix}/nordic/${activeCountry}`}
                   sx={{
                     color: GOLD,
                     fontSize: '0.9rem',

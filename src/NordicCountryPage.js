@@ -18,8 +18,10 @@ const BOOKING_URL = 'https://travel.finuo.fi/search?vendor_id=14';
  * indexed for "Norway fjords", "Iceland ring road", 芬兰极光 and so on.
  */
 export default function NordicCountryPage({ country }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const others = COUNTRY_IDS.filter((c) => c !== country);
+  // Chinese lives at the bare paths; the other languages are prefixed.
+  const langPrefix = i18n.language && i18n.language !== 'zh' ? `/${i18n.language}` : '';
 
   return (
     <Box sx={{ bgcolor: '#0D0D0D', minHeight: '100vh' }}>
@@ -72,7 +74,7 @@ export default function NordicCountryPage({ country }) {
               <Typography
                 key={c}
                 component="a"
-                href={`/nordic/${c}`}
+                href={`${langPrefix}/nordic/${c}`}
                 sx={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: { xs: '1.5rem', md: '2rem' },
@@ -87,7 +89,7 @@ export default function NordicCountryPage({ country }) {
             ))}
           </Box>
           <Typography sx={{ color: DIM, fontSize: '0.9rem', mt: 4 }}>
-            <Typography component="a" href="/" sx={{ color: DIM, textDecoration: 'underline', '&:hover': { color: GOLD } }}>
+            <Typography component="a" href={langPrefix || '/'} sx={{ color: DIM, textDecoration: 'underline', '&:hover': { color: GOLD } }}>
               Finuo · {t('tourism.nordicTitle')}
             </Typography>
           </Typography>
