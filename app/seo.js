@@ -84,3 +84,17 @@ export function faqLd() {
   if (!entities.length) return null;
   return { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: entities };
 }
+
+// The four Nordic country pages. The landing page only server-renders the
+// active tab, so these standalone URLs are what search engines can actually
+// index for Norway / Iceland / Denmark.
+export const NORDIC = ['finland', 'norway', 'iceland', 'denmark'].map((id) => ({
+  id,
+  zhTitle: zhT.tourism[id].title,
+  zhSubtitle: zhT.tourism[id].subtitle,
+  zhIntro: zhT.tourism[id].intro,
+  enTitle: enT.tourism[id].title,
+  enIntro: enT.tourism[id].intro,
+}));
+
+export const NORDIC_IDS = NORDIC.map((c) => c.id);

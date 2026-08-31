@@ -2,7 +2,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -12,27 +11,20 @@ import Footer from './components_shared/Footer';
 import {
   Statement,
   SectionHeader,
-  ListBlock,
-  CountrySection,
   FullBleedImage,
 } from './components_shared/sections';
 import { AboutSection, ContactSection } from './components_shared/AboutContact';
-import RestaurantModal from './components_shared/RestaurantModal';
 import TestimonialsMarquee from './components_shared/TestimonialsMarquee';
 import {
   GOLD, CREAM, DIM,
-  HelsinkiAttractions, DayTripsGrid, RestaurantCard, FinlandActivities, FinlandHotels,
-  CountryRoutesGrid, AnhuiTours, ChinaGuide, ServiceStandards, ForumBlock, NordicTabs,
+  AnhuiTours, ChinaGuide, ServiceStandards, ForumBlock, NordicTabs,
 } from './components_shared/landingSections';
+import NordicCountry from './components_shared/NordicCountry';
 
 // All imagery is self-hosted under /public/images (no external CDN dependency).
 
 // Hero panels for each country: image used at the top of each section
 const NORDIC_HEADER = '/images/destinations/aurora.jpg';
-const FINLAND_HEADER = '/images/destinations/cabin.jpg';
-const NORWAY_HEADER = '/images/destinations/fjord.jpg';
-const ICELAND_HEADER = '/images/destinations/iceland.jpg';
-const DENMARK_HEADER = '/images/destinations/lake.jpg';
 const CHINA_HEADER = '/images/anhui/huangshan-3.jpeg';
 
 const TOUR_REGIONS = {
@@ -51,11 +43,6 @@ export default function LandingPage() {
   const [activeCountry, setActiveCountry] = React.useState('finland');
   const [activeRegion, setActiveRegion] = React.useState('anhui');
   const [expandedTour, setExpandedTour] = React.useState('huangshan');
-  const [restaurantDetail, setRestaurantDetail] = React.useState(null);
-
-  const openRestaurant = (item, image) => setRestaurantDetail({ item, image });
-  const closeRestaurant = () => setRestaurantDetail(null);
-
   const anhuiToursRaw = t('tourism.china.anhuiTours', { returnObjects: true }) || [];
   const anhuiLabels = t('tourism.china.anhuiLabels', { returnObjects: true }) || {};
   const anhuiTours = anhuiToursRaw.map((tour) => ({
@@ -85,62 +72,7 @@ export default function LandingPage() {
     shanghai: '/images/anhui/shanghai-18.jpeg',            // Shanghai night skyline
   };
 
-  const finlandExperiences = t('tourism.finland.experiences', { returnObjects: true }) || [];
-  const finlandHotels = t('tourism.finland.hotelsItems', { returnObjects: true }) || [];
-  const helsinkiAttractions = t('tourism.finland.helsinkiAttractions', { returnObjects: true }) || [];
-  const dayTripsItems = t('tourism.finland.dayTripsItems', { returnObjects: true }) || [];
-  const diningHotel = t('tourism.finland.diningHotelItems', { returnObjects: true }) || [];
-  const diningWestern = t('tourism.finland.diningWesternItems', { returnObjects: true }) || [];
-  const diningChinese = t('tourism.finland.diningChineseItems', { returnObjects: true }) || [];
-
-  // Helsinki attraction image map (matches order in i18n)
-  const helsinkiImages = [
-    '/images/helsinki/helsinki-cathedral.png',
-    '/images/helsinki/suomenlinna.jpg',
-    '/images/helsinki/temppeliaukio.jpg',
-    '/images/helsinki/kauppatori.jpg',
-    '/images/helsinki/oodi.jpg',
-    '/images/helsinki/design-district.jpg',
-    '/images/helsinki/loyly.jpg',
-    '/images/helsinki/allas-sea-pool.jpg',
-    '/images/helsinki/esplanadi.jpg',
-    '/images/helsinki/seurasaari.jpg',
-    '/images/helsinki/uspenski.jpg',
-    '/images/helsinki/sibelius.jpg',
-    '/images/helsinki/kiasma.jpg',
-    '/images/helsinki/ateneum.jpg',
-    '/images/helsinki/old-market-hall.jpg',
-  ];
-  const dayTripImages = [
-    '/images/helsinki/porvoo.jpg',
-    '/images/helsinki/fiskars-village.jpg',
-    '/images/helsinki/tallinn.jpg',
-    '/images/helsinki/stockholm.jpg',
-  ];
-  // Restaurant images by id
-  const restaurantImage = (id, category) => {
-    const map = {
-      konnikiwa: '/images/helsinki/konnikiwa-2.png',
-      minmax: '/images/helsinki/minmax-1.png',
-      sway: '/images/helsinki/sway-2.png',
-      jinguanting: '/images/helsinki/jinguanting-3.jpg',
-      liu: '/images/helsinki/jinguanting-2.jpg', // no own photo — reuse a generic restaurant interior
-      happy: '/images/helsinki/happyfoodgarden-1.jpg',
-      dongbei: '/images/helsinki/dongbeihu-1.jpg',
-      leaf: '/images/helsinki/leaf-1.jpg',
-    };
-    return map[id] || null;
-  };
-  const norwayRoutes = t('tourism.norway.routesItems', { returnObjects: true }) || [];
-  const norwayActs = t('tourism.norway.activitiesItems', { returnObjects: true }) || [];
-  const icelandRoutes = t('tourism.iceland.routesItems', { returnObjects: true }) || [];
-  const icelandActs = t('tourism.iceland.activitiesItems', { returnObjects: true }) || [];
-  const denmarkRoutes = t('tourism.denmark.routesItems', { returnObjects: true }) || [];
   const forumTags = t('tourism.china.forum.tags', { returnObjects: true }) || [];
-
-  const norwayImages = ['/images/destinations/norway-coast.jpg', '/images/destinations/fjord.jpg', '/images/destinations/aurora.jpg', '/images/destinations/midnight.jpg', '/images/destinations/lake.jpg', '/images/destinations/forest.jpg'];
-  const icelandImages = ['/images/destinations/iceland.jpg', '/images/destinations/forest.jpg', '/images/destinations/lake.jpg'];
-  const denmarkImages = ['/images/destinations/lake.jpg', '/images/destinations/iceland.jpg', '/images/destinations/cabin.jpg'];
 
   const testimonials = t('testimonials.experience', { returnObjects: true }) || [];
 
@@ -191,191 +123,26 @@ export default function LandingPage() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
         >
-          {activeCountry === 'finland' && (
-            <CountrySection
-              id="finland"
-              eyebrow="01 — Finland"
-              title={t('tourism.finland.title')}
-              intro={t('tourism.finland.intro')}
-              image={FINLAND_HEADER}
-            >
-              <Box sx={{ mb: 8 }}>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
-                  {t('tourism.finland.hotels')}
+          <NordicCountry
+            country={activeCountry}
+            footer={
+              <Box sx={{ mt: 6, pt: 4, borderTop: '1px solid rgba(245,242,237,0.08)' }}>
+                <Typography
+                  component="a"
+                  href={`/nordic/${activeCountry}`}
+                  sx={{
+                    color: GOLD,
+                    fontSize: '0.9rem',
+                    letterSpacing: '0.08em',
+                    textDecoration: 'none',
+                    '&:hover': { textDecoration: 'underline' },
+                  }}
+                >
+                  {t('tourism.fullGuide')} →
                 </Typography>
-                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 700 }}>
-                  {t('tourism.finland.hotelsDesc')}
-                </Typography>
-                <FinlandHotels items={finlandHotels} />
               </Box>
-              <Box sx={{ mb: 8 }}>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
-                  {t('tourism.finland.activities')}
-                </Typography>
-                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4 }}>
-                  {t('tourism.finland.activitiesDesc')}
-                </Typography>
-                <FinlandActivities items={finlandExperiences} />
-              </Box>
-
-              {/* Helsinki Attractions */}
-              <Box sx={{ mb: 8 }}>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
-                  {t('tourism.finland.helsinki')}
-                </Typography>
-                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 800 }}>
-                  {t('tourism.finland.helsinkiDesc')}
-                </Typography>
-                <HelsinkiAttractions items={helsinkiAttractions} images={helsinkiImages} />
-              </Box>
-
-              {/* Day Trips */}
-              <Box sx={{ mb: 8 }}>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
-                  {t('tourism.finland.dayTrips')}
-                </Typography>
-                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 4, maxWidth: 800 }}>
-                  {t('tourism.finland.dayTripsDesc')}
-                </Typography>
-                <DayTripsGrid items={dayTripsItems} images={dayTripImages} />
-              </Box>
-
-              {/* Dining */}
-              <Box sx={{ mb: 6 }}>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 1 }}>
-                  {t('tourism.finland.dining')}
-                </Typography>
-                <Typography sx={{ color: DIM, fontSize: '0.95rem', mb: 5, maxWidth: 800 }}>
-                  {t('tourism.finland.diningDesc')}
-                </Typography>
-
-                {/* Sub-section: Hotel */}
-                <Box sx={{ mb: 5 }}>
-                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.7rem' }, color: CREAM, mb: 3, lineHeight: 1.2 }}>
-                    {t('tourism.finland.diningCatHotel')}
-                  </Typography>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                    {diningHotel.map((item, i) => (
-                      <RestaurantCard
-                        key={item.id}
-                        item={item}
-                        image={restaurantImage(item.id, 'hotel')}
-                        expanded={false}
-                        onToggle={() => {}}
-                        onOpenDetail={openRestaurant}
-                        index={i}
-                        category="hotel"
-                      />
-                    ))}
-                  </Box>
-                </Box>
-
-                {/* Sub-section: Western */}
-                <Box sx={{ mb: 5 }}>
-                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.7rem' }, color: CREAM, mb: 3, lineHeight: 1.2 }}>
-                    {t('tourism.finland.diningCatWestern')}
-                  </Typography>
-                  <Grid container spacing={2}>
-                    {diningWestern.map((item, i) => (
-                      <Grid item xs={12} md={6} key={item.id}>
-                        <RestaurantCard
-                          item={item}
-                          image={null}
-                          expanded={false}
-                          onToggle={() => {}}
-                          onOpenDetail={openRestaurant}
-                          index={i}
-                          category="western"
-                        />
-                      </Grid>
-                    ))}
-                  </Grid>
-                </Box>
-
-                {/* Sub-section: Chinese */}
-                <Box>
-                  <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontSize: { xs: '1.4rem', md: '1.7rem' }, color: CREAM, mb: 3, lineHeight: 1.2 }}>
-                    {t('tourism.finland.diningCatChinese')}
-                  </Typography>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                    {diningChinese.map((item, i) => (
-                      <RestaurantCard
-                        key={item.id}
-                        item={item}
-                        image={restaurantImage(item.id, 'chinese')}
-                        expanded={false}
-                        onToggle={() => {}}
-                        onOpenDetail={openRestaurant}
-                        index={i}
-                        category="chinese"
-                      />
-                    ))}
-                  </Box>
-                </Box>
-              </Box>
-            </CountrySection>
-          )}
-
-          {activeCountry === 'norway' && (
-            <CountrySection
-              id="norway"
-              eyebrow="02 — Norway"
-              title={t('tourism.norway.title')}
-              intro={t('tourism.norway.intro')}
-              image={NORWAY_HEADER}
-            >
-              <Box sx={{ mb: 6 }}>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-                  {t('tourism.norway.routes')}
-                </Typography>
-                <CountryRoutesGrid items={norwayRoutes} images={norwayImages} height={220} />
-              </Box>
-              <Box>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-                  {t('tourism.norway.activities')}
-                </Typography>
-                <ListBlock items={norwayActs} columns={3} />
-              </Box>
-            </CountrySection>
-          )}
-
-          {activeCountry === 'iceland' && (
-            <CountrySection
-              id="iceland"
-              eyebrow="03 — Iceland"
-              title={t('tourism.iceland.title')}
-              intro={t('tourism.iceland.intro')}
-              image={ICELAND_HEADER}
-            >
-              <Box sx={{ mb: 6 }}>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-                  {t('tourism.iceland.routes')}
-                </Typography>
-                <CountryRoutesGrid items={icelandRoutes} images={icelandImages} />
-              </Box>
-              <Box>
-                <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-                  {t('tourism.iceland.activities')}
-                </Typography>
-                <ListBlock items={icelandActs} columns={3} />
-              </Box>
-            </CountrySection>
-          )}
-
-          {activeCountry === 'denmark' && (
-            <CountrySection
-              id="denmark"
-              eyebrow="04 — Denmark"
-              title={t('tourism.denmark.title')}
-              intro={t('tourism.denmark.intro')}
-              image={DENMARK_HEADER}
-            >
-              <Typography sx={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, mb: 3 }}>
-                {t('tourism.denmark.routes')}
-              </Typography>
-              <CountryRoutesGrid items={denmarkRoutes} images={denmarkImages} />
-            </CountrySection>
-          )}
+            }
+          />
         </motion.div>
       </AnimatePresence>
 
@@ -480,12 +247,6 @@ export default function LandingPage() {
       <Footer />
 
       {/* Restaurant detail modal — Google Maps + full info */}
-      <RestaurantModal
-        open={!!restaurantDetail}
-        item={restaurantDetail?.item}
-        image={restaurantDetail?.image}
-        onClose={closeRestaurant}
-      />
     </Box>
   );
 }

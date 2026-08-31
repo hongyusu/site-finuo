@@ -42,6 +42,9 @@
   "tourism": {
     "intro": "我们以芬兰为核心，深耕北欧，覆盖中国全境。从极光到峡湾，从城市到荒原。",
     "regions": "目的地",
+    "fullGuide": "查看完整攻略",
+    "otherDestinations": "其他北欧目的地",
+    "countryPageCta": "定制这条线路",
     "nordicTitle": "北欧",
     "nordicSubtitle": "Nordic — 极光之地，原野之心",
     "chinaTitle": "中国",

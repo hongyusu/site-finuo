@@ -42,6 +42,9 @@
   "tourism": {
     "intro": "Finland-rooted, Nordic-deep, China-wide. From auroras to fjords, from cities to wilderness.",
     "regions": "Destinations",
+    "fullGuide": "View the full guide",
+    "otherDestinations": "Other Nordic destinations",
+    "countryPageCta": "Plan this trip",
     "nordicTitle": "Nordic",
     "nordicSubtitle": "Nordic — Land of Auroras, Heart of the Wild",
     "chinaTitle": "China",
