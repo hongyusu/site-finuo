@@ -323,38 +323,34 @@
         {
           "id": "kolmekruunua",
           "name": "Kolme Kruunua",
-          "type": "Traditional Finnish · Since 1952 · Kruununhaka",
+          "type": "Traditional Finnish · Classic · 4.4★",
           "address": "Liisankatu 5, 00170 Helsinki",
-          "phone": "+358 9 135 4172",
-          "desc": "A Helsinki classic open since 1952 in the quiet old quarter of Kruununhaka. The original 1950s interior has been preserved intact, which is why locals call it one of the 'most Helsinki' restaurants there is. The menu is Finnish home cooking: meatballs, pyttipannu hash and fried Baltic herring, generous portions at honest prices.",
-          "best": "Old-school Helsinki · Finnish home cooking"
+          "phone": "09 135 4172",
+          "desc": "The 'old Helsinki' restaurant — open since 1952 with its original 1950s interior intact. Honest Finnish home cooking: meatballs, pyttipannu hash, fried Baltic herring. Big portions, fair prices, a local favourite."
         },
         {
           "id": "juttutupa",
           "name": "Juttutupa",
-          "type": "Finnish pub food · Live music · Hakaniemi",
+          "type": "Finnish pub food · Live music · 4.1★",
           "address": "Säästöpankinranta 6, 00530 Helsinki",
-          "phone": "+358 20 742 4240",
-          "desc": "One of the oldest restaurants in Helsinki, with roots going back to 1884 and housed since 1908 in the granite Paasitorni building on Hakaniemi bay. Locals call it 'Juttis'. Warm, bohemian atmosphere with free live gigs almost every night, from blues and jazz to tango. Unpretentious Finnish pub fare: salmon soup, sourdough pizzas and vegan options, plus a good-value weekday lunch buffet.",
-          "best": "Live music · Local pub atmosphere · Budget lunch"
+          "phone": "020 742 4240",
+          "desc": "One of the oldest restaurants in Helsinki, inside the 1908 granite Paasitorni building on Hakaniemi bay — locals call it 'Juttis'. Relaxed, lively pub atmosphere with free live music almost every night. Unfussy food: salmon soup, sourdough pizza, and a good-value weekday lunch buffet."
         },
         {
           "id": "meripaviljonki",
           "name": "Meripaviljonki",
-          "type": "Seafood · Floating panorama restaurant · Hakaniemi",
+          "type": "Seafood · Floating restaurant · 4.2★",
           "address": "Säästöpankinranta 3, 00530 Helsinki",
-          "phone": "+358 44 420 3107",
-          "desc": "A glass-walled restaurant floating on Eläintarhanlahti bay, designed by architect Simo Freese to rise and fall with the water. Floor-to-ceiling sea views and its own dock for guests arriving by boat. Fish and shellfish are the specialty: a crayfish menu in late summer, mussel weeks in October, and an archipelago-style lunch buffet on weekdays. The glass terrace is one of Helsinki's favourite waterside seats in summer.",
-          "best": "Dining on the water · Seafood · Summer terrace"
+          "phone": "044 420 3107",
+          "desc": "A glass-walled restaurant floating on Eläintarhanlahti bay — the building rises and falls with the water, and the sea is right outside the window. Fish and shellfish: crayfish menu in late summer, mussel weeks in October, archipelago lunch buffet on weekdays. The terrace is one of Helsinki's most sought-after summer seats."
         },
         {
           "id": "peaks14",
           "name": "Ravintola 14 Peaks",
-          "type": "Himalayan · Nepalese & Indian · Kallio",
+          "type": "Nepalese · Indian · Mid-range · New",
           "address": "Siltasaarenkatu 13, 00530 Helsinki",
-          "phone": "+358 50 366 2992",
-          "desc": "Named after the fourteen 8,000-metre peaks, blending Nepalese, Indian and Tibetan flavours with a Nordic touch. In Kallio next to the Citybox hotel, a few minutes' walk from Hakaniemi metro. Sizzling tandoori dishes, rich curries and plenty of vegan-friendly options, with a lunch buffet on weekdays. A great pick when you want a change of pace and some spice.",
-          "best": "A change of pace · Vegan-friendly · Lunch buffet"
+          "phone": "050 366 2992",
+          "desc": "Himalayan restaurant named after the fourteen 8,000-metre peaks — Nepalese, Indian and Tibetan flavours with a Nordic touch. Rich tandoori and curries, plenty of vegetarian options, weekday lunch buffet. A few minutes' walk from Hakaniemi metro, a good pick when you want a change of pace and some spice."
         }
       ],
       "diningChineseItems": [
