@@ -229,7 +229,7 @@
       "dining": "Missä syödä",
       "diningDesc": "Valikoituja helsinkiläisiä ravintoloita — Michelin-tason fine diningista ja uudesta pohjoismaisesta keittiöstä kiinalaiseen kotiruokaan ja hotellin lähellä oleviin käteviin vaihtoehtoihin.",
       "diningCatHotel": "Aalto-yliopiston lähellä",
-      "diningCatWestern": "Länsimainen · Fine dining ja keskihintaiset",
+      "diningCatWestern": "Länsimainen ja kansainvälinen · Fine dining ja keskihintaiset",
       "diningCatChinese": "Kiinalaiset ravintolat",
       "diningHotelItems": [
         {
@@ -319,6 +319,42 @@
           "address": "Ludviginkatu 3-5, 00130 Helsinki",
           "phone": "09 596659",
           "desc": "Yksi niistä Helsingin ravintoloista, jotka ovat 'lähellä Michelin-tasoa mutta rennompia'. Suomalaisia ja pohjoismaisia sesonkiraaka-aineita yhdistetään italialaiseen ruoanlaiton logiikkaan ja viinikulttuuriin — modernia eurooppalaista fine diningia rauhallisessa ja hillityssä ympäristössä."
+        },
+        {
+          "id": "kolmekruunua",
+          "name": "Kolme Kruunua",
+          "type": "Perinteinen suomalainen · Vuodesta 1952 · Kruununhaka",
+          "address": "Liisankatu 5, 00170 Helsinki",
+          "phone": "+358 9 135 4172",
+          "desc": "Helsinkiläinen klassikko, joka on palvellut vuodesta 1952 rauhallisessa Kruununhaassa. Alkuperäinen 1950-luvun sisustus on säilytetty, ja moni paikallinen pitää sitä yhtenä 'helsinkiläisimmistä' ravintoloista. Listalla suomalaista kotiruokaa: lihapullia, pyttipannua ja paistettuja silakoita, runsaat annokset rehelliseen hintaan.",
+          "best": "Vanhan ajan Helsinki · Suomalaista kotiruokaa"
+        },
+        {
+          "id": "juttutupa",
+          "name": "Juttutupa",
+          "type": "Suomalaista pubiruokaa · Livemusiikkia · Hakaniemi",
+          "address": "Säästöpankinranta 6, 00530 Helsinki",
+          "phone": "+358 20 742 4240",
+          "desc": "Yksi Helsingin vanhimmista ravintoloista, jonka juuret ulottuvat vuoteen 1884 ja joka on toiminut vuodesta 1908 Paasitornin graniittirakennuksessa Hakaniemenrannassa. Paikalliset tuntevat sen nimellä 'Juttis'. Lämmin ja boheemi tunnelma, ilmaisia keikkoja lähes joka ilta bluesista ja jazzista tangoon. Mutkatonta suomalaista pubiruokaa: lohikeittoa, hapanjuuripizzaa ja vegaanisia vaihtoehtoja sekä edullinen arkilounasbuffet.",
+          "best": "Livemusiikkia · Paikallinen pubitunnelma · Edullinen lounas"
+        },
+        {
+          "id": "meripaviljonki",
+          "name": "Meripaviljonki",
+          "type": "Merenantimet · Kelluva panoraamaravintola · Hakaniemi",
+          "address": "Säästöpankinranta 3, 00530 Helsinki",
+          "phone": "+358 44 420 3107",
+          "desc": "Eläintarhanlahdella kelluva lasiseinäinen ravintola, jonka arkkitehti Simo Freese suunnitteli nousemaan ja laskemaan veden mukana. Lattiasta kattoon ulottuvat merinäkymät ja oma laituri veneellä saapuville. Erikoisuutena kala ja äyriäiset: rapumenu loppukesällä, simpukkaviikot lokakuussa ja saaristolaislounas arkisin. Lasiterassi on kesäisin yksi Helsingin suosituimmista rantapaikoista.",
+          "best": "Ruokailu veden päällä · Merenantimet · Kesäterassi"
+        },
+        {
+          "id": "peaks14",
+          "name": "Ravintola 14 Peaks",
+          "type": "Himalajalainen · Nepalilainen & intialainen · Kallio",
+          "address": "Siltasaarenkatu 13, 00530 Helsinki",
+          "phone": "+358 50 366 2992",
+          "desc": "Nimensä maailman neljältätoista yli 8 000 metrin huipulta saanut ravintola yhdistää nepalilaisia, intialaisia ja tiibetiläisiä makuja pohjoismaiseen otteeseen. Kalliossa Citybox-hotellin vieressä, muutaman minuutin kävelymatkan päässä Hakaniemen metroasemalta. Tulikuumia tandoori-annoksia, täyteläisiä curryja ja runsaasti vegaanisia vaihtoehtoja; arkisin lounasbuffet. Hyvä valinta, kun kaipaa vaihtelua ja tulisuutta.",
+          "best": "Vaihtelua ja tulisuutta · Vegaaniystävällinen · Lounasbuffet"
         }
       ],
       "diningChineseItems": [
